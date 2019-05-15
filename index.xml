@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>卜陋专酱</title>
+    <link>/</link>
+    <description>Recent content on 卜陋专酱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>github</title>
+      <link>/post/git/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/git/</guid>
+      <description>github 多账户使用ssh ssh-keygen -t rsa -C &amp;quot;wuguojun1024@gmail.com&amp;quot; -f ~/.ssh/id_rsa_wugjun
+ssh-keygen -t rsa -C &amp;quot;864785862@qq.com&amp;quot; -f ~/.ssh/id_rsa_drsin
+启动ssh代理 eval ssh-agent -s
+添加config配置文件分别映射不同的GitHub账户 进入~/.ssh目录，新建config文件，并添加相应的内容：
+# drsin GitHub Host github.com HostName github.com PreferredAuthentications publickey # 指定特定的ssh私钥文件 IdentityFile ~/.ssh/id_rsa_drsin # wugjun GitHub 别名 Host wugjun HostName github.com PreferredAuthentications publickey # 指定特定的ssh私钥文件 IdentityFile ~/.ssh/id_rsa_wugjun  项目配置 git config user.name wugjun
+git config user.email wuguojun1024@gmail.com
+[core] repositoryformatversion = 0 filemode = false bare = false logallrefupdates = true symlinks = false ignorecase = true [remote &amp;quot;origin&amp;quot;] url = git@wugjun:wugjun/blog.</description>
+    </item>
+    
+    <item>
+      <title>个人介绍</title>
+      <link>/post/about/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/about/</guid>
+      <description>陕西苦逼程序猿，没车没房也没存款的三好青年。
+个人简介:
+​ 陕北汉子一枚，家有糟妻。毕业于安康学院，所学计算机科学与技术专业，涉猎的技术比较广泛。基础编程，数据算法，技术架构都有所研究。最喜欢的还是编程开发和开源技术搭建。
+​ 曾工作于生物信息科技技术研究公司做过系统搭建与运维和国内系统的安全研究。现工作于银行支付业务。
+联系方式:
+ 微信：drsin1314 手机: 15615856276  </description>
+    </item>
+    
+    <item>
+      <title>个人网站</title>
+      <link>/post/%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E6%90%AD%E5%BB%BA/</guid>
+      <description>卜陋专酱 1.安装Hugo
+​ 百度云盘链接：https://pan.baidu.com/s/1VnvIjkMLxndXGclACry63w 提取码：5d49
+2.设置环境变量
+3.git clone https://github.com/wugjun/wugjun.github.io.git
+4.hugo server 启动服务，访问主页http://localhost:1313</description>
+    </item>
+    
+  </channel>
+</rss>

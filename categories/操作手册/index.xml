@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作手册 on 卜陋专酱</title>
+    <link>/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/</link>
+    <description>Recent content in 操作手册 on 卜陋专酱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>github</title>
+      <link>/post/git/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/git/</guid>
+      <description>github 多账户使用ssh ssh-keygen -t rsa -C &amp;quot;wuguojun1024@gmail.com&amp;quot; -f ~/.ssh/id_rsa_wugjun
+ssh-keygen -t rsa -C &amp;quot;864785862@qq.com&amp;quot; -f ~/.ssh/id_rsa_drsin
+启动ssh代理 eval ssh-agent -s
+添加config配置文件分别映射不同的GitHub账户 进入~/.ssh目录，新建config文件，并添加相应的内容：
+# drsin GitHub Host github.com HostName github.com PreferredAuthentications publickey # 指定特定的ssh私钥文件 IdentityFile ~/.ssh/id_rsa_drsin # wugjun GitHub 别名 Host wugjun HostName github.com PreferredAuthentications publickey # 指定特定的ssh私钥文件 IdentityFile ~/.ssh/id_rsa_wugjun  项目配置 git config user.name wugjun
+git config user.email wuguojun1024@gmail.com
+[core] repositoryformatversion = 0 filemode = false bare = false logallrefupdates = true symlinks = false ignorecase = true [remote &amp;quot;origin&amp;quot;] url = git@wugjun:wugjun/blog.</description>
+    </item>
+    
+    <item>
+      <title>个人网站</title>
+      <link>/post/%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E6%90%AD%E5%BB%BA/</guid>
+      <description>卜陋专酱 1.安装Hugo
+​ 百度云盘链接：https://pan.baidu.com/s/1VnvIjkMLxndXGclACry63w 提取码：5d49
+2.设置环境变量
+3.git clone https://github.com/wugjun/wugjun.github.io.git
+4.hugo server 启动服务，访问主页http://localhost:1313</description>
+    </item>
+    
+  </channel>
+</rss>

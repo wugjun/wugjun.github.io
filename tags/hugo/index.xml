@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 卜陋专酱</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on 卜陋专酱</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>个人网站</title>
+      <link>/post/%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E6%90%AD%E5%BB%BA/</guid>
+      <description>卜陋专酱 1.安装Hugo
+​ 百度云盘链接：https://pan.baidu.com/s/1VnvIjkMLxndXGclACry63w 提取码：5d49
+2.设置环境变量
+3.git clone https://github.com/wugjun/wugjun.github.io.git
+4.hugo server 启动服务，访问主页http://localhost:1313</description>
+    </item>
+    
+  </channel>
+</rss>
