@@ -35,7 +35,7 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/post/about/">个人介绍</a>
+			<a class="menu__link" href="/post/about/">主页</a>
 		</li>
 	</ul>
 </nav>
@@ -68,13 +68,16 @@
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		github 多账户使用ssh ssh-keygen -t rsa -C &quot;wuguojun1024@gmail.com&quot; -f ~/.ssh/id_rsa_wugjun
+		安装Hugo 百度云盘链接：https://pan.baidu.com/s/1VnvIjkMLxndXGclACry63w 提取码：5d49
+设置环境变量
+git clone https://github.com/wugjun/wugjun.github.io.git
+hugo server 启动服务，访问主页http://localhost:1313
+github 多账户使用ssh ssh-keygen -t rsa -C &quot;wuguojun1024@gmail.com&quot; -f ~/.ssh/id_rsa_wugjun
 ssh-keygen -t rsa -C &quot;864785862@qq.com&quot; -f ~/.ssh/id_rsa_drsin
 启动ssh代理 eval ssh-agent -s
 添加config配置文件分别映射不同的GitHub账户 进入~/.ssh目录，新建config文件，并添加相应的内容：
 # drsin GitHub Host github.com HostName github.com PreferredAuthentications publickey # 指定特定的ssh私钥文件 IdentityFile ~/.ssh/id_rsa_drsin # wugjun GitHub 别名 Host wugjun HostName github.com PreferredAuthentications publickey # 指定特定的ssh私钥文件 IdentityFile ~/.ssh/id_rsa_wugjun  项目配置 git config user.name wugjun
 git config user.email wuguojun1024@gmail.com
-[core] repositoryformatversion = 0 filemode = false bare = false logallrefupdates = true symlinks = false ignorecase = true [remote &quot;origin&quot;] url = git@wugjun:wugjun/blog.
 	</div>
 </article>
 </main>
@@ -96,8 +99,7 @@ git config user.email wuguojun1024@gmail.com
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/post/git/">github</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/about/">个人介绍</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/%E6%90%AD%E5%BB%BA/">个人网站</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/about/">主页</a></li>
 		</ul>
 	</div>
 </div>
@@ -114,7 +116,6 @@ git config user.email wuguojun1024@gmail.com
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e4%b8%aa%e4%ba%ba" title="个人">个人 (1)</a>
 	</div>
 </div>
