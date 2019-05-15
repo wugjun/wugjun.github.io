@@ -74,6 +74,7 @@
 <li><a href="#添加config配置文件分别映射不同的github账户">添加config配置文件分别映射不同的GitHub账户</a></li>
 <li><a href="#项目配置">项目配置</a></li>
 <li><a href="#测试配置是否成功">测试配置是否成功</a></li>
+<li><a href="#hugo生成网页">hugo生成网页</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -140,6 +141,40 @@ IdentityFile ~/.ssh/id_rsa_wugjun
 <h3 id="测试配置是否成功">测试配置是否成功</h3>
 
 <p><code>ssh -T git@github.com</code></p>
+
+<h3 id="hugo生成网页">hugo生成网页</h3>
+
+<p><code>hugo</code></p>
+
+<blockquote>
+<p>当前目录下生成public文件，进入public 目录，git init初始化 。</p>
+</blockquote>
+
+<p><code>cd .git</code></p>
+
+<p><code>vi config</code></p>
+
+<pre><code class="language-shell">[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote &quot;origin&quot;]
+        url = git@wugjun:wugjun/wugjun.github.io.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[gui]
+        wmstate = zoomed
+        geometry = 841x483+25+25 189 218
+[user]
+        name = wugjun
+        email = wugjun1024@gmail.com 
+</code></pre>
+
+<p><code>git commit -am &quot;msg&quot;</code></p>
+
+<p><a href="https://wugjun.github.io/">博客主页</a></p>
 
 		</div>
 		
