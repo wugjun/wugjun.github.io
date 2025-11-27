@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>前端开发 on 补漏砖匠</title><link>/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link><description>Recent content in 前端开发 on 补漏砖匠</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 10 Jan 2019 14:29:02 +0800</lastBuildDate><atom:link href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>画卷篇</title><link>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91--%E7%94%BB%E5%8D%B7%E7%AF%87/</link><pubDate>Thu, 10 Jan 2019 14:29:02 +0800</pubDate><guid>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91--%E7%94%BB%E5%8D%B7%E7%AF%87/</guid><description>卜陋专酱 1.安装Hugo
+​	百度云盘链接：https://pan.baidu.com/s/1VnvIjkMLxndXGclACry63w 提取码：5d49
+2.设置环境变量
+3.git clone https://github.com/wugjun/wugjun.github.io.git
+4.hugo server 启动服务，访问主页http://localhost:1313</description></item></channel></rss>

@@ -1,0 +1,198 @@
+<!doctype html><html class=no-js lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>剑法篇</title>
+<script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="C语言代码解码"><meta name=generator content="Hugo 0.128.0"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84--%E5%85%B5%E6%B3%95%E7%AF%87/>兵法篇</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3--%E5%85%B8%E7%B1%8D%E7%AF%87/>典籍篇</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%B1%87%E6%80%BB/>剑法篇</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E6%90%AD%E5%BB%BA/>机关篇</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84--%E6%A3%8B%E8%B0%B1%E7%AF%87/>棋谱篇</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87--%E6%B3%95%E5%AE%9D%E7%AF%87/>法宝篇</a></li><li class=menu__item><a class=menu__link href=/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91--%E7%94%BB%E5%8D%B7%E7%AF%87/>画卷篇</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>剑法篇</h1><p class=post__lead>编程语言</p><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2022-07-22T00:00:00>July 22, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content post__content clearfix"><p><a href=../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%B1%87%E6%80%BB/>◀ 返回</a></p><h2 id=问题描述>问题描述</h2><p>字符串被显示为acssi码, 数值被hex加减</p><p><img src=/images/C_code_replay.jpeg alt=源码></p><h2 id=转换思路>转换思路</h2><p>字符: acssi 转 string
+数值: 计算出值</p><h2 id=贴代码>贴代码</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;unistd.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;fcntl.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdio.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdlib.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;string.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;errno.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#define setnull(x) memset(&amp;(x), 0, sizeof(x))
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#define CAL(x, y, z) x + y - z
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ERR_EXIT(m) \
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    do { \
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        fprintf(stderr, &#34;[%s][%d]:%s %s \n&#34; ,__FILE__, __LINE__, m, strerror(errno));\
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        exit(EXIT_FAILURE); \
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        }while(0)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>( <span style=color:#66d9ef>int</span> argc, <span style=color:#66d9ef>char</span> <span style=color:#f92672>**</span>argv){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> i,j,len,varLen,ilen ;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> buf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> temp[<span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> var[<span style=color:#ae81ff>64</span>],var1[<span style=color:#ae81ff>64</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> ascii[<span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> hexBuf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> fbuf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> tobuf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> begin <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, end <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>data;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>pstr;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>pstr1;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> retlen;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> varBuf[<span style=color:#ae81ff>20</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> varRet;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> srcfile[<span style=color:#ae81ff>256</span>],destfile[<span style=color:#ae81ff>256</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setnull</span>(srcfile);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setnull</span>(destfile);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>sprintf</span>(srcfile,<span style=color:#e6db74>&#34;%s&#34;</span>, argv[<span style=color:#ae81ff>1</span>]);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>sprintf</span>(destfile,<span style=color:#e6db74>&#34;%s&#34;</span>, argv[<span style=color:#ae81ff>2</span>]);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,argv[1]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,srcfile);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,argv[2]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,destfile);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//strcpy(hexBuf, argv[1]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    FILE<span style=color:#f92672>*</span> fd <span style=color:#f92672>=</span> <span style=color:#a6e22e>fopen</span>(srcfile,<span style=color:#e6db74>&#34;r&#34;</span>);
+</span></span><span style=display:flex><span>    FILE<span style=color:#f92672>*</span> fdw <span style=color:#f92672>=</span> <span style=color:#a6e22e>fopen</span>(destfile,<span style=color:#e6db74>&#34;w&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(fd){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>feof</span>(fd)){
+</span></span><span style=display:flex><span>           <span style=color:#a6e22e>memset</span>(fbuf, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(fbuf));
+</span></span><span style=display:flex><span>           data <span style=color:#f92672>=</span> <span style=color:#a6e22e>fgets</span>(fbuf,<span style=color:#66d9ef>sizeof</span>(fbuf)<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,fd);
+</span></span><span style=display:flex><span>           <span style=color:#66d9ef>if</span>(data){
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>memset</span>(tobuf, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(tobuf));
+</span></span><span style=display:flex><span>                len <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(data);
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>for</span> (i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, j <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> len;){
+</span></span><span style=display:flex><span>                   <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>memcmp</span>(data <span style=color:#f92672>+</span> i,<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>x&#34;</span>,<span style=color:#ae81ff>2</span>)){
+</span></span><span style=display:flex><span>                       <span style=color:#a6e22e>memset</span>(ascii, <span style=color:#ae81ff>0x00</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>                       <span style=color:#a6e22e>memcpy</span>(temp, data <span style=color:#f92672>+</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>                       <span style=color:#75715e>//printf(&#34;temp: %s\n&#34;, temp);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                       <span style=color:#a6e22e>hex2ascii</span>(temp, ascii);
+</span></span><span style=display:flex><span>                       <span style=color:#75715e>//printf(&#34;ascii: %s\n&#34;, ascii);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                       <span style=color:#a6e22e>memcpy</span>(tobuf <span style=color:#f92672>+</span> j, ascii, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>                       i <span style=color:#f92672>+=</span> <span style=color:#ae81ff>4</span>;
+</span></span><span style=display:flex><span>                       j<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>                       <span style=color:#75715e>//printf(&#34;find \\x string offset %d\n&#34;, i); 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>                   }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>memcmp</span>(data <span style=color:#f92672>+</span> i,<span style=color:#e6db74>&#34;(0x&#34;</span>,<span style=color:#ae81ff>3</span>)){
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memset</span>(var, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(var));
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memset</span>(var1, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(var1));
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memset</span>(varBuf, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(varBuf));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memcpy</span>(var, data <span style=color:#f92672>+</span> i, <span style=color:#66d9ef>sizeof</span>(var));  
+</span></span><span style=display:flex><span>                        <span style=color:#75715e>//printf(&#34;var: %s \n&#34;, var);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>                        pstr <span style=color:#f92672>=</span> <span style=color:#a6e22e>strchr</span>(var, <span style=color:#e6db74>&#39;(&#39;</span>);
+</span></span><span style=display:flex><span>                        <span style=color:#66d9ef>if</span> ( pstr <span style=color:#f92672>!=</span> NULL)
+</span></span><span style=display:flex><span>                        {
+</span></span><span style=display:flex><span>                            <span style=color:#66d9ef>if</span>( pstr1 <span style=color:#f92672>=</span> <span style=color:#a6e22e>strstr</span>(var, <span style=color:#e6db74>&#34;)&#34;</span>)){
+</span></span><span style=display:flex><span>                                <span style=color:#75715e>//printf(&#34;find ),\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                                varLen <span style=color:#f92672>=</span> pstr1 <span style=color:#f92672>-</span> pstr ;
+</span></span><span style=display:flex><span>                                <span style=color:#75715e>//printf(&#34;%d\n&#34;, varLen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                                <span style=color:#a6e22e>memcpy</span>(var1, var<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>,varLen <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>                                varRet <span style=color:#f92672>=</span> <span style=color:#a6e22e>cal</span>(var1);
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>sprintf</span>(varBuf,<span style=color:#e6db74>&#34;%d&#34;</span>,varRet);
+</span></span><span style=display:flex><span>                                <span style=color:#75715e>//printf(&#34;%s,%d\n&#34;,varBuf,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                                ilen <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(varBuf);
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>memcpy</span>(tobuf <span style=color:#f92672>+</span> j, varBuf , ilen);
+</span></span><span style=display:flex><span>                                j <span style=color:#f92672>+=</span> ilen ;
+</span></span><span style=display:flex><span>                                i <span style=color:#f92672>+=</span> varLen <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>                            }
+</span></span><span style=display:flex><span>                           <span style=color:#75715e>//else if( pstr1 = strstr(var, &#34;);&#34;)){
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;find );\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int varLen = pstr1 - pstr ;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%d\n&#34;, varLen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(var1, var+1,varLen -1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     varRet = cal(var1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     sprintf(varBuf,&#34;%d;&#34;,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%s,%d\n&#34;,varBuf,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int ilen = strlen(varBuf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(tobuf + j, varBuf , ilen + 1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     j += ilen + 1;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     i += varLen + 1 + 1;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>// }
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//else if( pstr1 = strstr(var, &#34;)&#34;)){
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;find )\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int varLen = pstr1 - pstr ;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%d\n&#34;, varLen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(var1, var+1,varLen -1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     varRet = cal(var1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     sprintf(varBuf,&#34;%d&#34;,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%s,%d\n&#34;,varBuf,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int ilen = strlen(varBuf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(tobuf + j, varBuf , ilen );
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     j += ilen;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     i += varLen + 1;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//// }
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                        }
+</span></span><span style=display:flex><span>                   }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                       tobuf[j] <span style=color:#f92672>=</span> data[i];
+</span></span><span style=display:flex><span>                       i<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>                       j<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>                   }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//printf(&#34;%s&#34;, data);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#a6e22e>fprintf</span>(fdw,<span style=color:#e6db74>&#34;%s&#34;</span>,tobuf);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ERR_EXIT</span>(<span style=color:#e6db74>&#34;open file failure&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fclose</span>(fd);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//for( i = 0; i &lt; strlen(argv[1]); i++){ 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//    printf(&#34;%c\n&#34;, argv[i]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//int ret =  hex2ascii(hexBuf,buf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//for( i = 0; i &lt; strlen(buf); i++){ 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//    printf(&#34;%c&#34;, buf[i]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>hex2ascii</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>hex, <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>ascii)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> len <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(hex), tlen, cnt , i;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>( i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, cnt <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> ,tlen <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> len; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>char</span> c <span style=color:#f92672>=</span> <span style=color:#a6e22e>toupper</span>(hex[i]);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(( c <span style=color:#f92672>&gt;=</span> <span style=color:#e6db74>&#39;0&#39;</span> <span style=color:#f92672>&amp;&amp;</span> c <span style=color:#f92672>&lt;=</span><span style=color:#e6db74>&#39;9&#39;</span>) <span style=color:#f92672>||</span> ( c <span style=color:#f92672>&gt;=</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&amp;&amp;</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;F&#39;</span>))
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>int</span>  t <span style=color:#f92672>=</span> ( c <span style=color:#f92672>&gt;=</span><span style=color:#e6db74>&#39;A&#39;</span>) <span style=color:#f92672>?</span> c <span style=color:#f92672>-</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>10</span> <span style=color:#f92672>:</span> c <span style=color:#f92672>-</span> <span style=color:#e6db74>&#39;0&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span>(cnt)
+</span></span><span style=display:flex><span>                ascii[tlen<span style=color:#f92672>++</span>] <span style=color:#f92672>+=</span> t, cnt <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span> 
+</span></span><span style=display:flex><span>                ascii[tlen] <span style=color:#f92672>=</span> t <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>4</span>, cnt <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> tlen;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>cal</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>exprs){
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> x,y,z;
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;, exprs);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>sscanf</span>(exprs,<span style=color:#e6db74>&#34;%x + %d - %x&#34;</span>,<span style=color:#f92672>&amp;</span>x,<span style=color:#f92672>&amp;</span>y,<span style=color:#f92672>&amp;</span>z);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>CAL</span>(x,y,z); 
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=编译>编译</h2><p>gcc -o hex2ascii hex2ascii.c</p><h2 id=测试>测试</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#75715e>#!/bin/bash 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>srcfiles<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>find src -name <span style=color:#e6db74>&#34;*.*c&#34;</span>|egrep -v <span style=color:#e6db74>&#34;src/common/crypto/|src/sqlmem&#34;</span><span style=color:#e6db74>`</span>
+</span></span><span style=display:flex><span>hsrcfiles<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>find src -name <span style=color:#e6db74>&#34;*.*h&#34;</span>|egrep -v <span style=color:#e6db74>&#34;src/common/crypto/|src/sqlmem&#34;</span><span style=color:#e6db74>`</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> ! -d newsrc <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    mkdir newsrc
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#for srcfile in $hsrcfiles</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#do</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#     echo $srcfile</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#     cp ${srcfile} ${srcfile}.tmp</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#     ./hex2ascii ${srcfile}.tmp ${srcfile}</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#     rm ${srcfile}.tmp</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#done</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> srcfile in $srcfiles
+</span></span><span style=display:flex><span><span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>     echo $srcfile
+</span></span><span style=display:flex><span>     cp <span style=color:#e6db74>${</span>srcfile<span style=color:#e6db74>}</span> <span style=color:#e6db74>${</span>srcfile<span style=color:#e6db74>}</span>.tmp
+</span></span><span style=display:flex><span>     ./hex2ascii <span style=color:#e6db74>${</span>srcfile<span style=color:#e6db74>}</span>.tmp <span style=color:#e6db74>${</span>srcfile<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>     rm <span style=color:#e6db74>${</span>srcfile<span style=color:#e6db74>}</span>.tmp
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><h2 id=astyle优化>Astyle优化</h2><p>AStyle &ndash;style=ansi 文件名</p></div><div class="post__tags tags clearfix"><svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373.0-.74-.24-1-.5L1 8A2.853 2.853.0 01.3 7C.113 6.55.0 5.973.0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034.0 1.4.0h4.2c.373.0.95.113 1.4.3s.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5.0 100-3 1.5 1.5.0 000 3z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/ rel=tag>编程语言</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="wu guojun avatar" src=/img/blowizer.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About wu guojun</span></div><div class=authorbox__description>。</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--next"><a class=post-nav__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%B1%87%E6%80%BB/ rel=next><span class=post-nav__caption>Next&#8201;»</span><p class=post-nav__post-title>剑法篇</p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2025 补漏砖匠.
+<span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>
