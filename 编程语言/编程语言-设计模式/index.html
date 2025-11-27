@@ -1,0 +1,428 @@
+<!doctype html><html class=no-js lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>剑法篇</title>
+<script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="设计模式"><meta name=generator content="Hugo 0.128.0"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>兵法篇</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>典籍篇</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>剑法篇</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>棋谱篇</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>法宝篇</a></li><li class=menu__item><a class=menu__link href=/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91--%E7%94%BB%E5%8D%B7%E7%AF%87/>画卷篇</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>剑法篇</h1><p class=post__lead>以模式为纲，化复杂为简</p><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2022-07-22T00:00:00>July 22, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><ul><li><a href=#单一职责原则srpsingle-responsibility-principle>单一职责原则(SRP:Single Responsibility Principle)</a></li><li><a href=#开放-关闭原则ocpopen-closed-principle>开放-关闭原则(OCP:Open Closed Principle)</a></li><li><a href=#里氏替换原则lspliskov-substitution-principle>里氏替换原则(LSP:Liskov Substitution Principle)</a></li><li><a href=#依赖反转原则dipdependence-inversion-principle>依赖反转原则(DIP:Dependence Inversion Principle)</a></li><li><a href=#迪米特法则lodlaw-of-demeter>迪米特法则(LOD:Law of Demeter)</a></li><li><a href=#接口隔离原则ispinterface-segregation-principle>接口隔离原则(ISP:Interface Segregation Principle)</a></li></ul></li><li><a href=#设计模式>设计模式</a></li><li><a href=#代码分层>代码分层</a><ul><li><a href=#模块说明>模块说明</a></li></ul></li><li><a href=#命名规范>命名规范</a><ul><li><a href=#约定俗称的惯例>约定俗称的惯例</a></li><li><a href=#类命名>类命名</a></li><li><a href=#方法命名>方法命名</a></li></ul></li><li><a href=#重构技巧>重构技巧</a><ul><li><a href=#提炼方法>提炼方法</a></li><li><a href=#提炼类>提炼类</a></li><li><a href=#分离对象的创建与使用>分离对象的创建与使用</a></li><li><a href=#可访问性最小化>可访问性最小化</a></li><li><a href=#可变性最小化>可变性最小化</a></li></ul></li><li><a href=#质量如何保证>质量如何保证</a><ul><li><a href=#测试驱动开发>测试驱动开发</a></li><li><a href=#tdd的开发周期>TDD的开发周期</a></li><li><a href=#两个基本的原则>两个基本的原则</a></li><li><a href=#分层测试点>分层测试点</a></li></ul></li></ul></nav></div></div><div class="content post__content clearfix"><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p><h3 id=单一职责原则srpsingle-responsibility-principle>单一职责原则(SRP:Single Responsibility Principle)</h3><p>一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。</p><p>假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。</p><h3 id=开放-关闭原则ocpopen-closed-principle>开放-关闭原则(OCP:Open Closed Principle)</h3><p>添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。</p><p>开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。</p><p>很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。</p><p>假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TaxCalculator</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> decimal <span style=color:#a6e22e>Calculate</span>(decimal income, decimal deduction, string country)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        decimal taxAmount <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>        decimal taxableIncome <span style=color:#f92672>=</span> income <span style=color:#f92672>-</span> deduction;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>switch</span> (country)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;India&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//Todo calculation</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;USA&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//Todo calculation </span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;UK&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//Todocalculation</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> taxAmount;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。</p><p>让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。</p><p>根据类图，可以看到通过继承实现横向的扩展，并且不会引发对其他不相关类的修改。这时 TaxCalculator 类中的 Calculate 方法会异常简单：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> decimal <span style=color:#a6e22e>Calculate</span>(CountryTaxCalculator obj)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    decimal taxAmount <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>    taxAmount <span style=color:#f92672>=</span> obj.<span style=color:#a6e22e>CalculateTaxAmount</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> taxAmount;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=里氏替换原则lspliskov-substitution-principle>里氏替换原则(LSP:Liskov Substitution Principle)</h3><p>子类对象（object of subtype/derived class）能够替换程序（program）中父类对象（object of base/parent class）出现的任何地方，并且保证原来程序的逻辑行为（behavior）不变及正确性不被破坏。</p><p>子类可以扩展父类的功能，但不能改变父类原有的功能</p><p>父类中凡是已经实现好的方法（相对于抽象方法而言），实际上是在设定一系列的规范和契约，虽然它不强制要求所有的子类必须遵从这些契约，但是如果子类对这些非抽象方法任意修改，就会对整个继承体系造成破坏。
+接口隔离原则</p><p>调用方不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。接口隔离原则提供了一种判断接口的职责是否单一的标准：通过调用者如何使用接口来间接地判定。如果调用者只使用部分接口或接口的部分功能，那接口的设计就不够职责单一。</p><p>假设你在开发一个大的门户网站，并提供很多定制的功能给终端用户，根据用户的级别，系统提供了不同级别的设定。考虑到这个需求，设计如下类图：</p><p>可以看到，ISettings 接口有 GlobalSettings、SectionSettings 以及 UserSettings 三个不同的实现。GlobalSettings 设置会影响整个应用程序,例如标题、主题等。SectionSettings 适用于门户的各个部分,如新闻、天气、体育等设置。UserSettings 为特定登录用户设置,如电子邮件和通知偏好。</p><p>这样的设计没问题，但如果有另一个需求，系统需要支持游客访问，唯一区别是游客不支持系统的设定，为了满足这个需求，你可能会如下设计：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GuestSettings</span> <span style=color:#f92672>:</span> ISettings
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>GetSettings</span>()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//get settings from database
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>//include guest name、ip address...
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    }
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>SetSettings</span>()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//guests are not allowed set settings
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> NotImplementedException();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>这样没问题吗？准确来说，系统存在隐患。当单独使用 GuestSettings 时，因为我们了解游客不能设置，所以我们潜意识并不会主动调用 SetSettings 方法。但是由于多态，ISettings 接口的实现可以被替换为 GuestSettings 对象，当调用SetSettings 方法时，可能会引发系统异常。</p><p>重构这个功能，拆分为两个不同的接口：IReadableSettings 和 IWritableSettings。子类根据需求实现所需的接口。</p><h3 id=依赖反转原则dipdependence-inversion-principle>依赖反转原则(DIP:Dependence Inversion Principle)</h3><p>高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。</p><p>现在正在开发一个通知系统，当用户改变密码时，邮件通知用户。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>UserManager</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>ChangePassword</span>(string username,string oldpwd,string newpwd)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        EmailNotifier notifier <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> EmailNotifier();
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//add some logic and change password </span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//Notify the user</span>
+</span></span><span style=display:flex><span>        notifier.<span style=color:#a6e22e>Notify</span>(<span style=color:#e6db74>&#34;Password was changed on &#34;</span><span style=color:#f92672>+</span>DateTime.<span style=color:#a6e22e>Now</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>这样的实现在功能上没有问题，但试想一下，新的需求希望通过SNS形式通知用户，那么我们只能手动将EmaiNorifier 替换为 SNSNotifier。在这儿，UserManager 就是高层模块，而EmailNotifier 就是低层模块，他们彼此耦合。我们希望解耦，依赖于抽象 INotifier，也就是面向接口的编程。</p><h3 id=迪米特法则lodlaw-of-demeter>迪米特法则(LOD:Law of Demeter)</h3><p>一个对象应该对其他对象保持最少的了解</p><h3 id=接口隔离原则ispinterface-segregation-principle>接口隔离原则(ISP:Interface Segregation Principle)</h3><p>尽量使用合成/聚合的方式，而不是使用继承。</p><p>单一职责原则告诉我们实现类要职责单一；里氏替换原则告诉我们不要破坏继承体系；依赖倒置原则告诉我们要面向接口编程；接口隔离原则告诉我们在设计接口的时候要精简单一；迪米特法则告诉我们要降低耦合。而开闭原则是总纲，告诉我们要对扩展开放，对修改关闭。
+翻外:谈对象得专(单)一,前任先现任不迁里,若想接结连理不隔离,低耦合迪米法,有福同享有难同当开闭归.</p><hr><h2 id=设计模式>设计模式</h2><p>创建型：主要解决对象的创建问题，封装复杂的创建过程，解耦对象的创建代码和使用代码</p><p>结构型：主要通过类或对象的不同组合，解耦不同功能的耦合</p><p>行为型：主要解决的是类或对象之间的交互行为的耦合</p><table><thead><tr><th>类型</th><th>模式</th><th>说明</th><th>适用场景</th></tr></thead><tbody><tr><td>创建型</td><td>单例</td><td>一个类只允许创建一个实例或对象,并为其提供一个全局的访问点</td><td>无状态/全局唯一/控制资源访问</td></tr><tr><td></td><td>工厂</td><td>创建一个或多个相关的对象,而使用者不用关心具体的实现类</td><td>分离对象的创建和使用</td></tr><tr><td></td><td>建造者</td><td>用于创建一种类型的复杂对象,通过设置不同的可选参数进行“定制化”</td><td>对象的构造参数较多且多数可选</td></tr><tr><td></td><td>原型</td><td>通过复制已有的对象来创建新的对象</td><td>对象的创建成本较大且同一类的不同对象之前差别不大</td></tr><tr><td>结构型</td><td>代理</td><td>不改变原始类和不使用继承的情况下,通过引入代理列来给原始类附加功能</td><td>增加代理访问,比如监控、缓存、限流、事务、RPC</td></tr><tr><td></td><td>装饰型</td><td>不改变原始类的情况下,通过组合的方式使其适配新的借口</td><td>复用现有的类,但与期望的接口不适配</td></tr><tr><td></td><td>桥接</td><td>当类存在多个独立变化的维度时,通过组合的方式使得其可以独立进行扩展</td><td>存在多个维度的继承体系时</td></tr><tr><td></td><td>门面</td><td>为子系统中一组接口定义一个更高层的接口,使得子系统更加容易使用</td><td>解决接口复用性与接口易用性的矛盾</td></tr><tr><td></td><td>组合</td><td>将对象组合成树形结构以表示部分-整体的层次结构,统一单个对和组合对象的处理逻辑</td><td>满足部分与整体这种属性接口</td></tr><tr><td></td><td>享元</td><td>运用共享技术有效的支持大粒度的对象</td><td>当系统存在大量对象时这些对象的很多字段取值范围固定</td></tr><tr><td>行为型</td><td>观察者</td><td>多个观察者监听同一主题对象,当主题对象状态发生变化时通知所有观察者,使它能够自动更新自己</td><td>解耦事件创建者与接收者</td></tr><tr><td></td><td>模版</td><td>定义一个操作中算法的骨架,将某些步骤延迟到子类中</td><td>解决复用与扩展问题</td></tr><tr><td></td><td>策略</td><td>定义一组算法,将每个算法分别封装起来,使得他们可以相互替换</td><td>消除各种if-else分之判断,解耦策略定义、创建、使用</td></tr><tr><td></td><td>状态</td><td>允许一个对象在其内部状态的时候改变其行为</td><td>分离对象的状态与行为</td></tr><tr><td></td><td>访问者</td><td>封装一些作用域某种数据结构中个元素的操作,在不改变数据结构的前提下,定语作用于这些元素的新操作</td><td>分离对象的数据结构域行为</td></tr><tr><td></td><td>迭代器</td><td>提供一种方法顺序访问一个集合对象的各元素的操作,在不改变数据结构的前提下,定义与作用于这些元素的新操作</td><td>分离对象的数据结构域行为</td></tr><tr><td></td><td>职责链</td><td>将一组对象连成一条链,请求沿着该链传递,直到某个对象能够处理它为止</td><td>解耦集合对象的内部表示域遍历访问</td></tr><tr><td></td><td>备忘录</td><td>在不违背封装原则的前提下,捕获一个对象内部状态,并在该对象之外保存这个状态,以便之后恢复对象为先前的状态</td><td>用于对象的备份与恢复</td></tr><tr><td></td><td>命令</td><td>将不同的请求封装成对应的命令对象,对命令的执行进行控制且使用方法透明</td><td>用于控制命令的执行,比如异步、延迟、排队、撤销、存储、</td></tr><tr><td></td><td>解释器</td><td>为某个语言定义它的语法表示,并定义一个解释器来处理这个语法</td><td>用于编译器、规则引擎、正则表达时等特定场景</td></tr><tr><td></td><td>中介</td><td>定义一个单独的中介对象,来封装一组对象之间的交互,避免对象之间的直接交互</td><td>使各个对象不需要显式地互相引用,从而使其耦合算松散</td></tr></tbody></table><h2 id=代码分层>代码分层</h2><hr><h3 id=模块说明>模块说明</h3><ul><li>server_main：配置层，负责整个项目的module管理，maven配置管理、资源管理等；</li><li>server_application：应用接入层，承接外部流量入口，例如：RPC接口实现、消息处理、定时任务等；不要在此包含业务逻辑；</li><li>server_biz：核心业务层，用例服务、领域实体、领域事件等</li><li>server_irepository：资源接口层，负责资源接口的暴露</li><li>server_repository：资源层，负责资源的proxy访问，统一外部资源访问，隔离变化。注意：这里强调的是弱业务性，强数据性；</li><li>server_common：公共层，vo、工具等</li></ul><hr><h2 id=命名规范>命名规范</h2><h3 id=约定俗称的惯例>约定俗称的惯例</h3><table><thead><tr><th>场景</th><th>强约束</th><th>示例</th></tr></thead><tbody><tr><td>项目名</td><td>全部小写,多个单词用划线分割“-”</td><td>spring-cloud</td></tr><tr><td>包名</td><td>全部小写</td><td>com.alibaba.fashjson</td></tr><tr><td>类名/接口名</td><td>单词首字母大写</td><td>ParserConfig,DefaultField</td></tr><tr><td>变量名</td><td>首字母小写,多个单词组成时,除首单词,其他单词首字母大写</td><td>password,userName</td></tr><tr><td>常量名</td><td>全部大写,多个单词用"_&ldquo;分割</td><td>CACHE_EXPIRED_TIME</td></tr><tr><td>方法</td><td>同变量</td><td>read(),redadObject()</td></tr></tbody></table><h3 id=类命名>类命名</h3><blockquote><p>类名使用大驼峰命名形式，类命通常使用名词或名词短语。接口名除了用名词和名词短语以外，还可以使用形容词或形容词短语，如 Cloneable，Callable 等，表示实现该接口的类有某种功能或能力。</p></blockquote><table><thead><tr><th>场景</th><th>约束</th><th>示例</th></tr></thead><tbody><tr><td>抽象类</td><td>Abstract/Base</td><td>BaseUserService</td></tr><tr><td>枚举类</td><td>+Enum</td><td>GenderEnum</td></tr><tr><td>工具类</td><td>+Utils</td><td>StringUtils</td></tr><tr><td>异常类</td><td>+Exception</td><td>RuntimeException</td></tr><tr><td>接口实现类</td><td>+impl</td><td>UserServiceImpl</td></tr><tr><td>设计模式相关类</td><td>Builder,Factory</td><td>ThreadFactory</td></tr><tr><td>处理特定功能类</td><td>Handler,Predicate,Validator</td><td>表示处理器、校验器、断言</td></tr><tr><td>特定层类</td><td>Controller,Service,ServiceImpl,Dao</td><td>UserController,UserServiceImpl</td></tr><tr><td>特定层级的值对象</td><td>Ao,Param,Vo,Config,Message</td><td>Param调用入参数,Ao为thrift返回结果,Vo通用值对象,Config配置类,Message为MQ消息</td></tr><tr><td>测试类</td><td>+Test</td><td>UserServiceTest</td></tr></tbody></table><h3 id=方法命名>方法命名</h3><blockquote><p>方法命名采用小驼峰的形式，首字小写，往后的每个单词首字母都要大写。和类名不同的是，方法命名一般为动词或动词短语，与参数或参数名共同组成动宾短语，即动词 + 名词。一个好的函数名一般能通过名字直接获知该函数实现什么样的功能.</p></blockquote><table><thead><tr><th>场景</th><th>约束</th></tr></thead><tbody><tr><td>返回真伪</td><td>is/can/has/needs/should</td></tr><tr><td>用于检查</td><td>ensure/validate</td></tr><tr><td>按需执行</td><td>ifNeeded/try/OrDefault/Orelse</td></tr><tr><td>数据相关</td><td>get/search/save/update/batchSave</td></tr><tr><td>生命周期</td><td>initialize/pause/stop/destroy</td></tr><tr><td>常用动词</td><td>split/join inject/extract bind/seperate increase/decrease launch/run observe/listen build/publish encode/decode submit/commit push/pull enter/exit expand/collapse encode/decode</td></tr></tbody></table><hr><h2 id=重构技巧>重构技巧</h2><h3 id=提炼方法>提炼方法</h3><p>多个方法代码重复、方法中代码过长或者方法中的语句不在一个抽象层级。
+方法是代码复用的最小粒度，方法过长不利于复用，可读性低，提炼方法往往是重构工作的第一步。</p><h4 id=意图导向编程>意图导向编程：</h4><p>把处理某件事的流程和具体做事的实现方式分开。</p><ul><li>把一个问题分解为一系列功能性步骤，并假定这些功能步骤已经实现</li><li>我们只需把把各个函数组织在一起即可解决这一问题</li><li>在组织好整个功能后，我们在分别实现各个方法函数</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/** 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  * 1、交易信息开始于一串标准ASCII字符串。 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  * 2、这个信息字符串必须转换成一个字符串的数组，数组存放的此次交易的领域语言中所包含的词汇元素（token)。 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  * 3、每一个词汇必须标准化。 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  * 4、包含超过150个词汇元素的交易，应该采用不同于小型交易的方式（不同的算法）来提交，以提高效率。 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  * 5、如果提交成功，API返回”true”；失败，则返回”false”。 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  */</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Transaction</span> {    
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> Boolean <span style=color:#a6e22e>commit</span>(String command) {        
+</span></span><span style=display:flex><span>    Boolean result <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;        
+</span></span><span style=display:flex><span>    String<span style=color:#f92672>[]</span> tokens <span style=color:#f92672>=</span> tokenize(command);        
+</span></span><span style=display:flex><span>    normalizeTokens(tokens);        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (isALargeTransaction(tokens)) {            
+</span></span><span style=display:flex><span>      result <span style=color:#f92672>=</span> processLargeTransaction(tokens);        
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {            
+</span></span><span style=display:flex><span>      result <span style=color:#f92672>=</span> processSmallTransaction(tokens);        
+</span></span><span style=display:flex><span>    }        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> result;    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=以函数对象取代函数>以函数对象取代函数</h4><p>将函数放进一个单独对象中，如此一来局部变量就变成了对象内的字段。然后你可以在同一个对象中将这个大型函数分解为多个小型函数。</p><h4 id=引入参数对象>引入参数对象</h4><p>方法参数比较多时，将参数封装为参数对象</p><h4 id=移除对参数的赋值>移除对参数的赋值</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>discount</span>(<span style=color:#66d9ef>int</span> inputVal, <span style=color:#66d9ef>int</span> quantity, <span style=color:#66d9ef>int</span> yearToDate) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (inputVal <span style=color:#f92672>&gt;</span> 50) inputVal <span style=color:#f92672>-=</span> 2;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (quantity <span style=color:#f92672>&gt;</span> 100) inputVal <span style=color:#f92672>-=</span> 1;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (yearToDate <span style=color:#f92672>&gt;</span> 10000) inputVal <span style=color:#f92672>-=</span> 4;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> inputVal;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>discount</span>(<span style=color:#66d9ef>int</span> inputVal, <span style=color:#66d9ef>int</span> quantity, <span style=color:#66d9ef>int</span> yearToDate) { 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> result <span style=color:#f92672>=</span> inputVal;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (inputVal <span style=color:#f92672>&gt;</span> 50) result <span style=color:#f92672>-=</span> 2; 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (quantity <span style=color:#f92672>&gt;</span> 100) result <span style=color:#f92672>-=</span> 1; 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (yearToDate <span style=color:#f92672>&gt;</span> 10000) result <span style=color:#f92672>-=</span> 4; 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> result; 
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=将查询与修改分离>将查询与修改分离</h4><p>任何有返回值的方法，都不应该有副作用</p><ul><li>不要在convert中调用写操作，避免副作用</li><li>常见的例外：将查询结果缓存到本地</li></ul><h4 id=移除不必要临时变量>移除不必要临时变量</h4><p>临时变量仅使用一次或者取值逻辑成本很低的情况下</p><h4 id=引入解释性变量>引入解释性变量</h4><p>将复杂表达式（或其中一部分）的结果放进一个临时变量，以此变量名称来解释表达式用途</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>if</span> ((platform.<span style=color:#a6e22e>toUpperCase</span>().<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#34;MAC&#34;</span>) <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>1) 
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&amp;&amp;</span> (browser.<span style=color:#a6e22e>toUpperCase</span>().<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#34;IE&#34;</span>) <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>1) <span style=color:#f92672>&amp;&amp;</span> wasInitialized() <span style=color:#f92672>&amp;&amp;</span> resize <span style=color:#f92672>&gt;</span> 0) {   
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// do something </span>
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>final</span> <span style=color:#66d9ef>boolean</span> isMacOs <span style=color:#f92672>=</span> platform.<span style=color:#a6e22e>toUpperCase</span>().<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#34;MAC&#34;</span>) <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>1; 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>final</span> <span style=color:#66d9ef>boolean</span> isIEBrowser <span style=color:#f92672>=</span> browser.<span style=color:#a6e22e>toUpperCase</span>().<span style=color:#a6e22e>indexOf</span>(<span style=color:#e6db74>&#34;IE&#34;</span>) <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>1; 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>final</span> <span style=color:#66d9ef>boolean</span> wasResized <span style=color:#f92672>=</span> resize <span style=color:#f92672>&gt;</span> 0; 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> (isMacOs <span style=color:#f92672>&amp;&amp;</span> isIEBrowser <span style=color:#f92672>&amp;&amp;</span> wasInitialized() <span style=color:#f92672>&amp;&amp;</span> wasResized) {   
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// do something </span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=使用卫语句替代嵌套条件判断>使用卫语句替代嵌套条件判断</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>//未使用卫语句</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>getHello</span>(<span style=color:#66d9ef>int</span> type) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (type <span style=color:#f92672>==</span> 1) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (type <span style=color:#f92672>==</span> 2) {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> (type <span style=color:#f92672>==</span> 3) {
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>            } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>                setHello();
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//使用卫语句</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>getHello</span>(<span style=color:#66d9ef>int</span> type) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (type <span style=color:#f92672>==</span> 1) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (type <span style=color:#f92672>==</span> 2) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (type <span style=color:#f92672>==</span> 3) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    setHello();
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=使用多态替代条件判断断>使用多态替代条件判断断</h4><p>当存在这样一类条件表达式，它根据对象类型的不同选择不同的行为。可以将这种表达式的每个分支放进一个子类内的复写函数中，然后将原始函数声明为抽象函数。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>calculate</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b, String operator) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> result <span style=color:#f92672>=</span> Integer.<span style=color:#a6e22e>MIN_VALUE</span>;
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#e6db74>&#34;add&#34;</span>.<span style=color:#a6e22e>equals</span>(operator)) {
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>=</span> a <span style=color:#f92672>+</span> b;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#e6db74>&#34;multiply&#34;</span>.<span style=color:#a6e22e>equals</span>(operator)) {
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>=</span> a <span style=color:#f92672>*</span> b;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#e6db74>&#34;divide&#34;</span>.<span style=color:#a6e22e>equals</span>(operator)) {
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>=</span> a <span style=color:#f92672>/</span> b;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#e6db74>&#34;subtract&#34;</span>.<span style=color:#a6e22e>equals</span>(operator)) {
+</span></span><span style=display:flex><span>        result <span style=color:#f92672>=</span> a <span style=color:#f92672>-</span> b;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> result;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>当出现大量类型检查和判断时，if else（或switch）语句的体积会比较臃肿，这无疑降低了代码的可读性。 另外，if else（或switch）本身就是一个“变化点”，当需要扩展新的类型时，我们不得不追加if else（或switch）语句块，以及相应的逻辑，这无疑降低了程序的可扩展性，也违反了面向对象的开闭原则。</p><blockquote><p>基于这种场景，我们可以考虑使用“多态”来代替冗长的条件判断，将if else（或switch）中的“变化点”封装到子类中。这样，就不需要使用if else（或switch）语句了，取而代之的是子类多态的实例，从而使得提高代码的可读性和可扩展性。很多设计模式使用都是这种套路，比如策略模式、状态模式。</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>Operation</span> { 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>apply</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b); 
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Addition</span> <span style=color:#66d9ef>implements</span> Operation { 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span> 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>apply</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b) { 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b; 
+</span></span><span style=display:flex><span>  } 
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>OperatorFactory</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>static</span> Map<span style=color:#f92672>&lt;</span>String, Operation<span style=color:#f92672>&gt;</span> operationMap <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashMap<span style=color:#f92672>&lt;&gt;</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>static</span> {
+</span></span><span style=display:flex><span>        operationMap.<span style=color:#a6e22e>put</span>(<span style=color:#e6db74>&#34;add&#34;</span>, <span style=color:#66d9ef>new</span> Addition());
+</span></span><span style=display:flex><span>        operationMap.<span style=color:#a6e22e>put</span>(<span style=color:#e6db74>&#34;divide&#34;</span>, <span style=color:#66d9ef>new</span> Division());
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// more operators</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Operation <span style=color:#a6e22e>getOperation</span>(String operator) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> operationMap.<span style=color:#a6e22e>get</span>(operator);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>calculate</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b, String operator) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (OperatorFactory .<span style=color:#a6e22e>getOperation</span> <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>       <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> IllegalArgumentException(<span style=color:#e6db74>&#34;Invalid Operator&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> OperatorFactory .<span style=color:#a6e22e>getOperation</span>(operator).<span style=color:#a6e22e>apply</span>(a, b);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=使用异常替代返回错误码>使用异常替代返回错误码</h4><p>非正常业务状态的处理，使用抛出异常的方式代替返回错误码</p><ul><li>不要使用异常处理用于正常的业务流程控制<ul><li>异常处理的性能成本非常高</li></ul></li><li>尽量使用标准异常</li><li>避免在finally语句块中抛出异常<ul><li>如果同时抛出两个异常，则第一个异常的调用栈会丢失</li><li>finally块中应只做关闭资源这类的事情</li></ul></li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>//使用错误码</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>withdraw</span>(<span style=color:#66d9ef>int</span> amount) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (balance <span style=color:#f92672>&lt;</span> amount) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        balance <span style=color:#f92672>-=</span> amount;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//使用异常</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>withdraw</span>(<span style=color:#66d9ef>int</span> amount) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (amount <span style=color:#f92672>&gt;</span> balance) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> IllegalArgumentException(<span style=color:#e6db74>&#34;amount too large&#34;</span>);    
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    balance <span style=color:#f92672>-=</span> amount;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=引入断言>引入断言</h4><p>某一段代码需要对程序状态做出某种假设，以断言明确表现这种假设。</p><ul><li>不要滥用断言，不要使用它来检查“应该为真”的条件，只使用它来检查“一定必须为真”的条件</li><li>如果断言所指示的约束条件不能满足，代码是否仍能正常运行？如果可以就去掉断言</li></ul><h4 id=引入null对象或特殊对象>引入Null对象或特殊对象</h4><p>​ 当使用一个方法返回的对象时，而这个对象可能为空，这个时候需要对这个对象进行操作前，需要进行判空，否则就会报空指针。当这种判断频繁的出现在各处代码之中，就会影响代码的美观程度和可读性，甚至增加Bug的几率。</p><p>空引用的问题在Java中无法避免，但可以通过代码编程技巧（引入空对象）来改善这一问题。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>//空对象的例子</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>OperatorFactory</span> { 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>static</span> Map<span style=color:#f92672>&lt;</span>String, Operation<span style=color:#f92672>&gt;</span> operationMap <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashMap<span style=color:#f92672>&lt;&gt;</span>(); 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>static</span> { 
+</span></span><span style=display:flex><span>    operationMap.<span style=color:#a6e22e>put</span>(<span style=color:#e6db74>&#34;add&#34;</span>, <span style=color:#66d9ef>new</span> Addition()); 
+</span></span><span style=display:flex><span>    operationMap.<span style=color:#a6e22e>put</span>(<span style=color:#e6db74>&#34;divide&#34;</span>, <span style=color:#66d9ef>new</span> Division()); 
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// more operators </span>
+</span></span><span style=display:flex><span>  } 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Optional<span style=color:#f92672>&lt;</span>Operation<span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>getOperation</span>(String operator) { 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> Optional.<span style=color:#a6e22e>ofNullable</span>(operationMap.<span style=color:#a6e22e>get</span>(operator)); 
+</span></span><span style=display:flex><span>  } 
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>calculate</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b, String operator) { 
+</span></span><span style=display:flex><span>  Operation targetOperation <span style=color:#f92672>=</span> OperatorFactory.<span style=color:#a6e22e>getOperation</span>(operator) 
+</span></span><span style=display:flex><span>     .<span style=color:#a6e22e>orElseThrow</span>(() <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>new</span> IllegalArgumentException(<span style=color:#e6db74>&#34;Invalid Operator&#34;</span>)); 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> targetOperation.<span style=color:#a6e22e>apply</span>(a, b); 
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//特殊对象的例子</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>InvalidOp</span> <span style=color:#66d9ef>implements</span> Operation { 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span> 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>apply</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b)  { 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> IllegalArgumentException(<span style=color:#e6db74>&#34;Invalid Operator&#34;</span>);
+</span></span><span style=display:flex><span>  } 
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=提炼类>提炼类</h3><p>根据单一职责原则，一个类应该有明确的责任边界。但在实际工作中，类会不断的扩展。当给某个类添加一项新责任时，你会觉得不值得分离出一个单独的类。于是，随着责任不断增加，这个类包含了大量的数据和函数，逻辑复杂不易理解。</p><p>此时你需要考虑将哪些部分分离到一个单独的类中，可以依据高内聚低耦合的原则。如果某些数据和方法总是一起出现，或者某些数据经常同时变化，这就表明它们应该放到一个类中。另一种信号是类的子类化方式：如果你发现子类化只影响类的部分特性，或者类的特性需要以不同方式来子类化，这就意味着你需要分解原来的类。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>//原始类</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Person</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String officeAreaCode;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String officeNumber;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getName</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getTelephoneNumber</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> (<span style=color:#e6db74>&#34;(&#34;</span> <span style=color:#f92672>+</span> officeAreaCode <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;)&#34;</span> <span style=color:#f92672>+</span> officeNumber);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getOfficeAreaCode</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> officeAreaCode;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setOfficeAreaCode</span>(String arg) {
+</span></span><span style=display:flex><span>        officeAreaCode <span style=color:#f92672>=</span> arg;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getOfficeNumber</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> officeNumber;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setOfficeNumber</span>(String arg) {
+</span></span><span style=display:flex><span>        officeNumber <span style=color:#f92672>=</span> arg;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//新提炼的类（以对象替换数据值）</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TelephoneNumber</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String areaCode;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String number;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getTelephnoeNumber</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> (<span style=color:#e6db74>&#34;(&#34;</span> <span style=color:#f92672>+</span> getAreaCode() <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;)&#34;</span> <span style=color:#f92672>+</span> number);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    String <span style=color:#a6e22e>getAreaCode</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> areaCode;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setAreaCode</span>(String arg) {
+</span></span><span style=display:flex><span>        areaCode <span style=color:#f92672>=</span> arg;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    String <span style=color:#a6e22e>getNumber</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> number;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setNumber</span>(String arg) {
+</span></span><span style=display:flex><span>        number <span style=color:#f92672>=</span> arg;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=组合优先于继承>组合优先于继承</h4><p>继承使实现代码重用的有力手段，但这并非总是完成这项工作的最佳工具，使用不当会导致软件变得很脆弱。与方法调用不同的是，继承打破了封装性。子类依赖于其父类中特定功能的实现细节，如果父类的实现随着发行版本的不同而变化，子类可能会遭到破坏，即使他的代码完全没有改变。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// Inappropriate use of inheritance!</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>InstrumentedHashSet</span><span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>extends</span> HashSet<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// The number of attempted element insertions</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>int</span> addCount <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>InstrumentedHashSet</span>() { }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>InstrumentedHashSet</span>(<span style=color:#66d9ef>int</span> initCap, <span style=color:#66d9ef>float</span> loadFactor) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>super</span>(initCap, loadFactor);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>add</span>(E e) {
+</span></span><span style=display:flex><span>        addCount<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>add</span>(e);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>addAll</span>(Collection<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> E<span style=color:#f92672>&gt;</span> c) {
+</span></span><span style=display:flex><span>        addCount <span style=color:#f92672>+=</span> c.<span style=color:#a6e22e>size</span>();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>addAll</span>(c);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>getAddCount</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> addCount;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>通过在新的类中增加一个私有域，它引用现有类的一个实例，这种设计被称为组合，因为现有的类变成了新类的一个组件。这样得到的类将会非常稳固，它不依赖现有类的实现细节。即使现有的类添加了新的方法，也不会影响新的类。许多设计模式使用就是这种套路，比如代理模式、装饰者模式</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// Reusable forwarding class</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ForwardingSet</span><span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>implements</span> Set<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> Set<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> s;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>ForwardingSet</span>(Set<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> s) { <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>s</span> <span style=color:#f92672>=</span> s; }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>size</span>() { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>size</span>(); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>isEmpty</span>() { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>isEmpty</span>(); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>contains</span>(Object o) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>contains</span>(o); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Iterator<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>iterator</span>() { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>iterator</span>(); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Object<span style=color:#f92672>[]</span> <span style=color:#a6e22e>toArray</span>() { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>toArray</span>(); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> T<span style=color:#f92672>[]</span> <span style=color:#a6e22e>toArray</span>(T<span style=color:#f92672>[]</span> a) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>toArray</span>(a); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>add</span>(E e) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>add</span>(e); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>remove</span>(Object o) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>remove</span>(o); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>containsAll</span>(Collection<span style=color:#f92672>&lt;?&gt;</span> c) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>containsAll</span>(c); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>addAll</span>(Collection<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> E<span style=color:#f92672>&gt;</span> c) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>addAll</span>(c); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>retainAll</span>(Collection<span style=color:#f92672>&lt;?&gt;</span> c) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>retainAll</span>(c); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>removeAll</span>(Collection<span style=color:#f92672>&lt;?&gt;</span> c) { <span style=color:#66d9ef>return</span> s.<span style=color:#a6e22e>removeAll</span>(c); }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>clear</span>() { s.<span style=color:#a6e22e>clear</span>(); }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Wrappter class - uses composition in place of inheritance</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>InstrumentedHashSet</span><span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>extends</span> ForwardingSet<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>int</span> addCount <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>InstrumentedHashSet1</span>(Set<span style=color:#f92672>&lt;</span>E<span style=color:#f92672>&gt;</span> s) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>super</span>(s);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>add</span>(E e) {
+</span></span><span style=display:flex><span>        addCount<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>add</span>(e);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>addAll</span>(Collection<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> E<span style=color:#f92672>&gt;</span> c) {
+</span></span><span style=display:flex><span>        addCount <span style=color:#f92672>+=</span> c.<span style=color:#a6e22e>size</span>();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>addAll</span>(c);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>getAddCount</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> addCount;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=继承与组合如何取舍>继承与组合如何取舍</h4><ul><li>只有当子类真正是父类的子类型时，才适合继承。对于两个类A和B，只有两者之间确实存在“is-a”关系的时候，类B才应该继承A</li><li>在包的内部使用继承是非常安全的，子类和父类的实现都处在同一个程序员的控制之下；</li><li>其他情况就应该优先考虑组合的方式来实现</li></ul><h4 id=接口优于抽象类>接口优于抽象类</h4><p>Java提供了两种机制，可以用来定义允许多个实现的类型：接口和抽象类。自从Java8为接口增加缺省方法（default method），这两种机制都允许为实例方法提供实现。主要区别在于，为了实现由抽象类定义的类型，类必须称为抽象类的一个子类。因为Java只允许单继承，所以用抽象类作为类型定义受到了限制。</p><p>​ 接口相比于抽象类的优势:</p><ul><li>现有的类可以很容易被更新，以实现新的接口。</li><li>接口是定义混合类型（比如Comparable）的理想选择。</li><li>接口允许构造非层次结构的类型框架。</li></ul><p>接口虽然提供了缺省方法，但接口仍有有以下局限性：</p><ul><li>接口的变量修饰符只能是public static final的</li><li>接口不存在构造函数，也不存在this</li><li>可以给现有接口增加缺省方法，但不能确保这些方法在之前存在的实现中都能良好运行</li><li>因为这些默认方法是被注入到现有实现中的，它们的实现者并不知道，也没有许可</li></ul><h4 id=为了接口的演化>为了接口的演化</h4><ul><li>java 8 之前我们知道，一个接口的所有方法其子类必须实现（当然，这个子类不是一个抽象类），但是 java 8 之后接口的默认方法可以选择不实现，如上的操作是可以通过编译期编译的。这样就避免了由 Java 7 升级到 Java 8 时项目编译报错了。Java8在核心集合接口中增加了许多新的缺省方法，主要是为了便于使用lambda。</li></ul><h4 id=减少第三方工具类的创建>减少第三方工具类的创建</h4><ul><li>例如在 List 等集合接口中都有一些默认方法，List 接口中默认提供 replaceAll(UnaryOperator)、sort(Comparator)、、spliterator()等默认方法，这些方法在接口内部创建，避免了为了这些方法而专门去创建相应的工具类。</li></ul><h4 id=避免创建基类>避免创建基类</h4><ul><li>Java 8 之前我们可能需要创建一个基类来实现代码复用，而默认方法的出现，可以不必要去创建基类。</li></ul><p><strong>由于接口的局限性和设计目的的不同，接口并不能完全替换抽象类。但是通过对接口提供一个抽象的骨架实现类，可以把接口和抽象类的优点结合起来。</strong> 接口负责定义类型，或许还提供一些缺省方法，而骨架实现类则负责实现除基本类型接口方法之外，剩下的非基本类型接口方法。扩展骨架实现占了实现接口之外的大部分工作。这就是模板方法（Template Method）设计模式。</p><p>接口Protocol：定义了RPC协议层两个主要的方法，export暴露服务和refer引用服务</p><p>抽象类AbstractProtocol：封装了暴露服务之后的Exporter和引用服务之后的Invoker实例，并实现了服务销毁的逻辑</p><p>体实现类XxxProtocol：实现export暴露服务和refer引用服务具体逻辑</p><h4 id=优先考虑泛型>优先考虑泛型</h4><p>声明中具有一个或者多个类型参数（type parameter）的类或者接口，就是泛型（generic）类或者接口。泛型类和接口统称为泛型（generic type）。泛型从Java 5引入，提供了编译时类型安全检测机制。泛型的本质是参数化类型，通过一个参数来表示所操作的数据类型，并且可以限制这个参数的类型范围。泛型的好处就是编译期类型检测，避免类型转换。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 比较三个值并返回最大值</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#f92672>&lt;</span>T <span style=color:#66d9ef>extends</span> Comparable<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;&gt;</span> T <span style=color:#a6e22e>maximum</span>(T x, T y, T z) {   
+</span></span><span style=display:flex><span>  T max <span style=color:#f92672>=</span> x; 
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// 假设x是初始最大值   </span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> ( y.<span style=color:#a6e22e>compareTo</span>( max ) <span style=color:#f92672>&gt;</span> 0 ) {      
+</span></span><span style=display:flex><span>    max <span style=color:#f92672>=</span> y; <span style=color:#75715e>//y 更大  </span>
+</span></span><span style=display:flex><span>  }   <span style=color:#66d9ef>if</span> ( z.<span style=color:#a6e22e>compareTo</span>( max ) <span style=color:#f92672>&gt;</span> 0 ) {     
+</span></span><span style=display:flex><span>    max <span style=color:#f92672>=</span> z; <span style=color:#75715e>// 现在 z 更大              </span>
+</span></span><span style=display:flex><span>  }   <span style=color:#66d9ef>return</span> max; <span style=color:#75715e>// 返回最大对象</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>( String args<span style=color:#f92672>[]</span> ) {   
+</span></span><span style=display:flex><span>  System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>printf</span>( <span style=color:#e6db74>&#34;%d, %d 和 %d 中最大的数为 %d\n\n&#34;</span>,  3, 4, 5, maximum( 3, 4, 5 ));   
+</span></span><span style=display:flex><span>  System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>printf</span>( <span style=color:#e6db74>&#34;%.1f, %.1f 和 %.1f 中最大的数为 %.1f\n\n&#34;</span>,  6.<span style=color:#a6e22e>6</span>, 8.<span style=color:#a6e22e>8</span>, 7.<span style=color:#a6e22e>7</span>,  maximum( 6.<span style=color:#a6e22e>6</span>, 8.<span style=color:#a6e22e>8</span>, 7.<span style=color:#a6e22e>7</span> ));   
+</span></span><span style=display:flex><span>  System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>printf</span>( <span style=color:#e6db74>&#34;%s, %s 和 %s 中最大的数为 %s\n&#34;</span>,<span style=color:#e6db74>&#34;pear&#34;</span>, <span style=color:#e6db74>&#34;apple&#34;</span>, <span style=color:#e6db74>&#34;orange&#34;</span>, maximum( <span style=color:#e6db74>&#34;pear&#34;</span>, <span style=color:#e6db74>&#34;apple&#34;</span>, <span style=color:#e6db74>&#34;orange&#34;</span> ) );
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=不要使用原生态类型>不要使用原生态类型</h4><p>由于为了保持Java代码的兼容性，支持和原生态类型转换，并使用擦除机制实现的泛型。但是使用原生态类型就会失去泛型的优势，会受到编译器警告。</p><h4 id=要尽可能地消除每一个非受检警告>要尽可能地消除每一个非受检警告</h4><p>每一条警告都表示可能在运行时抛出ClassCastException异常。要尽最大的努力去消除这些警告。如果无法消除但是可以证明引起警告的代码是安全的，就可以在尽可能小的范围中，使用＠SuppressWarnings(&ldquo;unchecked&rdquo;)注解来禁止警告，但是要把禁止的原因记录下来。</p><h4 id=利用有限制通配符来提升api的灵活性>利用有限制通配符来提升API的灵活性</h4><p>参数化类型不支持协变的，即对于任何两个不同的类型Type1和Type2而言，List既不是List的子类型，也不是它的超类。为了解决这个问题，提高灵活性，Java提供了一种特殊的参数化类型，称作有限制的通配符类型，即List&lt;? extends E>和List&lt;? super E>。使用原则是producer-extends，consumer-super（PECS）。如果即是生产者，又是消费者，就没有必要使用通配符了。</p><p>还有一种特殊的无限制通配符List，表示某种类型但不确定。常用作泛型的引用，不可向其添加除Null以外的任何对象。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>//List&lt;? extends E&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Number 可以认为 是Number 的 &#34;子类&#34;</span>
+</span></span><span style=display:flex><span>List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> Number<span style=color:#f92672>&gt;</span> numberArray <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Number<span style=color:#f92672>&gt;</span>(); 
+</span></span><span style=display:flex><span><span style=color:#75715e>// Integer 是 Number 的子类</span>
+</span></span><span style=display:flex><span>List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> Number<span style=color:#f92672>&gt;</span> numberArray <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Integer<span style=color:#f92672>&gt;</span>(); 
+</span></span><span style=display:flex><span><span style=color:#75715e>// Double 是 Number 的子类</span>
+</span></span><span style=display:flex><span>List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> Number<span style=color:#f92672>&gt;</span> numberArray <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Double<span style=color:#f92672>&gt;</span>();  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//List&lt;? super E&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Integer 可以认为是 Integer 的 &#34;父类&#34;</span>
+</span></span><span style=display:flex><span>List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>super</span> Integer<span style=color:#f92672>&gt;</span> array <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Integer<span style=color:#f92672>&gt;</span>();<span style=color:#960050;background-color:#1e0010>、</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Number 是 Integer 的 父类</span>
+</span></span><span style=display:flex><span>List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>super</span> Integer<span style=color:#f92672>&gt;</span> array <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Number<span style=color:#f92672>&gt;</span>();
+</span></span><span style=display:flex><span><span style=color:#75715e>// Object 是 Integer 的 父类</span>
+</span></span><span style=display:flex><span>List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>super</span> Integer<span style=color:#f92672>&gt;</span> array <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;</span>Object<span style=color:#f92672>&gt;</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>copy</span>(List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>super</span> T<span style=color:#f92672>&gt;</span> dest, List<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> T<span style=color:#f92672>&gt;</span> src) {    
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>int</span> srcSize <span style=color:#f92672>=</span> src.<span style=color:#a6e22e>size</span>();    
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (srcSize <span style=color:#f92672>&gt;</span> dest.<span style=color:#a6e22e>size</span>())        
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> IndexOutOfBoundsException(<span style=color:#e6db74>&#34;Source does not fit in dest&#34;</span>);    
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (srcSize <span style=color:#f92672>&lt;</span> COPY_THRESHOLD <span style=color:#f92672>||</span> (src <span style=color:#66d9ef>instanceof</span> RandomAccess <span style=color:#f92672>&amp;&amp;</span> dest <span style=color:#66d9ef>instanceof</span> RandomAccess)) {        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i<span style=color:#f92672>=</span>0; i<span style=color:#f92672>&lt;</span>srcSize; i<span style=color:#f92672>++</span>)            
+</span></span><span style=display:flex><span>    dest.<span style=color:#a6e22e>set</span>(i, src.<span style=color:#a6e22e>get</span>(i));    
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> {        
+</span></span><span style=display:flex><span>    ListIterator<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>super</span> T<span style=color:#f92672>&gt;</span> di<span style=color:#f92672>=</span>dest.<span style=color:#a6e22e>listIterator</span>();        
+</span></span><span style=display:flex><span>    ListIterator<span style=color:#f92672>&lt;?</span> <span style=color:#66d9ef>extends</span> T<span style=color:#f92672>&gt;</span> si<span style=color:#f92672>=</span>src.<span style=color:#a6e22e>listIterator</span>();        
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i<span style=color:#f92672>=</span>0; i<span style=color:#f92672>&lt;</span>srcSize; i<span style=color:#f92672>++</span>) {            
+</span></span><span style=display:flex><span>      di.<span style=color:#a6e22e>next</span>();            
+</span></span><span style=display:flex><span>      di.<span style=color:#a6e22e>set</span>(si.<span style=color:#a6e22e>next</span>());        
+</span></span><span style=display:flex><span>    }    
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=静态成员类优于非静态成员类>静态成员类优于非静态成员类</h4><p>嵌套类（nested class）是指定义在另一个类的内部的类。<strong>嵌套类存在的目的只是为了它的外部类提供服务，如果其他的环境也会用到的话，应该成为一个顶层类（top-level class）。</strong> 嵌套类有四种：静态成员类（static member class）、非静态成员类（nonstatic member class）、匿名类（anonymous class）和 局部类（local class）。除了第一种之外，其他三种都称为内部类（inner class）。</p><h5 id=匿名类anonymous-class>匿名类（anonymous class）</h5><p>没有名字，声明的同时进行实例化，只能使用一次。当出现在非静态的环境中，会持有外部类实例的引用。通常用于创建函数对象和过程对象，不过现在会优先考虑lambda</p><h5 id=局部类local-class>局部类（local class）</h5><p>任何可以声明局部变量的地方都可以声明局部类，同时遵循同样的作用域规则。跟匿名类不同的是，有名字可以重复使用。不过实际很少使用局部类。</p><h5 id=静态成员类static-member-class>静态成员类（static member class）</h5><p>简单的一种嵌套类，声明在另一个类的内部，是这个类的静态成员，遵循同样的可访问性规则。常见的用法是作为公有的辅助类，只有与它的外部类一起使用才有意义</p><h5 id=非静态成员类nonstatic-member-class>非静态成员类（nonstatic member class）</h5><p>尽管语法上，跟静态成员类的唯一区别就是类的声明不包含static，但两者有很大的不同。非静态成员类的每个实例都隐含地与外部类的实例相关联，可以访问外部类的成员属性和方法。另外必须先创建外部类的实例之后才能创建非静态成员类的实例。</p><p>总而言之，这四种嵌套类都有自己的用途。假设这个嵌套类属于一个方法的内部，如果只需要在一个地方创建实例，并且已经有了一个预置的类型可以说明这个类的特征，就要把它做成匿名类。如果一个嵌套类需要在单个方法之外仍然可见，或者它太长了，不适合放在方法内部，就应该使用成员类。如果成员类的每个实例都需要一个指向其外围实例的引用，就要把成员类做成非静态的，否则就做成静态的。</p><h4 id=优先使用模板工具类>优先使用模板/工具类</h4><p>通过对常见场景的代码逻辑进行抽象封装，形成相应的模板工具类，可以大大减少重复代码，专注于业务逻辑，提高代码质量。</p><h3 id=分离对象的创建与使用>分离对象的创建与使用</h3><p>面向对象编程相对于面向过程，多了实例化这一步，而对象的创建必须要指定具体类型。我们常见的做法是“哪里用到，就在哪里创建”，使用实例和创建实例的是同一段代码。这似乎使代码更具有可读性，但是某些情况下造成了不必要的耦合。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BusinessObject</span> {
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> actionMethond {
+</span></span><span style=display:flex><span>     <span style=color:#75715e>//Other things</span>
+</span></span><span style=display:flex><span>     Service myServiceObj <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Service();
+</span></span><span style=display:flex><span>       myServiceObj.<span style=color:#a6e22e>doService</span>();
+</span></span><span style=display:flex><span>       <span style=color:#75715e>//Other things</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BusinessObject</span> {
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> actionMethond {
+</span></span><span style=display:flex><span>     <span style=color:#75715e>//Other things</span>
+</span></span><span style=display:flex><span>     Service myServiceObj <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ServiceImpl();
+</span></span><span style=display:flex><span>       myServiceObj.<span style=color:#a6e22e>doService</span>();
+</span></span><span style=display:flex><span>       <span style=color:#75715e>//Other things</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><blockquote><p>对象的创建者耦合的是对象的具体类型，而对象的使用者耦合的是对象的接口。也就是说，创建者关心的是这个对象是什么，而使用者关心的是它能干什么。这两者应该视为独立的考量，它们往往会因为不同的原因而改变。</p></blockquote><p>对象的创建者耦合的是对象的具体类型，而对象的使用者耦合的是对象的接口。也就是说，创建者关心的是这个对象是什么，而使用者关心的是它能干什么。这两者应该视为独立的考量，它们往往会因为不同的原因而改变。</p><h3 id=可访问性最小化>可访问性最小化</h3><p>区分一个组件设计得好不好，一个很重要的因素在于，它对于外部组件而言，是否隐藏了其内部数据和实现细节。Java提供了访问控制机制来决定类、接口和成员的可访问性。实体的可访问性由该实体声明所在的位置，以及该实体声明中所出现的访问修饰符（private、protected、public）共同决定的。</p><p>对于顶层的（非嵌套的）类和接口，只有两种的访问级别：包级私有的（没有public修饰）和公有的（public修饰）。</p><p>对于成员（实例/域、方法、嵌套类和嵌套接口）由四种的访问级别，可访问性如下递增：</p><ul><li><p>私有的（private修饰）&ndash;只有在声明该成员的顶层类内部才可以访问这个成员</p></li><li><p>包级私有的（默认）&ndash;声明该成员的包内部的任何类都可以访问这个成员；</p></li><li><p>受保护的（protected修饰）&ndash;声明该成员的类的子类可以访问这个成员，并且声明该成员的包内部的任何类也可以访问这个成员；</p></li><li><p>公有的（public修饰）&ndash;在任何地方都可以访问该成员；</p></li></ul><p>正确地使用这些修饰符对于实现信息隐藏是非常关键的，原则就是：尽可能地使每个类和成员不被外界访问（私有或包级私有）。这样好处就是在以后的发行版本中，可以对它进行修改、替换或者删除，而无须担心会影响现有的客户端程序。</p><ul><li><p>如果类或接口能够做成包级私有的，它就应该被做成包级私有的；</p></li><li><p>如果一个包级私有的顶层类或接口只是在某一个类的内部被用到，就应该考虑使它成为那个类的私有嵌套类</p></li><li><p>如果一个包级私有的顶层类或接口只是在某一个类的内部被用到，就应该考虑使它成为那个类的私有嵌套类</p></li><li><p>确定了类的公有API之后，应该把其他的成员都变成私有的；</p></li><li><p>如果同一个包下的类之间存在比较多的访问时，就要考虑重新设计以减少这种耦合；</p><h3 id=可变性最小化>可变性最小化</h3><p>不可变类是指其实例不能被修改的类。每个实例中包含的所有信息都必须在创建该实例时提供，并在对象的整个生命周期内固定不变。不可变类好处就是简单易用、线程安全、可自由共享而不容易出错。Java平台类库中包含许多不可变的类，比如String、基本类型包装类、BigDecimal等。</p><p><strong>为了使类成为不可变，要遵循下面五条规则：</strong></p><ul><li>声明所有的域都是私有的</li><li>声明所有的域都是final的</li><li><em>如果一个指向新创建实例的引用在缺乏同步机制的情况下，从一个线程被传递到另一个线程，就必须确保正确的行为</em></li><li>不提供任何会修改对象状态的方法</li><li>保证类不会被扩展（防止子类化，类声明为final）</li><li><em>防止粗心或者恶意的子类假装对象的状态已经改变，从而破坏该类的不可变行为</em></li><li>确保对任何可变组件的互斥访问</li><li><em>如果类具有指向可变对象的域，则必须确保该类的客户端无法获得指向这些对象的引用。并且，永远不要用客户端提供的对象引用来初始化这样的域，也不要从任何访问方法中返回该对象引用。在构造器、访问方法和readObject 方法中使用保护性拷贝技术</em></li></ul><h5 id=可变性最小化的一些建议><strong>可变性最小化的一些建议</strong></h5><ul><li>除非有很好的理由要让类成为可变的类，否则它就应该是不可变的；</li><li>如果类不能被做成不可变的，仍然应该尽可能地限制它的可变性；</li><li>除非有令人信服的理由要使域变成非final的，否则要使每个域都是private final的；</li><li>构造器应该创建完全初始化的对象，并建立起所有的约束关系；</li></ul></li></ul><hr><h2 id=质量如何保证>质量如何保证</h2><h3 id=测试驱动开发>测试驱动开发</h3><p>测试驱动开发（TDD）要求以测试作为开发过程的中心，要求在编写任何代码之前，首先编写用于产码行为的测试，而编写的代码又要以使测试通过为目标。TDD要求测试可以完全自动化地运行，并在对代码重构前后必须运行测试。</p><p>TDD的最终目标是整洁可用的代码（clean code that works）。大多数的开发者大部分时间无法得到整洁可用的代码。办法是分而治之。首先解决目标中的“可用”问题，然后再解决“代码的整洁”问题。这与体系结构驱动（architecture-driven）的开发相反。</p><p>用TDD另一个好处就是让我们拥有一套伴随代码产生的详尽的自动化测试集。将来无论出于任何原因（需求、重构、性能改进）需要对代码进行维护时，在这套测试集的驱动下工作，我们代码将会一直是健壮的。</p><h3 id=tdd的开发周期>TDD的开发周期</h3><p>添加一个测试 -> 运行所有测试并检查测试结果 -> 编写代码以通过测试 -> 运行所有测试且全部通过 -> 重构代码，以消除重复设计，优化设计结构</p><h3 id=两个基本的原则>两个基本的原则</h3><ul><li>仅在测试失败时才编写代码并且只编写刚好使测试通过的代码</li><li>编写下一个测试之前消除现有的重复设计，优化设计结构</li></ul><p>关注点分离是这两条规则隐含的另一个非常重要的原则。其表达的含义指在编码阶段先达到代码“可用”的目标，在重构阶段再追求“整洁”目标，每次只关注一件</p><h3 id=分层测试点>分层测试点</h3><table><thead><tr><th>测试类型</th><th>目标</th><th>测试和结果判定</th></tr></thead><tbody><tr><td>Dao测试</td><td>验证mybaits-config、mapper、handler的正确型</td><td>基于内存数据库可以使用assert验证</td></tr><tr><td>Adapter</td><td>验证外部依赖交互正确验证converter正确</td><td>依赖外部环境,正确型依赖人工判读</td></tr><tr><td>Repository测试</td><td>验证内部计算、转换逻辑</td><td>可使用mock外部依赖和assert验证</td></tr><tr><td>biz层测试</td><td>验证内部业务逻辑</td><td>尽可能隔离所有外部依赖,需要多个测试,每个测试验证一个场景或分支</td></tr><tr><td>Application</td><td>验证入口参数正确处理,验证系统内部链路无阻塞</td><td>可以隔离外部依赖,场景覆盖通过参数控制,可以使用单部调试观察代码执行走向</td></tr></tbody></table><hr><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p></div><div class="post__tags tags clearfix"><svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373.0-.74-.24-1-.5L1 8A2.853 2.853.0 01.3 7C.113 6.55.0 5.973.0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034.0 1.4.0h4.2c.373.0.95.113 1.4.3s.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5.0 100-3 1.5 1.5.0 000 3z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/java/ rel=tag>java</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ rel=tag>设计模式</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="wu guojun avatar" src=/img/blowizer.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About wu guojun</span></div><div class=authorbox__description>北京牛马，高级 CV工程狮</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--prev"><a class=post-nav__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/ rel=prev><span class=post-nav__caption>«&#8201;Previous</span><p class=post-nav__post-title>剑法篇</p></a></div><div class="post-nav__item post-nav__item--next"><a class=post-nav__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-c%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/ rel=next><span class=post-nav__caption>Next&#8201;»</span><p class=post-nav__post-title>剑法篇</p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2025 补漏砖匠.
+<span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>
