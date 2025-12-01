@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on 补漏砖匠</title><link>/tags/AI/</link><description>Recent content in AI on 补漏砖匠</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
+单选题（每题 1 分），请在四个选项中选择 1 个最符合题意 的答案。
+核心语法与运行时 Local Variable 的描述，哪项正确？
+A. 局部变量可以使用 public/private 修饰。
+B. 局部变量存储在堆（Heap）。
+C. 局部变量在定义时必须初始化，否则编译失败。
+D. 局部变量具有默认值，例如引用类型默认为 null。
+try-catch-finally 中执行 System.exit(0)，finally 会执行吗？
+A. 不会，System.exit(0) 直接终止 JVM，finally 被跳过。
+B. 只有 try 未抛异常才执行。
+C. 会，finally 总会执行。
+D. 取决于 catch 是否捕获 RuntimeException。
+并发与集合 以下哪一个集合在并发场景下性能优于 Hashtable？
+A. TreeMap
+B. ConcurrentHashMap
+C. Hashtable
+D. LinkedHashMap
+创建并启动线程，推荐方式是？
+A. 实现 Runnable 接口。
+B. 实现 Callable 接口。
+C. 继承 Thread 类。
+D. 实现 Serializable 接口。</description></item></channel></rss>

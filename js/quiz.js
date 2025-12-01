@@ -1,0 +1,200 @@
+// 答题系统 JavaScript
+(function() {
+  'use strict';
+
+  function bindQuizContainer(container) {
+    if (!container || container.dataset.quizBound === 'true') return;
+    container.dataset.quizBound = 'true';
+
+    const submitBtn = container.querySelector('.quiz-submit');
+    const showAnswerBtn = container.querySelector('.quiz-show-answer');
+    const resetBtn = container.querySelector('.quiz-reset');
+    const options = container.querySelectorAll('.quiz-option');
+    const resultDiv = container.querySelector('.quiz-result');
+    const explanationDiv = container.querySelector('.quiz-explanation');
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function() {
+        const correctAnswer = this.getAttribute('data-correct');
+        const selectedOption = container.querySelector('input[type="radio"]:checked');
+
+        if (!selectedOption) {
+          alert('请先选择一个答案！');
+          return;
+        }
+
+        const selectedValue = selectedOption.value;
+        const isCorrect = selectedValue === correctAnswer;
+
+        showResult(container, isCorrect, correctAnswer);
+        markOptions(options, selectedValue, correctAnswer);
+        showExplanation(container, selectedOption, correctAnswer);
+
+        submitBtn.disabled = true;
+        if (showAnswerBtn) {
+          showAnswerBtn.disabled = true;
+        }
+      });
+    }
+
+    if (showAnswerBtn) {
+      showAnswerBtn.addEventListener('click', function() {
+        const correctAnswer = this.getAttribute('data-correct');
+        showResult(container, true, correctAnswer, true);
+        markOptions(options, null, correctAnswer);
+        showAllExplanations(container, options, correctAnswer);
+
+        this.disabled = true;
+        if (submitBtn) {
+          submitBtn.disabled = true;
+        }
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        options.forEach(option => {
+          const radio = option.querySelector('input[type="radio"]');
+          if (radio) radio.checked = false;
+          option.classList.remove('correct', 'incorrect');
+        });
+
+        if (resultDiv) {
+          resultDiv.classList.remove('show', 'correct', 'incorrect');
+          resultDiv.textContent = '';
+        }
+
+        if (explanationDiv) {
+          explanationDiv.classList.remove('show');
+          explanationDiv.innerHTML = '';
+        }
+
+        if (submitBtn) submitBtn.disabled = false;
+        if (showAnswerBtn) showAnswerBtn.disabled = false;
+      });
+    }
+
+    options.forEach(option => {
+      option.addEventListener('click', function(e) {
+        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'LABEL') {
+          const radio = this.querySelector('input[type="radio"]');
+          if (radio) {
+            radio.checked = true;
+            radio.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        }
+      });
+    });
+  }
+
+  function initQuiz(root) {
+    let containers = [];
+    if (!root || root === document) {
+      containers = document.querySelectorAll('.quiz-container');
+    } else if (root.classList && root.classList.contains('quiz-container')) {
+      containers = [root];
+    } else if (root.querySelectorAll) {
+      containers = root.querySelectorAll('.quiz-container');
+    }
+    containers.forEach(bindQuizContainer);
+  }
+  
+  // 显示结果
+  function showResult(container, isCorrect, correctAnswer, isShowAnswer) {
+    const resultDiv = container.querySelector('.quiz-result');
+    if (!resultDiv) return;
+    
+    resultDiv.classList.add('show');
+    resultDiv.classList.remove('correct', 'incorrect');
+    
+    if (isCorrect) {
+      resultDiv.classList.add('correct');
+      resultDiv.innerHTML = '<span class="quiz-result-icon">✓</span>回答正确！';
+    } else {
+      resultDiv.classList.add('incorrect');
+      if (isShowAnswer) {
+        resultDiv.innerHTML = '<span class="quiz-result-icon">✓</span>正确答案是：' + correctAnswer;
+      } else {
+        resultDiv.innerHTML = '<span class="quiz-result-icon">✗</span>回答错误！正确答案是：' + correctAnswer;
+      }
+    }
+  }
+  
+  // 标记选项
+  function markOptions(options, selectedValue, correctAnswer) {
+    options.forEach(option => {
+      const value = option.getAttribute('data-value');
+      option.classList.remove('correct', 'incorrect');
+      
+      if (value === correctAnswer) {
+        option.classList.add('correct');
+      } else if (value === selectedValue && selectedValue !== correctAnswer) {
+        option.classList.add('incorrect');
+      }
+    });
+  }
+  
+  // 显示解释
+  function showExplanation(container, selectedOption, correctAnswer) {
+    const explanationDiv = container.querySelector('.quiz-explanation');
+    if (!explanationDiv) return;
+    
+    const selectedOptionDiv = selectedOption.closest('.quiz-option');
+    const selectedExplanation = selectedOptionDiv ? selectedOptionDiv.getAttribute('data-explanation') : '';
+    
+    const correctOption = container.querySelector(`.quiz-option[data-value="${correctAnswer}"]`);
+    const correctExplanation = correctOption ? correctOption.getAttribute('data-explanation') : '';
+    
+    let html = '<div class="quiz-explanation-title">📖 解析：</div>';
+    
+    if (selectedOption.value === correctAnswer) {
+      if (correctExplanation) {
+        html += '<div class="quiz-explanation-content">' + correctExplanation + '</div>';
+      }
+    } else {
+      if (selectedExplanation) {
+        html += '<div class="quiz-explanation-content"><strong>您选择的选项：</strong>' + selectedExplanation + '</div>';
+      }
+      if (correctExplanation) {
+        html += '<div class="quiz-explanation-content" style="margin-top: 0.5em;"><strong>正确答案：</strong>' + correctExplanation + '</div>';
+      }
+    }
+    
+    explanationDiv.innerHTML = html;
+    explanationDiv.classList.add('show');
+  }
+  
+  // 显示所有解释
+  function showAllExplanations(container, options, correctAnswer) {
+    const explanationDiv = container.querySelector('.quiz-explanation');
+    if (!explanationDiv) return;
+    
+    let html = '<div class="quiz-explanation-title">📖 解析：</div>';
+    
+    options.forEach(option => {
+      const value = option.getAttribute('data-value');
+      const explanation = option.getAttribute('data-explanation');
+      
+      if (explanation) {
+        const isCorrect = value === correctAnswer;
+        const prefix = isCorrect ? '<strong style="color: #27ae60;">✓ ' + value + '（正确答案）：</strong>' : '<strong>' + value + '：</strong>';
+        html += '<div class="quiz-explanation-content" style="margin-top: 0.5em;">' + prefix + explanation + '</div>';
+      }
+    });
+    
+    explanationDiv.innerHTML = html;
+    explanationDiv.classList.add('show');
+  }
+  
+  // 页面加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initQuiz);
+  } else {
+    initQuiz();
+  }
+
+  window.QuizApp = window.QuizApp || {};
+  window.QuizApp.init = initQuiz;
+  window.QuizApp.bindContainer = bindQuizContainer;
+})();
+
