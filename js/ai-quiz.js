@@ -14,13 +14,16 @@
 
       if (!button || !endpoint || !resultsEl) return;
 
+      initFloatingButton(button);
+
       button.addEventListener('click', async function () {
         button.disabled = true;
         setStatus(statusEl, '正在生成考题，请稍候…');
 
         try {
           const payload = await requestQuiz(endpoint);
-          const content = payload?.data?.answer?.result?.output?.content;
+          const content = payload?.data?.answer;
+          console.log(content);
           if (!content) {
             throw new Error('后端未返回考题内容');
           }
@@ -34,6 +37,80 @@
         }
       });
     });
+  }
+
+  function initFloatingButton(button) {
+    if (!button || button.dataset.draggable === 'true') return;
+    button.dataset.draggable = 'true';
+
+    let isDragging = false;
+    let dragMoved = false;
+    let startX = 0;
+    let startY = 0;
+    let startLeft = 0;
+    let startTop = 0;
+    let suppressClick = false;
+
+    const onPointerDown = (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      isDragging = true;
+      dragMoved = false;
+      button.classList.add('is-dragging');
+      // 开始拖动时，去掉 transform，改用 left/top 绝对定位，避免位置跳动
+      button.style.transform = 'none';
+      startX = event.clientX;
+      startY = event.clientY;
+      const rect = button.getBoundingClientRect();
+      startLeft = rect.left;
+      startTop = rect.top;
+      button.setPointerCapture?.(event.pointerId);
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
+    };
+
+    const onPointerMove = (event) => {
+      if (!isDragging) return;
+      dragMoved = true;
+      event.preventDefault();
+      const deltaX = event.clientX - startX;
+      const deltaY = event.clientY - startY;
+      const maxLeft = window.innerWidth - button.offsetWidth;
+      const maxTop = window.innerHeight - button.offsetHeight;
+      const nextLeft = clamp(startLeft + deltaX, 0, Math.max(0, maxLeft));
+      const nextTop = clamp(startTop + deltaY, 0, Math.max(0, maxTop));
+      button.style.left = `${nextLeft}px`;
+      button.style.top = `${nextTop}px`;
+      button.style.right = 'auto';
+      button.style.bottom = 'auto';
+    };
+
+    const onPointerUp = (event) => {
+      if (!isDragging) return;
+      isDragging = false;
+      button.classList.remove('is-dragging');
+      button.releasePointerCapture?.(event.pointerId);
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+      if (dragMoved) {
+        suppressClick = true;
+        dragMoved = false;
+        setTimeout(() => {
+          suppressClick = false;
+        }, 0);
+      }
+    };
+
+    button.addEventListener('pointerdown', onPointerDown);
+    button.addEventListener('click', (event) => {
+      if (suppressClick) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    }, true);
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
   }
 
   async function requestQuiz(endpoint) {
@@ -165,15 +242,6 @@
       optionDiv.dataset.value = option.value || '';
       optionDiv.dataset.explanation = option.explanation || '';
 
-      const input = document.createElement('input');
-      input.type = 'radio';
-      input.name = container.id;
-      input.id = `${container.id}-${option.value}`;
-      input.value = option.value;
-
-      const label = document.createElement('label');
-      label.setAttribute('for', input.id);
-
       const labelSpan = document.createElement('span');
       labelSpan.className = 'quiz-option-label';
       labelSpan.textContent = `${option.value || ''}.`;
@@ -182,10 +250,8 @@
       textSpan.className = 'quiz-option-text';
       textSpan.innerHTML = option.content || '';
 
-      label.appendChild(labelSpan);
-      label.appendChild(textSpan);
-      optionDiv.appendChild(input);
-      optionDiv.appendChild(label);
+      optionDiv.appendChild(labelSpan);
+      optionDiv.appendChild(textSpan);
       optionsWrap.appendChild(optionDiv);
     });
 

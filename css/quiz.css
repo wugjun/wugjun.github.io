@@ -32,25 +32,14 @@
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
 }
 
 .quiz-option:hover {
   border-color: #3498db;
   background-color: #f0f8ff;
   transform: translateX(5px);
-}
-
-.quiz-option input[type="radio"] {
-  margin-right: 0.8em;
-  cursor: pointer;
-}
-
-.quiz-option label {
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-  margin: 0;
-  width: 100%;
 }
 
 .quiz-option-label {
@@ -65,12 +54,8 @@
   line-height: 1.6;
 }
 
-/* 选中状态 */
-.quiz-option input[type="radio"]:checked + label {
-  color: #2980b9;
-}
-
-.quiz-option:has(input[type="radio"]:checked) {
+/* 选中状态（通过 JS 添加 .selected 类） */
+.quiz-option.selected {
   border-color: #3498db;
   background-color: #e8f4f8;
 }
@@ -281,6 +266,22 @@
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+}
+
+/* 悬浮的 AI 考题按钮（默认固定在视口右侧中间） */
+.ai-quiz-floating-button {
+  position: fixed;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  cursor: grab;
+}
+
+.ai-quiz-floating-button.is-dragging {
+  cursor: grabbing;
+  transition: none;
 }
 
 .ai-quiz-item {

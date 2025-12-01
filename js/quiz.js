@@ -16,19 +16,19 @@
     if (submitBtn) {
       submitBtn.addEventListener('click', function() {
         const correctAnswer = this.getAttribute('data-correct');
-        const selectedOption = container.querySelector('input[type="radio"]:checked');
+        const selectedOptionDiv = container.querySelector('.quiz-option.selected');
 
-        if (!selectedOption) {
+        if (!selectedOptionDiv) {
           alert('请先选择一个答案！');
           return;
         }
 
-        const selectedValue = selectedOption.value;
+        const selectedValue = selectedOptionDiv.getAttribute('data-value');
         const isCorrect = selectedValue === correctAnswer;
 
         showResult(container, isCorrect, correctAnswer);
         markOptions(options, selectedValue, correctAnswer);
-        showExplanation(container, selectedOption, correctAnswer);
+        showExplanation(container, selectedOptionDiv, correctAnswer);
 
         submitBtn.disabled = true;
         if (showAnswerBtn) {
@@ -54,9 +54,7 @@
     if (resetBtn) {
       resetBtn.addEventListener('click', function() {
         options.forEach(option => {
-          const radio = option.querySelector('input[type="radio"]');
-          if (radio) radio.checked = false;
-          option.classList.remove('correct', 'incorrect');
+          option.classList.remove('correct', 'incorrect', 'selected');
         });
 
         if (resultDiv) {
@@ -75,14 +73,10 @@
     }
 
     options.forEach(option => {
-      option.addEventListener('click', function(e) {
-        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'LABEL') {
-          const radio = this.querySelector('input[type="radio"]');
-          if (radio) {
-            radio.checked = true;
-            radio.dispatchEvent(new Event('change', { bubbles: true }));
-          }
-        }
+      option.addEventListener('click', function() {
+        // 单选效果：同一题目中只保留一个选中项
+        options.forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
       });
     });
   }
@@ -135,19 +129,20 @@
   }
   
   // 显示解释
-  function showExplanation(container, selectedOption, correctAnswer) {
+  function showExplanation(container, selectedOptionDiv, correctAnswer) {
     const explanationDiv = container.querySelector('.quiz-explanation');
     if (!explanationDiv) return;
-    
-    const selectedOptionDiv = selectedOption.closest('.quiz-option');
+
     const selectedExplanation = selectedOptionDiv ? selectedOptionDiv.getAttribute('data-explanation') : '';
     
     const correctOption = container.querySelector(`.quiz-option[data-value="${correctAnswer}"]`);
     const correctExplanation = correctOption ? correctOption.getAttribute('data-explanation') : '';
     
     let html = '<div class="quiz-explanation-title">📖 解析：</div>';
-    
-    if (selectedOption.value === correctAnswer) {
+
+    const selectedValue = selectedOptionDiv ? selectedOptionDiv.getAttribute('data-value') : '';
+
+    if (selectedValue === correctAnswer) {
       if (correctExplanation) {
         html += '<div class="quiz-explanation-content">' + correctExplanation + '</div>';
       }
