@@ -22,8 +22,7 @@
 
         try {
           const payload = await requestQuiz(endpoint);
-          const content = payload?.data?.answer;
-          console.log(content);
+          const content = payload?.data?.choices?.[0]?.message?.content;
           if (!content) {
             throw new Error('后端未返回考题内容');
           }
@@ -135,11 +134,12 @@
   }
 
   function appendQuizContent(container, rawContent) {
-    const nodes = buildQuizNodes(rawContent);
+    const normalized = extractContent(rawContent);
+    const nodes = normalized ? buildQuizNodes(normalized) : [];
     if (!nodes.length) {
       const fallback = document.createElement('div');
       fallback.className = 'ai-quiz-item';
-      fallback.textContent = rawContent;
+      fallback.textContent = normalized || stringifySafe(rawContent);
       container.appendChild(fallback);
       return;
     }
@@ -242,6 +242,15 @@
       optionDiv.dataset.value = option.value || '';
       optionDiv.dataset.explanation = option.explanation || '';
 
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = container.id;
+      input.id = `${container.id}-${option.value || ('opt-' + Math.random().toString(16).slice(2))}`;
+      input.value = option.value || '';
+
+      const label = document.createElement('label');
+      label.setAttribute('for', input.id);
+
       const labelSpan = document.createElement('span');
       labelSpan.className = 'quiz-option-label';
       labelSpan.textContent = `${option.value || ''}.`;
@@ -250,8 +259,10 @@
       textSpan.className = 'quiz-option-text';
       textSpan.innerHTML = option.content || '';
 
-      optionDiv.appendChild(labelSpan);
-      optionDiv.appendChild(textSpan);
+      label.appendChild(labelSpan);
+      label.appendChild(textSpan);
+      optionDiv.appendChild(input);
+      optionDiv.appendChild(label);
       optionsWrap.appendChild(optionDiv);
     });
 
@@ -297,6 +308,62 @@
     document.addEventListener('DOMContentLoaded', initAiQuizSections);
   } else {
     initAiQuizSections();
+  }
+
+  function extractContent(raw) {
+    if (!raw) return '';
+    if (typeof raw === 'string') return raw.trim();
+
+    if (Array.isArray(raw)) {
+      for (const item of raw) {
+        const result = extractContent(item);
+        if (result) return result;
+      }
+      return '';
+    }
+
+    if (typeof raw === 'object') {
+      if (typeof raw.content === 'string' && raw.content.trim()) {
+        return raw.content.trim();
+      }
+      if (raw.message) {
+        const messageContent = extractContent(raw.message);
+        if (messageContent) return messageContent;
+      }
+      if (raw.delta) {
+        const deltaContent = extractContent(raw.delta);
+        if (deltaContent) return deltaContent;
+      }
+      if (raw.result) {
+        const resultContent = extractContent(raw.result);
+        if (resultContent) return resultContent;
+      }
+      if (raw.output) {
+        const outputContent = extractContent(raw.output);
+        if (outputContent) return outputContent;
+      }
+      if (raw.choices) {
+        const choiceContent = extractContent(raw.choices);
+        if (choiceContent) return choiceContent;
+      }
+      if (raw.answer) {
+        const answerContent = extractContent(raw.answer);
+        if (answerContent) return answerContent;
+      }
+      if (raw.data) {
+        const dataContent = extractContent(raw.data);
+        if (dataContent) return dataContent;
+      }
+    }
+    return '';
+  }
+
+  function stringifySafe(value) {
+    try {
+      return typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+    } catch (error) {
+      return String(value);
+    }
   }
 })();
 
