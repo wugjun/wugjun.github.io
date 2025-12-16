@@ -1,7 +1,624 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具效率 on 补漏砖匠</title><link>/categories/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/</link><description>Recent content in 工具效率 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/index.xml" rel="self" type="application/rss+xml"/><item><title>DeepSeek</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</link><pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</guid><description> DeepSeek 智能助手 发送</description></item><item><title>工具效率</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/</guid><description>「工具效率法宝篇」 收录日常开发、测试、运维、办公中提升效率的神器与技巧。善用工具者，事半功倍。
-💻 「开发利器」 🛠️ 「IDE 神器」 「Visual Studio Code」 VS Code 高效配置指南 —— 快捷键、插件组合、调试技巧 计划：多语言开发环境配置、远程开发最佳实践 计划：代码片段自定义、主题与界面优化 「IntelliJ IDEA」 IDEA 高级用法揭秘 —— 重构技巧、代码模板、插件生态 计划：性能调优配置、团队协作设置 计划：数据库工具集成、微服务调试 🔧 「开发辅助」 「Git 时空术」 Git 高级工作流 —— 分支策略、后悔药、二分排查 计划：子模块管理、Hooks 自动化、大型仓库优化 「命令行神器」 终端效率提升大全 —— Zsh 配置、工具链组合 计划：SSH 技巧、管道高级用法、脚本自动化 🧪 「测试宝典」 📡 「API 测试」 「Postman」 Postman 自动化测试 —— 集合运行、数据驱动、监控告警 计划：API 文档生成、团队协作、Mock Server 「JMeter」 JMeter 性能测试实战 —— 场景设计、分布式测试、结果分析 计划：BeanShell 脚本、自定义插件、CI/CD 集成 🚀 「负载测试」 「LoadRunner」 LoadRunner 企业级应用 —— 协议选择、事务设计、资源监控 计划：分析器深度使用、瓶颈定位技巧 「性能监控」 计划：APM 工具对比、全链路追踪、性能基线建立 🏗️ 「运维部署」 🔄 「CI/CD 流水线」 「Jenkins」 Jenkins 流水线设计 —— Pipeline as Code、多分支流水线 计划：插件开发、集群部署、权限管理 计划：制品库管理、质量门禁设计 「Docker &amp;amp; K8s」 容器化部署大全 —— 镜像优化、编排技巧、故障排查 计划：Service Mesh 集成、监控日志方案 ☁️ 「云原生工具」 「基础设施即代码」 计划：Terraform 模块设计、Ansible Playbook 最佳实践 计划：云平台 CLI 工具集、跨云管理方案 🌐 「网页收藏」 📚 「开发资源」 「文档与教程」 前端开发资源库 —— 框架文档、设计系统、图标库 后端开发宝典 —— API 文档、架构指南、性能优化 「工具网站」 在线工具集锦 —— 编码解码、格式转换、正则测试 计划：图表生成、API 调试、数据可视化 🎨 「设计与灵感」 「UI/UX 资源」 设计工具与资源 —— 配色方案、字体库、原型工具 计划：动效设计、交互模式、设计系统 📝 「办公软件」 📄 「Word 高级技巧」 「长文档排版」 Word 论文排版指南 —— 样式管理、目录生成、参考文献 计划：模板设计、批量处理、协作评审 「自动化处理」 计划：VBA 宏编程、邮件合并、表单设计 📊 「Excel 数据处理」 「公式与函数」 Excel 函数大全 —— 查找引用、文本处理、数组公式 计划：Power Query 数据清洗、Power Pivot 建模 「数据分析」 Excel 图表与透视表 —— 动态图表、数据看板、高级筛选 计划：条件格式高级用法、数据验证技巧 🎯 「PPT 演示艺术」 「设计与动画」 PPT 专业设计 —— 版式设计、色彩搭配、动画时序 计划：模板制作、演讲者模式、协作技巧 ⚡ 「效率心法」 🧠 「工作流优化」 「时间管理」 GTD 实践指南 —— 任务分解、优先级划分、番茄工作法 计划：日历管理、习惯养成、专注技巧 「知识管理」 个人知识体系构建 —— 笔记系统、信息筛选、学习路径 计划：第二大脑、数字花园建设 🔗 「跨工具协作」 「自动化流程」 计划：浏览器自动化、RPA 工具应用、脚本联动 计划：通知集成、数据同步、工作流引擎 工具虽多，适者为佳。此处持续更新实际验证过的高效工具与技巧，去芜存菁。</description></item><item><title>法宝篇</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</guid><description>◀ 返回
-创建脚本 创建 录制 截取报文 替换空格和换行
-创建socket ![创建socket](/images/工具效率-测试工具-创建socket.png
-loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容
-参数化流水号,右健所选内容,命名为seqNum_6 格式为%lu6 在Action.c 中添加代码
-/********************************************************************* * Created by Windows Sockets Recorder * * Created on: Wed Jun 16 11:06:06 *********************************************************************/ #include &amp;#34;lrs.h&amp;#34; Action() { int rc=0; char *Data, *p,*q; int Size; char index[2]; char hexStr[20]={0}; char strByte[20]={0}; unsigned char hexByte[20]={0}; unsigned char *unitptr; char rSeqNum[20] = {0}; int len = 0; int i,j,k,ret; int z = 0; //设定开始事务 len = strlen(lr_eval_string(&amp;#34;{seqNum_6}&amp;#34;)); p = lr_eval_string(&amp;#34;{seqNum_6}&amp;#34;) ; ret = str2hex(rSeqNum,6,p); lr_output_message(&amp;#34;str=%s, len = %d&amp;#34;,p, ret); lr_output_message(&amp;#34;str=%s, len = %d&amp;#34;,rSeqNum, ret); HexStrTobyte(p,hexByte,&amp;amp;len); for (i =0;i &amp;lt; len ; i++){ lr_output_message(&amp;#34;str=%02x,&amp;#34;,hexByte[i]); } q = hexStr; lr_output_message(&amp;#34;str=%s&amp;#34;,p); len = strlen(p); for (j=0; j&amp;lt;len/2 ; j++){ memcpy(q,&amp;#34;\\x&amp;#34;,2); memcpy(q+2, p,2); p+=2; q+=4;	} lr_output_message(&amp;#34;str=%s&amp;#34;,hexStr); lr_save_string(hexStr,&amp;#34;seqN&amp;#34;); #if 1 lrs_startup(257); //创建socketS lr_start_transaction(&amp;#34;create_socket&amp;#34;); // rc = lrs_create_socket(&amp;#34;socket0&amp;#34;, &amp;#34;TCP&amp;#34;, &amp;#34;RemoteHost=127.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具效率 on 补漏砖匠</title><link>/categories/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/</link><description>Recent content in 工具效率 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/index.xml" rel="self" type="application/rss+xml"/><item><title>工具效率</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/</guid><description>&lt;h2 id="工具效率法宝篇"&gt;「工具效率法宝篇」&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;收录日常开发、测试、运维、办公中提升效率的神器与技巧。善用工具者，事半功倍。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="-开发利器"&gt;&lt;span style="color: var(--cinnabar);"&gt;💻 「开发利器」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-ide-神器"&gt;🛠️ 「IDE 神器」&lt;/h4&gt;
+&lt;h5 id="visual-studio-code"&gt;「Visual Studio Code」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VS-Code%E9%85%8D%E7%BD%AE"&gt;VS Code 高效配置指南&lt;/a&gt; —— 快捷键、插件组合、调试技巧&lt;/li&gt;
+&lt;li&gt;计划：多语言开发环境配置、远程开发最佳实践&lt;/li&gt;
+&lt;li&gt;计划：代码片段自定义、主题与界面优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="intellij-idea"&gt;「IntelliJ IDEA」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/IDEA%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95"&gt;IDEA 高级用法揭秘&lt;/a&gt; —— 重构技巧、代码模板、插件生态&lt;/li&gt;
+&lt;li&gt;计划：性能调优配置、团队协作设置&lt;/li&gt;
+&lt;li&gt;计划：数据库工具集成、微服务调试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-开发辅助"&gt;🔧 「开发辅助」&lt;/h4&gt;
+&lt;h5 id="git-时空术"&gt;「Git 时空术」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95"&gt;Git 高级工作流&lt;/a&gt; —— 分支策略、后悔药、二分排查&lt;/li&gt;
+&lt;li&gt;计划：子模块管理、Hooks 自动化、大型仓库优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="命令行神器"&gt;「命令行神器」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A5%9E%E5%99%A8"&gt;终端效率提升大全&lt;/a&gt; —— Zsh 配置、工具链组合&lt;/li&gt;
+&lt;li&gt;计划：SSH 技巧、管道高级用法、脚本自动化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-测试宝典"&gt;&lt;span style="color: var(--cinnabar);"&gt;🧪 「测试宝典」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-api-测试"&gt;📡 「API 测试」&lt;/h4&gt;
+&lt;h5 id="postman"&gt;「Postman」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/Postman%E8%BF%9B%E9%98%B6"&gt;Postman 自动化测试&lt;/a&gt; —— 集合运行、数据驱动、监控告警&lt;/li&gt;
+&lt;li&gt;计划：API 文档生成、团队协作、Mock Server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="jmeter"&gt;「JMeter」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/JMeter%E5%AE%9E%E6%88%98"&gt;JMeter 性能测试实战&lt;/a&gt; —— 场景设计、分布式测试、结果分析&lt;/li&gt;
+&lt;li&gt;计划：BeanShell 脚本、自定义插件、CI/CD 集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-负载测试"&gt;🚀 「负载测试」&lt;/h4&gt;
+&lt;h5 id="loadrunner"&gt;「LoadRunner」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/"&gt;LoadRunner 企业级应用&lt;/a&gt; —— 协议选择、事务设计、资源监控&lt;/li&gt;
+&lt;li&gt;计划：分析器深度使用、瓶颈定位技巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="性能监控"&gt;「性能监控」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;计划：APM 工具对比、全链路追踪、性能基线建立&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-运维部署"&gt;&lt;span style="color: var(--cinnabar);"&gt;🏗️ 「运维部署」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-cicd-流水线"&gt;🔄 「CI/CD 流水线」&lt;/h4&gt;
+&lt;h5 id="jenkins"&gt;「Jenkins」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/Jenkins%E5%AE%9E%E6%88%98"&gt;Jenkins 流水线设计&lt;/a&gt; —— Pipeline as Code、多分支流水线&lt;/li&gt;
+&lt;li&gt;计划：插件开发、集群部署、权限管理&lt;/li&gt;
+&lt;li&gt;计划：制品库管理、质量门禁设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="docker--k8s"&gt;「Docker &amp;amp; K8s」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/%E5%AE%B9%E5%99%A8%E5%8C%96%E5%AE%9E%E8%B7%B5"&gt;容器化部署大全&lt;/a&gt; —— 镜像优化、编排技巧、故障排查&lt;/li&gt;
+&lt;li&gt;计划：Service Mesh 集成、监控日志方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-云原生工具"&gt;☁️ 「云原生工具」&lt;/h4&gt;
+&lt;h5 id="基础设施即代码"&gt;「基础设施即代码」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;计划：Terraform 模块设计、Ansible Playbook 最佳实践&lt;/li&gt;
+&lt;li&gt;计划：云平台 CLI 工具集、跨云管理方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-网页收藏"&gt;&lt;span style="color: var(--cinnabar);"&gt;🌐 「网页收藏」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-开发资源"&gt;📚 「开发资源」&lt;/h4&gt;
+&lt;h5 id="文档与教程"&gt;「文档与教程」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E7%BD%91%E9%A1%B5%E6%94%B6%E8%97%8F/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90"&gt;前端开发资源库&lt;/a&gt; —— 框架文档、设计系统、图标库&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E7%BD%91%E9%A1%B5%E6%94%B6%E8%97%8F/%E5%90%8E%E7%AB%AF%E8%B5%84%E6%BA%90"&gt;后端开发宝典&lt;/a&gt; —— API 文档、架构指南、性能优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="工具网站"&gt;「工具网站」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E7%BD%91%E9%A1%B5%E6%94%B6%E8%97%8F/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7"&gt;在线工具集锦&lt;/a&gt; —— 编码解码、格式转换、正则测试&lt;/li&gt;
+&lt;li&gt;计划：图表生成、API 调试、数据可视化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-设计与灵感"&gt;🎨 「设计与灵感」&lt;/h4&gt;
+&lt;h5 id="uiux-资源"&gt;「UI/UX 资源」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E7%BD%91%E9%A1%B5%E6%94%B6%E8%97%8F/%E8%AE%BE%E8%AE%A1%E8%B5%84%E6%BA%90"&gt;设计工具与资源&lt;/a&gt; —— 配色方案、字体库、原型工具&lt;/li&gt;
+&lt;li&gt;计划：动效设计、交互模式、设计系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-办公软件"&gt;&lt;span style="color: var(--cinnabar);"&gt;📝 「办公软件」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-word-高级技巧"&gt;📄 「Word 高级技巧」&lt;/h4&gt;
+&lt;h5 id="长文档排版"&gt;「长文档排版」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6/Word%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7"&gt;Word 论文排版指南&lt;/a&gt; —— 样式管理、目录生成、参考文献&lt;/li&gt;
+&lt;li&gt;计划：模板设计、批量处理、协作评审&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="自动化处理"&gt;「自动化处理」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;计划：VBA 宏编程、邮件合并、表单设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-excel-数据处理"&gt;📊 「Excel 数据处理」&lt;/h4&gt;
+&lt;h5 id="公式与函数"&gt;「公式与函数」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6/Excel%E5%87%BD%E6%95%B0%E6%8A%80%E5%B7%A7"&gt;Excel 函数大全&lt;/a&gt; —— 查找引用、文本处理、数组公式&lt;/li&gt;
+&lt;li&gt;计划：Power Query 数据清洗、Power Pivot 建模&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="数据分析"&gt;「数据分析」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6/Excel%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"&gt;Excel 图表与透视表&lt;/a&gt; —— 动态图表、数据看板、高级筛选&lt;/li&gt;
+&lt;li&gt;计划：条件格式高级用法、数据验证技巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-ppt-演示艺术"&gt;🎯 「PPT 演示艺术」&lt;/h4&gt;
+&lt;h5 id="设计与动画"&gt;「设计与动画」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6/PPT%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"&gt;PPT 专业设计&lt;/a&gt; —— 版式设计、色彩搭配、动画时序&lt;/li&gt;
+&lt;li&gt;计划：模板制作、演讲者模式、协作技巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-效率心法"&gt;&lt;span style="color: var(--cinnabar);"&gt;⚡ 「效率心法」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-工作流优化"&gt;🧠 「工作流优化」&lt;/h4&gt;
+&lt;h5 id="时间管理"&gt;「时间管理」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%95%88%E7%8E%87%E5%BF%83%E6%B3%95/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86"&gt;GTD 实践指南&lt;/a&gt; —— 任务分解、优先级划分、番茄工作法&lt;/li&gt;
+&lt;li&gt;计划：日历管理、习惯养成、专注技巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="知识管理"&gt;「知识管理」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%95%88%E7%8E%87%E5%BF%83%E6%B3%95/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86"&gt;个人知识体系构建&lt;/a&gt; —— 笔记系统、信息筛选、学习路径&lt;/li&gt;
+&lt;li&gt;计划：第二大脑、数字花园建设&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-跨工具协作"&gt;🔗 「跨工具协作」&lt;/h4&gt;
+&lt;h5 id="自动化流程"&gt;「自动化流程」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;计划：浏览器自动化、RPA 工具应用、脚本联动&lt;/li&gt;
+&lt;li&gt;计划：通知集成、数据同步、工作流引擎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工具虽多，适者为佳。此处持续更新实际验证过的高效工具与技巧，去芜存菁。&lt;/p&gt;</description></item><item><title>DeepSeek</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</guid><description>&lt;div class="deepseek-chat-page"&gt;
+ &lt;h1&gt;DeepSeek 智能助手&lt;/h1&gt;
+ &lt;div id="chat-container"&gt;&lt;/div&gt;
+ &lt;div id="input-container"&gt;
+ &lt;input type="text" id="message-input" placeholder="输入您的问题..." /&gt;
+ &lt;button id="send-btn"&gt;发送&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.deepseek-chat-page {
+ font-family: Arial, sans-serif;
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 20px;
+}
+
+#chat-container {
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ padding: 20px;
+ margin-bottom: 20px;
+ height: 400px;
+ overflow-y: auto;
+}
+
+.message {
+ margin-bottom: 10px;
+ padding: 10px;
+ border-radius: 5px;
+}
+
+.user-message {
+ background-color: #e3f2fd;
+ text-align: right;
+}
+
+.ai-message {
+ background-color: #f5f5f5;
+}
+
+.streaming {
+ border-left: 3px solid #4CAF50;
+ animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+ 0% { opacity: 1; }
+ 50% { opacity: 0.5; }
+ 100% { opacity: 1; }
+}
+
+#input-container {
+ display: flex;
+ gap: 10px;
+}
+
+#message-input {
+ flex: 1;
+ padding: 10px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ font-size: 16px;
+}
+
+#send-btn {
+ padding: 10px 20px;
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 16px;
+}
+
+#send-btn:disabled {
+ background-color: #ccc;
+ cursor: not-allowed;
+}
+
+.typing-indicator {
+ color: #666;
+ font-style: italic;
+}
+&lt;/style&gt;
+&lt;script&gt;
+(function() {
+ const chatContainer = document.getElementById('chat-container');
+ const messageInput = document.getElementById('message-input');
+ const sendBtn = document.getElementById('send-btn');
+ const endpoint = 'http://qiaopan.tech:18080/api/v1/assistant/chat/stream';
+ let currentController = null;
+
+ function addUserMessage(content) {
+ const messageDiv = document.createElement('div');
+ messageDiv.className = 'message user-message';
+ messageDiv.innerHTML = `&lt;strong&gt;您:&lt;/strong&gt; ${content}`;
+ chatContainer.appendChild(messageDiv);
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ }
+
+ function createAiMessage() {
+ const messageDiv = document.createElement('div');
+ messageDiv.className = 'message ai-message streaming';
+ messageDiv.innerHTML = '&lt;strong&gt;AI:&lt;/strong&gt; &lt;span class="streaming-content"&gt;&lt;/span&gt;&lt;span class="typing-indicator"&gt;▋&lt;/span&gt;';
+ chatContainer.appendChild(messageDiv);
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ return messageDiv;
+ }
+
+ async function sendMessage() {
+ const message = messageInput.value.trim();
+ if (!message) return;
+
+ messageInput.disabled = true;
+ sendBtn.disabled = true;
+
+ addUserMessage(message);
+ messageInput.value = '';
+
+ const aiMessageDiv = createAiMessage();
+ const streamingContent = aiMessageDiv.querySelector('.streaming-content');
+
+ if (currentController) {
+ currentController.abort();
+ }
+
+ const requestData = {
+ model: "deepseek-chat",
+ messages: [{ role: "user", content: message }],
+ temperature: 0.7,
+ max_tokens: 2000,
+ stream: true
+ };
+
+ try {
+ currentController = new AbortController();
+ const response = await fetch(endpoint, {
+ method: 'POST',
+ headers: {
+ 'Content-Type': 'application/json',
+ 'Accept': 'text/event-stream'
+ },
+ body: JSON.stringify(requestData),
+ signal: currentController.signal
+ });
+
+ if (!response.ok || !response.body) {
+ throw new Error('服务返回异常状态：' + response.status);
+ }
+
+ const reader = response.body.getReader();
+ const decoder = new TextDecoder();
+ let buffer = '';
+ let fullResponse = '';
+ let doneStreaming = false;
+
+ while (true) {
+ const { value, done } = await reader.read();
+ if (done) break;
+
+ buffer += decoder.decode(value, { stream: true });
+ const lines = buffer.split('\n');
+ buffer = lines.pop() || '';
+
+ for (let rawLine of lines) {
+ let line = rawLine.trim();
+ if (!line) continue;
+
+ if (line.startsWith('data:')) {
+ const payload = line.slice(5).trim();
+ if (payload === '[DONE]') {
+ doneStreaming = true;
+ break;
+ }
+ fullResponse += payload;
+ streamingContent.textContent = fullResponse;
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ }
+ // 忽略 id: / event: 等控制字段
+ }
+
+ if (doneStreaming) break;
+ }
+
+ finalizeMessage(aiMessageDiv);
+ } catch (error) {
+ if (error.name === 'AbortError') {
+ streamingContent.textContent += ' (已中断)';
+ } else {
+ console.error('请求错误:', error);
+ streamingContent.textContent = '请求失败: ' + error.message;
+ }
+ finalizeMessage(aiMessageDiv);
+ } finally {
+ currentController = null;
+ }
+ }
+
+ function finalizeMessage(aiMessageDiv) {
+ aiMessageDiv.classList.remove('streaming');
+ const indicator = aiMessageDiv.querySelector('.typing-indicator');
+ if (indicator) indicator.style.display = 'none';
+ enableInput();
+ }
+
+ function enableInput() {
+ messageInput.disabled = false;
+ sendBtn.disabled = false;
+ messageInput.focus();
+ }
+
+ messageInput.addEventListener('keypress', (event) =&gt; {
+ if (event.key === 'Enter' &amp;&amp; !event.shiftKey) {
+ event.preventDefault();
+ sendMessage();
+ }
+ });
+
+ sendBtn.addEventListener('click', sendMessage);
+ window.addEventListener('load', () =&gt; messageInput.focus());
+})();
+&lt;/script&gt;</description></item><item><title>法宝篇</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</guid><description>&lt;p&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="创建脚本"&gt;创建脚本&lt;/h3&gt;
+&lt;h4 id="创建"&gt;创建&lt;/h4&gt;
+&lt;p&gt;&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-loadrunner.png" alt="创建socket script"&gt;&lt;/p&gt;
+&lt;h3 id="录制"&gt;录制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;截取报文
+&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E5%BD%95%E5%88%B6.png" alt="报文"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;替换空格和换行&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="替换空格和换行"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建socket
+![创建socket](/images/工具效率-测试工具-创建socket.png&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参数化流水号,右健所选内容,命名为seqNum_6 格式为%lu6
+&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E6%8F%90%E5%8F%96%E5%8F%82%E6%95%B0.png" alt="提取参数"&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在Action.c 中添加代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;/*********************************************************************
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; * Created by Windows Sockets Recorder
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; *
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; * Created on: Wed Jun 16 11:06:06
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; *********************************************************************/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;#34;lrs.h&amp;#34;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Action&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; rc&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;Data, &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p,&lt;span style="color:#f92672"&gt;*&lt;/span&gt;q;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; Size;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; index[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hexStr[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;]&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; strByte[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;]&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hexByte[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;]&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;unitptr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; rSeqNum[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; {&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i,j,k,ret;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; z &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//设定开始事务
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;lr_eval_string&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;{seqNum_6}&amp;#34;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lr_eval_string&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;{seqNum_6}&amp;#34;&lt;/span&gt;) ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;str2hex&lt;/span&gt;(rSeqNum,&lt;span style="color:#ae81ff"&gt;6&lt;/span&gt;,p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s, len = %d&amp;#34;&lt;/span&gt;,p, ret);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s, len = %d&amp;#34;&lt;/span&gt;,rSeqNum, ret);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;HexStrTobyte&lt;/span&gt;(p,hexByte,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;len);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i &lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; len ; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%02x,&amp;#34;&lt;/span&gt;,hexByte[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; q &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hexStr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s&amp;#34;&lt;/span&gt;,p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (j&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; j&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;len&lt;span style="color:#f92672"&gt;/&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; ; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		&lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(q,&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\\&lt;/span&gt;&lt;span style="color:#e6db74"&gt;x&amp;#34;&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		&lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(q&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, p,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;); 		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		p&lt;span style="color:#f92672"&gt;+=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		q&lt;span style="color:#f92672"&gt;+=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s&amp;#34;&lt;/span&gt;,hexStr);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_save_string&lt;/span&gt;(hexStr,&lt;span style="color:#e6db74"&gt;&amp;#34;seqN&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#if 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_startup&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;257&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//创建socketS
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;create_socket&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; rc &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_create_socket&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;TCP&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;RemoteHost=127.0.0.1:32001&amp;#34;&lt;/span&gt;, LrsLastArg);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//判断套接字创建是否成功
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (rc&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;create_socket&amp;#34;&lt;/span&gt;, LR_PASS); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Socket was successfully send &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;create_socket&amp;#34;&lt;/span&gt;, LR_FAIL); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;An error occurred while closing the socket, Error Code: %d&amp;#34;&lt;/span&gt;, rc);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//判断socket是否链接成功的事务，0表示创建成功 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;send_socket&amp;#34;&lt;/span&gt;); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//发送安全会话建立请求buf0为在data.ws中定义的发送变量 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lrs_send&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;buf0&amp;#34;&lt;/span&gt;, LrsLastArg);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#75715e"&gt;//设置连接超时时间为1秒
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lrs_set_recv_timeout&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;45&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (rc&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;send_socket&amp;#34;&lt;/span&gt;, LR_PASS); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Socket was successfully send &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;send_socket&amp;#34;&lt;/span&gt;, LR_FAIL); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;An error occurred while send the socket, Error Code: %d&amp;#34;&lt;/span&gt;, rc);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//设置接收超时时间为1秒
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//lrs_set_recv_timeout2(45,0);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Socket was successfully send&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//接收消息，存放在buf1中，buf1是在data.ws中定义的接收数组，注意数组长度一定要大于等于实际接收长度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_receive&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;buf1&amp;#34;&lt;/span&gt;, LrsLastArg); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//把Socket最后接收的字节数组，长度放在recvlen中，内容放在recvbuf中
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//lrs_get_last_received_buffer(&amp;#34;socket0&amp;#34;,&amp;amp;recvbuf,&amp;amp;recvlen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;received_socket&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//lrs_save_param(&amp;#34;socket0&amp;#34;, NULL, &amp;#34;F39&amp;#34;, 39, 2);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_message (&amp;#34;F39: %s&amp;#34;, lr_eval_string(&amp;#34;{F39}&amp;#34;));
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_get_last_received_buffer&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;Data,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;Size);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//lr_message(&amp;#34;报文内容:%s&amp;#34;,Data);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_message(&amp;#34;应答码第39位:%x&amp;#34;,Data[39]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_message(&amp;#34;应答码第40位:%x&amp;#34;,Data[40]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;		&lt;span style="color:#75715e"&gt;//获取流水号000000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(Size &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;116&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;接收报文长度 116 == %d&amp;#34;&lt;/span&gt;, Size);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;received_socket&amp;#34;&lt;/span&gt;, LR_PASS);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;接收报文长度不够116 != %d&amp;#34;&lt;/span&gt;, Size);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;received_socket&amp;#34;&lt;/span&gt;, LR_FAIL);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//memcpy(F39,lr_eval_string(&amp;#34;{F39}&amp;#34;),2);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_output_message(&amp;#34;recvbuf: %X&amp;#34;,recvbuf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	 &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0-33&amp;#34;&lt;/span&gt;);	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//获取流水号000000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//if(Data[32]==0x45&amp;amp;&amp;amp;Data[33]==0x34){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(rSeqNum, Data&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;31&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;memcmp&lt;/span&gt;(Data&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;31&lt;/span&gt;,hexByte,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_log_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;流水号位：%3.3s&amp;#34;&lt;/span&gt;,Data&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;32&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易流水一致&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0-33&amp;#34;&lt;/span&gt;, LR_PASS);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_log_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;流水号4位：%x&amp;#34;&lt;/span&gt;,Data[&lt;span style="color:#ae81ff"&gt;33&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易流水不一致&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0-33&amp;#34;&lt;/span&gt;, LR_FAIL);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//获取应答码000000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(Data[&lt;span style="color:#ae81ff"&gt;39&lt;/span&gt;]&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0x41&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt;Data[&lt;span style="color:#ae81ff"&gt;40&lt;/span&gt;]&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0x30&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易成功&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0&amp;#34;&lt;/span&gt;, LR_PASS);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易失败&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0&amp;#34;&lt;/span&gt;, LR_FAIL); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//关闭socket
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lrs_close_socket&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//lrs_free_buffer(lseqNum);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;#endif
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;test_printf5&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;str, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; length)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; iii;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;the str is:&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (iii &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; iii &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; length; iii&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;%02x &amp;#34;&lt;/span&gt;, str[iii]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;/*str to hex,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;字符串转换为16进制
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;利用snprintf 函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;int snprintf(char* dest_str,size_t size,const char* format,...);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;功能:将可变参数以format的格式转换到dest_str中，并可以用%s打印出来。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;1、dest_str:目标字符串，即输出字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;2、size: 转换字符控制长度。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;(1) 如果格式化后的字符串长度 &amp;lt; size，则将此字符串全部复制到str中，并给其后添加一个字符串结束符(&amp;#39;\0&amp;#39;)；
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;(2) 如果格式化后的字符串长度 &amp;gt;= size，则只将其中的(size-1)个字符复制到str中，并给其后添加一个字符串结束符(&amp;#39;\0&amp;#39;)，返回值为欲写入的字符串长度。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;3、format :转换为某个格式，例如：%2d,%04X,%02X。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;4、...:需要转换的字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;str2hex&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;out_string, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; length, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;in_string)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; index;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;fmt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;%02x&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (index &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; index &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; length; index&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;snprintf&lt;/span&gt;((&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;)&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;out_string[index &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;], &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;, fmt, in_string[index]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; (length &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;HexStrTobyte&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;str, &lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;out, &lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;outlen)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; str;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; high &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, low &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(p), cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tmplen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; (cnt &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; (tmplen &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; high &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;))) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; low &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;(&lt;span style="color:#f92672"&gt;++&lt;/span&gt;p) &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;))) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;(p)&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;(p)&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; out[cnt] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ((high &lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0x0f&lt;/span&gt;) &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt; &lt;span style="color:#f92672"&gt;|&lt;/span&gt; (low &lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0x0f&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cnt&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (tmplen &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; out[cnt] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;))) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (outlen &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; NULL)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;outlen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;byteToHexStr&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; byte_arr[], &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; arr_len, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStr, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStrLen)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i, index &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; arr_len; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hex1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hex2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; value &lt;span style="color:#f92672"&gt;=&lt;/span&gt; byte_arr[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; v1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; value &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; v2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; value &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (v1 &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; v1 &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;55&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (v2 &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; v2 &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;55&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStrLen &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; HexStr[index&lt;span style="color:#f92672"&gt;++&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hex1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; HexStr[index&lt;span style="color:#f92672"&gt;++&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hex2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStrLen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; index;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

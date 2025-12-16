@@ -1,3 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>面试题 on 补漏砖匠</title><link>/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/</link><description>Recent content in 面试题 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA在线测试</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
-即时生成 AI 考题 点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。
-“AI 考题”继续生成 ◀ 返回</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>面试题 on 补漏砖匠</title><link>/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/</link><description>Recent content in 面试题 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA在线测试</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;section class="ai-quiz-section" data-ai-quiz-root data-ai-quiz-endpoint="http://qiaopan.tech:18080/api/v1/assistant/"&gt;
+ &lt;h2 class="ai-quiz-title"&gt;即时生成 AI 考题&lt;/h2&gt;
+ &lt;p class="ai-quiz-desc"&gt;点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。&lt;/p&gt;
+ &lt;div class="ai-quiz-controls"&gt;
+ &lt;div class="ai-quiz-control-group"&gt;
+ &lt;label for="ai-quiz-difficulty-page"&gt;难度：&lt;/label&gt;
+ &lt;select id="ai-quiz-difficulty-page" class="ai-quiz-select" data-ai-quiz-param="difficulty"&gt;
+ &lt;option value="简单"&gt;简单&lt;/option&gt;
+ &lt;option value="中等" selected&gt;中等&lt;/option&gt;
+ &lt;option value="困难"&gt;困难&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-control-group"&gt;
+ &lt;label for="ai-quiz-count-page"&gt;数量：&lt;/label&gt;
+ &lt;select id="ai-quiz-count-page" class="ai-quiz-select" data-ai-quiz-param="count"&gt;
+ &lt;option value="1"&gt;1 题&lt;/option&gt;
+ &lt;option value="3" selected&gt;3 题&lt;/option&gt;
+ &lt;option value="5"&gt;5 题&lt;/option&gt;
+ &lt;option value="10"&gt;10 题&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-actions"&gt;
+ &lt;button class="ai-quiz-button ai-quiz-floating-button" data-ai-quiz-trigger&gt;“AI 考题”继续生成&lt;/button&gt;
+ &lt;span class="ai-quiz-status" data-ai-quiz-status&gt;&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-results" data-ai-quiz-results&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

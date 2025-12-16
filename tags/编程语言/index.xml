@@ -1,5 +1,211 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程语言 on 补漏砖匠</title><link>/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link><description>Recent content in 编程语言 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml"/><item><title>编程语言</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</guid><description>「编程语言兵器谱」 以江湖门派为纲，串联站内所有编程笔记。每个门派会收录对应语言的实战心法与案例，持续更新中。
-🔧 「C 古谱」· 底层乾坤，性能为王 📊 「数据结构」： C 列表实战 —— 从指针到链表的演练记录。 C 语言代码重构 —— ASCII/HEX 混合报文拆解手记。 🐍 「Python 剑诀」· 化繁为简，以柔克刚 计划整理：快速原型、脚本自动化、数据处理常用套路。 ☕ 「Java 心经」· 重剑无锋，大巧不工 计划整理：企业级架构、并发与内存调优。 设计模式理解 JAVA测验 🟨 「JavaScript 妙法」· 灵动变幻，万象归一 计划整理：可视化组件、前端工程化心得。 🚀 「Go 道术」· 大道至简，并发自然 计划整理：goroutine 调度图谱、微服务脚手架。 🦀 「Rust 玄功」· 内存无患，安全自在 计划整理：所有权系统心法、零成本抽象笔记。 如需补充新的「秘笈」，直接在对应语言目录下创建 Markdown 文件并在此处追加条目即可。</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</guid><description>◀ 返回
-问题描述 字符串被显示为acssi码, 数值被hex加减
-转换思路 字符: acssi 转 string 数值: 计算出值
-贴代码 #include &amp;lt;unistd.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #define setnull(x) memset(&amp;amp;(x), 0, sizeof(x)) #define CAL(x, y, z) x + y - z #define ERR_EXIT(m) \ do { \ fprintf(stderr, &amp;#34;[%s][%d]:%s %s \n&amp;#34; ,__FILE__, __LINE__, m, strerror(errno));\ exit(EXIT_FAILURE); \ }while(0) int main( int argc, char **argv){ int i,j,len,varLen,ilen ; char buf[1024]; char temp[2]; char var[64],var1[64]; char ascii[2]; char hexBuf[1024]; char fbuf[1024]; char tobuf[1024]; int begin = 0, end = 0; char *data; char *pstr; char *pstr1; int retlen; char varBuf[20]; char varRet; char srcfile[256],destfile[256]; setnull(srcfile); setnull(destfile); sprintf(srcfile,&amp;#34;%s&amp;#34;, argv[1]); sprintf(destfile,&amp;#34;%s&amp;#34;, argv[2]); //printf(&amp;#34;%s\n&amp;#34;,argv[1]); //printf(&amp;#34;%s\n&amp;#34;,srcfile); //printf(&amp;#34;%s\n&amp;#34;,argv[2]); //printf(&amp;#34;%s\n&amp;#34;,destfile); //strcpy(hexBuf, argv[1]); FILE* fd = fopen(srcfile,&amp;#34;r&amp;#34;); FILE* fdw = fopen(destfile,&amp;#34;w&amp;#34;); if(fd){ while(!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程语言 on 补漏砖匠</title><link>/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link><description>Recent content in 编程语言 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml"/><item><title>编程语言</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</guid><description>&lt;h2 id="编程语言兵器谱"&gt;「编程语言兵器谱」&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以江湖门派为纲，串联站内所有编程笔记。每个门派会收录对应语言的实战心法与案例，持续更新中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="-c-古谱-底层乾坤性能为王"&gt;🔧 「C 古谱」· 底层乾坤，性能为王&lt;/h3&gt;
+&lt;h4 id="-数据结构"&gt;&lt;span style="color: var(--cinnabar);"&gt;📊 「数据结构」&lt;/span&gt;：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"&gt;C 列表实战&lt;/a&gt; —— 从指针到链表的演练记录。&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/"&gt;C 语言代码重构&lt;/a&gt; —— ASCII/HEX 混合报文拆解手记。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-python-剑诀-化繁为简以柔克刚"&gt;🐍 「Python 剑诀」· 化繁为简，以柔克刚&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：快速原型、脚本自动化、数据处理常用套路。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-java-心经-重剑无锋大巧不工"&gt;☕ 「Java 心经」· 重剑无锋，大巧不工&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：企业级架构、并发与内存调优。&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"&gt;设计模式理解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/"&gt;JAVA测验&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-javascript-妙法-灵动变幻万象归一"&gt;🟨 「JavaScript 妙法」· 灵动变幻，万象归一&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：可视化组件、前端工程化心得。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-go-道术-大道至简并发自然"&gt;🚀 「Go 道术」· 大道至简，并发自然&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：goroutine 调度图谱、微服务脚手架。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-rust-玄功-内存无患安全自在"&gt;🦀 「Rust 玄功」· 内存无患，安全自在&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：所有权系统心法、零成本抽象笔记。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如需补充新的「秘笈」，直接在对应语言目录下创建 Markdown 文件并在此处追加条目即可。&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="问题描述"&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;字符串被显示为acssi码, 数值被hex加减&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/C_code_replay.jpeg" alt="源码"&gt;&lt;/p&gt;
+&lt;h2 id="转换思路"&gt;转换思路&lt;/h2&gt;
+&lt;p&gt;字符: acssi 转 string
+数值: 计算出值&lt;/p&gt;
+&lt;h2 id="贴代码"&gt;贴代码&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;fcntl.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;errno.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#define setnull(x) memset(&amp;amp;(x), 0, sizeof(x))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#define CAL(x, y, z) x + y - z
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#define ERR_EXIT(m) \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; do { \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; fprintf(stderr, &amp;#34;[%s][%d]:%s %s \n&amp;#34; ,__FILE__, __LINE__, m, strerror(errno));\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; exit(EXIT_FAILURE); \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; }while(0)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;( &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; argc, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;**&lt;/span&gt;argv){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i,j,len,varLen,ilen ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; buf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; temp[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; var[&lt;span style="color:#ae81ff"&gt;64&lt;/span&gt;],var1[&lt;span style="color:#ae81ff"&gt;64&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; ascii[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hexBuf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; fbuf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; tobuf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; begin &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, end &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;data;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;pstr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;pstr1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; retlen;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; varBuf[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; varRet;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; srcfile[&lt;span style="color:#ae81ff"&gt;256&lt;/span&gt;],destfile[&lt;span style="color:#ae81ff"&gt;256&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;setnull&lt;/span&gt;(srcfile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;setnull&lt;/span&gt;(destfile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;sprintf&lt;/span&gt;(srcfile,&lt;span style="color:#e6db74"&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, argv[&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;sprintf&lt;/span&gt;(destfile,&lt;span style="color:#e6db74"&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, argv[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,argv[1]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,srcfile);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,argv[2]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,destfile);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//strcpy(hexBuf, argv[1]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; FILE&lt;span style="color:#f92672"&gt;*&lt;/span&gt; fd &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fopen&lt;/span&gt;(srcfile,&lt;span style="color:#e6db74"&gt;&amp;#34;r&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; FILE&lt;span style="color:#f92672"&gt;*&lt;/span&gt; fdw &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fopen&lt;/span&gt;(destfile,&lt;span style="color:#e6db74"&gt;&amp;#34;w&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(fd){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;feof&lt;/span&gt;(fd)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(fbuf, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(fbuf));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; data &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fgets&lt;/span&gt;(fbuf,&lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(fbuf)&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,fd);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(data){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(tobuf, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(tobuf));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(data);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, j &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; len;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;memcmp&lt;/span&gt;(data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i,&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\\&lt;/span&gt;&lt;span style="color:#e6db74"&gt;x&amp;#34;&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(ascii, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(temp, data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;temp: %s\n&amp;#34;, temp);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hex2ascii&lt;/span&gt;(temp, ascii);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;ascii: %s\n&amp;#34;, ascii);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(tobuf &lt;span style="color:#f92672"&gt;+&lt;/span&gt; j, ascii, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; i &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;find \\x string offset %d\n&amp;#34;, i); 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;memcmp&lt;/span&gt;(data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i,&lt;span style="color:#e6db74"&gt;&amp;#34;(0x&amp;#34;&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(var, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(var));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(var1, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(var1));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(varBuf, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(varBuf));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(var, data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(var)); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;var: %s \n&amp;#34;, var);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pstr &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strchr&lt;/span&gt;(var, &lt;span style="color:#e6db74"&gt;&amp;#39;(&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ( pstr &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; NULL)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;( pstr1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strstr&lt;/span&gt;(var, &lt;span style="color:#e6db74"&gt;&amp;#34;)&amp;#34;&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;find ),\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; varLen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; pstr1 &lt;span style="color:#f92672"&gt;-&lt;/span&gt; pstr ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%d\n&amp;#34;, varLen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(var1, var&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,varLen &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; varRet &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;cal&lt;/span&gt;(var1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;sprintf&lt;/span&gt;(varBuf,&lt;span style="color:#e6db74"&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s,%d\n&amp;#34;,varBuf,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; ilen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(varBuf);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(tobuf &lt;span style="color:#f92672"&gt;+&lt;/span&gt; j, varBuf , ilen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; j &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; ilen ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; i &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; varLen &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//else if( pstr1 = strstr(var, &amp;#34;);&amp;#34;)){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;find );\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int varLen = pstr1 - pstr ;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%d\n&amp;#34;, varLen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(var1, var+1,varLen -1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// varRet = cal(var1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// sprintf(varBuf,&amp;#34;%d;&amp;#34;,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%s,%d\n&amp;#34;,varBuf,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int ilen = strlen(varBuf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(tobuf + j, varBuf , ilen + 1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// j += ilen + 1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// i += varLen + 1 + 1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//else if( pstr1 = strstr(var, &amp;#34;)&amp;#34;)){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;find )\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int varLen = pstr1 - pstr ;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%d\n&amp;#34;, varLen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(var1, var+1,varLen -1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// varRet = cal(var1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// sprintf(varBuf,&amp;#34;%d&amp;#34;,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%s,%d\n&amp;#34;,varBuf,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int ilen = strlen(varBuf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(tobuf + j, varBuf , ilen );
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// j += ilen;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// i += varLen + 1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tobuf[j] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; data[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s&amp;#34;, data);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fprintf&lt;/span&gt;(fdw,&lt;span style="color:#e6db74"&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;,tobuf);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;ERR_EXIT&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;open file failure&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;fclose&lt;/span&gt;(fd);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//for( i = 0; i &amp;lt; strlen(argv[1]); i++){ 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%c\n&amp;#34;, argv[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//int ret = hex2ascii(hexBuf,buf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//for( i = 0; i &amp;lt; strlen(buf); i++){ 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%c&amp;#34;, buf[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hex2ascii&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;hex, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;ascii)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(hex), tlen, cnt , i;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt;( i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; ,tlen &lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; len; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; c &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;toupper&lt;/span&gt;(hex[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(( c &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;0&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; c &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; ( c &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; c &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; t &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ( c &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; c &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; c &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;0&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(cnt)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ascii[tlen&lt;span style="color:#f92672"&gt;++&lt;/span&gt;] &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; t, cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ascii[tlen] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; t &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;, cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; tlen;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;cal&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;exprs){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; x,y,z;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;, exprs);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;sscanf&lt;/span&gt;(exprs,&lt;span style="color:#e6db74"&gt;&amp;#34;%x + %d - %x&amp;#34;&lt;/span&gt;,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;x,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;y,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;z);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;CAL&lt;/span&gt;(x,y,z); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="编译"&gt;编译&lt;/h2&gt;
+&lt;p&gt;gcc -o hex2ascii hex2ascii.c&lt;/p&gt;</description></item></channel></rss>

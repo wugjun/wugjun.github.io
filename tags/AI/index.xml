@@ -1,22 +1,222 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on 补漏砖匠</title><link>/tags/AI/</link><description>Recent content in AI on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>DeepSeek</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</link><pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</guid><description> DeepSeek 智能助手 发送</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
-单选题（每题 1 分），请在四个选项中选择 1 个最符合题意 的答案。
-核心语法与运行时 Local Variable 的描述，哪项正确？
-A. 局部变量可以使用 public/private 修饰。
-B. 局部变量存储在堆（Heap）。
-C. 局部变量在定义时必须初始化，否则编译失败。
-D. 局部变量具有默认值，例如引用类型默认为 null。
-try-catch-finally 中执行 System.exit(0)，finally 会执行吗？
-A. 不会，System.exit(0) 直接终止 JVM，finally 被跳过。
-B. 只有 try 未抛异常才执行。
-C. 会，finally 总会执行。
-D. 取决于 catch 是否捕获 RuntimeException。
-并发与集合 以下哪一个集合在并发场景下性能优于 Hashtable？
-A. TreeMap
-B. ConcurrentHashMap
-C. Hashtable
-D. LinkedHashMap
-创建并启动线程，推荐方式是？
-A. 实现 Runnable 接口。
-B. 实现 Callable 接口。
-C. 继承 Thread 类。
-D. 实现 Serializable 接口。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on 补漏砖匠</title><link>/tags/AI/</link><description>Recent content in AI on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>DeepSeek</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/</guid><description>&lt;div class="deepseek-chat-page"&gt;
+ &lt;h1&gt;DeepSeek 智能助手&lt;/h1&gt;
+ &lt;div id="chat-container"&gt;&lt;/div&gt;
+ &lt;div id="input-container"&gt;
+ &lt;input type="text" id="message-input" placeholder="输入您的问题..." /&gt;
+ &lt;button id="send-btn"&gt;发送&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.deepseek-chat-page {
+ font-family: Arial, sans-serif;
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 20px;
+}
+
+#chat-container {
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ padding: 20px;
+ margin-bottom: 20px;
+ height: 400px;
+ overflow-y: auto;
+}
+
+.message {
+ margin-bottom: 10px;
+ padding: 10px;
+ border-radius: 5px;
+}
+
+.user-message {
+ background-color: #e3f2fd;
+ text-align: right;
+}
+
+.ai-message {
+ background-color: #f5f5f5;
+}
+
+.streaming {
+ border-left: 3px solid #4CAF50;
+ animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+ 0% { opacity: 1; }
+ 50% { opacity: 0.5; }
+ 100% { opacity: 1; }
+}
+
+#input-container {
+ display: flex;
+ gap: 10px;
+}
+
+#message-input {
+ flex: 1;
+ padding: 10px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ font-size: 16px;
+}
+
+#send-btn {
+ padding: 10px 20px;
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 16px;
+}
+
+#send-btn:disabled {
+ background-color: #ccc;
+ cursor: not-allowed;
+}
+
+.typing-indicator {
+ color: #666;
+ font-style: italic;
+}
+&lt;/style&gt;
+&lt;script&gt;
+(function() {
+ const chatContainer = document.getElementById('chat-container');
+ const messageInput = document.getElementById('message-input');
+ const sendBtn = document.getElementById('send-btn');
+ const endpoint = 'http://qiaopan.tech:18080/api/v1/assistant/chat/stream';
+ let currentController = null;
+
+ function addUserMessage(content) {
+ const messageDiv = document.createElement('div');
+ messageDiv.className = 'message user-message';
+ messageDiv.innerHTML = `&lt;strong&gt;您:&lt;/strong&gt; ${content}`;
+ chatContainer.appendChild(messageDiv);
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ }
+
+ function createAiMessage() {
+ const messageDiv = document.createElement('div');
+ messageDiv.className = 'message ai-message streaming';
+ messageDiv.innerHTML = '&lt;strong&gt;AI:&lt;/strong&gt; &lt;span class="streaming-content"&gt;&lt;/span&gt;&lt;span class="typing-indicator"&gt;▋&lt;/span&gt;';
+ chatContainer.appendChild(messageDiv);
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ return messageDiv;
+ }
+
+ async function sendMessage() {
+ const message = messageInput.value.trim();
+ if (!message) return;
+
+ messageInput.disabled = true;
+ sendBtn.disabled = true;
+
+ addUserMessage(message);
+ messageInput.value = '';
+
+ const aiMessageDiv = createAiMessage();
+ const streamingContent = aiMessageDiv.querySelector('.streaming-content');
+
+ if (currentController) {
+ currentController.abort();
+ }
+
+ const requestData = {
+ model: "deepseek-chat",
+ messages: [{ role: "user", content: message }],
+ temperature: 0.7,
+ max_tokens: 2000,
+ stream: true
+ };
+
+ try {
+ currentController = new AbortController();
+ const response = await fetch(endpoint, {
+ method: 'POST',
+ headers: {
+ 'Content-Type': 'application/json',
+ 'Accept': 'text/event-stream'
+ },
+ body: JSON.stringify(requestData),
+ signal: currentController.signal
+ });
+
+ if (!response.ok || !response.body) {
+ throw new Error('服务返回异常状态：' + response.status);
+ }
+
+ const reader = response.body.getReader();
+ const decoder = new TextDecoder();
+ let buffer = '';
+ let fullResponse = '';
+ let doneStreaming = false;
+
+ while (true) {
+ const { value, done } = await reader.read();
+ if (done) break;
+
+ buffer += decoder.decode(value, { stream: true });
+ const lines = buffer.split('\n');
+ buffer = lines.pop() || '';
+
+ for (let rawLine of lines) {
+ let line = rawLine.trim();
+ if (!line) continue;
+
+ if (line.startsWith('data:')) {
+ const payload = line.slice(5).trim();
+ if (payload === '[DONE]') {
+ doneStreaming = true;
+ break;
+ }
+ fullResponse += payload;
+ streamingContent.textContent = fullResponse;
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ }
+ // 忽略 id: / event: 等控制字段
+ }
+
+ if (doneStreaming) break;
+ }
+
+ finalizeMessage(aiMessageDiv);
+ } catch (error) {
+ if (error.name === 'AbortError') {
+ streamingContent.textContent += ' (已中断)';
+ } else {
+ console.error('请求错误:', error);
+ streamingContent.textContent = '请求失败: ' + error.message;
+ }
+ finalizeMessage(aiMessageDiv);
+ } finally {
+ currentController = null;
+ }
+ }
+
+ function finalizeMessage(aiMessageDiv) {
+ aiMessageDiv.classList.remove('streaming');
+ const indicator = aiMessageDiv.querySelector('.typing-indicator');
+ if (indicator) indicator.style.display = 'none';
+ enableInput();
+ }
+
+ function enableInput() {
+ messageInput.disabled = false;
+ sendBtn.disabled = false;
+ messageInput.focus();
+ }
+
+ messageInput.addEventListener('keypress', (event) =&gt; {
+ if (event.key === 'Enter' &amp;&amp; !event.shiftKey) {
+ event.preventDefault();
+ sendMessage();
+ }
+ });
+
+ sendBtn.addEventListener('click', sendMessage);
+ window.addEventListener('load', () =&gt; messageInput.focus());
+})();
+&lt;/script&gt;</description></item></channel></rss>

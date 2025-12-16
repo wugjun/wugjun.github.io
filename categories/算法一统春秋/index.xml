@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>算法一统春秋 on 补漏砖匠</title><link>/categories/%E7%AE%97%E6%B3%95%E4%B8%80%E7%BB%9F%E6%98%A5%E7%A7%8B/</link><description>Recent content in 算法一统春秋 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E7%AE%97%E6%B3%95%E4%B8%80%E7%BB%9F%E6%98%A5%E7%A7%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>&lt;&lt;春秋算法&gt;&gt;</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/</link><pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/</guid><description>&lt;h1 id="第一章链表分治初露锋芒"&gt;&lt;strong&gt;第一章：链表分治，初露锋芒&lt;/strong&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="第一幕算法朝会秦使发难"&gt;&lt;strong&gt;第一幕：算法朝会，秦使发难&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;齐国，临淄城，算法殿。&lt;/p&gt;
+&lt;p&gt;晨光透过雕花木窗，在青石地面上投下斑驳光影。大殿中央，一丈见方的水镜悬浮空中，波纹流转——正是列国敬畏的“天机算法系统”。&lt;/p&gt;
+&lt;p&gt;齐威王端坐龙纹宝座，眉宇间隐现忧色。殿下文武分立两侧，左侧以宰相邹忌为首，右侧以上将军田忌为尊。&lt;/p&gt;
+&lt;p&gt;“诸位爱卿，”齐威王声音低沉，“天机系统已出今日之题。谁能解之，赏千金，封上卿！”&lt;/p&gt;
+&lt;p&gt;水镜波纹骤变，浮现金色篆文：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【王诏·链表分封令】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【场景】：秦王点兵改制，甲士营将士依序而列，各佩功勋数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【龙门线】：阈值 叁&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【改制令】：功勋小于伍 者立左阵，大于等于伍者立右阵&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【铁律】：左、右阵中，诸将士初始前后次序不可乱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【当前最佳解法】：秦相商鞅之&amp;rsquo;两度遍历册录法&amp;rsquo;】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://assets.leetcode.com/uploads/2021/01/04/partition.jpg" alt="请看图"&gt;
+“哈哈哈！”&lt;/p&gt;
+&lt;p&gt;一声长笑打破沉寂。黑袍秦使踏前一步，腰间玉佩叮当作响，正是秦国第一算法大师——商鞅。&lt;/p&gt;
+&lt;p&gt;“齐王陛下，”商鞅拱手，眼中却无半分敬意，“我大秦‘双重遍历法’，虽复杂度略高，但堂堂正正，势如破竹！不知齐国可有更高明解法？”&lt;/p&gt;
+&lt;p&gt;他袖袍一挥，水镜显现解法：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;/** 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;**【题目：链表分区】**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;**【描述】：给定单链表头结点 head 与整数 x，请分隔链表，使所有小于 x 的节点皆在大于等于 x 的节点之前**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;**【约束】：须保持节点初始相对位置**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;**【当前最佳】：时间复杂度 O(n²)，空间复杂度 O(n)，提供者——秦使商鞅】**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;输入：head = [1,4,3,2,5,2], x = 3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;输出：[1,2,2,4,3,5]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;示例 2：
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;输入：head = [2,1], x = 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;输出：[1,2]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;提示：
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;链表中节点的数目在范围 [0, 200] 内
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;-100 &amp;lt;= Node.val &amp;lt;= 100
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;-200 &amp;lt;= x &amp;lt;= 200
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 秦国解法：双重遍历法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; ListNode &lt;span style="color:#a6e22e"&gt;partition&lt;/span&gt;(ListNode head, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 第一次遍历：收集所有小于x的节点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; List&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;ListNode&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; smallList &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ArrayList&lt;span style="color:#f92672"&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ListNode p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; head;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; (p &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;null&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (p.&lt;span style="color:#a6e22e"&gt;val&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; x) smallList.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; p.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 第二次遍历：收集所有大于等于x的节点 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; List&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;ListNode&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; largeList &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ArrayList&lt;span style="color:#f92672"&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; head;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; (p &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;null&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (p.&lt;span style="color:#a6e22e"&gt;val&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; x) largeList.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; p.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 拼接新链表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ListNode dummy &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ListNode(&lt;span style="color:#f92672"&gt;-&lt;/span&gt;1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ListNode curr &lt;span style="color:#f92672"&gt;=&lt;/span&gt; dummy;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (ListNode node : smallList) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; curr.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; node;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; curr &lt;span style="color:#f92672"&gt;=&lt;/span&gt; curr.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (ListNode node : largeList) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; curr.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; node;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; curr &lt;span style="color:#f92672"&gt;=&lt;/span&gt; curr.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; curr.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; dummy.&lt;span style="color:#a6e22e"&gt;next&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;“两次遍历，两个列表，”商鞅傲然道，“虽非最优，却稳妥可靠。此乃我大秦治国之道——步步为营，稳中求胜！”&lt;/p&gt;</description></item></channel></rss>

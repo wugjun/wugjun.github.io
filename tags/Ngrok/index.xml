@@ -1,2 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ngrok on 补漏砖匠</title><link>/tags/Ngrok/</link><description>Recent content in Ngrok on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/Ngrok/index.xml" rel="self" type="application/rss+xml"/><item><title>Ngrok 内网穿透部署指南</title><link>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD-ngrok%E5%86%85%E7%BD%91%E7%BD%91%E7%A9%BF%E9%80%8F/</link><pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate><guid>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD-ngrok%E5%86%85%E7%BD%91%E7%BD%91%E7%A9%BF%E9%80%8F/</guid><description>🎯 场景概述 实现基于自建服务器的 Ngrok 公网转发访问，将本地服务安全暴露到公网环境。
-🖥️ 服务器环境准备 系统要求 操作系统: Ubuntu 16.04+ / CentOS 7+ 内存: 至少 1GB 存储: 至少 10GB 可用空间 网络: 公网 IP，开放所需端口 Ubuntu 环境依赖安装 # 更新系统包 apt-get update # 安装必要依赖 apt-get -y install zlib-devel openssl-devel perl hg cpio expat-devel \ gettext-devel curl curl-devel perl-ExtUtils-MakeMaker \ hg wget gcc gcc-c++ git ⚙️ Go 语言环境配置 清理旧版本 Golang # 删除现有golang依赖包 rpm -qa | grep golang | xargs rpm -e 2&amp;gt;/dev/null || true 安装 Go 1.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ngrok on 补漏砖匠</title><link>/tags/Ngrok/</link><description>Recent content in Ngrok on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/Ngrok/index.xml" rel="self" type="application/rss+xml"/><item><title>Ngrok 内网穿透部署指南</title><link>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD-ngrok%E5%86%85%E7%BD%91%E7%BD%91%E7%A9%BF%E9%80%8F/</link><pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate><guid>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD-ngrok%E5%86%85%E7%BD%91%E7%BD%91%E7%A9%BF%E9%80%8F/</guid><description>&lt;h2 id="-场景概述"&gt;🎯 场景概述&lt;/h2&gt;
+&lt;p&gt;实现基于自建服务器的 Ngrok 公网转发访问，将本地服务安全暴露到公网环境。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-服务器环境准备"&gt;🖥️ 服务器环境准备&lt;/h2&gt;
+&lt;h3 id="系统要求"&gt;系统要求&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: Ubuntu 16.04+ / CentOS 7+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 至少 1GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储&lt;/strong&gt;: 至少 10GB 可用空间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络&lt;/strong&gt;: 公网 IP，开放所需端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="ubuntu-环境依赖安装"&gt;Ubuntu 环境依赖安装&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 更新系统包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 安装必要依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;apt-get -y install zlib-devel openssl-devel perl hg cpio expat-devel &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; gettext-devel curl curl-devel perl-ExtUtils-MakeMaker &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;&lt;/span&gt; hg wget gcc gcc-c++ git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-go-语言环境配置"&gt;⚙️ Go 语言环境配置&lt;/h2&gt;
+&lt;h3 id="清理旧版本-golang"&gt;清理旧版本 Golang&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 删除现有golang依赖包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rpm -qa | grep golang | xargs rpm -e 2&amp;gt;/dev/null &lt;span style="color:#f92672"&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="安装-go-1163"&gt;安装 Go 1.16.3&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 下载安装包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 解压到系统目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 配置环境变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cat &amp;gt;&amp;gt; /etc/profile &lt;span style="color:#e6db74"&gt;&amp;lt;&amp;lt; &amp;#39;EOF&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;# Go Language Environment
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;export GOROOT=/usr/local/go
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;export PATH=$PATH:$GOROOT/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;export GOPATH=/home/go
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 加载环境变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;source /etc/profile
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 验证安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;go version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;预期输出&lt;/strong&gt;: &lt;code&gt;go version go1.16.3 linux/amd64&lt;/code&gt;&lt;/p&gt;</description></item></channel></rss>

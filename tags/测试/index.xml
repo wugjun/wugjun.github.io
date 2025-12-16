@@ -1,6 +1,262 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>测试 on 补漏砖匠</title><link>/tags/%E6%B5%8B%E8%AF%95/</link><description>Recent content in 测试 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>法宝篇</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</guid><description>◀ 返回
-创建脚本 创建 录制 截取报文 替换空格和换行
-创建socket ![创建socket](/images/工具效率-测试工具-创建socket.png
-loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容
-参数化流水号,右健所选内容,命名为seqNum_6 格式为%lu6 在Action.c 中添加代码
-/********************************************************************* * Created by Windows Sockets Recorder * * Created on: Wed Jun 16 11:06:06 *********************************************************************/ #include &amp;#34;lrs.h&amp;#34; Action() { int rc=0; char *Data, *p,*q; int Size; char index[2]; char hexStr[20]={0}; char strByte[20]={0}; unsigned char hexByte[20]={0}; unsigned char *unitptr; char rSeqNum[20] = {0}; int len = 0; int i,j,k,ret; int z = 0; //设定开始事务 len = strlen(lr_eval_string(&amp;#34;{seqNum_6}&amp;#34;)); p = lr_eval_string(&amp;#34;{seqNum_6}&amp;#34;) ; ret = str2hex(rSeqNum,6,p); lr_output_message(&amp;#34;str=%s, len = %d&amp;#34;,p, ret); lr_output_message(&amp;#34;str=%s, len = %d&amp;#34;,rSeqNum, ret); HexStrTobyte(p,hexByte,&amp;amp;len); for (i =0;i &amp;lt; len ; i++){ lr_output_message(&amp;#34;str=%02x,&amp;#34;,hexByte[i]); } q = hexStr; lr_output_message(&amp;#34;str=%s&amp;#34;,p); len = strlen(p); for (j=0; j&amp;lt;len/2 ; j++){ memcpy(q,&amp;#34;\\x&amp;#34;,2); memcpy(q+2, p,2); p+=2; q+=4;	} lr_output_message(&amp;#34;str=%s&amp;#34;,hexStr); lr_save_string(hexStr,&amp;#34;seqN&amp;#34;); #if 1 lrs_startup(257); //创建socketS lr_start_transaction(&amp;#34;create_socket&amp;#34;); // rc = lrs_create_socket(&amp;#34;socket0&amp;#34;, &amp;#34;TCP&amp;#34;, &amp;#34;RemoteHost=127.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>测试 on 补漏砖匠</title><link>/tags/%E6%B5%8B%E8%AF%95/</link><description>Recent content in 测试 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>法宝篇</title><link>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate><guid>/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/</guid><description>&lt;p&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="创建脚本"&gt;创建脚本&lt;/h3&gt;
+&lt;h4 id="创建"&gt;创建&lt;/h4&gt;
+&lt;p&gt;&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-loadrunner.png" alt="创建socket script"&gt;&lt;/p&gt;
+&lt;h3 id="录制"&gt;录制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;截取报文
+&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E5%BD%95%E5%88%B6.png" alt="报文"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;替换空格和换行&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="替换空格和换行"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建socket
+![创建socket](/images/工具效率-测试工具-创建socket.png&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参数化流水号,右健所选内容,命名为seqNum_6 格式为%lu6
+&lt;img src="/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E6%8F%90%E5%8F%96%E5%8F%82%E6%95%B0.png" alt="提取参数"&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在Action.c 中添加代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;/*********************************************************************
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; * Created by Windows Sockets Recorder
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; *
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; * Created on: Wed Jun 16 11:06:06
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; *********************************************************************/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;#34;lrs.h&amp;#34;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Action&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; rc&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;Data, &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p,&lt;span style="color:#f92672"&gt;*&lt;/span&gt;q;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; Size;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; index[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hexStr[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;]&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; strByte[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;]&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hexByte[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;]&lt;span style="color:#f92672"&gt;=&lt;/span&gt;{&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;unitptr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; rSeqNum[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; {&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i,j,k,ret;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; z &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//设定开始事务
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;lr_eval_string&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;{seqNum_6}&amp;#34;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lr_eval_string&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;{seqNum_6}&amp;#34;&lt;/span&gt;) ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;str2hex&lt;/span&gt;(rSeqNum,&lt;span style="color:#ae81ff"&gt;6&lt;/span&gt;,p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s, len = %d&amp;#34;&lt;/span&gt;,p, ret);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s, len = %d&amp;#34;&lt;/span&gt;,rSeqNum, ret);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;HexStrTobyte&lt;/span&gt;(p,hexByte,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;len);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i &lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; len ; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%02x,&amp;#34;&lt;/span&gt;,hexByte[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; q &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hexStr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s&amp;#34;&lt;/span&gt;,p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (j&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; j&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;len&lt;span style="color:#f92672"&gt;/&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; ; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		&lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(q,&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\\&lt;/span&gt;&lt;span style="color:#e6db74"&gt;x&amp;#34;&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		&lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(q&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, p,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;); 		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		p&lt;span style="color:#f92672"&gt;+=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 		q&lt;span style="color:#f92672"&gt;+=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;str=%s&amp;#34;&lt;/span&gt;,hexStr);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;lr_save_string&lt;/span&gt;(hexStr,&lt;span style="color:#e6db74"&gt;&amp;#34;seqN&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#if 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_startup&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;257&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//创建socketS
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;create_socket&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; rc &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_create_socket&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;TCP&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;RemoteHost=127.0.0.1:32001&amp;#34;&lt;/span&gt;, LrsLastArg);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//判断套接字创建是否成功
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (rc&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;create_socket&amp;#34;&lt;/span&gt;, LR_PASS); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Socket was successfully send &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;create_socket&amp;#34;&lt;/span&gt;, LR_FAIL); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;An error occurred while closing the socket, Error Code: %d&amp;#34;&lt;/span&gt;, rc);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//判断socket是否链接成功的事务，0表示创建成功 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;send_socket&amp;#34;&lt;/span&gt;); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//发送安全会话建立请求buf0为在data.ws中定义的发送变量 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lrs_send&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;buf0&amp;#34;&lt;/span&gt;, LrsLastArg);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#75715e"&gt;//设置连接超时时间为1秒
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lrs_set_recv_timeout&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;45&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (rc&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;send_socket&amp;#34;&lt;/span&gt;, LR_PASS); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Socket was successfully send &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;send_socket&amp;#34;&lt;/span&gt;, LR_FAIL); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;An error occurred while send the socket, Error Code: %d&amp;#34;&lt;/span&gt;, rc);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//设置接收超时时间为1秒
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//lrs_set_recv_timeout2(45,0);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Socket was successfully send&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//接收消息，存放在buf1中，buf1是在data.ws中定义的接收数组，注意数组长度一定要大于等于实际接收长度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_receive&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;buf1&amp;#34;&lt;/span&gt;, LrsLastArg); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//把Socket最后接收的字节数组，长度放在recvlen中，内容放在recvbuf中
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//lrs_get_last_received_buffer(&amp;#34;socket0&amp;#34;,&amp;amp;recvbuf,&amp;amp;recvlen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;received_socket&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//lrs_save_param(&amp;#34;socket0&amp;#34;, NULL, &amp;#34;F39&amp;#34;, 39, 2);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_message (&amp;#34;F39: %s&amp;#34;, lr_eval_string(&amp;#34;{F39}&amp;#34;));
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lrs_get_last_received_buffer&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;Data,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;Size);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//lr_message(&amp;#34;报文内容:%s&amp;#34;,Data);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_message(&amp;#34;应答码第39位:%x&amp;#34;,Data[39]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_message(&amp;#34;应答码第40位:%x&amp;#34;,Data[40]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;		&lt;span style="color:#75715e"&gt;//获取流水号000000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(Size &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;116&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;接收报文长度 116 == %d&amp;#34;&lt;/span&gt;, Size);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;received_socket&amp;#34;&lt;/span&gt;, LR_PASS);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;接收报文长度不够116 != %d&amp;#34;&lt;/span&gt;, Size);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;received_socket&amp;#34;&lt;/span&gt;, LR_FAIL);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//memcpy(F39,lr_eval_string(&amp;#34;{F39}&amp;#34;),2);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;//lr_output_message(&amp;#34;recvbuf: %X&amp;#34;,recvbuf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	 &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0-33&amp;#34;&lt;/span&gt;);	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//获取流水号000000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//if(Data[32]==0x45&amp;amp;&amp;amp;Data[33]==0x34){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(rSeqNum, Data&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;31&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;memcmp&lt;/span&gt;(Data&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;31&lt;/span&gt;,hexByte,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_log_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;流水号位：%3.3s&amp;#34;&lt;/span&gt;,Data&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;32&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易流水一致&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0-33&amp;#34;&lt;/span&gt;, LR_PASS);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_log_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;流水号4位：%x&amp;#34;&lt;/span&gt;,Data[&lt;span style="color:#ae81ff"&gt;33&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易流水不一致&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0-33&amp;#34;&lt;/span&gt;, LR_FAIL);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 &lt;span style="color:#a6e22e"&gt;lr_start_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//获取应答码000000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(Data[&lt;span style="color:#ae81ff"&gt;39&lt;/span&gt;]&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0x41&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt;Data[&lt;span style="color:#ae81ff"&gt;40&lt;/span&gt;]&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0x30&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易成功&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0&amp;#34;&lt;/span&gt;, LR_PASS);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_output_message&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;交易失败&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;lr_end_transaction&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;ITMP-9121-A0&amp;#34;&lt;/span&gt;, LR_FAIL); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//关闭socket
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#a6e22e"&gt;lrs_close_socket&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;socket0&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;//lrs_free_buffer(lseqNum);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#75715e"&gt;#endif
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;test_printf5&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;str, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; length)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; iii;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;the str is:&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (iii &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; iii &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; length; iii&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;%02x &amp;#34;&lt;/span&gt;, str[iii]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;/*str to hex,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;字符串转换为16进制
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;利用snprintf 函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;int snprintf(char* dest_str,size_t size,const char* format,...);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;功能:将可变参数以format的格式转换到dest_str中，并可以用%s打印出来。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;1、dest_str:目标字符串，即输出字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;2、size: 转换字符控制长度。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;(1) 如果格式化后的字符串长度 &amp;lt; size，则将此字符串全部复制到str中，并给其后添加一个字符串结束符(&amp;#39;\0&amp;#39;)；
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;(2) 如果格式化后的字符串长度 &amp;gt;= size，则只将其中的(size-1)个字符复制到str中，并给其后添加一个字符串结束符(&amp;#39;\0&amp;#39;)，返回值为欲写入的字符串长度。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;3、format :转换为某个格式，例如：%2d,%04X,%02X。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;4、...:需要转换的字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;str2hex&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;out_string, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; length, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;in_string)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; index;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;fmt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;%02x&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (index &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; index &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; length; index&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;snprintf&lt;/span&gt;((&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;)&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;out_string[index &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;], &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;, fmt, in_string[index]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; (length &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;HexStrTobyte&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;str, &lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;out, &lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;outlen)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;=&lt;/span&gt; str;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; high &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, low &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(p), cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tmplen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; (cnt &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; (tmplen &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; high &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;))) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; low &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;(&lt;span style="color:#f92672"&gt;++&lt;/span&gt;p) &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;))) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;(p)&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;(p)&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; out[cnt] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ((high &lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0x0f&lt;/span&gt;) &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt; &lt;span style="color:#f92672"&gt;|&lt;/span&gt; (low &lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0x0f&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cnt&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (tmplen &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; out[cnt] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ((&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;))) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;p &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;48&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (outlen &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; NULL)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;outlen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; tmplen &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;byteToHexStr&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;unsigned&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; byte_arr[], &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; arr_len, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStr, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStrLen)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i, index &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; arr_len; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hex1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hex2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; value &lt;span style="color:#f92672"&gt;=&lt;/span&gt; byte_arr[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; v1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; value &lt;span style="color:#f92672"&gt;/&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; v2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; value &lt;span style="color:#f92672"&gt;%&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;16&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (v1 &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; v1 &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;55&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (v2 &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; v2 &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;48&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hex2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;)(&lt;span style="color:#ae81ff"&gt;55&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; v2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStrLen &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; i)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; HexStr[index&lt;span style="color:#f92672"&gt;++&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hex1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; HexStr[index&lt;span style="color:#f92672"&gt;++&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hex2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;HexStrLen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; index;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a href="/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

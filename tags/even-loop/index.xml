@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Even Loop on 补漏砖匠</title><link>/tags/even-loop/</link><description>Recent content in Even Loop on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/even-loop/index.xml" rel="self" type="application/rss+xml"/><item><title>画卷篇</title><link>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate><guid>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid><description>事件循环 浏览器有哪些进程和线程 浏览器进程: 主要负责界面显示、用户交互、子进程管理等。浏览器进程内部会启动多个线程处理不同的任务。 网络进程: 负责加载网络资源，网络进程内部会启动多个线程处理不同的网络任务 渲染进程：一个标签页一个进程，渲染进程启动后，会开启一个渲染主线程，主线程负责执行 html、css、js 代码，默认情况下浏览器会为每个标签页开启一个新的渲染进程，以保证不同标签页之间互不影响。 渲染主线程是如何工作的 解析 html 解析 css 计算样式 布局 处理图层 每秒把页面画 60 次 执行全局 js 代码 执行事件处理函数 执行计时器的回调函数 排队 1. 最开始的时候渲染主线程会进入一个无限循环 2. 每一次循环会检查消息对列中是否存有任务存在，如果有，就获取第一个任务执行，执行完一个后进入下一个循环；如果没有，则进入休眠状态 3. 其他线程（包括其他进程的线程）可以随时向消息队列添加任务。新任务会加到消息队列的末尾。在添加新任务时，如果主线程是休眠状态，则会将其唤醒以继续循环拿取任务。 这样任务就有条不紊，持续执行下去，整个过程称之为事件循环（消息循环） 何为异步 执行代码中，会遇到一些无法立即处理的任务，比如：
-计时完成后需要执行任务：setTimeout、setInterval 网络通信完成后需要执行任务：XHR、 Fetch 用户操作后需要执行的任务： addEventListener 如果让主线程等待这些任务的时机到达，就会导致主线程长期处于阻塞状态，从而导致浏览其卡死。 渲染主线程承担着机器重要的工作，无论如何不能阻塞
-因此浏览器选择异步任务来解决问题 使用异步的方式，渲染主线程用不阻塞
-# Q:如何理解 JS 的异步？ A：js 是一门单线程的语言，这是因为它运行在浏览其的渲染主线程中，而渲染主线程只有一个。 渲染主线程承担着诸多的工作，渲染页面、执行 js 代码都在其中运行。 如果使用同步的方式，就有可能导致主线程阻塞，从而导致消息队列中的很多其他任务无法得到执行。 这样一来，一方面导致繁忙的主线程任务白白消耗时间，另一个方面无法及时更新，给用户造成卡死现象。 所以浏览器采用异步的方式来避免，具体的做法是当某些任务发生是，比如计时器、网络、事件监听, 主线程江南任务交给其他线程去处理，自身立即结束任务执行，转而执行后续代码， 当其他线程完成是将事先传递的回调函数包装程任务， 加入到消息队列的末尾，等待主线程调度执行。 在这种异步模式下，浏览器永不阻塞，从而最大限度的保证了单线程的流畅执行 js 为何会阻塞渲染 &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;run block&amp;lt;/h1&amp;gt; &amp;lt;button&amp;gt; change&amp;lt;/button&amp;gt; &amp;lt;script&amp;gt; var h1 = document.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Even Loop on 补漏砖匠</title><link>/tags/even-loop/</link><description>Recent content in Even Loop on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/even-loop/index.xml" rel="self" type="application/rss+xml"/><item><title>画卷篇</title><link>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate><guid>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid><description>&lt;h1 id="事件循环"&gt;事件循环&lt;/h1&gt;
+&lt;h2 id="浏览器有哪些进程和线程"&gt;浏览器有哪些进程和线程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览器进程: 主要负责界面显示、用户交互、子进程管理等。浏览器进程内部会启动多个线程处理不同的任务。&lt;/li&gt;
+&lt;li&gt;网络进程: 负责加载网络资源，网络进程内部会启动多个线程处理不同的网络任务&lt;/li&gt;
+&lt;li&gt;渲染进程：一个标签页一个进程，渲染进程启动后，会开启一个渲染主线程，主线程负责执行 html、css、js 代码，默认情况下浏览器会为每个标签页开启一个新的渲染进程，以保证不同标签页之间互不影响。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="渲染主线程是如何工作的"&gt;渲染主线程是如何工作的&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;解析 html&lt;/li&gt;
+&lt;li&gt;解析 css&lt;/li&gt;
+&lt;li&gt;计算样式&lt;/li&gt;
+&lt;li&gt;布局&lt;/li&gt;
+&lt;li&gt;处理图层&lt;/li&gt;
+&lt;li&gt;每秒把页面画 60 次&lt;/li&gt;
+&lt;li&gt;执行全局 js 代码&lt;/li&gt;
+&lt;li&gt;执行事件处理函数&lt;/li&gt;
+&lt;li&gt;执行计时器的回调函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="排队"&gt;排队&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%9B%BE1.png" alt="渲染主线程"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 1. 最开始的时候渲染主线程会进入一个无限循环
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 2. 每一次循环会检查消息对列中是否存有任务存在，如果有，就获取第一个任务执行，执行完一个后进入下一个循环；如果没有，则进入休眠状态
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 3. 其他线程（包括其他进程的线程）可以随时向消息队列添加任务。新任务会加到消息队列的末尾。在添加新任务时，如果主线程是休眠状态，则会将其唤醒以继续循环拿取任务。
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 这样任务就有条不紊，持续执行下去，整个过程称之为事件循环（消息循环）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src="/images/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%9B%BE2.png" alt="代码"&gt;&lt;/p&gt;
+&lt;h2 id="何为异步"&gt;何为异步&lt;/h2&gt;
+&lt;p&gt;执行代码中，会遇到一些无法立即处理的任务，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计时完成后需要执行任务：setTimeout、setInterval&lt;/li&gt;
+&lt;li&gt;网络通信完成后需要执行任务：XHR、 Fetch&lt;/li&gt;
+&lt;li&gt;用户操作后需要执行的任务： addEventListener
+如果让主线程等待这些任务的时机到达，就会导致主线程长期处于&lt;code&gt;阻塞&lt;/code&gt;状态，从而导致浏览其卡死。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="/images/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%9B%BE3.png" alt="异步任务"&gt;
+渲染主线程承担着机器重要的工作，无论如何不能阻塞&lt;/p&gt;
+&lt;p&gt;因此浏览器选择异步任务来解决问题
+&lt;img src="/images/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E5%9B%BE4.png" alt="image"&gt;&lt;/p&gt;
+&lt;p&gt;使用异步的方式，渲染主线程用不阻塞&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Q:如何理解 JS 的异步？&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;A&lt;span style="color:#960050;background-color:#1e0010"&gt;：&lt;/span&gt;js 是一门单线程的语言&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;这是因为它运行在浏览其的渲染主线程中&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;而渲染主线程只有一个&lt;span style="color:#960050;background-color:#1e0010"&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;渲染主线程承担着诸多的工作&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;渲染页面&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;执行 js 代码都在其中运行&lt;span style="color:#960050;background-color:#1e0010"&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;如果使用同步的方式&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;就有可能导致主线程阻塞&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;从而导致消息队列中的很多其他任务无法得到执行&lt;span style="color:#960050;background-color:#1e0010"&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;这样一来&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;一方面导致繁忙的主线程任务白白消耗时间&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;另一个方面无法及时更新&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;给用户造成卡死现象&lt;span style="color:#960050;background-color:#1e0010"&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;所以浏览器采用异步的方式来避免&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;具体的做法是当某些任务发生是&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;比如计时器&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;网络&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;事件监听,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;主线程江南任务交给其他线程去处理&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;自身立即结束任务执行&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;转而执行后续代码&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;当其他线程完成是将事先传递的回调函数包装程任务&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;加入到消息队列的末尾&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;等待主线程调度执行&lt;span style="color:#960050;background-color:#1e0010"&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;在这种异步模式下&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;浏览器永不阻塞&lt;span style="color:#960050;background-color:#1e0010"&gt;，&lt;/span&gt;从而最大限度的保证了单线程的流畅执行
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="js-为何会阻塞渲染"&gt;js 为何会阻塞渲染&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;html&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;lang&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;body&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;h1&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;run&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;block&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;/h1&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;button&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;change&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;/button&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;script&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;h1&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; document.&lt;span style="color:#a6e22e"&gt;querySelector&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#39;h1&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;btn&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; document.&lt;span style="color:#a6e22e"&gt;querySelector&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#39;button&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//死循环指定的时间
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;delay&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;duration&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;start&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Date.&lt;span style="color:#a6e22e"&gt;now&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; (Date.&lt;span style="color:#a6e22e"&gt;now&lt;/span&gt;() &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;start&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;duration&lt;/span&gt;) { }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;btn&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;onclick&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; () {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;h1&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;textContent&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;blocking&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;delay&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;3000&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;/body&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;/html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="任务有优先级吗"&gt;任务有优先级吗&lt;/h2&gt;
+&lt;p&gt;任务没优先级，消息队列有 FIFO
+根据 W3C 解释：&lt;/p&gt;</description></item></channel></rss>

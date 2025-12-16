@@ -1,70 +1,551 @@
-<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>补漏砖匠</title>
-<script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="Wu guo jun Personal blog about everything"><meta name=generator content="Hugo 0.128.0"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=alternate type=application/rss+xml href=/index.xml title=补漏砖匠><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
-<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class="main list" role=main><section class=ai-quiz-section data-ai-quiz-root data-ai-quiz-endpoint="http://localhost:18080/api/v1/assistant/chat?mode=exam&amp;query=%22%22"><h2 class=ai-quiz-title>AI 考题</h2><p class=ai-quiz-desc>点击下方按钮调用本地服务，自动生成新的考试题并追加到页面。</p><div class=ai-quiz-actions><button class=ai-quiz-button data-ai-quiz-trigger>“AI 考题”继续生成</button>
-<span class=ai-quiz-status data-ai-quiz-status></span></div><div class=ai-quiz-results data-ai-quiz-results></div></section><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">C语言-列表</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>补漏砖匠</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="补漏砖匠"><meta name=generator content="Hugo 0.152.2"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=alternate type=application/rss+xml href=/index.xml title=补漏砖匠><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>菜单</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/>在线答题</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class="main list" role=main><div class=ai-quiz-link-section><a href=/编程语言/编程语言-AI在线测试/ class=ai-quiz-home-button><span class=ai-quiz-button-icon>☕</span>
+<span class=ai-quiz-button-text>JAVA在线测试</span>
+<span class=ai-quiz-button-arrow>→</span></a></div><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">C语言-列表</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2022-07-23T00:00:00>July 23, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-线性表 顺序表 链式表 线性表的本质 定义： 由0个或多个数据元素的集合 数据元素之间是有顺序的 数据元素的个数是有限个 数据元素的类型必须相同 专业的定义： 线性表是具有相同类型的n(n>=0)个数据元素的有限序列 (a0,a1,a2,..an) ai是表项，n是长度 性质： a0为线性表的第一个元素，只有一个后继 an为线性表的最后一个元素，只有一个前驱 除a0和an以外的其他元素ai，既有前驱也有后继. 线性表的操作 创建 销毁 插入 删除 获得表中某个位置的元素 获得线性表的长度 清空 线性表的操作对应于我们程序中的一组函数
-List *List_Create(void); void List_Destroy(List *list); void List_Clear(List *list); int List_Insert(List *list, ListNode *node, int pos) ListNode * List_Delete(List *list, int pos) ListNode * List_Get(List *list, int pos) int List_Length(List *list) 线性表的顺序存储结构 线性表的顺序存储结构是指用一段地址连续的存储单元依次存储线性表的数据元素 看成C语言的数组，用C语言的一维数组实现顺序存储结构
-#define MAXSIZE 20 //线性表的最大容量 typedef struct _list { char node[MAXSIE]; //存储空间的起始地址是node int length; //表示线性表的当前长度 }List; 获得元素的操作 char Get(List *list, int pos) { char ret = -1; // 1.</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">C源码加壳解析</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p><h2 id=线性表>线性表</h2><ul><li>顺序表</li><li>链式表</li></ul><h3 id=线性表的本质>线性表的本质</h3><pre><code>定义：
+	由0个或多个数据元素的集合
+	数据元素之间是有顺序的
+	数据元素的个数是有限个
+	数据元素的类型必须相同
+	
+专业的定义：
+	线性表是具有相同类型的n(n&gt;=0)个数据元素的有限序列
+	(a0,a1,a2,..an)
+	ai是表项，n是长度
+	
+性质：
+	a0为线性表的第一个元素，只有一个后继
+	an为线性表的最后一个元素，只有一个前驱
+	除a0和an以外的其他元素ai，既有前驱也有后继.	
+</code></pre><h3 id=线性表的操作>线性表的操作</h3><pre><code>	创建
+	销毁
+	插入
+	删除
+	获得表中某个位置的元素
+	获得线性表的长度
+	清空
+</code></pre><p>线性表的操作对应于我们程序中的一组函数</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>List <span style=color:#f92672>*</span><span style=color:#a6e22e>List_Create</span>(<span style=color:#66d9ef>void</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>List_Destroy</span>(List <span style=color:#f92672>*</span>list);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>List_Clear</span>(List <span style=color:#f92672>*</span>list);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>List_Insert</span>(List <span style=color:#f92672>*</span>list, ListNode <span style=color:#f92672>*</span>node, <span style=color:#66d9ef>int</span> pos)
+</span></span><span style=display:flex><span>ListNode <span style=color:#f92672>*</span> <span style=color:#a6e22e>List_Delete</span>(List <span style=color:#f92672>*</span>list, <span style=color:#66d9ef>int</span> pos)
+</span></span><span style=display:flex><span>ListNode <span style=color:#f92672>*</span> <span style=color:#a6e22e>List_Get</span>(List <span style=color:#f92672>*</span>list, <span style=color:#66d9ef>int</span> pos)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>List_Length</span>(List <span style=color:#f92672>*</span>list)
+</span></span></code></pre></div><h3 id=线性表的顺序存储结构>线性表的顺序存储结构</h3><p>线性表的顺序存储结构是指用一段地址连续的存储单元依次存储线性表的数据元素
+看成C语言的数组，用C语言的一维数组实现顺序存储结构</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>	<span style=color:#75715e>#define MAXSIZE 20 </span><span style=color:#75715e>//线性表的最大容量
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> _list {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>char</span> node[MAXSIE]; <span style=color:#75715e>//存储空间的起始地址是node
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#66d9ef>int</span> length; <span style=color:#75715e>//表示线性表的当前长度
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	}List;
+</span></span></code></pre></div><h3 id=获得元素的操作>获得元素的操作</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>	<span style=color:#66d9ef>char</span> <span style=color:#a6e22e>Get</span>(List <span style=color:#f92672>*</span>list, <span style=color:#66d9ef>int</span> pos) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>char</span> ret <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>		<span style=color:#75715e>// 1. 判断list的合法性
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#75715e>// 2. 判断位置的合法性
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#66d9ef>if</span> ( (list<span style=color:#f92672>!=</span>NULL) <span style=color:#f92672>&amp;&amp;</span>(<span style=color:#ae81ff>0</span><span style=color:#f92672>&lt;=</span>pos) <span style=color:#f92672>&amp;&amp;</span> (pos<span style=color:#f92672>&lt;</span>list<span style=color:#f92672>-&gt;</span>length) )
+</span></span><span style=display:flex><span>			<span style=color:#75715e>// 3. 获得元素	
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>			ret <span style=color:#f92672>=</span> list<span style=color:#f92672>-&gt;</span>node[pos];
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> ret;
+</span></span><span style=display:flex><span>	}
+</span></span></code></pre></div><h3 id=插入元素的操作>插入元素的操作</h3><pre><code>算法：
+	1.判断线性表的合法性	
+	2.判断插入位置的合法性
+	3.把最后一个元素到插入位置的元素依次后移一个位置
+	4.将新元素插入
+	5.将长度加1
+</code></pre><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>Insert</span>(List <span style=color:#f92672>*</span>list, <span style=color:#66d9ef>char</span> c, <span style=color:#66d9ef>int</span> pos) {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>int</span> ret <span style=color:#f92672>=</span> (list<span style=color:#f92672>!=</span>NULL);
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>		ret <span style=color:#f92672>=</span> ret <span style=color:#f92672>&amp;&amp;</span> (list<span style=color:#f92672>-&gt;</span>length <span style=color:#f92672>&lt;=</span> MAXSIZE);
+</span></span><span style=display:flex><span>		ret <span style=color:#f92672>=</span> ret <span style=color:#f92672>&amp;&amp;</span> (<span style=color:#ae81ff>0</span><span style=color:#f92672>&lt;=</span>pos);	
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> ( ret ) {
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> ( pos <span style=color:#f92672>&gt;</span> list<span style=color:#f92672>-&gt;</span>length)
+</span></span><span style=display:flex><span>				pos <span style=color:#f92672>=</span> list<span style=color:#f92672>-&gt;</span>length;
+</span></span><span style=display:flex><span>			
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (i<span style=color:#f92672>=</span>list<span style=color:#f92672>-&gt;</span>length; i<span style=color:#f92672>&gt;</span>pos; i<span style=color:#f92672>--</span>)
+</span></span><span style=display:flex><span>				list<span style=color:#f92672>-&gt;</span>node[i] <span style=color:#f92672>=</span> list<span style=color:#f92672>-&gt;</span>node[i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>]; 
+</span></span><span style=display:flex><span>			
+</span></span><span style=display:flex><span>			list<span style=color:#f92672>-&gt;</span>node[i] <span style=color:#f92672>=</span> c;
+</span></span><span style=display:flex><span>			list<span style=color:#f92672>-&gt;</span>length<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> ret;
+</span></span><span style=display:flex><span>	}
+</span></span></code></pre></div><h3 id=删除元素操作>删除元素操作</h3><pre><code>算法：
+	1.判断线性表的合法性	
+	2.判断删除位置的合法性
+	3.将元素取出
+	4.将删除位置之后的所有元素都向前移动一个位置
+	5.顺序表的长度-1
+</code></pre><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>har <span style=color:#a6e22e>Delete</span>(List <span style=color:#f92672>*</span>list, <span style=color:#66d9ef>int</span> pos) {
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>char</span> ret <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>			
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> ( (list<span style=color:#f92672>!=</span>NULL)<span style=color:#f92672>&amp;&amp;</span>(<span style=color:#ae81ff>0</span><span style=color:#f92672>&lt;=</span>pos)<span style=color:#f92672>&amp;&amp;</span>(pos<span style=color:#f92672>&lt;</span>list<span style=color:#f92672>-&gt;</span>length) ){
+</span></span><span style=display:flex><span>				ret <span style=color:#f92672>=</span> list<span style=color:#f92672>-&gt;</span>node[pos];
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (i<span style=color:#f92672>=</span>pos<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>; i<span style=color:#f92672>&lt;</span>list<span style=color:#f92672>-&gt;</span>length; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>					list<span style=color:#f92672>-&gt;</span>node[i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> list<span style=color:#f92672>-&gt;</span>node[i];
+</span></span><span style=display:flex><span>				list<span style=color:#f92672>-&gt;</span>length<span style=color:#f92672>--</span>;
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> ret;
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div><p><strong>优点</strong>：<em>可以快速的获取表中合法位置的元素</em>
+<strong>缺点</strong>：<em>插入和删除的时候需要移动大量的元素</em></p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">C源码加壳解析</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2022-07-22T00:00:00>July 22, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-问题描述 字符串被显示为acssi码, 数值被hex加减
-转换思路 字符: acssi 转 string 数值: 计算出值
-贴代码 #include &lt;unistd.h> #include &lt;fcntl.h> #include &lt;stdio.h> #include &lt;stdlib.h> #include &lt;string.h> #include &lt;errno.h> #define setnull(x) memset(&(x), 0, sizeof(x)) #define CAL(x, y, z) x + y - z #define ERR_EXIT(m) \ do { \ fprintf(stderr, "[%s][%d]:%s %s \n" ,__FILE__, __LINE__, m, strerror(errno));\ exit(EXIT_FAILURE); \ }while(0) int main( int argc, char **argv){ int i,j,len,varLen,ilen ; char buf[1024]; char temp[2]; char var[64],var1[64]; char ascii[2]; char hexBuf[1024]; char fbuf[1024]; char tobuf[1024]; int begin = 0, end = 0; char *data; char *pstr; char *pstr1; int retlen; char varBuf[20]; char varRet; char srcfile[256],destfile[256]; setnull(srcfile); setnull(destfile); sprintf(srcfile,"%s", argv[1]); sprintf(destfile,"%s", argv[2]); //printf("%s\n",argv[1]); //printf("%s\n",srcfile); //printf("%s\n",argv[2]); //printf("%s\n",destfile); //strcpy(hexBuf, argv[1]); FILE* fd = fopen(srcfile,"r"); FILE* fdw = fopen(destfile,"w"); if(fd){ while(!</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">以模式为纲，化复杂为简</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p><h2 id=问题描述>问题描述</h2><p>字符串被显示为acssi码, 数值被hex加减</p><p><img src=/images/C_code_replay.jpeg alt=源码></p><h2 id=转换思路>转换思路</h2><p>字符: acssi 转 string
+数值: 计算出值</p><h2 id=贴代码>贴代码</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;unistd.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;fcntl.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdio.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdlib.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;string.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;errno.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#define setnull(x) memset(&amp;(x), 0, sizeof(x))
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#define CAL(x, y, z) x + y - z
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#define ERR_EXIT(m) \
+</span></span></span><span style=display:flex><span><span style=color:#75715e>    do { \
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        fprintf(stderr, &#34;[%s][%d]:%s %s \n&#34; ,__FILE__, __LINE__, m, strerror(errno));\
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        exit(EXIT_FAILURE); \
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        }while(0)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>( <span style=color:#66d9ef>int</span> argc, <span style=color:#66d9ef>char</span> <span style=color:#f92672>**</span>argv){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> i,j,len,varLen,ilen ;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> buf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> temp[<span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> var[<span style=color:#ae81ff>64</span>],var1[<span style=color:#ae81ff>64</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> ascii[<span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> hexBuf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> fbuf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> tobuf[<span style=color:#ae81ff>1024</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> begin <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, end <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>data;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>pstr;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>pstr1;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> retlen;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> varBuf[<span style=color:#ae81ff>20</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> varRet;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> srcfile[<span style=color:#ae81ff>256</span>],destfile[<span style=color:#ae81ff>256</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setnull</span>(srcfile);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setnull</span>(destfile);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>sprintf</span>(srcfile,<span style=color:#e6db74>&#34;%s&#34;</span>, argv[<span style=color:#ae81ff>1</span>]);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>sprintf</span>(destfile,<span style=color:#e6db74>&#34;%s&#34;</span>, argv[<span style=color:#ae81ff>2</span>]);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,argv[1]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,srcfile);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,argv[2]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;,destfile);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//strcpy(hexBuf, argv[1]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    FILE<span style=color:#f92672>*</span> fd <span style=color:#f92672>=</span> <span style=color:#a6e22e>fopen</span>(srcfile,<span style=color:#e6db74>&#34;r&#34;</span>);
+</span></span><span style=display:flex><span>    FILE<span style=color:#f92672>*</span> fdw <span style=color:#f92672>=</span> <span style=color:#a6e22e>fopen</span>(destfile,<span style=color:#e6db74>&#34;w&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(fd){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>while</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>feof</span>(fd)){
+</span></span><span style=display:flex><span>           <span style=color:#a6e22e>memset</span>(fbuf, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(fbuf));
+</span></span><span style=display:flex><span>           data <span style=color:#f92672>=</span> <span style=color:#a6e22e>fgets</span>(fbuf,<span style=color:#66d9ef>sizeof</span>(fbuf)<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,fd);
+</span></span><span style=display:flex><span>           <span style=color:#66d9ef>if</span>(data){
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>memset</span>(tobuf, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(tobuf));
+</span></span><span style=display:flex><span>                len <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(data);
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>for</span> (i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, j <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> len;){
+</span></span><span style=display:flex><span>                   <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>memcmp</span>(data <span style=color:#f92672>+</span> i,<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>x&#34;</span>,<span style=color:#ae81ff>2</span>)){
+</span></span><span style=display:flex><span>                       <span style=color:#a6e22e>memset</span>(ascii, <span style=color:#ae81ff>0x00</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>                       <span style=color:#a6e22e>memcpy</span>(temp, data <span style=color:#f92672>+</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>                       <span style=color:#75715e>//printf(&#34;temp: %s\n&#34;, temp);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                       <span style=color:#a6e22e>hex2ascii</span>(temp, ascii);
+</span></span><span style=display:flex><span>                       <span style=color:#75715e>//printf(&#34;ascii: %s\n&#34;, ascii);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                       <span style=color:#a6e22e>memcpy</span>(tobuf <span style=color:#f92672>+</span> j, ascii, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>                       i <span style=color:#f92672>+=</span> <span style=color:#ae81ff>4</span>;
+</span></span><span style=display:flex><span>                       j<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>                       <span style=color:#75715e>//printf(&#34;find \\x string offset %d\n&#34;, i); 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>                   }<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>memcmp</span>(data <span style=color:#f92672>+</span> i,<span style=color:#e6db74>&#34;(0x&#34;</span>,<span style=color:#ae81ff>3</span>)){
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memset</span>(var, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(var));
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memset</span>(var1, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(var1));
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memset</span>(varBuf, <span style=color:#ae81ff>0x00</span>, <span style=color:#66d9ef>sizeof</span>(varBuf));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>memcpy</span>(var, data <span style=color:#f92672>+</span> i, <span style=color:#66d9ef>sizeof</span>(var));  
+</span></span><span style=display:flex><span>                        <span style=color:#75715e>//printf(&#34;var: %s \n&#34;, var);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>                        pstr <span style=color:#f92672>=</span> <span style=color:#a6e22e>strchr</span>(var, <span style=color:#e6db74>&#39;(&#39;</span>);
+</span></span><span style=display:flex><span>                        <span style=color:#66d9ef>if</span> ( pstr <span style=color:#f92672>!=</span> NULL)
+</span></span><span style=display:flex><span>                        {
+</span></span><span style=display:flex><span>                            <span style=color:#66d9ef>if</span>( pstr1 <span style=color:#f92672>=</span> <span style=color:#a6e22e>strstr</span>(var, <span style=color:#e6db74>&#34;)&#34;</span>)){
+</span></span><span style=display:flex><span>                                <span style=color:#75715e>//printf(&#34;find ),\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                                varLen <span style=color:#f92672>=</span> pstr1 <span style=color:#f92672>-</span> pstr ;
+</span></span><span style=display:flex><span>                                <span style=color:#75715e>//printf(&#34;%d\n&#34;, varLen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                                <span style=color:#a6e22e>memcpy</span>(var1, var<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>,varLen <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>                                varRet <span style=color:#f92672>=</span> <span style=color:#a6e22e>cal</span>(var1);
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>sprintf</span>(varBuf,<span style=color:#e6db74>&#34;%d&#34;</span>,varRet);
+</span></span><span style=display:flex><span>                                <span style=color:#75715e>//printf(&#34;%s,%d\n&#34;,varBuf,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                                ilen <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(varBuf);
+</span></span><span style=display:flex><span>                                <span style=color:#a6e22e>memcpy</span>(tobuf <span style=color:#f92672>+</span> j, varBuf , ilen);
+</span></span><span style=display:flex><span>                                j <span style=color:#f92672>+=</span> ilen ;
+</span></span><span style=display:flex><span>                                i <span style=color:#f92672>+=</span> varLen <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>                            }
+</span></span><span style=display:flex><span>                           <span style=color:#75715e>//else if( pstr1 = strstr(var, &#34;);&#34;)){
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;find );\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int varLen = pstr1 - pstr ;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%d\n&#34;, varLen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(var1, var+1,varLen -1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     varRet = cal(var1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     sprintf(varBuf,&#34;%d;&#34;,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%s,%d\n&#34;,varBuf,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int ilen = strlen(varBuf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(tobuf + j, varBuf , ilen + 1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     j += ilen + 1;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     i += varLen + 1 + 1;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>// }
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//else if( pstr1 = strstr(var, &#34;)&#34;)){
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;find )\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int varLen = pstr1 - pstr ;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%d\n&#34;, varLen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(var1, var+1,varLen -1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     varRet = cal(var1);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     sprintf(varBuf,&#34;%d&#34;,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     printf(&#34;%s,%d\n&#34;,varBuf,varRet);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     int ilen = strlen(varBuf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     memcpy(tobuf + j, varBuf , ilen );
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     j += ilen;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//     i += varLen + 1;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                           <span style=color:#75715e>//// }
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                        }
+</span></span><span style=display:flex><span>                   }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                       tobuf[j] <span style=color:#f92672>=</span> data[i];
+</span></span><span style=display:flex><span>                       i<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>                       j<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>                   }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//printf(&#34;%s&#34;, data);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#a6e22e>fprintf</span>(fdw,<span style=color:#e6db74>&#34;%s&#34;</span>,tobuf);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ERR_EXIT</span>(<span style=color:#e6db74>&#34;open file failure&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fclose</span>(fd);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//for( i = 0; i &lt; strlen(argv[1]); i++){ 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//    printf(&#34;%c\n&#34;, argv[i]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//int ret =  hex2ascii(hexBuf,buf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//for( i = 0; i &lt; strlen(buf); i++){ 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//    printf(&#34;%c&#34;, buf[i]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//printf(&#34;\n&#34;);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>hex2ascii</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>hex, <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>ascii)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> len <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(hex), tlen, cnt , i;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>( i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, cnt <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> ,tlen <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> len; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>char</span> c <span style=color:#f92672>=</span> <span style=color:#a6e22e>toupper</span>(hex[i]);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(( c <span style=color:#f92672>&gt;=</span> <span style=color:#e6db74>&#39;0&#39;</span> <span style=color:#f92672>&amp;&amp;</span> c <span style=color:#f92672>&lt;=</span><span style=color:#e6db74>&#39;9&#39;</span>) <span style=color:#f92672>||</span> ( c <span style=color:#f92672>&gt;=</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>&amp;&amp;</span> c <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;F&#39;</span>))
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>int</span>  t <span style=color:#f92672>=</span> ( c <span style=color:#f92672>&gt;=</span><span style=color:#e6db74>&#39;A&#39;</span>) <span style=color:#f92672>?</span> c <span style=color:#f92672>-</span> <span style=color:#e6db74>&#39;A&#39;</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>10</span> <span style=color:#f92672>:</span> c <span style=color:#f92672>-</span> <span style=color:#e6db74>&#39;0&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span>(cnt)
+</span></span><span style=display:flex><span>                ascii[tlen<span style=color:#f92672>++</span>] <span style=color:#f92672>+=</span> t, cnt <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span> 
+</span></span><span style=display:flex><span>                ascii[tlen] <span style=color:#f92672>=</span> t <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>4</span>, cnt <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> tlen;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>cal</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>exprs){
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> x,y,z;
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//printf(&#34;%s\n&#34;, exprs);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>sscanf</span>(exprs,<span style=color:#e6db74>&#34;%x + %d - %x&#34;</span>,<span style=color:#f92672>&amp;</span>x,<span style=color:#f92672>&amp;</span>y,<span style=color:#f92672>&amp;</span>z);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>CAL</span>(x,y,z); 
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=编译>编译</h2><p>gcc -o hex2ascii hex2ascii.c</p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">以模式为纲，化复杂为简</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2022-07-22T00:00:00>July 22, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-单一职责原则(SRP:Single Responsibility Principle) 一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。
-假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。
-开放-关闭原则(OCP:Open Closed Principle) 添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。
-开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。
-很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。
-假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：
-public class TaxCalculator { public decimal Calculate(decimal income, decimal deduction, string country) { decimal taxAmount = 0; decimal taxableIncome = income - deduction; switch (country) { case "India": //Todo calculation break; case "USA": //Todo calculation break; case "UK": //Todocalculation break; } return taxAmount; } } 这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。
-让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95/ rel=bookmark>典籍篇</a></h3><p class="list__lead post__lead">聚社区之智，传技术之火</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p><h3 id=单一职责原则srpsingle-responsibility-principle>单一职责原则(SRP:Single Responsibility Principle)</h3><p>一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。</p><p>假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。</p><h3 id=开放-关闭原则ocpopen-closed-principle>开放-关闭原则(OCP:Open Closed Principle)</h3><p>添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。</p><p>开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。</p><p>很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。</p><p>假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TaxCalculator</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> decimal <span style=color:#a6e22e>Calculate</span>(decimal income, decimal deduction, string country)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        decimal taxAmount <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>        decimal taxableIncome <span style=color:#f92672>=</span> income <span style=color:#f92672>-</span> deduction;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>switch</span> (country)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;India&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//Todo calculation</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;USA&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//Todo calculation </span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;UK&#34;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//Todocalculation</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> taxAmount;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。</p><p>让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。</p><p>根据类图，可以看到通过继承实现横向的扩展，并且不会引发对其他不相关类的修改。这时 TaxCalculator 类中的 Calculate 方法会异常简单：</p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95/ rel=bookmark>典籍篇</a></h3><p class="list__lead post__lead">聚社区之智，传技术之火</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2021-12-21T00:00:00>December 21, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-五种基本句式 主语:我们所有造的句子都有主体
-谓语:主体执行的动作
-系动词:联系动作的动词,连接前边的主语和后边的表语
-表语：描述主语性质、特点、位置的词
-宾语：主语执行动作的对象
-间宾：人叫间宾 7.直宾：物叫直宾
-宾补：宾语不能完全说明谓语执行的对象的执行结果时需要补充说明
-主+谓 S+V
-the universe remains 宇宙长存
-主+系+表 S+V+P
-the food is delicious 这食物好吃
-主+谓+宾 S+V+O
-he took his bag and left 他拿着他的包离开了
-主+谓+间宾+直宾 S+V+o+O
-her father bought her a dictionary 他的爸爸给他买了一本词典
-主+谓+宾+宾补 S+V+O+C
-We made him our monitor 我们选他当班长
-Be动词的形式 be is am are was were being been
-the man is back They are back He was back They were back They have been back 后面接名次、形容词、地点副词或短语作补足语</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/ rel=bookmark>法宝篇</a></h3><p class="list__lead post__lead">工欲善其事，必先利其器</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>◀ 返回</a></p><h3 id=五种基本句式>五种基本句式</h3><ol><li><p><strong>主语</strong>:我们所有造的句子都有主体</p></li><li><p><strong>谓语</strong>:主体执行的动作</p></li><li><p><strong>系动词</strong>:联系动作的动词,连接前边的主语和后边的表语</p></li><li><p><strong>表语</strong>：描述主语性质、特点、位置的词</p></li><li><p><strong>宾语</strong>：主语执行动作的对象</p></li><li><p><strong>间宾</strong>：人叫间宾
+7.<strong>直宾</strong>：物叫直宾</p></li><li><p><strong>宾</strong>补：宾语不能完全说明谓语执行的对象的执行结果时需要补充说明</p></li><li><p>主+谓 <strong>S+V</strong></p><p>the universe remains <strong>宇宙长存</strong></p></li><li><p>主+系+表 <strong>S+V+P</strong></p><p>the food is delicious <strong>这食物好吃</strong></p></li><li><p>主+谓+宾 <strong>S+V+O</strong></p><p>he took his bag and left <strong>他拿着他的包离开了</strong></p></li><li><p>主+谓+间宾+直宾 <strong>S+V+o+O</strong></p><p>her father bought her a dictionary <strong>他的爸爸给他买了一本词典</strong></p></li><li><p>主+谓+宾+宾补 <strong>S+V+O+C</strong></p><p>We made him our monitor <strong>我们选他当班长</strong></p></li></ol><h3 id=be动词的形式>Be动词的形式</h3><p><strong>be is am are was were being been</strong></p><ul><li>the man is back</li><li>They are back</li><li>He was back</li><li>They were back</li><li>They have been back</li></ul><p><em>后面接名次、形容词、地点副词或短语作补足语</em></p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-LoadRunner%E9%AB%98%E7%BA%A7/ rel=bookmark>法宝篇</a></h3><p class="list__lead post__lead">工欲善其事，必先利其器</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2021-12-21T00:00:00>December 21, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87 rel=category>工具效率</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-创建脚本 创建 录制 截取报文 替换空格和换行
-创建socket ![创建socket](/images/工具效率-测试工具-创建socket.png
-loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容
-参数化流水号,右健所选内容,命名为seqNum_6 格式为%lu6 在Action.c 中添加代码
-/********************************************************************* * Created by Windows Sockets Recorder * * Created on: Wed Jun 16 11:06:06 *********************************************************************/ #include "lrs.h" Action() { int rc=0; char *Data, *p,*q; int Size; char index[2]; char hexStr[20]={0}; char strByte[20]={0}; unsigned char hexByte[20]={0}; unsigned char *unitptr; char rSeqNum[20] = {0}; int len = 0; int i,j,k,ret; int z = 0; //设定开始事务 len = strlen(lr_eval_string("{seqNum_6}")); p = lr_eval_string("{seqNum_6}") ; ret = str2hex(rSeqNum,6,p); lr_output_message("str=%s, len = %d",p, ret); lr_output_message("str=%s, len = %d",rSeqNum, ret); HexStrTobyte(p,hexByte,&amp;len); for (i =0;i &lt; len ; i++){ lr_output_message("str=%02x,",hexByte[i]); } q = hexStr; lr_output_message("str=%s",p); len = strlen(p); for (j=0; j&lt;len/2 ; j++){ memcpy(q,"\\x",2); memcpy(q+2, p,2); p+=2; q+=4; } lr_output_message("str=%s",hexStr); lr_save_string(hexStr,"seqN"); #if 1 lrs_startup(257); //创建socketS lr_start_transaction("create_socket"); // rc = lrs_create_socket("socket0", "TCP", "RemoteHost=127.</div></article></main><div class=pagination><a class="pagination__item pagination__item--prev btn" href=/page/3/>«</a>
+<span class=meta__text><a class=meta__link href=/categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87 rel=category>工具效率</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>◀ 返回</a></p><h3 id=创建脚本>创建脚本</h3><h4 id=创建>创建</h4><p><img src=/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-loadrunner.png alt="创建socket script"></p><h3 id=录制>录制</h3><ul><li><p>截取报文
+<img src=/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E5%BD%95%E5%88%B6.png alt=报文></p></li><li><p>替换空格和换行<img src=/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png alt=替换空格和换行></p></li><li><p>创建socket
+![创建socket](/images/工具效率-测试工具-创建socket.png</p></li><li><p>loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容</p></li></ul><blockquote><p>参数化流水号,右健所选内容,命名为seqNum_6 格式为%lu6
+<img src=/images/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-%E6%8F%90%E5%8F%96%E5%8F%82%E6%95%B0.png alt=提取参数></p></blockquote><p>在Action.c 中添加代码</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>/*********************************************************************
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * Created by Windows Sockets Recorder
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * Created on: Wed Jun 16 11:06:06
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *********************************************************************/</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&#34;lrs.h&#34;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>Action</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> rc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>Data, <span style=color:#f92672>*</span>p,<span style=color:#f92672>*</span>q;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> Size;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>char</span> index[<span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>char</span> hexStr[<span style=color:#ae81ff>20</span>]<span style=color:#f92672>=</span>{<span style=color:#ae81ff>0</span>};
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>char</span> strByte[<span style=color:#ae81ff>20</span>]<span style=color:#f92672>=</span>{<span style=color:#ae81ff>0</span>};
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>char</span> hexByte[<span style=color:#ae81ff>20</span>]<span style=color:#f92672>=</span>{<span style=color:#ae81ff>0</span>};
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>unitptr;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>char</span> rSeqNum[<span style=color:#ae81ff>20</span>] <span style=color:#f92672>=</span> {<span style=color:#ae81ff>0</span>};
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> len <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> i,j,k,ret;
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>int</span> z <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//设定开始事务
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span> 
+</span></span><span style=display:flex><span>    len <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(<span style=color:#a6e22e>lr_eval_string</span>(<span style=color:#e6db74>&#34;{seqNum_6}&#34;</span>));
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    p <span style=color:#f92672>=</span> <span style=color:#a6e22e>lr_eval_string</span>(<span style=color:#e6db74>&#34;{seqNum_6}&#34;</span>) ;
+</span></span><span style=display:flex><span>    ret <span style=color:#f92672>=</span> <span style=color:#a6e22e>str2hex</span>(rSeqNum,<span style=color:#ae81ff>6</span>,p);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;str=%s, len = %d&#34;</span>,p, ret);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;str=%s, len = %d&#34;</span>,rSeqNum, ret);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>HexStrTobyte</span>(p,hexByte,<span style=color:#f92672>&amp;</span>len);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (i <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;i <span style=color:#f92672>&lt;</span> len ; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>    	<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;str=%02x,&#34;</span>,hexByte[i]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    q <span style=color:#f92672>=</span> hexStr;
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>   <span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;str=%s&#34;</span>,p);
+</span></span><span style=display:flex><span>   len <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(p);
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>for</span> (j<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; j<span style=color:#f92672>&lt;</span>len<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span> ; j<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>   		<span style=color:#a6e22e>memcpy</span>(q,<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>x&#34;</span>,<span style=color:#ae81ff>2</span>);  
+</span></span><span style=display:flex><span>   		<span style=color:#a6e22e>memcpy</span>(q<span style=color:#f92672>+</span><span style=color:#ae81ff>2</span>, p,<span style=color:#ae81ff>2</span>);  		
+</span></span><span style=display:flex><span>   		p<span style=color:#f92672>+=</span><span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>   		q<span style=color:#f92672>+=</span><span style=color:#ae81ff>4</span>;	
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;str=%s&#34;</span>,hexStr);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>lr_save_string</span>(hexStr,<span style=color:#e6db74>&#34;seqN&#34;</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span> <span style=color:#75715e>#if 1
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>lrs_startup</span>(<span style=color:#ae81ff>257</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//创建socketS
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>lr_start_transaction</span>(<span style=color:#e6db74>&#34;create_socket&#34;</span>);
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    rc <span style=color:#f92672>=</span> <span style=color:#a6e22e>lrs_create_socket</span>(<span style=color:#e6db74>&#34;socket0&#34;</span>, <span style=color:#e6db74>&#34;TCP&#34;</span>, <span style=color:#e6db74>&#34;RemoteHost=127.0.0.1:32001&#34;</span>,  LrsLastArg);
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//判断套接字创建是否成功
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span> 
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> (rc<span style=color:#f92672>==</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;create_socket&#34;</span>, LR_PASS); 
+</span></span><span style=display:flex><span>    	<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;Socket was successfully send &#34;</span>);
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;create_socket&#34;</span>, LR_FAIL); 
+</span></span><span style=display:flex><span>    	<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;An error occurred while closing the socket, Error Code: %d&#34;</span>, rc);
+</span></span><span style=display:flex><span>    	
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//判断socket是否链接成功的事务，0表示创建成功 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>lr_start_transaction</span>(<span style=color:#e6db74>&#34;send_socket&#34;</span>);   
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//发送安全会话建立请求buf0为在data.ws中定义的发送变量     
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>lrs_send</span>(<span style=color:#e6db74>&#34;socket0&#34;</span>, <span style=color:#e6db74>&#34;buf0&#34;</span>, LrsLastArg);
+</span></span><span style=display:flex><span> 	<span style=color:#75715e>//设置连接超时时间为1秒
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>lrs_set_recv_timeout</span>(<span style=color:#ae81ff>45</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> (rc<span style=color:#f92672>==</span><span style=color:#ae81ff>0</span>){
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;send_socket&#34;</span>, LR_PASS); 
+</span></span><span style=display:flex><span>    	<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;Socket was successfully send &#34;</span>);
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;send_socket&#34;</span>, LR_FAIL); 
+</span></span><span style=display:flex><span>    	<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;An error occurred while send the socket, Error Code: %d&#34;</span>, rc);
+</span></span><span style=display:flex><span>    	
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//设置接收超时时间为1秒
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//lrs_set_recv_timeout2(45,0);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;Socket was successfully send&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//接收消息，存放在buf1中，buf1是在data.ws中定义的接收数组，注意数组长度一定要大于等于实际接收长度
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>lrs_receive</span>(<span style=color:#e6db74>&#34;socket0&#34;</span>, <span style=color:#e6db74>&#34;buf1&#34;</span>, LrsLastArg); 
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//把Socket最后接收的字节数组，长度放在recvlen中，内容放在recvbuf中
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//lrs_get_last_received_buffer(&#34;socket0&#34;,&amp;recvbuf,&amp;recvlen);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	
+</span></span><span style=display:flex><span>	 <span style=color:#a6e22e>lr_start_transaction</span>(<span style=color:#e6db74>&#34;received_socket&#34;</span>);
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//lrs_save_param(&#34;socket0&#34;, NULL, &#34;F39&#34;, 39, 2);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>//lr_message (&#34;F39: %s&#34;, lr_eval_string(&#34;{F39}&#34;));
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>lrs_get_last_received_buffer</span>(<span style=color:#e6db74>&#34;socket0&#34;</span>,<span style=color:#f92672>&amp;</span>Data,<span style=color:#f92672>&amp;</span>Size);
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//lr_message(&#34;报文内容:%s&#34;,Data);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>//lr_message(&#34;应答码第39位:%x&#34;,Data[39]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>//lr_message(&#34;应答码第40位:%x&#34;,Data[40]);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>		<span style=color:#75715e>//获取流水号000000
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span>(Size <span style=color:#f92672>==</span> <span style=color:#ae81ff>116</span>){
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;接收报文长度 116 == %d&#34;</span>, Size);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;received_socket&#34;</span>, LR_PASS);
+</span></span><span style=display:flex><span>	}<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;接收报文长度不够116 != %d&#34;</span>, Size);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;received_socket&#34;</span>, LR_FAIL);
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//memcpy(F39,lr_eval_string(&#34;{F39}&#34;),2);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>//lr_output_message(&#34;recvbuf: %X&#34;,recvbuf);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	 <span style=color:#a6e22e>lr_start_transaction</span>(<span style=color:#e6db74>&#34;ITMP-9121-A0-33&#34;</span>);	
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//获取流水号000000
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>//if(Data[32]==0x45&amp;&amp;Data[33]==0x34){
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>memcpy</span>(rSeqNum, Data<span style=color:#f92672>+</span><span style=color:#ae81ff>31</span>,<span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>memcmp</span>(Data<span style=color:#f92672>+</span><span style=color:#ae81ff>31</span>,hexByte,<span style=color:#ae81ff>3</span>)){
+</span></span><span style=display:flex><span>    	
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_log_message</span>(<span style=color:#e6db74>&#34;流水号位：%3.3s&#34;</span>,Data<span style=color:#f92672>+</span><span style=color:#ae81ff>32</span>);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;交易流水一致&#34;</span>);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;ITMP-9121-A0-33&#34;</span>, LR_PASS);
+</span></span><span style=display:flex><span>	}<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_log_message</span>(<span style=color:#e6db74>&#34;流水号4位：%x&#34;</span>,Data[<span style=color:#ae81ff>33</span>]);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;交易流水不一致&#34;</span>);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;ITMP-9121-A0-33&#34;</span>, LR_FAIL);
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	 <span style=color:#a6e22e>lr_start_transaction</span>(<span style=color:#e6db74>&#34;ITMP-9121-A0&#34;</span>);
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//获取应答码000000
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span>(Data[<span style=color:#ae81ff>39</span>]<span style=color:#f92672>==</span><span style=color:#ae81ff>0x41</span><span style=color:#f92672>&amp;&amp;</span>Data[<span style=color:#ae81ff>40</span>]<span style=color:#f92672>==</span><span style=color:#ae81ff>0x30</span>){
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;交易成功&#34;</span>);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;ITMP-9121-A0&#34;</span>, LR_PASS);
+</span></span><span style=display:flex><span>	}<span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>		
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_output_message</span>(<span style=color:#e6db74>&#34;交易失败&#34;</span>);
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>lr_end_transaction</span>(<span style=color:#e6db74>&#34;ITMP-9121-A0&#34;</span>, LR_FAIL); 
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//关闭socket
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#a6e22e>lrs_close_socket</span>(<span style=color:#e6db74>&#34;socket0&#34;</span>);
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//lrs_free_buffer(lseqNum);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>#endif
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_printf5</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>str, <span style=color:#66d9ef>int</span> length)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> iii;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>printf</span>(<span style=color:#e6db74>&#34;the str is:&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (iii <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; iii <span style=color:#f92672>&lt;</span> length; iii<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>printf</span>(<span style=color:#e6db74>&#34;%02x &#34;</span>, str[iii]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>printf</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>/*str to hex,
+</span></span></span><span style=display:flex><span><span style=color:#75715e>字符串转换为16进制
+</span></span></span><span style=display:flex><span><span style=color:#75715e>利用snprintf 函数
+</span></span></span><span style=display:flex><span><span style=color:#75715e>int snprintf(char* dest_str,size_t size,const char* format,...);
+</span></span></span><span style=display:flex><span><span style=color:#75715e>功能:将可变参数以format的格式转换到dest_str中，并可以用%s打印出来。
+</span></span></span><span style=display:flex><span><span style=color:#75715e>1、dest_str:目标字符串，即输出字符串
+</span></span></span><span style=display:flex><span><span style=color:#75715e>2、size: 转换字符控制长度。
+</span></span></span><span style=display:flex><span><span style=color:#75715e>(1) 如果格式化后的字符串长度 &lt; size，则将此字符串全部复制到str中，并给其后添加一个字符串结束符(&#39;\0&#39;)；
+</span></span></span><span style=display:flex><span><span style=color:#75715e>(2) 如果格式化后的字符串长度 &gt;= size，则只将其中的(size-1)个字符复制到str中，并给其后添加一个字符串结束符(&#39;\0&#39;)，返回值为欲写入的字符串长度。
+</span></span></span><span style=display:flex><span><span style=color:#75715e>3、format :转换为某个格式，例如：%2d,%04X,%02X。
+</span></span></span><span style=display:flex><span><span style=color:#75715e>4、...:需要转换的字符串
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>str2hex</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>out_string, <span style=color:#66d9ef>int</span> length, <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>in_string)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> index;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>fmt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;%02x&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (index <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; index <span style=color:#f92672>&lt;</span> length; index<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>snprintf</span>((<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>)<span style=color:#f92672>&amp;</span>out_string[index <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>1</span>], <span style=color:#ae81ff>3</span>, fmt, in_string[index]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> (length <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>HexStrTobyte</span>(<span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>str, <span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>out, <span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>int</span> <span style=color:#f92672>*</span>outlen)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>p <span style=color:#f92672>=</span> str;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> high <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, low <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> tmplen <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(p), cnt <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    tmplen <span style=color:#f92672>=</span> <span style=color:#a6e22e>strlen</span>(p);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (cnt <span style=color:#f92672>&lt;</span> (tmplen <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>))
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        high <span style=color:#f92672>=</span> ((<span style=color:#f92672>*</span>p <span style=color:#f92672>&gt;</span> <span style=color:#e6db74>&#39;9&#39;</span>) <span style=color:#f92672>&amp;&amp;</span> ((<span style=color:#f92672>*</span>p <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;F&#39;</span>) <span style=color:#f92672>||</span> (<span style=color:#f92672>*</span>p <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;f&#39;</span>))) <span style=color:#f92672>?</span> <span style=color:#f92672>*</span>p <span style=color:#f92672>-</span> <span style=color:#ae81ff>48</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>7</span> <span style=color:#f92672>:</span> <span style=color:#f92672>*</span>p <span style=color:#f92672>-</span> <span style=color:#ae81ff>48</span>;
+</span></span><span style=display:flex><span>        low <span style=color:#f92672>=</span> (<span style=color:#f92672>*</span>(<span style=color:#f92672>++</span>p) <span style=color:#f92672>&gt;</span> <span style=color:#e6db74>&#39;9&#39;</span> <span style=color:#f92672>&amp;&amp;</span> ((<span style=color:#f92672>*</span>p <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;F&#39;</span>) <span style=color:#f92672>||</span> (<span style=color:#f92672>*</span>p <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;f&#39;</span>))) <span style=color:#f92672>?</span> <span style=color:#f92672>*</span>(p)<span style=color:#f92672>-</span><span style=color:#ae81ff>48</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>7</span> <span style=color:#f92672>:</span> <span style=color:#f92672>*</span>(p)<span style=color:#f92672>-</span><span style=color:#ae81ff>48</span>;
+</span></span><span style=display:flex><span>        out[cnt] <span style=color:#f92672>=</span> ((high <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0x0f</span>) <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>4</span> <span style=color:#f92672>|</span> (low <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0x0f</span>));
+</span></span><span style=display:flex><span>        p<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>        cnt<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (tmplen <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        out[cnt] <span style=color:#f92672>=</span> ((<span style=color:#f92672>*</span>p <span style=color:#f92672>&gt;</span> <span style=color:#e6db74>&#39;9&#39;</span>) <span style=color:#f92672>&amp;&amp;</span> ((<span style=color:#f92672>*</span>p <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;F&#39;</span>) <span style=color:#f92672>||</span> (<span style=color:#f92672>*</span>p <span style=color:#f92672>&lt;=</span> <span style=color:#e6db74>&#39;f&#39;</span>))) <span style=color:#f92672>?</span> <span style=color:#f92672>*</span>p <span style=color:#f92672>-</span> <span style=color:#ae81ff>48</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>7</span> <span style=color:#f92672>:</span> <span style=color:#f92672>*</span>p <span style=color:#f92672>-</span> <span style=color:#ae81ff>48</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (outlen <span style=color:#f92672>!=</span> NULL)
+</span></span><span style=display:flex><span>        <span style=color:#f92672>*</span>outlen <span style=color:#f92672>=</span> tmplen <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>+</span> tmplen <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> tmplen <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>+</span> tmplen <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>byteToHexStr</span>(<span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>char</span> byte_arr[], <span style=color:#66d9ef>int</span> arr_len, <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>HexStr, <span style=color:#66d9ef>int</span> <span style=color:#f92672>*</span>HexStrLen)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> i, index <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> arr_len; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>char</span> hex1;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>char</span> hex2;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> value <span style=color:#f92672>=</span> byte_arr[i];
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> v1 <span style=color:#f92672>=</span> value <span style=color:#f92672>/</span> <span style=color:#ae81ff>16</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> v2 <span style=color:#f92672>=</span> value <span style=color:#f92672>%</span> <span style=color:#ae81ff>16</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (v1 <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>&amp;&amp;</span> v1 <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>9</span>)
+</span></span><span style=display:flex><span>            hex1 <span style=color:#f92672>=</span> (<span style=color:#66d9ef>char</span>)(<span style=color:#ae81ff>48</span> <span style=color:#f92672>+</span> v1);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>            hex1 <span style=color:#f92672>=</span> (<span style=color:#66d9ef>char</span>)(<span style=color:#ae81ff>55</span> <span style=color:#f92672>+</span> v1);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (v2 <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>&amp;&amp;</span> v2 <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>9</span>)
+</span></span><span style=display:flex><span>            hex2 <span style=color:#f92672>=</span> (<span style=color:#66d9ef>char</span>)(<span style=color:#ae81ff>48</span> <span style=color:#f92672>+</span> v2);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>            hex2 <span style=color:#f92672>=</span> (<span style=color:#66d9ef>char</span>)(<span style=color:#ae81ff>55</span> <span style=color:#f92672>+</span> v2);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>*</span>HexStrLen <span style=color:#f92672>&lt;=</span> i)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        HexStr[index<span style=color:#f92672>++</span>] <span style=color:#f92672>=</span> hex1;
+</span></span><span style=display:flex><span>        HexStr[index<span style=color:#f92672>++</span>] <span style=color:#f92672>=</span> hex2;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#f92672>*</span>HexStrLen <span style=color:#f92672>=</span> index;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><p><a href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>◀ 返回</a></p></div></article></main><div class=pagination><a class="pagination__item pagination__item--prev btn" href=/page/3/>«</a>
 <span class="pagination__item pagination__item--current">4/5</span>
-<a class="pagination__item pagination__item--next btn" href=/page/5/>»</a></div></div><aside class="sidebar sidebar--left"><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH... name=q aria-label=SEARCH...>
+<a class="pagination__item pagination__item--next btn" href=/page/5/>»</a></div></div><aside class="sidebar sidebar--left"><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=搜索... name=q aria-label=搜索...>
 </label><input class=widget-search__submit type=submit value=Search>
-<input type=hidden name=sitesearch value=/></form></div><div class="widget-recent widget"><h4 class=widget__title>Recent Posts</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/post/about/>个人简历-中文</a></li><li class=widget__item><a class=widget__link href=/post/about-en/>个人简历-英文</a></li></ul></div></div><div class="widget-categories widget"><h4 class=widget__title>Categories</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/%20categories/%e5%85%b3%e4%ba%8e%e6%88%91>关于我</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91>前端开发</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%90%8e%e7%ab%af%e6%9e%b6%e6%9e%84>后端架构</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87>工具效率</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3>开源文档</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e7%ae%97%e6%b3%95%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84>算法数据结构</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80>编程语言</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e8%bf%90%e7%bb%b4%e9%83%a8%e7%bd%b2>运维部署</a></li></ul></div></div><div class="widget-taglist widget"><h4 class=widget__title>Tags</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/ai title=Ai>Ai (2)</a>
+<input type=hidden name=sitesearch value=/></form></div><div class="widget-recent widget"><h4 class=widget__title>最新文章</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/>&lt;&lt;春秋算法>></a></li><li class=widget__item><a class=widget__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=widget__item><a class=widget__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=widget__item><a class=widget__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/>典籍篇</a></li><li class=widget__item><a class=widget__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84/>典籍篇</a></li></ul></div></div><div class="widget-categories widget"><h4 class=widget__title>分类</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/categories/%e5%85%b3%e4%ba%8e%e6%88%91>关于我</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91>前端开发</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%90%8e%e7%ab%af%e6%9e%b6%e6%9e%84>后端架构</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87>工具效率</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3>开源文档</a></li><li class=widget__item><a class=widget__link href=/categories/%e7%ae%97%e6%b3%95%e4%b8%80%e7%bb%9f%e6%98%a5%e7%a7%8b>算法一统春秋</a></li><li class=widget__item><a class=widget__link href=/categories/%e7%ae%97%e6%b3%95%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84>算法数据结构</a></li><li class=widget__item><a class=widget__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80>编程语言</a></li><li class=widget__item><a class=widget__link href=/categories/%e8%bf%90%e7%bb%b4%e9%83%a8%e7%bd%b2>运维部署</a></li></ul></div></div><div class="widget-taglist widget"><h4 class=widget__title>标签</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/ai title=Ai>Ai (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/c title=C>C (3)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/ci/cd title="Ci cd">Ci cd (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/deepseek title=Deepseek>Deepseek (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/even-loop title="Even loop">Even loop (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/java title=Java>Java (3)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/java title=Java>Java (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/loadrunner title=Loadrunner>Loadrunner (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/ngrok title=Ngrok>Ngrok (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/postgresql title=Postgresql>Postgresql (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e4%ba%91%e5%8e%9f%e7%94%9f title=云原生>云原生 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f title=内网穿透>内网穿透 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%88%86%e5%b8%83%e5%bc%8f%e7%b3%bb%e7%bb%9f title=分布式系统>分布式系统 (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/%e5%88%97%e8%a1%a8 title=列表>列表 (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%8a%9e%e5%85%ac%e8%bd%af%e4%bb%b6 title=办公软件>办公软件 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%ae%b9%e5%99%a8%e5%8c%96 title=容器化>容器化 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7 title=开发工具>开发工具 (1)</a>
@@ -76,7 +557,6 @@ loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容
 <a class="widget-taglist__link widget__link btn" href=/tags/%e6%b5%8b%e8%af%95%e5%b7%a5%e5%85%b7 title=测试工具>测试工具 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86 title=版本管理>版本管理 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%9b%91%e6%8e%a7%e6%97%a5%e5%bf%97 title=监控日志>监控日志 (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/%e7%a4%ba%e4%be%8b title=示例>示例 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%a4%be%e5%8c%ba%e5%bb%ba%e8%ae%be title=社区建设>社区建设 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%ad%94%e9%a2%98%e7%b3%bb%e7%bb%9f title=答题系统>答题系统 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%ae%80%e5%8e%86 title=简历>简历 (2)</a>
@@ -87,7 +567,7 @@ loadrunner gennerator 中ctrl+r 录制发送报文 生成如下内容
 <a class="widget-taglist__link widget__link btn" href=/tags/%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f title=设计模式>设计模式 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e8%b7%af%e7%ba%bf%e8%a7%84%e5%88%92 title=路线规划>路线规划 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e9%9d%a2%e8%af%95%e9%a2%98 title=面试题>面试题 (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/%e9%ab%98%e5%b9%b6%e5%8f%91 title=高并发>高并发 (1)</a></div></div><div class="widget-social widget"><h4 class="widget-social__title widget__title">Social</h4><div class="widget-social__content widget__content"><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=GitHub rel="noopener noreferrer" href=https://github.com/blowizer target=_blank><svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0C85.9.0.0 85.8.0 191.7c0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2.0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8.0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7.0.0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4.0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5.0 25.6-.2 46.3-.2 52.6.0 5.1 3.5 11.1 13.2 9.2C329 348.2 384 276.4 384 191.7 384 85.8 298 0 192 0z"/></svg>
+<a class="widget-taglist__link widget__link btn" href=/tags/%e9%ab%98%e5%b9%b6%e5%8f%91 title=高并发>高并发 (1)</a></div></div><div class="widget-social widget"><h4 class="widget-social__title widget__title">社交</h4><div class="widget-social__content widget__content"><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=GitHub rel="noopener noreferrer" href=https://github.com/blowizer target=_blank><svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0C85.9.0.0 85.8.0 191.7c0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2.0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8.0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7.0.0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4.0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5.0 25.6-.2 46.3-.2 52.6.0 5.1 3.5 11.1 13.2 9.2C329 348.2 384 276.4 384 191.7 384 85.8 298 0 192 0z"/></svg>
 <span>GitHub</span></a></div><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=Email href=mailto:blowizer@qq.com><svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16V16 0h-16H16 0zm347 16-139 92.5L69 32zM199 157.5l9 5.5 9-5.5L384 46v210H32V46z"/></svg>
 <span>blowizer@qq.com</span></a></div></div></div></aside></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2025 补漏砖匠.
 <span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/quiz.js></script><script src=/js/ai-quiz.js></script></body></html>

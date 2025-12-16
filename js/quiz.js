@@ -3,7 +3,14 @@
   'use strict';
 
   function bindQuizContainer(container) {
-    if (!container || container.dataset.quizBound === 'true') return;
+    if (!container) {
+      console.warn('[Quiz] bindQuizContainer: container is null');
+      return;
+    }
+    if (container.dataset.quizBound === 'true') {
+      console.log('[Quiz] bindQuizContainer: container already bound', container.id);
+      return;
+    }
     container.dataset.quizBound = 'true';
 
     const submitBtn = container.querySelector('.quiz-submit');
@@ -12,6 +19,14 @@
     const options = container.querySelectorAll('.quiz-option');
     const resultDiv = container.querySelector('.quiz-result');
     const explanationDiv = container.querySelector('.quiz-explanation');
+
+    console.log('[Quiz] bindQuizContainer:', {
+      containerId: container.id,
+      hasSubmitBtn: !!submitBtn,
+      hasShowAnswerBtn: !!showAnswerBtn,
+      hasResetBtn: !!resetBtn,
+      optionsCount: options.length
+    });
 
     if (submitBtn) {
       submitBtn.addEventListener('click', function() {
@@ -90,7 +105,12 @@
     } else if (root.querySelectorAll) {
       containers = root.querySelectorAll('.quiz-container');
     }
-    containers.forEach(bindQuizContainer);
+    
+    console.log('[Quiz] initQuiz: found', containers.length, 'quiz containers');
+    containers.forEach(function(container, index) {
+      console.log('[Quiz] initializing container', index + 1, container.id || '(no id)');
+      bindQuizContainer(container);
+    });
   }
   
   // 显示结果
@@ -182,11 +202,20 @@
   }
   
   // 页面加载完成后初始化
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initQuiz);
-  } else {
+  function initializeQuiz() {
     initQuiz();
   }
+
+  // 使用多种方式确保初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeQuiz);
+  } else {
+    // DOM 已经加载，立即初始化
+    initializeQuiz();
+  }
+
+  // 也监听 load 事件作为备用（处理动态内容）
+  window.addEventListener('load', initializeQuiz);
 
   window.QuizApp = window.QuizApp || {};
   window.QuizApp.init = initQuiz;

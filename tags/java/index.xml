@@ -1,32 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on 补漏砖匠</title><link>/tags/java/</link><description>Recent content in Java on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA在线测试</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
-即时生成 AI 考题 点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。
-“AI 考题”继续生成 ◀ 返回</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
-单选题（每题 1 分），请在四个选项中选择 1 个最符合题意 的答案。
-核心语法与运行时 Local Variable 的描述，哪项正确？
-A. 局部变量可以使用 public/private 修饰。
-B. 局部变量存储在堆（Heap）。
-C. 局部变量在定义时必须初始化，否则编译失败。
-D. 局部变量具有默认值，例如引用类型默认为 null。
-try-catch-finally 中执行 System.exit(0)，finally 会执行吗？
-A. 不会，System.exit(0) 直接终止 JVM，finally 被跳过。
-B. 只有 try 未抛异常才执行。
-C. 会，finally 总会执行。
-D. 取决于 catch 是否捕获 RuntimeException。
-并发与集合 以下哪一个集合在并发场景下性能优于 Hashtable？
-A. TreeMap
-B. ConcurrentHashMap
-C. Hashtable
-D. LinkedHashMap
-创建并启动线程，推荐方式是？
-A. 实现 Runnable 接口。
-B. 实现 Callable 接口。
-C. 继承 Thread 类。
-D. 实现 Serializable 接口。</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid><description>◀ 返回
-单一职责原则(SRP:Single Responsibility Principle) 一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。
-假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。
-开放-关闭原则(OCP:Open Closed Principle) 添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。
-开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。
-很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。
-假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：
-public class TaxCalculator { public decimal Calculate(decimal income, decimal deduction, string country) { decimal taxAmount = 0; decimal taxableIncome = income - deduction; switch (country) { case &amp;#34;India&amp;#34;: //Todo calculation break; case &amp;#34;USA&amp;#34;: //Todo calculation break; case &amp;#34;UK&amp;#34;: //Todocalculation break; } return taxAmount; } } 这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。
-让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on 补漏砖匠</title><link>/tags/java/</link><description>Recent content in Java on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA在线测试</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;section class="ai-quiz-section" data-ai-quiz-root data-ai-quiz-endpoint="http://qiaopan.tech:18080/api/v1/assistant/"&gt;
+ &lt;h2 class="ai-quiz-title"&gt;即时生成 AI 考题&lt;/h2&gt;
+ &lt;p class="ai-quiz-desc"&gt;点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。&lt;/p&gt;
+ &lt;div class="ai-quiz-controls"&gt;
+ &lt;div class="ai-quiz-control-group"&gt;
+ &lt;label for="ai-quiz-difficulty-page"&gt;难度：&lt;/label&gt;
+ &lt;select id="ai-quiz-difficulty-page" class="ai-quiz-select" data-ai-quiz-param="difficulty"&gt;
+ &lt;option value="简单"&gt;简单&lt;/option&gt;
+ &lt;option value="中等" selected&gt;中等&lt;/option&gt;
+ &lt;option value="困难"&gt;困难&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-control-group"&gt;
+ &lt;label for="ai-quiz-count-page"&gt;数量：&lt;/label&gt;
+ &lt;select id="ai-quiz-count-page" class="ai-quiz-select" data-ai-quiz-param="count"&gt;
+ &lt;option value="1"&gt;1 题&lt;/option&gt;
+ &lt;option value="3" selected&gt;3 题&lt;/option&gt;
+ &lt;option value="5"&gt;5 题&lt;/option&gt;
+ &lt;option value="10"&gt;10 题&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-actions"&gt;
+ &lt;button class="ai-quiz-button ai-quiz-floating-button" data-ai-quiz-trigger&gt;“AI 考题”继续生成&lt;/button&gt;
+ &lt;span class="ai-quiz-status" data-ai-quiz-status&gt;&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-results" data-ai-quiz-results&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="单一职责原则srpsingle-responsibility-principle"&gt;单一职责原则(SRP:Single Responsibility Principle)&lt;/h3&gt;
+&lt;p&gt;一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。&lt;/p&gt;
+&lt;p&gt;假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。&lt;/p&gt;
+&lt;h3 id="开放-关闭原则ocpopen-closed-principle"&gt;开放-关闭原则(OCP:Open Closed Principle)&lt;/h3&gt;
+&lt;p&gt;添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。&lt;/p&gt;
+&lt;p&gt;开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。&lt;/p&gt;
+&lt;p&gt;很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。&lt;/p&gt;
+&lt;p&gt;假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;TaxCalculator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; decimal &lt;span style="color:#a6e22e"&gt;Calculate&lt;/span&gt;(decimal income, decimal deduction, string country)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; decimal taxAmount &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; decimal taxableIncome &lt;span style="color:#f92672"&gt;=&lt;/span&gt; income &lt;span style="color:#f92672"&gt;-&lt;/span&gt; deduction;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;switch&lt;/span&gt; (country)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;India&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//Todo calculation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;USA&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//Todo calculation &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;UK&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//Todocalculation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; taxAmount;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。&lt;/p&gt;
+&lt;p&gt;让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。&lt;/p&gt;
+&lt;p&gt;根据类图，可以看到通过继承实现横向的扩展，并且不会引发对其他不相关类的修改。这时 TaxCalculator 类中的 Calculate 方法会异常简单：&lt;/p&gt;</description></item></channel></rss>

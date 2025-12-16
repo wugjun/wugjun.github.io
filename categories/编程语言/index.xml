@@ -1,40 +1,685 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程语言 on 补漏砖匠</title><link>/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link><description>Recent content in 编程语言 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA在线测试</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
-即时生成 AI 考题 点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。
-“AI 考题”继续生成 ◀ 返回</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/</guid><description>◀ 返回
-单选题（每题 1 分），请在四个选项中选择 1 个最符合题意 的答案。
-核心语法与运行时 Local Variable 的描述，哪项正确？
-A. 局部变量可以使用 public/private 修饰。
-B. 局部变量存储在堆（Heap）。
-C. 局部变量在定义时必须初始化，否则编译失败。
-D. 局部变量具有默认值，例如引用类型默认为 null。
-try-catch-finally 中执行 System.exit(0)，finally 会执行吗？
-A. 不会，System.exit(0) 直接终止 JVM，finally 被跳过。
-B. 只有 try 未抛异常才执行。
-C. 会，finally 总会执行。
-D. 取决于 catch 是否捕获 RuntimeException。
-并发与集合 以下哪一个集合在并发场景下性能优于 Hashtable？
-A. TreeMap
-B. ConcurrentHashMap
-C. Hashtable
-D. LinkedHashMap
-创建并启动线程，推荐方式是？
-A. 实现 Runnable 接口。
-B. 实现 Callable 接口。
-C. 继承 Thread 类。
-D. 实现 Serializable 接口。</description></item><item><title>编程语言</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</guid><description>「编程语言兵器谱」 以江湖门派为纲，串联站内所有编程笔记。每个门派会收录对应语言的实战心法与案例，持续更新中。
-🔧 「C 古谱」· 底层乾坤，性能为王 📊 「数据结构」： C 列表实战 —— 从指针到链表的演练记录。 C 语言代码重构 —— ASCII/HEX 混合报文拆解手记。 🐍 「Python 剑诀」· 化繁为简，以柔克刚 计划整理：快速原型、脚本自动化、数据处理常用套路。 ☕ 「Java 心经」· 重剑无锋，大巧不工 计划整理：企业级架构、并发与内存调优。 设计模式理解 JAVA测验 🟨 「JavaScript 妙法」· 灵动变幻，万象归一 计划整理：可视化组件、前端工程化心得。 🚀 「Go 道术」· 大道至简，并发自然 计划整理：goroutine 调度图谱、微服务脚手架。 🦀 「Rust 玄功」· 内存无患，安全自在 计划整理：所有权系统心法、零成本抽象笔记。 如需补充新的「秘笈」，直接在对应语言目录下创建 Markdown 文件并在此处追加条目即可。</description></item><item><title>在线答题示例</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/</guid><description>使用说明 本文档展示了如何使用交互式答题模板。在 Markdown 中使用 quiz 和 quizoption shortcode 来创建在线答题题目。
-示例 1：Java 基础题 Local Variable 的描述，哪项正确？ A. 局部变量可以使用 public/private 修饰。 B. 局部变量存储在堆（Heap）。 C. 局部变量在定义时必须初始化，否则编译失败。 D. 局部变量具有默认值，例如引用类型默认为 null。 提交答案 查看答案 重置 示例 2：异常处理题 `try-catch-finally` 中执行 `System.exit(0)`，`finally` 会执行吗？ A. 不会，System.exit(0) 直接终止 JVM，finally 被跳过。 B. 只有 try 未抛异常才执行。 C. 会，finally 总会执行。 D. 取决于 catch 是否捕获 RuntimeException。 提交答案 查看答案 重置 示例 3：集合框架题 以下哪一个集合在并发场景下性能优于 `Hashtable`？ A. TreeMap B. ConcurrentHashMap C. Hashtable D. LinkedHashMap 提交答案 查看答案 重置 使用方法 在 Spring AI 中集成阿里云通义千问（Qwen）模型时，应使用哪个官方平台提供的 API Key？ A.</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid><description>◀ 返回
-线性表 顺序表 链式表 线性表的本质 定义： 由0个或多个数据元素的集合 数据元素之间是有顺序的 数据元素的个数是有限个 数据元素的类型必须相同 专业的定义： 线性表是具有相同类型的n(n&amp;gt;=0)个数据元素的有限序列 (a0,a1,a2,..an) ai是表项，n是长度 性质： a0为线性表的第一个元素，只有一个后继 an为线性表的最后一个元素，只有一个前驱 除a0和an以外的其他元素ai，既有前驱也有后继.	线性表的操作 创建 销毁 插入 删除 获得表中某个位置的元素 获得线性表的长度 清空 线性表的操作对应于我们程序中的一组函数
-List *List_Create(void); void List_Destroy(List *list); void List_Clear(List *list); int List_Insert(List *list, ListNode *node, int pos) ListNode * List_Delete(List *list, int pos) ListNode * List_Get(List *list, int pos) int List_Length(List *list) 线性表的顺序存储结构 线性表的顺序存储结构是指用一段地址连续的存储单元依次存储线性表的数据元素 看成C语言的数组，用C语言的一维数组实现顺序存储结构
-#define MAXSIZE 20 //线性表的最大容量 typedef struct _list { char node[MAXSIE]; //存储空间的起始地址是node int length; //表示线性表的当前长度 }List; 获得元素的操作 char Get(List *list, int pos) { char ret = -1; // 1.</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</guid><description>◀ 返回
-问题描述 字符串被显示为acssi码, 数值被hex加减
-转换思路 字符: acssi 转 string 数值: 计算出值
-贴代码 #include &amp;lt;unistd.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #define setnull(x) memset(&amp;amp;(x), 0, sizeof(x)) #define CAL(x, y, z) x + y - z #define ERR_EXIT(m) \ do { \ fprintf(stderr, &amp;#34;[%s][%d]:%s %s \n&amp;#34; ,__FILE__, __LINE__, m, strerror(errno));\ exit(EXIT_FAILURE); \ }while(0) int main( int argc, char **argv){ int i,j,len,varLen,ilen ; char buf[1024]; char temp[2]; char var[64],var1[64]; char ascii[2]; char hexBuf[1024]; char fbuf[1024]; char tobuf[1024]; int begin = 0, end = 0; char *data; char *pstr; char *pstr1; int retlen; char varBuf[20]; char varRet; char srcfile[256],destfile[256]; setnull(srcfile); setnull(destfile); sprintf(srcfile,&amp;#34;%s&amp;#34;, argv[1]); sprintf(destfile,&amp;#34;%s&amp;#34;, argv[2]); //printf(&amp;#34;%s\n&amp;#34;,argv[1]); //printf(&amp;#34;%s\n&amp;#34;,srcfile); //printf(&amp;#34;%s\n&amp;#34;,argv[2]); //printf(&amp;#34;%s\n&amp;#34;,destfile); //strcpy(hexBuf, argv[1]); FILE* fd = fopen(srcfile,&amp;#34;r&amp;#34;); FILE* fdw = fopen(destfile,&amp;#34;w&amp;#34;); if(fd){ while(!</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid><description>◀ 返回
-单一职责原则(SRP:Single Responsibility Principle) 一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。
-假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。
-开放-关闭原则(OCP:Open Closed Principle) 添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。
-开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。
-很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。
-假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：
-public class TaxCalculator { public decimal Calculate(decimal income, decimal deduction, string country) { decimal taxAmount = 0; decimal taxableIncome = income - deduction; switch (country) { case &amp;#34;India&amp;#34;: //Todo calculation break; case &amp;#34;USA&amp;#34;: //Todo calculation break; case &amp;#34;UK&amp;#34;: //Todocalculation break; } return taxAmount; } } 这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。
-让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程语言 on 补漏砖匠</title><link>/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link><description>Recent content in 编程语言 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA在线测试</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</link><pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;section class="ai-quiz-section" data-ai-quiz-root data-ai-quiz-endpoint="http://qiaopan.tech:18080/api/v1/assistant/"&gt;
+ &lt;h2 class="ai-quiz-title"&gt;即时生成 AI 考题&lt;/h2&gt;
+ &lt;p class="ai-quiz-desc"&gt;点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。&lt;/p&gt;
+ &lt;div class="ai-quiz-controls"&gt;
+ &lt;div class="ai-quiz-control-group"&gt;
+ &lt;label for="ai-quiz-difficulty-page"&gt;难度：&lt;/label&gt;
+ &lt;select id="ai-quiz-difficulty-page" class="ai-quiz-select" data-ai-quiz-param="difficulty"&gt;
+ &lt;option value="简单"&gt;简单&lt;/option&gt;
+ &lt;option value="中等" selected&gt;中等&lt;/option&gt;
+ &lt;option value="困难"&gt;困难&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-control-group"&gt;
+ &lt;label for="ai-quiz-count-page"&gt;数量：&lt;/label&gt;
+ &lt;select id="ai-quiz-count-page" class="ai-quiz-select" data-ai-quiz-param="count"&gt;
+ &lt;option value="1"&gt;1 题&lt;/option&gt;
+ &lt;option value="3" selected&gt;3 题&lt;/option&gt;
+ &lt;option value="5"&gt;5 题&lt;/option&gt;
+ &lt;option value="10"&gt;10 题&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-actions"&gt;
+ &lt;button class="ai-quiz-button ai-quiz-floating-button" data-ai-quiz-trigger&gt;“AI 考题”继续生成&lt;/button&gt;
+ &lt;span class="ai-quiz-status" data-ai-quiz-status&gt;&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="ai-quiz-results" data-ai-quiz-results&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;</description></item><item><title>编程语言</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/</guid><description>&lt;h2 id="编程语言兵器谱"&gt;「编程语言兵器谱」&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以江湖门派为纲，串联站内所有编程笔记。每个门派会收录对应语言的实战心法与案例，持续更新中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="-c-古谱-底层乾坤性能为王"&gt;🔧 「C 古谱」· 底层乾坤，性能为王&lt;/h3&gt;
+&lt;h4 id="-数据结构"&gt;&lt;span style="color: var(--cinnabar);"&gt;📊 「数据结构」&lt;/span&gt;：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"&gt;C 列表实战&lt;/a&gt; —— 从指针到链表的演练记录。&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/"&gt;C 语言代码重构&lt;/a&gt; —— ASCII/HEX 混合报文拆解手记。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-python-剑诀-化繁为简以柔克刚"&gt;🐍 「Python 剑诀」· 化繁为简，以柔克刚&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：快速原型、脚本自动化、数据处理常用套路。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-java-心经-重剑无锋大巧不工"&gt;☕ 「Java 心经」· 重剑无锋，大巧不工&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：企业级架构、并发与内存调优。&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"&gt;设计模式理解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/"&gt;JAVA测验&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-javascript-妙法-灵动变幻万象归一"&gt;🟨 「JavaScript 妙法」· 灵动变幻，万象归一&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：可视化组件、前端工程化心得。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-go-道术-大道至简并发自然"&gt;🚀 「Go 道术」· 大道至简，并发自然&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：goroutine 调度图谱、微服务脚手架。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-rust-玄功-内存无患安全自在"&gt;🦀 「Rust 玄功」· 内存无患，安全自在&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;计划整理：所有权系统心法、零成本抽象笔记。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如需补充新的「秘笈」，直接在对应语言目录下创建 Markdown 文件并在此处追加条目即可。&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>在线答题</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/</guid><description>&lt;div class="quiz-container" id="quiz-1"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;Local Variable 的描述，哪项正确？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="错误：局部变量不能使用访问修饰符（public/private/protected），它们只在方法或代码块内部可见。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;局部变量可以使用 &lt;code&gt;public/private&lt;/code&gt; 修饰。&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="错误：局部变量存储在栈（Stack）中，而不是堆（Heap）。堆用于存储对象实例。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;局部变量存储在堆（Heap）。&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="正确：局部变量在使用前必须初始化，否则编译器会报错。这与实例变量不同，实例变量有默认值。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;局部变量在定义时必须初始化，否则编译失败。&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="错误：局部变量没有默认值，必须显式初始化。只有实例变量和类变量才有默认值。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;局部变量具有默认值，例如引用类型默认为 &lt;code&gt;null&lt;/code&gt;。&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-1" data-correct="C"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-1" data-correct="C"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-1"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-1-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-1-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-2"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;&lt;code&gt;try-catch-finally&lt;/code&gt; 中执行 &lt;code&gt;System.exit(0)&lt;/code&gt;，&lt;code&gt;finally&lt;/code&gt; 会执行吗？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="正确：`System.exit(0)` 会直接终止 JVM 进程，所有后续代码（包括 finally 块）都不会执行。这是唯一能让 finally 不执行的情况。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;不会，&lt;code&gt;System.exit(0)&lt;/code&gt; 直接终止 JVM，&lt;code&gt;finally&lt;/code&gt; 被跳过。&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="错误：finally 块的执行与 try 是否抛异常无关，只要 JVM 正常运行，finally 总是会执行。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;只有 &lt;code&gt;try&lt;/code&gt; 未抛异常才执行。&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="错误：虽然一般情况下 finally 会执行，但如果调用了 System.exit()，finally 就不会执行。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;会，&lt;code&gt;finally&lt;/code&gt; 总会执行。&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="错误：finally 的执行与 catch 捕获的异常类型无关，只要 JVM 正常运行就会执行。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;取决于 &lt;code&gt;catch&lt;/code&gt; 是否捕获 &lt;code&gt;RuntimeException&lt;/code&gt;。&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-2" data-correct="A"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-2" data-correct="A"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-2"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-2-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-2-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-3"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;以下哪一个集合在并发场景下性能优于 &lt;code&gt;Hashtable&lt;/code&gt;？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="错误：TreeMap 不是线程安全的，且性能在并发场景下不如 ConcurrentHashMap。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&lt;code&gt;TreeMap&lt;/code&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="正确：ConcurrentHashMap 使用分段锁机制，在并发场景下性能远优于使用 synchronized 的 Hashtable。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&lt;code&gt;ConcurrentHashMap&lt;/code&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="错误：Hashtable 虽然线程安全，但使用全表锁，并发性能较差。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&lt;code&gt;Hashtable&lt;/code&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="错误：LinkedHashMap 不是线程安全的，且性能在并发场景下不如 ConcurrentHashMap。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&lt;code&gt;LinkedHashMap&lt;/code&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-3" data-correct="B"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-3" data-correct="B"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-3"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-3-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-3-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-springai-01"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;在 Spring AI 中集成阿里云通义千问（Qwen）模型时，应使用哪个官方平台提供的 API Key？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="阿里云 RAM（Resource Access Management）用于管理用户权限，不直接提供大模型 API Key。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云 RAM AccessKey&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="百炼（Model Studio）是阿里云的模型训练平台，但 Qwen 的推理 API 由 DashScope 提供。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云百炼（Model Studio）&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="正确。DashScope（灵积）是阿里云官方提供 Qwen 等大模型 API 服务的平台，需在此创建 API Key。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云 DashScope&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="阿里云函数计算（FC）用于事件驱动计算，与大模型 API 无关。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云函数计算（Function Compute）&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-springai-01" data-correct="C"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-springai-01" data-correct="C"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-springai-01"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-springai-01-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-springai-01-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-springai-02"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;使用 Spring AI 调用阿里云 DashScope 的 Qwen 模型时，以下哪个 Maven 依赖是正确的？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="正确。Spring AI 为阿里云 DashScope 提供了专用 starter，groupId 为 org.springframework.ai。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&amp;lt;dependency&amp;gt;&lt;br&gt; &amp;lt;groupId&amp;gt;org.springframework.ai&amp;lt;/groupId&amp;gt;&lt;br&gt; &amp;lt;artifactId&amp;gt;spring-ai-alibaba-dashscope-spring-boot-starter&amp;lt;/artifactId&amp;gt;&lt;br&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="错误。spring-ai-alibaba 是不存在的 artifactId，且阿里云支持由 dashscope 子模块提供。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&amp;lt;dependency&amp;gt;&lt;br&gt; &amp;lt;groupId&amp;gt;org.springframework.ai&amp;lt;/groupId&amp;gt;&lt;br&gt; &amp;lt;artifactId&amp;gt;spring-ai-alibaba&amp;lt;/artifactId&amp;gt;&lt;br&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="错误。com.alibaba.cloud 是 Spring Cloud Alibaba 的依赖，与 Spring AI 无关。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&amp;lt;dependency&amp;gt;&lt;br&gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt;&lt;br&gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-alibaba-nacos&amp;lt;/artifactId&amp;gt;&lt;br&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="错误。dashscope-sdk 是阿里云官方 SDK，但 Spring AI 已封装，应使用其 starter 而非原生 SDK。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;&amp;lt;dependency&amp;gt;&lt;br&gt; &amp;lt;groupId&amp;gt;com.aliyun&amp;lt;/groupId&amp;gt;&lt;br&gt; &amp;lt;artifactId&amp;gt;dashscope-sdk&amp;lt;/artifactId&amp;gt;&lt;br&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-springai-02" data-correct="A"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-springai-02" data-correct="A"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-springai-02"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-springai-02-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-springai-02-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-springai-03"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;在 Spring Boot 应用中配置 DashScope API Key 时，以下哪种方式最符合安全最佳实践？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="将 API Key 硬编码在 application.yml 中存在泄露风险，不符合安全规范。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;直接在 &lt;code&gt;application.yml&lt;/code&gt; 中写死：&lt;code&gt;api-key: sk-123456...&lt;/code&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="将密钥提交到 Git 仓库（即使私有）仍存在泄露和审计困难问题，应避免。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;将 &lt;code&gt;application.yml&lt;/code&gt; 提交到私有 Git 仓库&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="明文写在 Java 代码的字符串常量中极易被反编译或日志泄露，风险极高。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;在 Java 代码中定义常量：&lt;code&gt;private static final String KEY = \&amp;quot;sk-...\&amp;quot;;&lt;/code&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="正确。通过环境变量注入密钥，避免硬编码，便于在不同环境（开发/生产）隔离凭据，符合 12-Factor App 原则。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;在 &lt;code&gt;application.yml&lt;/code&gt; 中使用 &lt;code&gt;${DASHSCOPE_API_KEY}&lt;/code&gt;，并通过环境变量传入&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-springai-03" data-correct="D"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-springai-03" data-correct="D"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-springai-03"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-springai-03-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-springai-03-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-springai-04"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;以下关于 Spring AI 与阿里云 Qwen 模型集成的说法，哪一项是错误的？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="正确。Spring AI 从 v0.8.0 开始正式支持 DashScope 的 Qwen 模型。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;Spring AI 需要 0.8.0 或更高版本才能支持阿里云 DashScope&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="错误。DashScope 的 API Key 是字符串格式（如 sk-...），不需要 AccessKey ID 和 Secret。后者用于阿里云 OpenAPI（如 ECS、OSS），而非 DashScope。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;必须同时提供阿里云 AccessKey ID 和 AccessKey Secret 才能调用 Qwen&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="正确。DashScope 提供免费额度供新用户试用，超出后按量计费。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;DashScope 为新用户提供免费调用额度&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="正确。Qwen 系列模型（如 qwen-max、qwen-turbo）均可通过 DashScope API 调用。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;支持的模型包括 qwen-turbo、qwen-plus 和 qwen-max&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-springai-04" data-correct="B"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-springai-04" data-correct="B"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-springai-04"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-springai-04-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-springai-04-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;
+&lt;div class="quiz-container" id="唯一ID"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;题目内容&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="选项A的解释"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;选项A的内容&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="选项B的解释"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;选项B的内容&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="选项C的解释"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;选项C的内容&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="选项D的解释"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;选项D的内容&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="唯一ID" data-correct="正确答案（A/B/C/D）"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="唯一ID" data-correct="正确答案（A/B/C/D）"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="唯一ID"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="唯一ID-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="唯一ID-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="quiz-container" id="quiz-springai-01"&gt;
+ &lt;div class="quiz-question"&gt;
+ &lt;h3 class="quiz-title"&gt;在 Spring AI 中集成阿里云通义千问（Qwen）模型时，应使用哪个官方平台提供的 API Key？&lt;/h3&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-options"&gt;
+ &lt;div class="quiz-option" data-value="A" data-explanation="阿里云 RAM（Resource Access Management）用于管理用户权限，不直接提供大模型 API Key。"&gt;
+ &lt;span class="quiz-option-label"&gt;A.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云 RAM AccessKey&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="B" data-explanation="百炼（Model Studio）是阿里云的模型训练平台，但 Qwen 的推理 API 由 DashScope 提供。"&gt;
+ &lt;span class="quiz-option-label"&gt;B.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云百炼（Model Studio）&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="C" data-explanation="正确。DashScope（灵积）是阿里云官方提供 Qwen 等大模型 API 服务的平台，需在此创建 API Key。"&gt;
+ &lt;span class="quiz-option-label"&gt;C.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云 DashScope&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="quiz-option" data-value="D" data-explanation="阿里云函数计算（FC）用于事件驱动计算，与大模型 API 无关。"&gt;
+ &lt;span class="quiz-option-label"&gt;D.&lt;/span&gt;
+ &lt;span class="quiz-option-text"&gt;阿里云函数计算（Function Compute）&lt;/span&gt;
+&lt;/div&gt;
+
+ &lt;/div&gt;
+ &lt;div class="quiz-actions"&gt;
+ &lt;button class="quiz-btn quiz-submit" data-quiz-id="quiz-springai-01" data-correct="C"&gt;提交答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-show-answer" data-quiz-id="quiz-springai-01" data-correct="C"&gt;查看答案&lt;/button&gt;
+ &lt;button class="quiz-btn quiz-reset" data-quiz-id="quiz-springai-01"&gt;重置&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div class="quiz-result" id="quiz-springai-01-result"&gt;&lt;/div&gt;
+ &lt;div class="quiz-explanation" id="quiz-springai-01-explanation"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/p&gt;</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link><pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="线性表"&gt;线性表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;顺序表&lt;/li&gt;
+&lt;li&gt;链式表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="线性表的本质"&gt;线性表的本质&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;定义：
+	由0个或多个数据元素的集合
+	数据元素之间是有顺序的
+	数据元素的个数是有限个
+	数据元素的类型必须相同
+	
+专业的定义：
+	线性表是具有相同类型的n(n&amp;gt;=0)个数据元素的有限序列
+	(a0,a1,a2,..an)
+	ai是表项，n是长度
+	
+性质：
+	a0为线性表的第一个元素，只有一个后继
+	an为线性表的最后一个元素，只有一个前驱
+	除a0和an以外的其他元素ai，既有前驱也有后继.	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="线性表的操作"&gt;线性表的操作&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;	创建
+	销毁
+	插入
+	删除
+	获得表中某个位置的元素
+	获得线性表的长度
+	清空
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;线性表的操作对应于我们程序中的一组函数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;List_Create&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;void&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;List_Destroy&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;List_Clear&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;List_Insert&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list, ListNode &lt;span style="color:#f92672"&gt;*&lt;/span&gt;node, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pos)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ListNode &lt;span style="color:#f92672"&gt;*&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;List_Delete&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pos)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ListNode &lt;span style="color:#f92672"&gt;*&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;List_Get&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pos)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;List_Length&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="线性表的顺序存储结构"&gt;线性表的顺序存储结构&lt;/h3&gt;
+&lt;p&gt;线性表的顺序存储结构是指用一段地址连续的存储单元依次存储线性表的数据元素
+看成C语言的数组，用C语言的一维数组实现顺序存储结构&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#75715e"&gt;#define MAXSIZE 20 &lt;/span&gt;&lt;span style="color:#75715e"&gt;//线性表的最大容量
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	&lt;span style="color:#66d9ef"&gt;typedef&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;struct&lt;/span&gt; _list {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; node[MAXSIE]; &lt;span style="color:#75715e"&gt;//存储空间的起始地址是node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;		&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; length; &lt;span style="color:#75715e"&gt;//表示线性表的当前长度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;	}List;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="获得元素的操作"&gt;获得元素的操作&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Get&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pos) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#75715e"&gt;// 1. 判断list的合法性
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;		&lt;span style="color:#75715e"&gt;// 2. 判断位置的合法性
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;		&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ( (list&lt;span style="color:#f92672"&gt;!=&lt;/span&gt;NULL) &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt;pos) &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; (pos&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length) )
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#75715e"&gt;// 3. 获得元素	
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;			ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[pos];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; ret;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="插入元素的操作"&gt;插入元素的操作&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;算法：
+	1.判断线性表的合法性	
+	2.判断插入位置的合法性
+	3.把最后一个元素到插入位置的元素依次后移一个位置
+	4.将新元素插入
+	5.将长度加1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Insert&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; c, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pos) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; (list&lt;span style="color:#f92672"&gt;!=&lt;/span&gt;NULL);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ret &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; (list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; MAXSIZE);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ret &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; (&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt;pos);	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ( ret ) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ( pos &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				pos &lt;span style="color:#f92672"&gt;=&lt;/span&gt; list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i&lt;span style="color:#f92672"&gt;=&lt;/span&gt;list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length; i&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt;pos; i&lt;span style="color:#f92672"&gt;--&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[i] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[i&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[i] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; c;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; ret;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="删除元素操作"&gt;删除元素操作&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;算法：
+	1.判断线性表的合法性	
+	2.判断删除位置的合法性
+	3.将元素取出
+	4.将删除位置之后的所有元素都向前移动一个位置
+	5.顺序表的长度-1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;har &lt;span style="color:#a6e22e"&gt;Delete&lt;/span&gt;(List &lt;span style="color:#f92672"&gt;*&lt;/span&gt;list, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; pos) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ( (list&lt;span style="color:#f92672"&gt;!=&lt;/span&gt;NULL)&lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt;pos)&lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(pos&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length) ){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				ret &lt;span style="color:#f92672"&gt;=&lt;/span&gt; list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[pos];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i&lt;span style="color:#f92672"&gt;=&lt;/span&gt;pos&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;; i&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;					list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[i&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;node[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				list&lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt;length&lt;span style="color:#f92672"&gt;--&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; ret;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;em&gt;可以快速的获取表中合法位置的元素&lt;/em&gt;
+&lt;strong&gt;缺点&lt;/strong&gt;：&lt;em&gt;插入和删除的时候需要移动大量的元素&lt;/em&gt;&lt;/p&gt;</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E8%A7%A3%E7%A0%81/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="问题描述"&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;字符串被显示为acssi码, 数值被hex加减&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/C_code_replay.jpeg" alt="源码"&gt;&lt;/p&gt;
+&lt;h2 id="转换思路"&gt;转换思路&lt;/h2&gt;
+&lt;p&gt;字符: acssi 转 string
+数值: 计算出值&lt;/p&gt;
+&lt;h2 id="贴代码"&gt;贴代码&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;fcntl.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;errno.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#define setnull(x) memset(&amp;amp;(x), 0, sizeof(x))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#define CAL(x, y, z) x + y - z
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#define ERR_EXIT(m) \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; do { \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; fprintf(stderr, &amp;#34;[%s][%d]:%s %s \n&amp;#34; ,__FILE__, __LINE__, m, strerror(errno));\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; exit(EXIT_FAILURE); \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt; }while(0)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;( &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; argc, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;**&lt;/span&gt;argv){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i,j,len,varLen,ilen ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; buf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; temp[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; var[&lt;span style="color:#ae81ff"&gt;64&lt;/span&gt;],var1[&lt;span style="color:#ae81ff"&gt;64&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; ascii[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; hexBuf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; fbuf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; tobuf[&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; begin &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, end &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;data;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;pstr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;pstr1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; retlen;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; varBuf[&lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; varRet;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; srcfile[&lt;span style="color:#ae81ff"&gt;256&lt;/span&gt;],destfile[&lt;span style="color:#ae81ff"&gt;256&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;setnull&lt;/span&gt;(srcfile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;setnull&lt;/span&gt;(destfile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;sprintf&lt;/span&gt;(srcfile,&lt;span style="color:#e6db74"&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, argv[&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;sprintf&lt;/span&gt;(destfile,&lt;span style="color:#e6db74"&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;, argv[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,argv[1]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,srcfile);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,argv[2]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;,destfile);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//strcpy(hexBuf, argv[1]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; FILE&lt;span style="color:#f92672"&gt;*&lt;/span&gt; fd &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fopen&lt;/span&gt;(srcfile,&lt;span style="color:#e6db74"&gt;&amp;#34;r&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; FILE&lt;span style="color:#f92672"&gt;*&lt;/span&gt; fdw &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fopen&lt;/span&gt;(destfile,&lt;span style="color:#e6db74"&gt;&amp;#34;w&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(fd){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;feof&lt;/span&gt;(fd)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(fbuf, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(fbuf));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; data &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fgets&lt;/span&gt;(fbuf,&lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(fbuf)&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,fd);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(data){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(tobuf, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(tobuf));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(data);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, j &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; len;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;memcmp&lt;/span&gt;(data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i,&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\\&lt;/span&gt;&lt;span style="color:#e6db74"&gt;x&amp;#34;&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(ascii, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(temp, data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;temp: %s\n&amp;#34;, temp);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hex2ascii&lt;/span&gt;(temp, ascii);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;ascii: %s\n&amp;#34;, ascii);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(tobuf &lt;span style="color:#f92672"&gt;+&lt;/span&gt; j, ascii, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; i &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;find \\x string offset %d\n&amp;#34;, i); 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;memcmp&lt;/span&gt;(data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i,&lt;span style="color:#e6db74"&gt;&amp;#34;(0x&amp;#34;&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(var, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(var));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(var1, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(var1));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memset&lt;/span&gt;(varBuf, &lt;span style="color:#ae81ff"&gt;0x00&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(varBuf));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(var, data &lt;span style="color:#f92672"&gt;+&lt;/span&gt; i, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(var)); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;var: %s \n&amp;#34;, var);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pstr &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strchr&lt;/span&gt;(var, &lt;span style="color:#e6db74"&gt;&amp;#39;(&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ( pstr &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; NULL)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;( pstr1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strstr&lt;/span&gt;(var, &lt;span style="color:#e6db74"&gt;&amp;#34;)&amp;#34;&lt;/span&gt;)){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;find ),\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; varLen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; pstr1 &lt;span style="color:#f92672"&gt;-&lt;/span&gt; pstr ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%d\n&amp;#34;, varLen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(var1, var&lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,varLen &lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; varRet &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;cal&lt;/span&gt;(var1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;sprintf&lt;/span&gt;(varBuf,&lt;span style="color:#e6db74"&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s,%d\n&amp;#34;,varBuf,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; ilen &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(varBuf);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;memcpy&lt;/span&gt;(tobuf &lt;span style="color:#f92672"&gt;+&lt;/span&gt; j, varBuf , ilen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; j &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; ilen ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; i &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; varLen &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//else if( pstr1 = strstr(var, &amp;#34;);&amp;#34;)){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;find );\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int varLen = pstr1 - pstr ;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%d\n&amp;#34;, varLen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(var1, var+1,varLen -1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// varRet = cal(var1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// sprintf(varBuf,&amp;#34;%d;&amp;#34;,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%s,%d\n&amp;#34;,varBuf,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int ilen = strlen(varBuf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(tobuf + j, varBuf , ilen + 1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// j += ilen + 1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// i += varLen + 1 + 1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//else if( pstr1 = strstr(var, &amp;#34;)&amp;#34;)){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;find )\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int varLen = pstr1 - pstr ;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%d\n&amp;#34;, varLen);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(var1, var+1,varLen -1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// varRet = cal(var1);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// sprintf(varBuf,&amp;#34;%d&amp;#34;,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%s,%d\n&amp;#34;,varBuf,varRet);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// int ilen = strlen(varBuf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// memcpy(tobuf + j, varBuf , ilen );
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// j += ilen;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// i += varLen + 1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; tobuf[j] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; data[i];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s&amp;#34;, data);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fprintf&lt;/span&gt;(fdw,&lt;span style="color:#e6db74"&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;,tobuf);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;ERR_EXIT&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;open file failure&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;fclose&lt;/span&gt;(fd);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//for( i = 0; i &amp;lt; strlen(argv[1]); i++){ 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%c\n&amp;#34;, argv[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//int ret = hex2ascii(hexBuf,buf);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//for( i = 0; i &amp;lt; strlen(buf); i++){ 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;// printf(&amp;#34;%c&amp;#34;, buf[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;\n&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hex2ascii&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;hex, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;ascii)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; len &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;strlen&lt;/span&gt;(hex), tlen, cnt , i;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt;( i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;, cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; ,tlen &lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; len; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; c &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;toupper&lt;/span&gt;(hex[i]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(( c &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;0&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; c &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; ( c &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; c &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; t &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ( c &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;?&lt;/span&gt; c &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt; &lt;span style="color:#f92672"&gt;:&lt;/span&gt; c &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;0&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(cnt)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ascii[tlen&lt;span style="color:#f92672"&gt;++&lt;/span&gt;] &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; t, cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ascii[tlen] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; t &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;, cnt &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; tlen;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;cal&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;exprs){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; x,y,z;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//printf(&amp;#34;%s\n&amp;#34;, exprs);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;sscanf&lt;/span&gt;(exprs,&lt;span style="color:#e6db74"&gt;&amp;#34;%x + %d - %x&amp;#34;&lt;/span&gt;,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;x,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;y,&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt;z);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;CAL&lt;/span&gt;(x,y,z); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="编译"&gt;编译&lt;/h2&gt;
+&lt;p&gt;gcc -o hex2ascii hex2ascii.c&lt;/p&gt;</description></item><item><title>剑法篇</title><link>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link><pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate><guid>/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid><description>&lt;p&gt;&lt;a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="单一职责原则srpsingle-responsibility-principle"&gt;单一职责原则(SRP:Single Responsibility Principle)&lt;/h3&gt;
+&lt;p&gt;一个类只负责完成一个职责或者功能，不要存在多于一种导致类变更的原因。单一职责原则通过避免设计大而全的类，避免将不相关的功能耦合在一起，来提高类的内聚性。同时，类职责单一，类依赖的和被依赖的其他类也会变少，减少了代码的耦合性，以此来实现代码的高内聚、松耦合。但是，如果拆分得过细，实际上会适得其反，反倒会降低内聚性，也会影响代码的可维护性。&lt;/p&gt;
+&lt;p&gt;假设你在构建一个应用程序，其中有个模块是根据条件搜索顾客并以Excel形式导出。随着业务的发展，搜索条件会不断增加，导出数据的分类也会不断增加。如果此时将搜索与数据导出功能放在同一个类中，势必会变的笨重起来，即使是微小的改动，也可能影响其他功能。所以根据单一职责原则，一个类只有一个职责，故创建两个单独的类，分别处理搜索以及导出数据。&lt;/p&gt;
+&lt;h3 id="开放-关闭原则ocpopen-closed-principle"&gt;开放-关闭原则(OCP:Open Closed Principle)&lt;/h3&gt;
+&lt;p&gt;添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。&lt;/p&gt;
+&lt;p&gt;开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。&lt;/p&gt;
+&lt;p&gt;很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。&lt;/p&gt;
+&lt;p&gt;假设你现在正在开发一个 Web 应用程序，包括一个在线纳税计算器。用户可以访问Web 页面,指定他们的收入和费用的细节,并使用一些数学公式来计算应纳税额。考虑到这一点，你创建了如下类：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;TaxCalculator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; decimal &lt;span style="color:#a6e22e"&gt;Calculate&lt;/span&gt;(decimal income, decimal deduction, string country)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; decimal taxAmount &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; decimal taxableIncome &lt;span style="color:#f92672"&gt;=&lt;/span&gt; income &lt;span style="color:#f92672"&gt;-&lt;/span&gt; deduction;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;switch&lt;/span&gt; (country)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;India&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//Todo calculation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;USA&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//Todo calculation &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;UK&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;//Todocalculation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; taxAmount;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个方法非常简单，通过指定收入和支出，可以动态切换不同的国家计算不同的纳税额。但这里隐含了一个问题，它只考虑了3个国家。当这个 Web 应用变得越来越流行时，越来越多的国家将被加进来，你不得不去修改 Calculate 方法。这违反了开放封闭原则，有可能你的修改会导致系统其他模块的崩溃。&lt;/p&gt;
+&lt;p&gt;让我们对这个功能进行重构，以符合对扩展是开放，对修改是封闭的。&lt;/p&gt;
+&lt;p&gt;根据类图，可以看到通过继承实现横向的扩展，并且不会引发对其他不相关类的修改。这时 TaxCalculator 类中的 Calculate 方法会异常简单：&lt;/p&gt;</description></item></channel></rss>

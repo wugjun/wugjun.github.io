@@ -1,66 +1,613 @@
-<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>补漏砖匠</title>
-<script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="Wu guo jun Personal blog about everything"><meta name=generator content="Hugo 0.128.0"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=alternate type=application/rss+xml href=/index.xml title=补漏砖匠><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
-<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class="main list" role=main><section class=ai-quiz-section data-ai-quiz-root data-ai-quiz-endpoint="http://localhost:18080/api/v1/assistant/chat?mode=exam&amp;query=%22%22"><h2 class=ai-quiz-title>AI 考题</h2><p class=ai-quiz-desc>点击下方按钮调用本地服务，自动生成新的考试题并追加到页面。</p><div class=ai-quiz-actions><button class=ai-quiz-button data-ai-quiz-trigger>“AI 考题”继续生成</button>
-<span class=ai-quiz-status data-ai-quiz-status></span></div><div class=ai-quiz-results data-ai-quiz-results></div></section><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/ rel=bookmark>DeepSeek</a></h3><p class="list__lead post__lead">实时查看 AI 助手的流式响应</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
-<time class=meta__text datetime=2025-12-03T00:00:00>December 03, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87 rel=category>工具效率</a></span></div></div></header><div class="content list__excerpt post__content clearfix">DeepSeek 智能助手 发送</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/ rel=bookmark>JAVA在线测试</a></h3><p class="list__lead post__lead">以考促学，查漏补缺</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>补漏砖匠</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="补漏砖匠"><meta name=generator content="Hugo 0.152.2"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=alternate type=application/rss+xml href=/index.xml title=补漏砖匠><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>菜单</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/>在线答题</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class="main list" role=main><div class=ai-quiz-link-section><a href=/编程语言/编程语言-AI在线测试/ class=ai-quiz-home-button><span class=ai-quiz-button-icon>☕</span>
+<span class=ai-quiz-button-text>JAVA在线测试</span>
+<span class=ai-quiz-button-arrow>→</span></a></div><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/ rel=bookmark>&lt;&lt;春秋算法>></a></h3><p class="list__lead post__lead">一眼春秋，望穿风云。</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2025-12-16T00:00:00>December 16, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%ae%97%e6%b3%95%e4%b8%80%e7%bb%9f%e6%98%a5%e7%a7%8b rel=category>算法一统春秋</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><h1 id=第一章链表分治初露锋芒><strong>第一章：链表分治，初露锋芒</strong></h1><hr><h2 id=第一幕算法朝会秦使发难><strong>第一幕：算法朝会，秦使发难</strong></h2><p>齐国，临淄城，算法殿。</p><p>晨光透过雕花木窗，在青石地面上投下斑驳光影。大殿中央，一丈见方的水镜悬浮空中，波纹流转——正是列国敬畏的“天机算法系统”。</p><p>齐威王端坐龙纹宝座，眉宇间隐现忧色。殿下文武分立两侧，左侧以宰相邹忌为首，右侧以上将军田忌为尊。</p><p>“诸位爱卿，”齐威王声音低沉，“天机系统已出今日之题。谁能解之，赏千金，封上卿！”</p><p>水镜波纹骤变，浮现金色篆文：</p><p><strong>【王诏·链表分封令】</strong></p><p><strong>【场景】：秦王点兵改制，甲士营将士依序而列，各佩功勋数</strong></p><p><strong>【龙门线】：阈值 叁</strong></p><p><strong>【改制令】：功勋小于伍 者立左阵，大于等于伍者立右阵</strong></p><p><strong>【铁律】：左、右阵中，诸将士初始前后次序不可乱</strong></p><p><strong>【当前最佳解法】：秦相商鞅之&rsquo;两度遍历册录法&rsquo;】</strong></p><p><img src=https://assets.leetcode.com/uploads/2021/01/04/partition.jpg alt=请看图>
+“哈哈哈！”</p><p>一声长笑打破沉寂。黑袍秦使踏前一步，腰间玉佩叮当作响，正是秦国第一算法大师——商鞅。</p><p>“齐王陛下，”商鞅拱手，眼中却无半分敬意，“我大秦‘双重遍历法’，虽复杂度略高，但堂堂正正，势如破竹！不知齐国可有更高明解法？”</p><p>他袖袍一挥，水镜显现解法：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>/** 
+</span></span></span><span style=display:flex><span><span style=color:#75715e>**【题目：链表分区】**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>**【描述】：给定单链表头结点 head 与整数 x，请分隔链表，使所有小于 x 的节点皆在大于等于 x 的节点之前**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>**【约束】：须保持节点初始相对位置**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>**【当前最佳】：时间复杂度 O(n²)，空间复杂度 O(n)，提供者——秦使商鞅】**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>输入：head = [1,4,3,2,5,2], x = 3
+</span></span></span><span style=display:flex><span><span style=color:#75715e>输出：[1,2,2,4,3,5]
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>示例 2：
+</span></span></span><span style=display:flex><span><span style=color:#75715e>输入：head = [2,1], x = 2
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>输出：[1,2]
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>提示：
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>链表中节点的数目在范围 [0, 200] 内
+</span></span></span><span style=display:flex><span><span style=color:#75715e>-100 &lt;= Node.val &lt;= 100
+</span></span></span><span style=display:flex><span><span style=color:#75715e>-200 &lt;= x &lt;= 200
+</span></span></span><span style=display:flex><span><span style=color:#75715e>*/</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 秦国解法：双重遍历法</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> ListNode <span style=color:#a6e22e>partition</span>(ListNode head, <span style=color:#66d9ef>int</span> x) {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 第一次遍历：收集所有小于x的节点</span>
+</span></span><span style=display:flex><span>    List<span style=color:#f92672>&lt;</span>ListNode<span style=color:#f92672>&gt;</span> smallList <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;&gt;</span>();
+</span></span><span style=display:flex><span>    ListNode p <span style=color:#f92672>=</span> head;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (p <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (p.<span style=color:#a6e22e>val</span> <span style=color:#f92672>&lt;</span> x) smallList.<span style=color:#a6e22e>add</span>(p);
+</span></span><span style=display:flex><span>        p <span style=color:#f92672>=</span> p.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 第二次遍历：收集所有大于等于x的节点  </span>
+</span></span><span style=display:flex><span>    List<span style=color:#f92672>&lt;</span>ListNode<span style=color:#f92672>&gt;</span> largeList <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList<span style=color:#f92672>&lt;&gt;</span>();
+</span></span><span style=display:flex><span>    p <span style=color:#f92672>=</span> head;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (p <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (p.<span style=color:#a6e22e>val</span> <span style=color:#f92672>&gt;=</span> x) largeList.<span style=color:#a6e22e>add</span>(p);
+</span></span><span style=display:flex><span>        p <span style=color:#f92672>=</span> p.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 拼接新链表</span>
+</span></span><span style=display:flex><span>    ListNode dummy <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ListNode(<span style=color:#f92672>-</span>1);
+</span></span><span style=display:flex><span>    ListNode curr <span style=color:#f92672>=</span> dummy;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (ListNode node : smallList) {
+</span></span><span style=display:flex><span>        curr.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> node;
+</span></span><span style=display:flex><span>        curr <span style=color:#f92672>=</span> curr.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (ListNode node : largeList) {
+</span></span><span style=display:flex><span>        curr.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> node;
+</span></span><span style=display:flex><span>        curr <span style=color:#f92672>=</span> curr.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    curr.<span style=color:#a6e22e>next</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> dummy.<span style=color:#a6e22e>next</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>“两次遍历，两个列表，”商鞅傲然道，“虽非最优，却稳妥可靠。此乃我大秦治国之道——步步为营，稳中求胜！”</p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/ rel=bookmark>算法数据结构</a></h3><p class="list__lead post__lead">万物皆结构，万法归算法</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2025-12-16T00:00:00>December 16, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%ae%97%e6%b3%95%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84 rel=category>算法数据结构</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><h2 id=算法与数据结构真解>「算法与数据结构真解」</h2><blockquote><p>以算法思想与数据结构为核心，贯穿不同编程语言的实现。这里不问语言门派，只探算法本源。</p></blockquote><hr><h3 id=数据结构篇-万物皆结构>「数据结构篇」· 万物皆结构</h3><h4 id=-刷题一统春秋><span style=color:var(--cinnabar)>📊 「刷题一统春秋」</span>：</h4><ul><li><a href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%EF%BC%8C%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92-/>第一章-链表分治，初露锋芒</a></li></ul><h4 id=-线性结构><span style=color:var(--cinnabar)>📊 「线性结构」</span>：</h4><h5 id=数组与链表内存的连续与离散之美>「数组与链表」：内存的连续与离散之美</h5><ul><li><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/>C 列表实战</a> —— 从指针到链表的演练记录。</li><li>计划：动态数组扩容策略、双向链表实现比较</li></ul><h5 id=栈与队列后进先出与先进先出的哲学>「栈与队列」：后进先出与先进先出的哲学</h5><ul><li>计划：递归调用栈剖析、消息队列应用场景</li><li>计划：双端队列的妙用、优先队列实现方案</li></ul><h4 id=-树形结构><span style=color:var(--cinnabar)>🌳 「树形结构」</span>：</h4><h5 id=二叉树二分思想的具象化>「二叉树」：二分思想的具象化</h5><ul><li>计划：二叉搜索树增删查、AVL树旋转平衡</li><li>计划：红黑树原理图解、B树在数据库中的应用</li></ul><h5 id=堆结构优先级的艺术>「堆结构」：优先级的艺术</h5><ul><li>计划：二叉堆实现、堆排序的原地版本</li><li>计划：Top K 问题的多种解法对比</li></ul><h4 id=-哈希世界><span style=color:var(--cinnabar)>🔑 「哈希世界」</span>：</h4><h5 id=哈希表从键到值的瞬间映射>「哈希表」：从键到值的瞬间映射</h5><ul><li>计划：哈希冲突解决策略、布谷鸟哈希原理</li><li>计划：一致性哈希在分布式系统中的运用</li></ul><h4 id=-图论基石><span style=color:var(--cinnabar)>🕸️ 「图论基石」</span>：</h4><h5 id=图的表示邻接矩阵与邻接表的抉择>「图的表示」：邻接矩阵与邻接表的抉择</h5><ul><li><a href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87-%E8%B7%AF%E7%BA%BF%E8%A7%84%E5%88%92/>路线规划</a> —— Grid-Based Route (Re-)Planning</li><li>计划：稠密图与稀疏图的存储优化</li></ul><hr><h3 id=算法篇-思维的模式>「算法篇」· 思维的模式</h3><h4 id=-搜索算法><span style=color:var(--cinnabar)>🔍 「搜索算法」</span>：</h4><h5 id=深度优先一条路走到黑的探索>「深度优先」：一条路走到黑的探索</h5><ul><li>计划：回溯法解数独、排列组合问题模板</li></ul><h5 id=广度优先层层递进的扩张>「广度优先」：层层递进的扩张</h5><ul><li>计划：最短路径问题、状态空间搜索</li></ul><h4 id=-排序算法><span style=color:var(--cinnabar)>🔄 「排序算法」</span>：</h4><h5 id=比较排序基于比较的秩序建立>「比较排序」：基于比较的秩序建立</h5><ul><li>计划：快速排序优化、归并排序的迭代实现</li><li>计划：堆排序的建堆技巧</li></ul><h5 id=非比较排序突破onlogn的界限>「非比较排序」：突破O(nlogn)的界限</h5><ul><li>计划：计数排序的适用场景、基数排序的位数处理</li></ul><h4 id=-动态规划><span style=color:var(--cinnabar)>🧩 「动态规划」</span>：</h4><h5 id=经典模型从斐波那契到背包问题>「经典模型」：从斐波那契到背包问题</h5><ul><li>计划：状态定义技巧、状态转移方程推导</li><li>计划：背包九讲精要、区间DP的遍历顺序</li></ul><h5 id=字符串dp编辑距离与最长公共子序列>「字符串DP」：编辑距离与最长公共子序列</h5><ul><li>计划：DNA序列比对中的DP应用</li></ul><h4 id=-贪心算法><span style=color:var(--cinnabar)>⚡ 「贪心算法」</span>：</h4><h5 id=局部最优何时贪心能得全局最优>「局部最优」：何时贪心能得全局最优</h5><ul><li>计划：区间调度问题、霍夫曼编码构造</li></ul><h4 id=-分治思想><span style=color:var(--cinnabar)>✂️ 「分治思想」</span>：</h4><h4 id=大事化小递归分解的艺术>「大事化小」：递归分解的艺术</h4><ul><li>计划：最近点对问题、矩阵乘法的Strassen算法</li></ul><hr><h3 id=高级专题-思想的融合>「高级专题」· 思想的融合</h3><h4 id=-算法设计范式><span style=color:var(--cinnabar)>🎯 「算法设计范式」</span>：</h4><h5 id=双指针相向而行的智慧>「双指针」：相向而行的智慧</h5><ul><li>计划：滑动窗口模板、快慢指针判环</li></ul><h5 id=位运算0与1的魔法>「位运算」：0与1的魔法</h5><ul><li>计划：状态压缩技巧、位操作优化</li></ul><h4 id=-复杂度分析><span style=color:var(--cinnabar)>📈 「复杂度分析」</span>：</h4><h4 id=时间空间算法效率的度量衡>「时间空间」：算法效率的度量衡</h4><ul><li>计划：主定理的应用、均摊分析实例</li></ul><hr><h3 id=实战演练-知行合一>「实战演练」· 知行合一</h3><h4 id=-leetcode精讲><span style=color:var(--cinnabar)>💻 「LeetCode精讲」</span>：</h4><h5 id=高频题目面试常考题型深度解析>「高频题目」：面试常考题型深度解析</h5><ul><li>计划：每题多语言实现、多种解法对比</li><li><a href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83-C%E8%AF%AD%E8%A8%80%E8%B6%A3%E5%91%B3%E7%AE%97%E6%B3%95/>C语言趣味算法</a> —— 汉诺塔、百鸡百钱、常胜将军、约瑟夫环。</li></ul><h4 id=-竞赛算法><span style=color:var(--cinnabar)>🏆 「竞赛算法」</span>：</h4><h5 id=acm模板竞赛常用算法模板库>「ACM模板」：竞赛常用算法模板库</h5><ul><li>计划：并查集优化、线段树懒更新</li></ul><hr></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/ rel=bookmark>JAVA在线测试</a></h3><p class="list__lead post__lead">以考促学，查漏补缺</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2025-11-28T00:00:00>November 28, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-即时生成 AI 考题 点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。
-“AI 考题”继续生成 ◀ 返回</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA%E7%BB%BC%E5%90%88%E6%B5%8B%E8%AF%95/ rel=bookmark>剑法篇</a></h3><p class="list__lead post__lead">以考促学，查漏补缺</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
-<time class=meta__text datetime=2025-11-28T00:00:00>November 28, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-单选题（每题 1 分），请在四个选项中选择 1 个最符合题意 的答案。
-核心语法与运行时 Local Variable 的描述，哪项正确？
-A. 局部变量可以使用 public/private 修饰。
-B. 局部变量存储在堆（Heap）。
-C. 局部变量在定义时必须初始化，否则编译失败。
-D. 局部变量具有默认值，例如引用类型默认为 null。
-try-catch-finally 中执行 System.exit(0)，finally 会执行吗？
-A. 不会，System.exit(0) 直接终止 JVM，finally 被跳过。
-B. 只有 try 未抛异常才执行。
-C. 会，finally 总会执行。
-D. 取决于 catch 是否捕获 RuntimeException。
-并发与集合 以下哪一个集合在并发场景下性能优于 Hashtable？
-A. TreeMap
-B. ConcurrentHashMap
-C. Hashtable
-D. LinkedHashMap
-创建并启动线程，推荐方式是？
-A. 实现 Runnable 接口。
-B. 实现 Callable 接口。
-C. 继承 Thread 类。
-D. 实现 Serializable 接口。</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/ rel=bookmark>典籍篇</a></h3><p class="list__lead post__lead">聚社区之智，传技术之火</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80 rel=category>编程语言</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p><section class=ai-quiz-section data-ai-quiz-root data-ai-quiz-endpoint=http://qiaopan.tech:18080/api/v1/assistant/><h2 class=ai-quiz-title>即时生成 AI 考题</h2><p class=ai-quiz-desc>点击按钮即可调用本地大模型接口，自动生成新的考试题并追加到页面。</p><div class=ai-quiz-controls><div class=ai-quiz-control-group><label for=ai-quiz-difficulty-page>难度：</label>
+<select id=ai-quiz-difficulty-page class=ai-quiz-select data-ai-quiz-param=difficulty><option value=简单>简单</option><option value=中等 selected>中等</option><option value=困难>困难</option></select></div><div class=ai-quiz-control-group><label for=ai-quiz-count-page>数量：</label>
+<select id=ai-quiz-count-page class=ai-quiz-select data-ai-quiz-param=count><option value=1>1 题</option><option value=3 selected>3 题</option><option value=5>5 题</option><option value=10>10 题</option></select></div></div><div class=ai-quiz-actions><button class="ai-quiz-button ai-quiz-floating-button" data-ai-quiz-trigger>“AI 考题”继续生成</button>
+<span class=ai-quiz-status data-ai-quiz-status></span></div><div class=ai-quiz-results data-ai-quiz-results></div></section><p><a href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>◀ 返回</a></p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/ rel=bookmark>典籍篇</a></h3><p class="list__lead post__lead">聚社区之智，传技术之火</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2025-11-27T00:00:00>November 27, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-PostgreSQL 安装 创建用户与环境配置 创建用户 groupadd postgres useradd -g postgres postgres 环境变量配置(.bash_profile) export PGPORT=5433 export PG_HOME=/usr/local/pg16.2 export PATH=$PG_HOME/bin:$PATH export PGDATA=$PG_HOME/data export LD_LIBRARY_PATH=$PG_HOME/lib export LANG=en_US.utf8 内核参数配置 vi /etc/sysctl.conf #最大共享内存段大小 kernel.shmmax = 68719476736(默认) #可以使用的共享内存的总量 kernel.shmall = 4294967296(默认) #整个系统共享内存段的最大数目 kernel.shmmni = 4096 #每个信号对象集的最大信号对象数 kernel.sem = 50100 64128000 50100 1280 #文件句柄的最大数量。 fs.file-max = 7672460 #应用程序可使用的IPv4端口范围 net.ipv4.ip_local_port_range = 9000 65000 #套接字接收缓冲区大小的缺省值 net.core.rmem_default = 1048576 #套接字发送缓冲区大小的缺省 net.core.wmem_default = 262144 值 #套接字发送缓冲区大小的最大值 net.core.wmem_max = 1048576 # sysctl -p #配置生效 centos7 源码安装 下载</div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84/ rel=bookmark>典籍篇</a></h3><p class="list__lead post__lead">聚社区之智，传技术之火</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>◀ 返回</a></p><h1 id=源码安装postgresql稳定版本linux>源码安装PostgreSQL稳定版本（Linux）</h1><h2 id=-准备工作>📋 准备工作</h2><h3 id=1-查看最新稳定版本>1. <strong>查看最新稳定版本</strong></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 访问PostgreSQL官网或使用命令查看</span>
+</span></span><span style=display:flex><span>curl -s https://www.postgresql.org/ftp/source/ | grep -E <span style=color:#e6db74>&#39;href=&#34;v[0-9]+\.[0-9]+/&#34;&#39;</span> | tail -5
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 当前长期支持版本（LTS）</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># PostgreSQL 16.x (最新稳定版)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># PostgreSQL 15.x (长期支持)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># PostgreSQL 14.x (长期支持到2026年)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># PostgreSQL 13.x (长期支持到2025年)</span>
+</span></span></code></pre></div><h3 id=2-安装编译依赖>2. <strong>安装编译依赖</strong></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Ubuntu/Debian</span>
+</span></span><span style=display:flex><span>sudo apt update
+</span></span><span style=display:flex><span>sudo apt install -y <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    build-essential <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libreadline-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    zlib1g-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    flex bison <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxml2-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxslt-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libssl-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libssl-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libpam0g-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libldap-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libperl-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libicu-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    tcl-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    git <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    wget <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    curl
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># CentOS/RHEL/Rocky/AlmaLinux</span>
+</span></span><span style=display:flex><span>sudo yum groupinstall -y <span style=color:#e6db74>&#34;Development Tools&#34;</span>
+</span></span><span style=display:flex><span>sudo yum install -y <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    readline-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    zlib-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    flex bison <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxml2-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxslt-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    openssl-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    pam-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    openldap-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    perl-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    perl-ExtUtils-Embed <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    tcl-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3-devel <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    git <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    wget
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>vi /etc/sysctl.conf
+</span></span><span style=display:flex><span><span style=color:#75715e>#最大共享内存段大小</span>
+</span></span><span style=display:flex><span>kernel.shmmax <span style=color:#f92672>=</span> 68719476736<span style=color:#f92672>(</span>默认<span style=color:#f92672>)</span> 
+</span></span><span style=display:flex><span> <span style=color:#75715e>#可以使用的共享内存的总量</span>
+</span></span><span style=display:flex><span>kernel.shmall <span style=color:#f92672>=</span> 4294967296<span style=color:#f92672>(</span>默认<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#整个系统共享内存段的最大数目</span>
+</span></span><span style=display:flex><span>kernel.shmmni <span style=color:#f92672>=</span> <span style=color:#ae81ff>4096</span> 
+</span></span><span style=display:flex><span><span style=color:#75715e>#每个信号对象集的最大信号对象数</span>
+</span></span><span style=display:flex><span>kernel.sem <span style=color:#f92672>=</span> <span style=color:#ae81ff>50100</span> <span style=color:#ae81ff>64128000</span> <span style=color:#ae81ff>50100</span> <span style=color:#ae81ff>1280</span> 
+</span></span><span style=display:flex><span><span style=color:#75715e>#文件句柄的最大数量。</span>
+</span></span><span style=display:flex><span>fs.file-max <span style=color:#f92672>=</span> <span style=color:#ae81ff>7672460</span> 
+</span></span><span style=display:flex><span><span style=color:#75715e>#应用程序可使用的IPv4端口范围</span>
+</span></span><span style=display:flex><span>net.ipv4.ip_local_port_range <span style=color:#f92672>=</span> <span style=color:#ae81ff>9000</span> <span style=color:#ae81ff>65000</span> 
+</span></span><span style=display:flex><span><span style=color:#75715e>#套接字接收缓冲区大小的缺省值</span>
+</span></span><span style=display:flex><span>net.core.rmem_default <span style=color:#f92672>=</span> <span style=color:#ae81ff>1048576</span> 
+</span></span><span style=display:flex><span><span style=color:#75715e>#套接字发送缓冲区大小的缺省</span>
+</span></span><span style=display:flex><span>net.core.wmem_default <span style=color:#f92672>=</span> <span style=color:#ae81ff>262144</span> 值
+</span></span><span style=display:flex><span><span style=color:#75715e>#套接字发送缓冲区大小的最大值</span>
+</span></span><span style=display:flex><span>net.core.wmem_max <span style=color:#f92672>=</span> <span style=color:#ae81ff>1048576</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># sysctl -p #配置生效</span>
+</span></span></code></pre></div><h2 id=-源码安装postgresql-162当前稳定版>🚀 源码安装PostgreSQL 16.2（当前稳定版）</h2><h3 id=步骤1创建专用用户和目录>步骤1：创建专用用户和目录</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 创建postgres系统用户和组</span>
+</span></span><span style=display:flex><span>sudo groupadd -r postgres
+</span></span><span style=display:flex><span>sudo useradd -r -g postgres -s /bin/bash -d /usr/local/pgsql -m -k /dev/null postgres
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建安装目录和数据目录</span>
+</span></span><span style=display:flex><span>sudo mkdir -p /usr/local/pgsql/<span style=color:#f92672>{</span>data,logs,backup<span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>sudo chown -R postgres:postgres /usr/local/pgsql
+</span></span><span style=display:flex><span>sudo chmod <span style=color:#ae81ff>750</span> /usr/local/pgsql
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建源码目录</span>
+</span></span><span style=display:flex><span>sudo mkdir -p /opt/postgresql_src
+</span></span><span style=display:flex><span>sudo chown <span style=color:#66d9ef>$(</span>whoami<span style=color:#66d9ef>)</span>:<span style=color:#66d9ef>$(</span>whoami<span style=color:#66d9ef>)</span> /opt/postgresql_src
+</span></span><span style=display:flex><span>cd /opt/postgresql_src
+</span></span></code></pre></div><h3 id=步骤2下载源码>步骤2：下载源码</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 下载PostgreSQL 16.2（截至2024年3月的最新稳定版）</span>
+</span></span><span style=display:flex><span>wget https://ftp.postgresql.org/pub/source/v16.2/postgresql-16.2.tar.gz
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 或者使用国内镜像（清华源）</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># wget https://mirrors.tuna.tsinghua.edu.cn/postgresql/source/v16.2/postgresql-16.2.tar.gz</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 验证下载完整性（可选）</span>
+</span></span><span style=display:flex><span>wget https://ftp.postgresql.org/pub/source/v16.2/postgresql-16.2.tar.gz.sha256
+</span></span><span style=display:flex><span>sha256sum -c postgresql-16.2.tar.gz.sha256
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 解压源码</span>
+</span></span><span style=display:flex><span>tar -zxvf postgresql-16.2.tar.gz
+</span></span><span style=display:flex><span>cd postgresql-16.2
+</span></span></code></pre></div><h3 id=步骤3配置编译选项>步骤3：配置编译选项</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 查看所有配置选项</span>
+</span></span><span style=display:flex><span>./configure --help
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建编译目录（推荐）</span>
+</span></span><span style=display:flex><span>mkdir build <span style=color:#f92672>&amp;&amp;</span> cd build
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 基本配置（适用于大多数情况）</span>
+</span></span><span style=display:flex><span>../configure <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --prefix<span style=color:#f92672>=</span>/usr/local/pgsql <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-pgport<span style=color:#f92672>=</span><span style=color:#ae81ff>5432</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-perl <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-python <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-tcl <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-openssl <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-pam <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    -with-uuid<span style=color:#f92672>=</span>ossp <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-ldap <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-libxml <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-libxslt <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-icu <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --enable-thread-safety <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --enable-debug <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --enable-nls <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-system-tzdata<span style=color:#f92672>=</span>/usr/share/zoneinfo
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 或者精简配置（最小化安装）</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># ../configure --prefix=/usr/local/pgsql --with-openssl</span>
+</span></span></code></pre></div><h3 id=步骤4编译和安装>步骤4：编译和安装</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 查看CPU核心数，决定并行编译数</span>
+</span></span><span style=display:flex><span>nproc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 编译（使用4个并行任务，根据CPU核心数调整）</span>
+</span></span><span style=display:flex><span>make -j4
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 可选：运行回归测试（需要较长时间）</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># make check</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 安装到系统</span>
+</span></span><span style=display:flex><span>sudo make install
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 安装contrib模块（扩展工具）</span>
+</span></span><span style=display:flex><span>cd contrib
+</span></span><span style=display:flex><span>make -j4
+</span></span><span style=display:flex><span>sudo make install
+</span></span><span style=display:flex><span>cd ..
+</span></span></code></pre></div><h3 id=步骤5配置环境变量>步骤5：配置环境变量</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 为postgres用户配置环境变量</span>
+</span></span><span style=display:flex><span>sudo tee -a /usr/local/pgsql/.bash_profile <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export PGHOME=/usr/local/pgsql
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export PGDATA=/usr/local/pgsql/data
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export PATH=$PGHOME/bin:$PATH
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export LD_LIBRARY_PATH=$PGHOME/lib:$LD_LIBRARY_PATH
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>export MANPATH=$PGHOME/share/man:$MANPATH
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 为当前用户配置环境变量</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#39;export PATH=/usr/local/pgsql/bin:$PATH&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span style=display:flex><span>source ~/.bashrc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 验证安装</span>
+</span></span><span style=display:flex><span>/usr/local/pgsql/bin/postgres --version
+</span></span></code></pre></div><h2 id=-初始化数据库和配置>⚙️ 初始化数据库和配置</h2><h3 id=步骤6初始化数据库>步骤6：初始化数据库</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 切换到postgres用户</span>
+</span></span><span style=display:flex><span>sudo su - postgres
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 初始化数据库集群</span>
+</span></span><span style=display:flex><span>initdb -D /usr/local/pgsql/data -E UTF8 --locale<span style=color:#f92672>=</span>C -U postgres
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 或者使用详细参数</span>
+</span></span><span style=display:flex><span>initdb <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  -D /usr/local/pgsql/data <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  -E UTF8 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  --locale<span style=color:#f92672>=</span>en_US.UTF-8 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  --lc-collate<span style=color:#f92672>=</span>C <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  --lc-ctype<span style=color:#f92672>=</span>en_US.UTF-8 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  --username<span style=color:#f92672>=</span>postgres <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>  --pwprompt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 设置密码（记下这个密码）</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 输入并确认postgres用户的密码</span>
+</span></span></code></pre></div><h3 id=步骤7配置postgresqlconf>步骤7：配置postgresql.conf</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 备份原始配置</span>
+</span></span><span style=display:flex><span>cp /usr/local/pgsql/data/postgresql.conf /usr/local/pgsql/data/postgresql.conf.original
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 编辑主配置文件</span>
+</span></span><span style=display:flex><span>nano /usr/local/pgsql/data/postgresql.conf
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#75715e># 修改以下参数（根据服务器配置调整）</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>listen_addresses</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;*&#39;          # 允许远程连接</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>port</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>5432                     # 监听端口</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>max_connections</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>100           # 最大连接数</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>shared_buffers</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>128MB          # 共享缓冲区大小（建议为内存的25%）</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>work_mem</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>4MB                  # 每个查询的工作内存</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>maintenance_work_mem</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>64MB     # 维护操作的内存</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>dynamic_shared_memory_type</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>posix  # 动态共享内存类型</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>wal_level</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>replica             # WAL级别</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>synchronous_commit</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>on         # 同步提交</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>wal_buffers</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>-1                # WAL缓冲区（-1表示自动）</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>checkpoint_timeout</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>5min       # 检查点超时时间</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>max_wal_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1GB              # 最大WAL大小</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>min_wal_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>80MB             # 最小WAL大小</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>archive_mode</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>off              # 归档模式</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>archive_command</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/bin/date&#39;   # 归档命令（关闭时随意设置）</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>logging_collector</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>on          # 启用日志收集</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_directory</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;pg_log&#39;        # 日志目录</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_filename</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;postgresql-%Y-%m-%d_%H%M%S.log&#39;  # 日志文件名格式</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_rotation_age</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1d           # 日志轮转时间</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_rotation_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>10MB        # 日志轮转大小</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_truncate_on_rotation</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>on   # 轮转时截断</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_line_prefix</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;%m [%p] %q%u@%d &#39;  # 日志前缀</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>log_timezone</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Asia/Shanghai&#39;  # 日志时区</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>timezone</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Asia/Shanghai&#39;      # 时区</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>datestyle</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;iso, ymd&#39;          # 日期格式</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>lc_messages</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;en_US.UTF-8&#39;     # 消息语言</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>lc_monetary</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;en_US.UTF-8&#39;     # 货币格式</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>lc_numeric</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;en_US.UTF-8&#39;      # 数字格式</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>lc_time</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;en_US.UTF-8&#39;         # 时间格式</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>default_text_search_config</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;pg_catalog.english&#39;  # 全文搜索配置</span>
+</span></span></code></pre></div><h3 id=步骤8配置客户端认证>步骤8：配置客户端认证</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 编辑pg_hba.conf</span>
+</span></span><span style=display:flex><span>nano /usr/local/pgsql/data/pg_hba.conf
+</span></span></code></pre></div><pre tabindex=0><code class=language-conf data-lang=conf># 允许本地连接（md5需要密码，trust不需要密码）
+local   all             postgres                                peer
+local   all             all                                     md5
+host    all             all             127.0.0.1/32            md5
+
+# 允许特定IP段连接
+host    all             all             192.168.1.0/24          md5
+
+# 允许所有IP连接（生产环境慎用）
+host    all             all             0.0.0.0/0               md5
+
+# 示例：只允许特定用户从特定IP访问特定数据库
+# host    exam_db         app_user        192.168.1.100/32       md5
+</code></pre><h3 id=步骤9创建系统服务>步骤9：创建系统服务</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 退出postgres用户</span>
+</span></span><span style=display:flex><span>exit
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建systemd服务文件</span>
+</span></span><span style=display:flex><span>sudo tee /etc/systemd/system/postgresql.service <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Unit]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Description=PostgreSQL Database Server
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>After=network.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Service]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Type=forking
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>User=postgres
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Group=postgres
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Environment=PGDATA=/usr/local/pgsql/data
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>OOMScoreAdjust=-1000
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecStart=/usr/local/pgsql/bin/pg_ctl -D ${PGDATA} start
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecStop=/usr/local/pgsql/bin/pg_ctl -D ${PGDATA} stop
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecReload=/usr/local/pgsql/bin/pg_ctl -D ${PGDATA} reload
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>TimeoutSec=300
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Install]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>WantedBy=multi-user.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 或者使用simple类型（推荐）</span>
+</span></span><span style=display:flex><span>sudo tee /etc/systemd/system/postgresql.service <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Unit]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Description=PostgreSQL Database Server
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>After=network.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Service]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Type=simple
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>User=postgres
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Group=postgres
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Environment=PGDATA=/usr/local/pgsql/data
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Environment=PGPORT=5432
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>OOMScoreAdjust=-1000
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecStart=/usr/local/pgsql/bin/postgres -D ${PGDATA}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecReload=/bin/kill -HUP $MAINPID
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>KillMode=mixed
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>KillSignal=SIGINT
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>TimeoutSec=300
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Install]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>WantedBy=multi-user.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><h3 id=步骤10启动服务>步骤10：启动服务</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 重新加载systemd配置</span>
+</span></span><span style=display:flex><span>sudo systemctl daemon-reload
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 启动PostgreSQL服务</span>
+</span></span><span style=display:flex><span>sudo systemctl start postgresql
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 设置开机自启</span>
+</span></span><span style=display:flex><span>sudo systemctl enable postgresql
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 查看服务状态</span>
+</span></span><span style=display:flex><span>sudo systemctl status postgresql
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 查看日志</span>
+</span></span><span style=display:flex><span>sudo journalctl -u postgresql -f
+</span></span></code></pre></div><h2 id=-验证和基础配置>🔧 验证和基础配置</h2><h3 id=步骤11验证安装>步骤11：验证安装</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 连接到数据库</span>
+</span></span><span style=display:flex><span>psql -h localhost -U postgres -d postgres
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 在psql中执行</span>
+</span></span><span style=display:flex><span>SELECT version<span style=color:#f92672>()</span>;
+</span></span><span style=display:flex><span>SELECT current_user;
+</span></span><span style=display:flex><span>SHOW data_directory;
+</span></span><span style=display:flex><span>SHOW config_file;
+</span></span><span style=display:flex><span><span style=color:#ae81ff>\q</span>  <span style=color:#75715e># 退出</span>
+</span></span></code></pre></div><h3 id=步骤12创建数据库和用户>步骤12：创建数据库和用户</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 切换到postgres用户</span>
+</span></span><span style=display:flex><span>sudo su - postgres
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建测试数据库</span>
+</span></span><span style=display:flex><span>createdb test_db
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建应用用户</span>
+</span></span><span style=display:flex><span>createuser -P -d -e app_user
+</span></span><span style=display:flex><span><span style=color:#75715e># 输入密码：AppPass123</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 连接到数据库并授权</span>
+</span></span><span style=display:flex><span>psql -d test_db <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>-- 创建schema
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>CREATE SCHEMA IF NOT EXISTS app_schema;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>-- 创建测试表
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>CREATE TABLE app_schema.users (
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    id SERIAL PRIMARY KEY,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    username VARCHAR(50) NOT NULL,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    email VARCHAR(100) UNIQUE NOT NULL,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>-- 插入测试数据
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>INSERT INTO app_schema.users (username, email) VALUES
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>(&#39;admin&#39;, &#39;admin@example.com&#39;),
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>(&#39;user1&#39;, &#39;user1@example.com&#39;);
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>-- 授权给应用用户
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>GRANT ALL PRIVILEGES ON DATABASE test_db TO app_user;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>GRANT ALL PRIVILEGES ON SCHEMA app_schema TO app_user;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA app_schema TO app_user;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA app_schema TO app_user;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>-- 查看表
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>SELECT * FROM app_schema.users;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><h3 id=步骤13安装常用扩展>步骤13：安装常用扩展</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 安装pg_stat_statements（性能监控）</span>
+</span></span><span style=display:flex><span>psql -U postgres -d test_db <span style=color:#e6db74>&lt;&lt;EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>CREATE EXTENSION IF NOT EXISTS pg_stat_statements;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>CREATE EXTENSION IF NOT EXISTS uuid-ossp;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>CREATE EXTENSION IF NOT EXISTS btree_gin;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>CREATE EXTENSION IF NOT EXISTS btree_gist;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>SELECT * FROM pg_available_extensions ORDER BY name;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><h2 id=-高级配置和优化>🛠️ 高级配置和优化</h2><h3 id=内存优化配置>内存优化配置</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 根据服务器内存调整配置</span>
+</span></span><span style=display:flex><span>sudo nano /usr/local/pgsql/data/postgresql.conf
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#75715e># 内存相关优化（8GB内存服务器示例）</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>shared_buffers</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>2GB           # 内存的25%</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>work_mem</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>16MB                # 每个查询的工作内存</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>maintenance_work_mem</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>512MB   # 维护操作内存</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>effective_cache_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>6GB     # 可用于缓存的磁盘空间估计值</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 性能优化</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>max_connections</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>200          # 根据应用需求调整</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>checkpoint_completion_target</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>0.9</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>random_page_cost</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1.1         # SSD设为1.1，HDD设为4.0</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>effective_io_concurrency</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>200 # SSD可以设高，HDD设低</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># WAL优化</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>wal_buffers</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>16MB</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>min_wal_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>1GB</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>max_wal_size</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>4GB</span>
+</span></span></code></pre></div><h3 id=配置归档和备份>配置归档和备份</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 创建归档目录</span>
+</span></span><span style=display:flex><span>sudo mkdir -p /usr/local/pgsql/archive
+</span></span><span style=display:flex><span>sudo chown postgres:postgres /usr/local/pgsql/archive
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 配置归档</span>
+</span></span><span style=display:flex><span>sudo nano /usr/local/pgsql/data/postgresql.conf
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#75715e># 启用归档</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>archive_mode</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>on</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>archive_command</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;test ! -f /usr/local/pgsql/archive/%f &amp;&amp; cp %p /usr/local/pgsql/archive/%f&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>archive_timeout</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>3600  # 每小时强制归档</span>
+</span></span></code></pre></div><h2 id=-监控和维护脚本>📊 监控和维护脚本</h2><h3 id=创建监控脚本>创建监控脚本</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 创建数据库健康检查脚本</span>
+</span></span><span style=display:flex><span>sudo tee /usr/local/bin/check_postgres.sh <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># PostgreSQL健康检查脚本
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PGHOME=/usr/local/pgsql
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PGDATA=/usr/local/pgsql/data
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>PGPORT=5432
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;=== PostgreSQL健康检查 $(date) ===&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 检查服务状态
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>systemctl is-active postgresql &gt; /dev/null 2&gt;&amp;1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>if [ $? -eq 0 ]; then
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    echo &#34;✓ 服务状态: 运行中&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>else
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    echo &#34;✗ 服务状态: 停止&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    exit 1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>fi
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 检查连接
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>$PGHOME/bin/pg_isready -p $PGPORT -h localhost -U postgres
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>if [ $? -eq 0 ]; then
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    echo &#34;✓ 数据库连接: 正常&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>else
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    echo &#34;✗ 数据库连接: 失败&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>fi
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 检查磁盘空间
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>df -h $PGDATA | tail -1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 检查数据库大小
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;数据库大小:&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>$PGHOME/bin/psql -h localhost -U postgres -d postgres -c &#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>SELECT 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    datname as \&#34;数据库\&#34;,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    pg_size_pretty(pg_database_size(datname)) as \&#34;大小\&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>FROM pg_database 
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ORDER BY pg_database_size(datname) DESC;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;=== 检查完成 ===&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sudo chmod +x /usr/local/bin/check_postgres.sh
+</span></span><span style=display:flex><span>sudo chown postgres:postgres /usr/local/bin/check_postgres.sh
+</span></span></code></pre></div><h3 id=创建备份脚本>创建备份脚本</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 创建备份脚本</span>
+</span></span><span style=display:flex><span>sudo tee /usr/local/bin/backup_postgres.sh <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># PostgreSQL备份脚本
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>BACKUP_DIR=&#34;/usr/local/pgsql/backup&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>DATE=$(date +%Y%m%d_%H%M%S)
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RETENTION_DAYS=7
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 创建备份目录
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>mkdir -p $BACKUP_DIR/$DATE
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;开始备份: $(date)&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 备份所有数据库
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>/usr/local/pgsql/bin/pg_dumpall -h localhost -U postgres \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    | gzip &gt; $BACKUP_DIR/$DATE/full_backup_$DATE.sql.gz
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 备份单个重要数据库（可选）
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>/usr/local/pgsql/bin/pg_dump -h localhost -U postgres test_db \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    -F c -f $BACKUP_DIR/$DATE/test_db_$DATE.dump
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;备份完成: $(date)&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;备份文件:&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ls -lh $BACKUP_DIR/$DATE/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 清理旧备份
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>find $BACKUP_DIR -type d -mtime +$RETENTION_DAYS -exec rm -rf {} \;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>echo &#34;已清理超过${RETENTION_DAYS}天的备份&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sudo chmod +x /usr/local/bin/backup_postgres.sh
+</span></span><span style=display:flex><span>sudo chown postgres:postgres /usr/local/bin/backup_postgres.sh
+</span></span></code></pre></div><h2 id=-安装其他稳定版本>🎯 安装其他稳定版本</h2><h3 id=安装postgresql-157lts版本>安装PostgreSQL 15.7（LTS版本）</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cd /opt/postgresql_src
+</span></span><span style=display:flex><span>wget https://ftp.postgresql.org/pub/source/v15.7/postgresql-15.7.tar.gz
+</span></span><span style=display:flex><span>tar -zxvf postgresql-15.7.tar.gz
+</span></span><span style=display:flex><span>cd postgresql-15.7
+</span></span><span style=display:flex><span>mkdir build <span style=color:#f92672>&amp;&amp;</span> cd build
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 配置（与16.2类似）</span>
+</span></span><span style=display:flex><span>../configure <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --prefix<span style=color:#f92672>=</span>/usr/local/pgsql15 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-pgport<span style=color:#f92672>=</span><span style=color:#ae81ff>5433</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-openssl <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-perl <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --with-python
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>make -j<span style=color:#66d9ef>$(</span>nproc<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>sudo make install
+</span></span></code></pre></div><h3 id=安装postgresql-1412长期支持>安装PostgreSQL 14.12（长期支持）</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cd /opt/postgresql_src
+</span></span><span style=display:flex><span>wget https://ftp.postgresql.org/pub/source/v14.12/postgresql-14.12.tar.gz
+</span></span><span style=display:flex><span>tar -zxvf postgresql-14.12.tar.gz
+</span></span><span style=display:flex><span>cd postgresql-14.12
+</span></span><span style=display:flex><span>mkdir build <span style=color:#f92672>&amp;&amp;</span> cd build
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>../configure --prefix<span style=color:#f92672>=</span>/usr/local/pgsql14 --with-openssl
+</span></span><span style=display:flex><span>make -j<span style=color:#66d9ef>$(</span>nproc<span style=color:#66d9ef>)</span>
+</span></span><span style=display:flex><span>sudo make install
+</span></span></code></pre></div><h2 id=-故障排除>⚠️ 故障排除</h2><h3 id=常见问题解决>常见问题解决</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 1. 编译错误：缺少依赖</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 重新安装所有依赖后清理重试</span>
+</span></span><span style=display:flex><span>make distclean
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 2. 启动失败：端口被占用</span>
+</span></span><span style=display:flex><span>netstat -tlnp | grep <span style=color:#ae81ff>5432</span>
+</span></span><span style=display:flex><span>sudo lsof -i :5432
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 3. 连接失败：认证问题</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 检查pg_hba.conf配置</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 4. 内存不足：调整编译并行度</span>
+</span></span><span style=display:flex><span>make -j2  <span style=color:#75715e># 使用更少的并行任务</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 5. 查看详细错误日志</span>
+</span></span><span style=display:flex><span>tail -f /usr/local/pgsql/data/log/postgresql-*.log
+</span></span></code></pre></div><h2 id=-总结>📝 总结</h2><h3 id=安装步骤回顾>安装步骤回顾</h3><ol><li><strong>安装依赖</strong>：确保编译环境完整</li><li><strong>下载源码</strong>：选择稳定版本（推荐16.2或15.7）</li><li><strong>配置编译</strong>：根据需求选择编译选项</li><li><strong>编译安装</strong>：使用并行编译提高速度</li><li><strong>初始化数据库</strong>：设置数据目录和编码</li><li><strong>配置参数</strong>：优化性能和安全</li><li><strong>创建服务</strong>：使用systemd管理</li><li><strong>验证测试</strong>：确保安装成功</li></ol><h3 id=版本选择建议>版本选择建议</h3><ul><li><strong>生产环境</strong>：PostgreSQL 15.x（LTS支持到2027年）</li><li><strong>学习测试</strong>：PostgreSQL 16.x（最新特性）</li><li><strong>兼容性要求</strong>：PostgreSQL 14.x（支持到2026年）</li></ul><h3 id=关键配置文件>关键配置文件</h3><ul><li><code>/usr/local/pgsql/data/postgresql.conf</code> - 主配置文件</li><li><code>/usr/local/pgsql/data/pg_hba.conf</code> - 客户端认证</li><li><code>/etc/systemd/system/postgresql.service</code> - 服务文件</li></ul><p>通过源码安装可以获得更好的性能和定制性，适合生产环境和对性能有要求的场景。</p></div></article><article class="list__item post"><header class=list__header><h3 class="list__title post__title"><a href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84/ rel=bookmark>典籍篇</a></h3><p class="list__lead post__lead">聚社区之智，传技术之火</p><div class="list__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
 <time class=meta__text datetime=2025-11-27T00:00:00>November 27, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
-<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a></span></div></div></header><div class="content list__excerpt post__content clearfix">◀ 返回
-postgresql 的组成结构 内存 Local memory area:由每个后端进程分配给自己使用。
-Share memory area: 由 postgresql 服务器的所有进程使用。
-work_mem: 执行器执行 order by、distinct、join tables、hash-join操作时使用。
-maintenance_work_mem: vacuum 归整、reindex重建索引，时使用。
-temp_buffers: 临时表使用。
-shared_buffer_pool: 从持久化的存储加载表页和索引页到此。
-wal_buffer: 防止服务异常停止导致数据没有落盘，创建了 wal 缓冲区，相当于 redo log。
-commit log: 记录所有的事务状态如:再处理，已提交、回退，保持事务的一致性。相当于 undo log。
-进程 PostgreSQL 采用 C/S 模式，系统为每个连接的客户端分配一个服务进程 Postgres 当运行 pg_ctl 命令进入 Postgres 程序时，其进程创建流程如下:
-PostMaster PostMaster：进程是整个数据库实例的总控进程，负责启动关闭该数据实例。并且在服务进程出现错误时完成系统的恢复，还要在系统奔溃的时候重启系统。它是运行在服务器上的总控进程，同时也负责整个系统范围内的操作，例如中断操作与信号处理。但是 Postmaster 本身并不执行这些操作，而是指派一个子进程在适当的时间处理它们。Postmaster 进程在起始时会创建共享内存与信号库，用于与子进程的通信，同时也能在某个子进程奔溃的时候重置共享内存即可恢复。 Postmaster 守护进程的执行流程如下
-SysLogger SysLogger:（系统日志）进程,日志信息是数据库管理员获取数据库系统运行状态的有效手段。在数据库出现故障时，日志信息是非常有用的。把数据库日志信息集中输出到一个位置将极大方便管理员维护数据库系统。然而，日志输出将产生大量数据（特别是在比较高的调试级别上），单文件保存时不利于日志文件的操作。因此，在SysLogger的配置选项中可以设置日志文件的大小，SysLogger会在日志文件达到指定的大小时关闭当前日志文件，产生新的日志文件。 # - Where to Log - log_destination = 'stderr' # Valid values are combinations of # stderr, csvlog, jsonlog, syslog, and # eventlog, depending on platform.</div></article></main><div class=pagination><span class="pagination__item pagination__item--current">1/5</span>
-<a class="pagination__item pagination__item--next btn" href=/page/2/>»</a></div></div><aside class="sidebar sidebar--left"><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH... name=q aria-label=SEARCH...>
+<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a></span></div></div></header><div class="content list__excerpt post__content clearfix"><p><a href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>◀ 返回</a></p><h2 id=postgresql-的组成结构>postgresql 的组成结构</h2><h3 id=内存>内存</h3><ul><li><p><strong>Local memory area</strong>:由每个后端进程分配给自己使用。</p></li><li><p><strong>Share memory area</strong>: 由 postgresql 服务器的所有进程使用。</p></li></ul><p><img src=https://blowizer.oss-cn-beijing.aliyuncs.com/blog/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84.png alt=postgresql-memory></p><ul><li><p><strong>work_mem</strong>: 执行器执行 <em>order by</em>、<em>distinct</em>、<em>join tables</em>、<em>hash-join</em>操作时使用。</p></li><li><p><strong>maintenance_work_mem</strong>: <em>vacuum</em> 归整、<em>reindex</em>重建索引，时使用。</p></li><li><p><strong>temp_buffers</strong>: 临时表使用。</p></li><li><p><strong>shared_buffer_pool</strong>: 从持久化的存储加载表页和索引页到此。</p></li><li><p><strong>wal_buffer</strong>: 防止服务异常停止导致数据没有落盘，创建了 wal 缓冲区，相当于 redo log。</p></li><li><p><strong>commit log</strong>: 记录所有的事务状态如:再处理，已提交、回退，保持事务的一致性。相当于 undo log。</p></li></ul><h3 id=进程>进程</h3><p><strong>PostgreSQL 采用 C/S 模式，系统为每个连接的客户端分配一个服务进程 Postgres</strong>
+<img src=https://blowizer.oss-cn-beijing.aliyuncs.com/blog/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E8%BF%9B%E7%A8%8B.webp alt=postgresql-process></p><p>当运行 pg_ctl 命令进入 Postgres 程序时，其进程创建流程如下:</p><h3 id=postmaster>PostMaster</h3><p><img src=https://blowizer.oss-cn-beijing.aliyuncs.com/blog/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQ%E8%BF%9B%E7%A8%8B2.webp alt=postgresql-process1></p><ul><li><strong>PostMaster</strong>：进程是整个数据库实例的总控进程，负责启动关闭该数据实例。并且在服务进程出现错误时完成系统的恢复，还要在系统奔溃的时候重启系统。它是运行在服务器上的总控进程，同时也负责整个系统范围内的操作，例如中断操作与信号处理。但是 Postmaster 本身并不执行这些操作，而是指派一个子进程在适当的时间处理它们。Postmaster 进程在起始时会创建共享内存与信号库，用于与子进程的通信，同时也能在某个子进程奔溃的时候重置共享内存即可恢复。</li></ul><p><em>Postmaster 守护进程的执行流程如下</em></p><p><img src=https://blowizer.oss-cn-beijing.aliyuncs.com/blog/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQ%E8%BF%9B%E7%A8%8B2.webp alt=postgres-porcess2></p><h3 id=syslogger>SysLogger</h3><ul><li><strong>SysLogger</strong>:（系统日志）进程,日志信息是数据库管理员获取数据库系统运行状态的有效手段。在数据库出现故障时，日志信息是非常有用的。把数据库日志信息集中输出到一个位置将极大方便管理员维护数据库系统。然而，日志输出将产生大量数据（特别是在比较高的调试级别上），单文件保存时不利于日志文件的操作。因此，在SysLogger的配置选项中可以设置日志文件的大小，SysLogger会在日志文件达到指定的大小时关闭当前日志文件，产生新的日志文件。</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#75715e># - Where to Log -</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>log_destination <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;stderr&#39;</span>              <span style=color:#75715e># Valid values are combinations of</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># stderr, csvlog, jsonlog, syslog, and</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># eventlog, depending on platform.</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># csvlog and jsonlog require</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># logging_collector to be on.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This is used when logging to stderr:</span>
+</span></span><span style=display:flex><span>logging_collector <span style=color:#f92672>=</span> on          <span style=color:#75715e># Enable capturing of stderr, jsonlog,</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># and csvlog into log files. Required</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># to be on for csvlogs and jsonlogs.</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># (change requires restart)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># These are only used if logging_collector is on:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#log_directory = &#39;log&#39;                  # directory where log files are written,</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># can be absolute or relative to PGDATA</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#log_filename = &#39;postgresql-%Y-%m-%d_%H%M%S.log&#39;        # log file name pattern,</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># can include strftime() escapes</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#log_file_mode = 0600                   # creation mode for log files,</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># begin with 0 to use octal notation</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#log_rotation_age = 1d                  # Automatic rotation of logfiles will</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># happen after that time.  0 disables.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#log_rotation_size = 10MB               # Automatic rotation of logfiles will</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># happen after that much log output.</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># 0 disables.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#log_truncate_on_rotation = off         # If on, an existing log file with the</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># same name as the new log file will be</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># truncated rather than appended to.</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># But such truncation only occurs on</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># time-driven rotation, not on restarts</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># or size-driven rotation.  Default is</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># off, meaning append to existing files</span>
+</span></span><span style=display:flex><span>                                        <span style=color:#75715e># in all cases.</span>
+</span></span></code></pre></div><blockquote><p><strong>log_destination</strong>：配置日志输出目标，根据不同的运行平台会设置不同的值，Linux下默认为stderr。</p></div></article></main><div class=pagination><span class="pagination__item pagination__item--current">1/5</span>
+<a class="pagination__item pagination__item--next btn" href=/page/2/>»</a></div></div><aside class="sidebar sidebar--left"><div class="widget-search widget"><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=搜索... name=q aria-label=搜索...>
 </label><input class=widget-search__submit type=submit value=Search>
-<input type=hidden name=sitesearch value=/></form></div><div class="widget-recent widget"><h4 class=widget__title>Recent Posts</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/post/about/>个人简历-中文</a></li><li class=widget__item><a class=widget__link href=/post/about-en/>个人简历-英文</a></li></ul></div></div><div class="widget-categories widget"><h4 class=widget__title>Categories</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/%20categories/%e5%85%b3%e4%ba%8e%e6%88%91>关于我</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91>前端开发</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%90%8e%e7%ab%af%e6%9e%b6%e6%9e%84>后端架构</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87>工具效率</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3>开源文档</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e7%ae%97%e6%b3%95%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84>算法数据结构</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80>编程语言</a></li><li class=widget__item><a class=widget__link href=/%20categories/%e8%bf%90%e7%bb%b4%e9%83%a8%e7%bd%b2>运维部署</a></li></ul></div></div><div class="widget-taglist widget"><h4 class=widget__title>Tags</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/ai title=Ai>Ai (2)</a>
+<input type=hidden name=sitesearch value=/></form></div><div class="widget-recent widget"><h4 class=widget__title>最新文章</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/>&lt;&lt;春秋算法>></a></li><li class=widget__item><a class=widget__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=widget__item><a class=widget__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=widget__item><a class=widget__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/>典籍篇</a></li><li class=widget__item><a class=widget__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84/>典籍篇</a></li></ul></div></div><div class="widget-categories widget"><h4 class=widget__title>分类</h4><div class=widget__content><ul class=widget__list><li class=widget__item><a class=widget__link href=/categories/%e5%85%b3%e4%ba%8e%e6%88%91>关于我</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91>前端开发</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%90%8e%e7%ab%af%e6%9e%b6%e6%9e%84>后端架构</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%b7%a5%e5%85%b7%e6%95%88%e7%8e%87>工具效率</a></li><li class=widget__item><a class=widget__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3>开源文档</a></li><li class=widget__item><a class=widget__link href=/categories/%e7%ae%97%e6%b3%95%e4%b8%80%e7%bb%9f%e6%98%a5%e7%a7%8b>算法一统春秋</a></li><li class=widget__item><a class=widget__link href=/categories/%e7%ae%97%e6%b3%95%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84>算法数据结构</a></li><li class=widget__item><a class=widget__link href=/categories/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80>编程语言</a></li><li class=widget__item><a class=widget__link href=/categories/%e8%bf%90%e7%bb%b4%e9%83%a8%e7%bd%b2>运维部署</a></li></ul></div></div><div class="widget-taglist widget"><h4 class=widget__title>标签</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/ai title=Ai>Ai (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/c title=C>C (3)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/ci/cd title="Ci cd">Ci cd (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/deepseek title=Deepseek>Deepseek (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/even-loop title="Even loop">Even loop (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/java title=Java>Java (3)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/java title=Java>Java (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/loadrunner title=Loadrunner>Loadrunner (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/ngrok title=Ngrok>Ngrok (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/postgresql title=Postgresql>Postgresql (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e4%ba%91%e5%8e%9f%e7%94%9f title=云原生>云原生 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f title=内网穿透>内网穿透 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%88%86%e5%b8%83%e5%bc%8f%e7%b3%bb%e7%bb%9f title=分布式系统>分布式系统 (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/%e5%88%97%e8%a1%a8 title=列表>列表 (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%8a%9e%e5%85%ac%e8%bd%af%e4%bb%b6 title=办公软件>办公软件 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%ae%b9%e5%99%a8%e5%8c%96 title=容器化>容器化 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7 title=开发工具>开发工具 (1)</a>
@@ -72,7 +619,6 @@ SysLogger SysLogger:（系统日志）进程,日志信息是数据库管理员�
 <a class="widget-taglist__link widget__link btn" href=/tags/%e6%b5%8b%e8%af%95%e5%b7%a5%e5%85%b7 title=测试工具>测试工具 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86 title=版本管理>版本管理 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%9b%91%e6%8e%a7%e6%97%a5%e5%bf%97 title=监控日志>监控日志 (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/%e7%a4%ba%e4%be%8b title=示例>示例 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%a4%be%e5%8c%ba%e5%bb%ba%e8%ae%be title=社区建设>社区建设 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%ad%94%e9%a2%98%e7%b3%bb%e7%bb%9f title=答题系统>答题系统 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e7%ae%80%e5%8e%86 title=简历>简历 (2)</a>
@@ -83,7 +629,7 @@ SysLogger SysLogger:（系统日志）进程,日志信息是数据库管理员�
 <a class="widget-taglist__link widget__link btn" href=/tags/%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f title=设计模式>设计模式 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e8%b7%af%e7%ba%bf%e8%a7%84%e5%88%92 title=路线规划>路线规划 (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/%e9%9d%a2%e8%af%95%e9%a2%98 title=面试题>面试题 (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/%e9%ab%98%e5%b9%b6%e5%8f%91 title=高并发>高并发 (1)</a></div></div><div class="widget-social widget"><h4 class="widget-social__title widget__title">Social</h4><div class="widget-social__content widget__content"><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=GitHub rel="noopener noreferrer" href=https://github.com/blowizer target=_blank><svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0C85.9.0.0 85.8.0 191.7c0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2.0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8.0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7.0.0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4.0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5.0 25.6-.2 46.3-.2 52.6.0 5.1 3.5 11.1 13.2 9.2C329 348.2 384 276.4 384 191.7 384 85.8 298 0 192 0z"/></svg>
+<a class="widget-taglist__link widget__link btn" href=/tags/%e9%ab%98%e5%b9%b6%e5%8f%91 title=高并发>高并发 (1)</a></div></div><div class="widget-social widget"><h4 class="widget-social__title widget__title">社交</h4><div class="widget-social__content widget__content"><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=GitHub rel="noopener noreferrer" href=https://github.com/blowizer target=_blank><svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0C85.9.0.0 85.8.0 191.7c0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2.0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8.0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7.0.0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4.0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5.0 25.6-.2 46.3-.2 52.6.0 5.1 3.5 11.1 13.2 9.2C329 348.2 384 276.4 384 191.7 384 85.8 298 0 192 0z"/></svg>
 <span>GitHub</span></a></div><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=Email href=mailto:blowizer@qq.com><svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16V16 0h-16H16 0zm347 16-139 92.5L69 32zM199 157.5l9 5.5 9-5.5L384 46v210H32V46z"/></svg>
 <span>blowizer@qq.com</span></a></div></div></div></aside></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2025 补漏砖匠.
 <span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/quiz.js></script><script src=/js/ai-quiz.js></script></body></html>
