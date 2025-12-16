@@ -1,5 +1,304 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>列表 on 补漏砖匠</title><link>/tags/%E5%88%97%E8%A1%A8/</link><description>Recent content in 列表 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E5%88%97%E8%A1%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>&lt;&lt;春秋算法&gt;&gt;</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/</link><pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/</guid><description>&lt;h1 id="第一章链表分治初露锋芒"&gt;&lt;strong&gt;第一章：链表分治，初露锋芒&lt;/strong&gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>列表 on 补漏砖匠</title><link>/tags/%E5%88%97%E8%A1%A8/</link><description>Recent content in 列表 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E5%88%97%E8%A1%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>第五章：系统觉醒，时空乱流</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%A7%89%E9%86%92%E6%97%B6%E7%A9%BA%E4%B9%B1%E6%B5%81/</link><pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%A7%89%E9%86%92%E6%97%B6%E7%A9%BA%E4%B9%B1%E6%B5%81/</guid><description>&lt;p&gt;&lt;a href="/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="第五章系统觉醒时空乱流"&gt;&lt;strong&gt;第五章：系统觉醒，时空乱流&lt;/strong&gt;&lt;/h1&gt;
 &lt;hr&gt;
+&lt;h2 id="第一幕np完全杀局近似破阵"&gt;&lt;strong&gt;第一幕：NP完全杀局，近似破阵&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;大梁城下，十万联军列阵。&lt;/p&gt;
+&lt;p&gt;城头鬼谷子麻衣飘飘，脚下是绵延十里的算法符文——正是“NP完全杀阵”。阵法光芒流转，隐约可见无数节点与路径交织，正是旅行商问题（TSP）的具现化。&lt;/p&gt;
+&lt;p&gt;“姬玄，”鬼谷子声音传遍战场，“此阵需从起点遍历所有节点一次且仅一次，最后回起点，求最短路径。但节点数&amp;hellip;一万。”&lt;/p&gt;
+&lt;p&gt;一万节点的TSP！解空间规模是(n-1)!/2，远超宇宙原子总数。&lt;/p&gt;
+&lt;p&gt;庞涓在旁狞笑：“师尊此阵，穷尽天下算法亦不可破！姬玄，今日就是你葬身之地！”&lt;/p&gt;
+&lt;p&gt;齐楚联军将领皆面色惨白。&lt;/p&gt;
+&lt;p&gt;芈月紧握姬玄的手：“真无解吗？”&lt;/p&gt;
+&lt;p&gt;“有近似解。”姬玄凝神观察，“TSP虽NP-hard，但有好近似算法。看此阵结构&amp;hellip;节点分布有规律，并非最坏情况。”&lt;/p&gt;
+&lt;p&gt;他大脑飞转，分析阵法特征：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;满足三角不等式&lt;/strong&gt;？观察节点间距，似乎满足——从i到j的直接距离 ≤ 从i经k到j的距离。若是，则可用&lt;strong&gt;Christofides算法&lt;/strong&gt;达到1.5倍近似比。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;欧几里得TSP&lt;/strong&gt;？节点在平面上，距离为直线——若是，则有多项式时间近似方案（PTAS）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;姬玄凌空而起，神识扫描整个大阵。&lt;/p&gt;
+&lt;p&gt;片刻，他落地：“此阵是&lt;strong&gt;度量TSP&lt;/strong&gt;，满足三角不等式。可用Christofides算法！”&lt;/p&gt;
+&lt;p&gt;Christofides算法步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;构建最小生成树（MST）&lt;/li&gt;
+&lt;li&gt;在奇度节点间找最小完美匹配&lt;/li&gt;
+&lt;li&gt;将MST与匹配合并成欧拉回路&lt;/li&gt;
+&lt;li&gt;短路法转为哈密顿回路&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;姬玄对田忌下令：“分四队，每队负责一个阶段！楚军负责构建最小生成树，齐军负责寻找匹配&amp;hellip;”&lt;/p&gt;
+&lt;p&gt;大军如臂使指，开始“计算”。&lt;/p&gt;
+&lt;p&gt;第一阶段：构建最小生成树。楚军用&lt;strong&gt;Prim算法&lt;/strong&gt;——从任意节点开始，不断添加最短边，避免成环。&lt;/p&gt;
+&lt;p&gt;第二阶段：找奇度节点最小完美匹配。齐军用**开花算法（Blossom Algorithm）**处理一般图匹配。&lt;/p&gt;
+&lt;p&gt;阵法开始震动！&lt;/p&gt;
+&lt;p&gt;鬼谷子脸色微变：“他竟然知道Christofides&amp;hellip;但一万节点的匹配计算，你们时间不够！”&lt;/p&gt;
+&lt;p&gt;确实，开花算法虽多项式时间，但O(n³)，一万节点需要太久。&lt;/p&gt;
+&lt;p&gt;“改用&lt;strong&gt;贪婪近似&lt;/strong&gt;！”姬玄当机立断，“对奇度节点按距离排序，贪婪配对——虽不是最优匹配，但仍在2倍范围内。”&lt;/p&gt;
+&lt;p&gt;这牺牲精度换时间。&lt;/p&gt;
+&lt;p&gt;两炷香后，MST和匹配完成，合并成欧拉回路。&lt;/p&gt;
+&lt;p&gt;最后一步：短路法。遍历欧拉回路，跳过已访问节点，得到哈密顿回路。&lt;/p&gt;
+&lt;p&gt;“成了！”姬玄一剑指向阵法核心，“破！”&lt;/p&gt;
+&lt;p&gt;大军沿计算出的路径冲锋，阵法光芒剧烈闪烁，最终——&lt;/p&gt;
+&lt;p&gt;“轰隆！”&lt;/p&gt;
+&lt;p&gt;NP完全杀阵，破！&lt;/p&gt;
+&lt;p&gt;庞涓目瞪口呆：“怎么可能&amp;hellip;”
+鬼谷子却笑了：“好一个近似算法。姬玄，你已摸到算法之道的真谛——世间本无完美解，唯有足够好。”&lt;/p&gt;
+&lt;p&gt;他袖袍一挥：“魏军&amp;hellip;投降。”&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二幕系统异常数据风暴"&gt;&lt;strong&gt;第二幕：系统异常，数据风暴&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;魏国投降，列国震动。&lt;/p&gt;
+&lt;p&gt;姬玄携芈月凯旋归齐，齐王大宴三日，宣布三月后为二人举行大婚。&lt;/p&gt;
+&lt;p&gt;但就在庆功宴当夜，异变突生。&lt;/p&gt;
+&lt;p&gt;子时，姬玄在房中查看系统界面，准备兑换新婚礼物。忽然——&lt;/p&gt;
+&lt;p&gt;【警告！检测到异常数据流】
+【来源：系统核心层】
+【内容：时空参数错乱，因果链断裂风险】&lt;/p&gt;
+&lt;p&gt;几乎同时，窗外天空出现奇景：星辰位置错乱，月亮一分为三，时空如水面般泛起涟漪。&lt;/p&gt;
+&lt;p&gt;“这是&amp;hellip;”姬玄冲到院中。&lt;/p&gt;
+&lt;p&gt;芈月也惊醒出来，看到天空异象，脸色煞白：“我听师尊说过&amp;hellip;这是‘算法天道’崩溃的前兆&amp;hellip;”&lt;/p&gt;
+&lt;p&gt;“算法天道？”
+“就是维持这个世界的底层规则。”芈月颤声道，“若天道崩溃，万物将归为混沌&amp;hellip;”&lt;/p&gt;
+&lt;p&gt;话音未落，姬玄脑中系统疯狂报警：&lt;/p&gt;
+&lt;p&gt;【紧急！系统被未知存在入侵！】&lt;/p&gt;
+&lt;p&gt;【入侵者身份：？？？】&lt;/p&gt;
+&lt;p&gt;【目标：回收所有超时代算法知识】&lt;/p&gt;
+&lt;p&gt;【警告：宿主可能被标记为“异常数据”】&lt;/p&gt;
+&lt;p&gt;突然，一道白光从天空射下，笼罩姬玄！&lt;/p&gt;
+&lt;p&gt;“姬玄！”芈月想冲过去，却被无形屏障弹开。&lt;/p&gt;
+&lt;p&gt;白光中，响起冰冷的机械音：&lt;/p&gt;
+&lt;p&gt;“检测到异常数据：姬玄”
+“携带超时代算法知识：动态规划、图论、NP理论&amp;hellip;”
+“来源：非法时空穿越”
+“处理方案：数据回收，宿主抹杀”&lt;/p&gt;
+&lt;p&gt;姬玄感到灵魂在被剥离，算法知识如潮水般被抽走！&lt;/p&gt;
+&lt;p&gt;“不&amp;hellip;！”他拼命抵抗，但对方层级太高。&lt;/p&gt;</description></item><item><title>第四章：鬼谷出山，动态规划</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%AC%BC%E8%B0%B7%E5%87%BA%E5%B1%B1%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link><pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%AC%BC%E8%B0%B7%E5%87%BA%E5%B1%B1%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid><description>&lt;p&gt;&lt;a href="/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="第四章鬼谷出山动态规划"&gt;&lt;strong&gt;第四章：鬼谷出山，动态规划&lt;/strong&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="第一幕鬼谷子出山魏国请圣"&gt;&lt;strong&gt;第一幕：鬼谷子出山，魏国请圣&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;魏国，大梁城，云梦算法阁。&lt;/p&gt;
+&lt;p&gt;阁高九层，飞檐斗拱，最顶层终年云雾缭绕，寻常人不得入。传闻此阁中住着一位算法圣人——&lt;strong&gt;鬼谷子&lt;/strong&gt;，已闭关三十年，参悟《鬼谷算法》最后一重。&lt;/p&gt;
+&lt;p&gt;今日，云梦阁前，魏惠王亲率百官跪候。&lt;/p&gt;
+&lt;p&gt;“求鬼谷圣人出山，救魏国于危难！”&lt;/p&gt;
+&lt;p&gt;魏惠王三拜九叩，身后庞涓伏地不起，额头抵着青石，血迹斑斑。&lt;/p&gt;
+&lt;p&gt;“弟子无能，败于齐国王子姬玄，损魏国威名，请师尊责罚！”&lt;/p&gt;
+&lt;p&gt;良久，阁顶云雾散开一道缝隙，传来苍老声音：&lt;/p&gt;
+&lt;p&gt;“姬玄&amp;hellip;得《九章算法》第一卷，破你三阵？”&lt;/p&gt;
+&lt;p&gt;“是。”
+“用何法破你‘最小割’阵？”
+“他&amp;hellip;他临时增设虚节点，绕过最小割。”&lt;/p&gt;
+&lt;p&gt;阁顶沉默片刻，忽有笑声：“倒是个聪明孩子。进来。”&lt;/p&gt;
+&lt;p&gt;庞涓大喜，连滚爬入阁中。&lt;/p&gt;
+&lt;p&gt;顶层无桌无椅，只有满地算法符文流动如河。中央蒲团上，坐着一位麻衣老者，须发皆白，但双目清澈如婴童——正是鬼谷子。&lt;/p&gt;
+&lt;p&gt;“你败得不冤。”鬼谷子缓缓道，“你学的是‘死算法’，他用的却是‘活思维’。”&lt;/p&gt;
+&lt;p&gt;“求师尊指点！”
+“算法之道，分三重境界。”鬼谷子伸出一指，“第一重：记算法，知其然；第二重：懂原理，知其所以然；第三重：&lt;strong&gt;无算法&lt;/strong&gt;，万物皆可为算法。”&lt;/p&gt;
+&lt;p&gt;他看向西方，目光似穿透千里：“这个姬玄&amp;hellip;已摸到第三重门槛。”&lt;/p&gt;
+&lt;p&gt;庞涓骇然：“他才多大？！”
+“天赋，与年纪无关。”鬼谷子起身，“也罢，老夫闭关三十载，也该活动活动筋骨了。”&lt;/p&gt;
+&lt;p&gt;他袖袍一挥，地面符文汇聚成一张&lt;strong&gt;中原地图&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;“齐伐魏，必走两条路：一为西线经桂陵，二为北线过马陵。”鬼谷子指点地图，“你可知，姬玄会走哪条？”&lt;/p&gt;
+&lt;p&gt;庞涓沉吟：“按常理，应走桂陵，地势平缓，粮草易运。”
+“所以他不走桂陵。”鬼谷子微笑，“他会走马陵。”&lt;/p&gt;
+&lt;p&gt;“为何？马陵道险，易中埋伏！”
+“正因易中埋伏，才要走。”鬼谷子眼中闪过精光，“他已猜到我会在桂陵布阵，故而反其道行之。此子&amp;hellip;善用‘逆向思维’。”&lt;/p&gt;
+&lt;p&gt;庞涓恍然：“那我们在马陵设伏？”
+“不。”鬼谷子摇头，“我们在&lt;strong&gt;两条路都设伏&lt;/strong&gt;。”&lt;/p&gt;
+&lt;p&gt;他指尖在地图上划出复杂路径：“此乃‘动态规划伏击网’——无论他走哪条路，我们都能以最优兵力调度应对。”&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二幕齐国点兵背包难题"&gt;&lt;strong&gt;第二幕：齐国点兵，背包难题&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;齐国，临淄，校场。&lt;/p&gt;
+&lt;p&gt;十万大军列阵，旌旗蔽日。姬玄一身银甲，腰悬玉笔，立于点将台上。身旁芈月白衣胜雪，手持楚国“凤鸣算盘”。&lt;/p&gt;
+&lt;p&gt;田忌呈上军册：“殿下，粮草已备：粟米三十万石，草料二十万车，箭矢一百万支&amp;hellip;但运输车辆有限，只能载重八万石。”&lt;/p&gt;
+&lt;p&gt;姬玄皱眉：“十万大军，日耗粟米五千石，三十万石仅够六十日。若战事拖延&amp;hellip;”&lt;/p&gt;
+&lt;p&gt;“还有更大问题。”后勤官苦脸，“车辆还要运箭矢、帐篷、药材&amp;hellip;如何分配载重，才能最大化战力？”&lt;/p&gt;
+&lt;p&gt;这分明是经典的&lt;strong&gt;背包问题&lt;/strong&gt;（Knapsack Problem）！&lt;/p&gt;
+&lt;p&gt;物品：粮草、箭矢、帐篷、药材&amp;hellip;
+重量：各不相同
+价值：对战斗力的贡献度不同
+背包容量：车辆总载重八万石&lt;/p&gt;
+&lt;p&gt;需选择物品组合，使总价值最大。&lt;/p&gt;
+&lt;p&gt;台下将领议论纷纷：
+“当然先运粮草！没饭吃打什么仗？”
+“箭矢重要！守城进攻都要用！”
+“帐篷呢？将士露宿生病怎办？”&lt;/p&gt;
+&lt;p&gt;姬玄抬手，全场静下。&lt;/p&gt;
+&lt;p&gt;“此乃‘多维背包问题’，”他朗声道，“不是简单取舍，而要&lt;strong&gt;动态规划优化&lt;/strong&gt;。”&lt;/p&gt;
+&lt;p&gt;他在空中画出表格：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;定义 dp[i][w]：前i种物品，总重量不超过w时的最大价值
+状态转移：
+dp[i][w] = max(
+ dp[i-1][w], // 不选第i种
+ dp[i-1][w-weight[i]] + value[i] // 选第i种
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;但现实更复杂——物品分&lt;strong&gt;类别&lt;/strong&gt;：粮草是消耗品，随时间减少价值；箭矢可回收部分；帐篷多人共用&amp;hellip;&lt;/p&gt;
+&lt;p&gt;芈月轻声道：“可用‘分组背包’思路，每类物品内选最优组合，再类间优化。”&lt;/p&gt;
+&lt;p&gt;姬玄点头，二人联手推演。&lt;/p&gt;</description></item><item><title>第三章：图论杀局，临淄风云</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%BE%E8%AE%BA%E6%9D%80%E5%B1%80%E4%B8%B4%E6%B7%84%E9%A3%8E%E4%BA%91/</link><pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%BE%E8%AE%BA%E6%9D%80%E5%B1%80%E4%B8%B4%E6%B7%84%E9%A3%8E%E4%BA%91/</guid><description>&lt;p&gt;&lt;a href="/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="第三章图论杀局临淄风云"&gt;&lt;strong&gt;第三章：图论杀局，临淄风云&lt;/strong&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="第一幕急报惊变算法反噬"&gt;&lt;strong&gt;第一幕：急报惊变，算法反噬&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;暮色如血，马车在官道上飞驰，车轮碾起滚滚烟尘。&lt;/p&gt;
+&lt;p&gt;车内，姬玄握着临淄急报的手微微颤抖。竹简上只有八个字，却字字惊心：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“王遭反噬，危，速归，忌”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“田忌将军的笔迹，”姬玄声音沙哑，“父王&amp;hellip;怎会算法反噬？”&lt;/p&gt;
+&lt;p&gt;芈月凝眉：“齐王修的是《齐民算法》，以稳著称，按理不该&amp;hellip;”&lt;/p&gt;
+&lt;p&gt;“除非有人动了手脚。”姬玄眼中寒光一闪，“我离城不过五日，父王就出事&amp;hellip;太巧了。”&lt;/p&gt;
+&lt;p&gt;车外，田忌策马并行：“殿下，太医诊断，大王中的是‘递归栈溢出毒’——有人在大王修炼的算法典籍中，植入了无限递归陷阱。”&lt;/p&gt;
+&lt;p&gt;“无限递归&amp;hellip;”姬玄闭目，脑中飞速分析，“需要《九章算法》中的‘栈帧修复术’&amp;hellip;但第一卷中并无此术。”&lt;/p&gt;
+&lt;p&gt;芈月急道：“那怎么办？”
+“第二卷，”姬玄睁眼，“《九章算法》第二卷‘方程’，专解异常状态。但第二卷&amp;hellip;在魏国算法库。”&lt;/p&gt;
+&lt;p&gt;田忌脸色一变：“魏国？庞涓的魏国？”&lt;/p&gt;
+&lt;p&gt;话音未落——&lt;/p&gt;
+&lt;p&gt;“咻咻咻！”&lt;/p&gt;
+&lt;p&gt;前方官道两侧树林，箭如雨下！&lt;/p&gt;
+&lt;p&gt;“敌袭！结阵！”田忌大吼。&lt;/p&gt;
+&lt;p&gt;三百齐兵瞬间结成圆阵，盾牌高举，箭矢叮当落下。&lt;/p&gt;
+&lt;p&gt;但这不是普通箭矢——箭头上刻着&lt;strong&gt;算法符文&lt;/strong&gt;，落地即触发！&lt;/p&gt;
+&lt;p&gt;“轰！轰！轰！”&lt;/p&gt;
+&lt;p&gt;地面炸开，符文交织成&lt;strong&gt;巨型有向图&lt;/strong&gt;，将车队困在中央！&lt;/p&gt;
+&lt;p&gt;姬玄掀开车帘，瞳孔骤缩。&lt;/p&gt;
+&lt;p&gt;前方官道上，庞涓摇扇而立，笑容温和如旧。他身旁站着八名黑袍阵师，各持算筹，正在构建阵法。&lt;/p&gt;
+&lt;p&gt;“庞先生，”姬玄冷冷道，“这就是魏国的待客之道？”&lt;/p&gt;
+&lt;p&gt;庞涓拱手：“七王子误会。庞某此行，是为&amp;hellip;借《九章算法》一观。只要殿下交出玉简，立刻放行，还赠‘方程卷’救齐王。”&lt;/p&gt;
+&lt;p&gt;“若我不给呢？”
+“那&amp;hellip;”庞涓笑容转冷，“只好请殿下&amp;hellip;永远留在此地了。”&lt;/p&gt;
+&lt;p&gt;他扇子一挥：“起阵！”&lt;/p&gt;
+&lt;p&gt;八名阵师同时划动算筹，空中浮现巨大光图——&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【图论杀阵·最短路径封锁】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;**【描述】：以车队为起点，临淄为终点，官道为边，设权重障碍】&lt;/p&gt;
+&lt;p&gt;**【效果】：所有从起点到终点的路径，权重皆被修改为无穷大】&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【实质】：让你们找不到任何可行回家之路】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;姬玄瞬间看透：“你想用&lt;strong&gt;负权环&lt;/strong&gt;修改边权重，使所有路径不可达？”&lt;/p&gt;
+&lt;p&gt;“殿下果然通透。”庞涓笑道，“此阵名‘狄杰斯特拉之困’——任你算法再高，找不到最短路径，就只能困死阵中。”&lt;/p&gt;
+&lt;p&gt;田忌怒吼：“庞涓！你魏国要与我齐国开战吗？！”&lt;/p&gt;
+&lt;p&gt;“开战？”庞涓摇头，“不不，这只是&amp;hellip;算法切磋。姬玄殿下若破不了阵，便是学艺不精，死于阵中，与我魏国何干？”&lt;/p&gt;
+&lt;p&gt;他顿了顿：“当然，若殿下愿归顺魏国，庞某可亲自护送殿下回临淄，还奉上《九章算法·第二卷》。”&lt;/p&gt;
+&lt;p&gt;赤裸裸的威胁。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二幕破阵之思最短路径之争"&gt;&lt;strong&gt;第二幕：破阵之思，最短路径之争&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;姬玄跳下马车，走向阵法边缘。&lt;/p&gt;
+&lt;p&gt;地面上的有向图复杂无比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;节点：三十六处关键路口&lt;/li&gt;
+&lt;li&gt;边：七十二段官道&lt;/li&gt;
+&lt;li&gt;初始权重：道路长度（已知）&lt;/li&gt;
+&lt;li&gt;当前权重：部分边被修改为&lt;strong&gt;无穷大&lt;/strong&gt;（∞）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;芈月跟上来：“此阵用狄杰斯特拉算法（Dijkstra）原理，修改边权破坏连通性&amp;hellip;可有解法？”&lt;/p&gt;
+&lt;p&gt;“有，”姬玄盯着阵法，“狄杰斯特拉算法有两个弱点：一、不能处理负权边；二、贪心选择可能不是全局最优。”&lt;/p&gt;
+&lt;p&gt;他大脑飞转：“庞涓引入‘负权环’，让某些边权重临时变负，诱导算法走错路&amp;hellip;但负权环本身，就是破绽。”&lt;/p&gt;
+&lt;p&gt;田忌急道：“殿下，如何破？强冲吗？”&lt;/p&gt;
+&lt;p&gt;“强冲必死，”姬玄摇头，“此阵隐含‘优先级队列’——谁先动，谁先被重点攻击。”&lt;/p&gt;
+&lt;p&gt;他盘膝坐下，取出玉笔，在地上快速推演。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一步：建模&lt;/strong&gt;
+将三十六节点编号，七十二边列出，初始权重记为w₀。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二步：检测负权环&lt;/strong&gt;
+“狄杰斯特拉怕负权&amp;hellip;那就用&lt;strong&gt;贝尔曼-福特算法（Bellman-Ford）&lt;/strong&gt;！”姬玄眼中精光一闪。&lt;/p&gt;
+&lt;p&gt;贝尔曼-福特可处理负权，且能检测负权环！&lt;/p&gt;
+&lt;p&gt;他快速写出算法框架：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;路径破解&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; 最短距离;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; 前驱节点;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;boolean&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;贝尔曼福特&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; 节点数, 边&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; 边集, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; 起点) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 最短距离 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;节点数&lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Arrays.&lt;span style="color:#a6e22e"&gt;fill&lt;/span&gt;(最短距离, Integer.&lt;span style="color:#a6e22e"&gt;MAX_VALUE&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;起点&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 松弛操作 V-1 轮&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 1; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; 节点数; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (边 e : 边集) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;起点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;MAX_VALUE&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;起点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; e.&lt;span style="color:#a6e22e"&gt;权重&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;终点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;终点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;起点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; e.&lt;span style="color:#a6e22e"&gt;权重&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 前驱节点&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;终点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; e.&lt;span style="color:#a6e22e"&gt;起点&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 检测负权环：再松弛一轮，若还能更新，则有负权环&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (边 e : 边集) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;起点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;MAX_VALUE&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;起点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; e.&lt;span style="color:#a6e22e"&gt;权重&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; 最短距离&lt;span style="color:#f92672"&gt;[&lt;/span&gt;e.&lt;span style="color:#a6e22e"&gt;终点&lt;/span&gt;&lt;span style="color:#f92672"&gt;]&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;; &lt;span style="color:#75715e"&gt;// 存在负权环&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;第三步：逆向利用&lt;/strong&gt;
+“检测到负权环后&amp;hellip;”姬玄嘴角微翘，“不是消除它，而是&lt;strong&gt;放大它&lt;/strong&gt;！”&lt;/p&gt;</description></item><item><title>第二章：九章迷宫，群雄逐鹿</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B9%9D%E7%AB%A0%E8%BF%B7%E5%AE%AB%E7%BE%A4%E9%9B%84%E9%80%90%E9%B9%BF/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B9%9D%E7%AB%A0%E8%BF%B7%E5%AE%AB%E7%BE%A4%E9%9B%84%E9%80%90%E9%B9%BF/</guid><description>&lt;p&gt;&lt;a href="/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="第二章九章迷宫群雄逐鹿"&gt;&lt;strong&gt;第二章：九章迷宫，群雄逐鹿&lt;/strong&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="第一幕金光现世秘境开启"&gt;&lt;strong&gt;第一幕：金光现世，秘境开启&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;姬玄在算法殿一战成名后的第七日。&lt;/p&gt;
+&lt;p&gt;子时三刻，万籁俱寂。&lt;/p&gt;
+&lt;p&gt;齐国稷下学宫旧址，荒废三百年的演算法坛，突然震动。&lt;/p&gt;
+&lt;p&gt;“轰隆隆——”&lt;/p&gt;
+&lt;p&gt;九道金色光柱自地底冲天而起，直破云霄！光柱在夜空中交织，竟构成九个巨大篆字：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“九章算法·第一卷”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;金光映照半个临淄城，无数算法修士从梦中惊醒，披衣推窗，目瞪口呆。&lt;/p&gt;
+&lt;p&gt;“九章迷宫&amp;hellip;开启了！”
+“上古算法秘境！得之可成圣人！”
+“快！禀报大王！”&lt;/p&gt;
+&lt;p&gt;姬玄正在府中参悟新得的《算法导论》，系统突然狂响：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【紧急！上古秘境开启！】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;**【名称】：九章迷宫】&lt;/p&gt;
+&lt;p&gt;**【层级】：九层，对应《九章算法》九卷】&lt;/p&gt;
+&lt;p&gt;**【当前开启】：第一卷“方田”迷宫】&lt;/p&gt;
+&lt;p&gt;**【核心算法】：面积计算、最大子矩阵】&lt;/p&gt;
+&lt;p&gt;**【危险等级】：★★★★☆】&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【传闻】：迷宫中藏有“算圣”刘徽真传】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;几乎同时，侍从撞门而入：“殿下！稷下学宫异象！大王急召！”&lt;/p&gt;
+&lt;p&gt;姬玄收功睁眼，眼中闪过精光。&lt;/p&gt;
+&lt;p&gt;终于来了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;算法殿，灯火通明。&lt;/p&gt;
+&lt;p&gt;齐威王面色凝重：“九章迷宫三百年一开，每次开启，列国天骄死伤过半。但&amp;hellip;得其中一卷者，必成一代宗师。”&lt;/p&gt;
+&lt;p&gt;他看向姬玄：“玄儿，你前日展现算法天赋，此机缘&amp;hellip;你可愿争？”&lt;/p&gt;
+&lt;p&gt;殿内众臣神色复杂。有人嫉妒，有人担忧，有人幸灾乐祸。&lt;/p&gt;
+&lt;p&gt;姬玄拱手：“儿臣愿往。”
+“好！”齐威王拍案，“田忌将军率三百精兵护卫，淳于髡先生为算法顾问，七王子姬玄&amp;hellip;为我齐国主探！”&lt;/p&gt;
+&lt;p&gt;“报——！”又一侍从冲入，“秦、楚、魏、赵、韩、燕六国使团连夜出城，皆往稷下！”&lt;/p&gt;
+&lt;p&gt;齐威王冷笑：“果然都坐不住。玄儿，此行凶险，记住——&lt;strong&gt;算法可输，性命要保&lt;/strong&gt;。”&lt;/p&gt;
+&lt;p&gt;姬玄点头，心中却道：&lt;strong&gt;算法，我也不会输。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二幕迷宫入口群雄聚首"&gt;&lt;strong&gt;第二幕：迷宫入口，群雄聚首&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;稷下学宫旧址，已成人海。&lt;/p&gt;
+&lt;p&gt;九道光柱汇聚处，一座青铜巨门缓缓升起，门上刻满算法符文：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;【九章迷宫·第一卷·方田】
+【入内须知】：
+1. 迷宫共九层，每层一道算法题
+2. 解题正确可入下一层，错误触发机关
+3. 最先抵达第九层者，得《九章算法·第一卷》
+4. 生死自负，算法为凭
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;门前空地，列国天骄分立。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;秦国阵营&lt;/strong&gt;：
+嬴驷（秦国太子）居中，商鞅立于侧，身后跟着十名黑衣算法死士。
+嬴驷冷冷扫视众人：“《九章算法》乃我大秦必得之物，诸位&amp;hellip;莫要自误。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;楚国阵营&lt;/strong&gt;：
+芈月一袭白衣，腰佩递归玉佩，身后八名楚女手持算筹阵图。
+她目光扫过姬玄时，微微一顿，随即移开。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;魏国阵营&lt;/strong&gt;：
+一名青衫文士摇着羽扇，正是魏国第一天才——&lt;strong&gt;庞涓&lt;/strong&gt;。
+他笑眯眯对姬玄拱手：“七王子殿下，前日交易，魏王已准。庞某此行&amp;hellip;还望殿下多多关照。”&lt;/p&gt;
+&lt;p&gt;姬玄微笑还礼，心中警惕——此人笑里藏刀，史书称其“妒才”，需小心。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;赵、韩、燕&lt;/strong&gt;等国亦有高手到场，个个气息深沉。&lt;/p&gt;
+&lt;p&gt;“嗡——”&lt;/p&gt;
+&lt;p&gt;青铜巨门洞开，露出幽深通道。&lt;/p&gt;
+&lt;p&gt;商鞅突然朗声道：“既是算法比拼，何不设个彩头？哪国最先有人抵达第九层，其余六国&amp;hellip;各输城池一座！”&lt;/p&gt;
+&lt;p&gt;全场哗然！&lt;/p&gt;
+&lt;p&gt;嬴驷接话：“可。秦国若输，割让函谷关外三城！”
+芈月清冷道：“楚国若输，让出云梦泽算法秘境。”
+庞涓笑道：“魏国若输&amp;hellip;送上‘优先队列’秘法全卷。”&lt;/p&gt;
+&lt;p&gt;众人看向姬玄。&lt;/p&gt;
+&lt;p&gt;姬玄摸摸鼻子：“齐国若输&amp;hellip;我当众承认，我是靠作弊赢的商君。”&lt;/p&gt;
+&lt;p&gt;“你！”商鞅大怒。&lt;/p&gt;
+&lt;p&gt;“开玩笑的。”姬玄正色，“齐国若输，献上‘阴阳双链诀’专利，永不再用。”&lt;/p&gt;
+&lt;p&gt;“好！”嬴驷眼中闪过贪婪，“立天道誓约！”&lt;/p&gt;</description></item><item><title>第一幕：算法朝会，秦使发难</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%93%BE%E8%A1%A8%E5%88%86%E6%B2%BB%E5%88%9D%E9%9C%B2%E9%94%8B%E8%8A%92/</guid><description>&lt;h1 id="第一章链表分治初露锋芒"&gt;&lt;strong&gt;第一章：链表分治，初露锋芒&lt;/strong&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="第一幕算法朝会秦使发难"&gt;&lt;strong&gt;第一幕：算法朝会，秦使发难&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;齐国，临淄城，算法殿。&lt;/p&gt;
 &lt;p&gt;晨光透过雕花木窗，在青石地面上投下斑驳光影。大殿中央，一丈见方的水镜悬浮空中，波纹流转——正是列国敬畏的“天机算法系统”。&lt;/p&gt;
