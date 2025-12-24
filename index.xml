@@ -2769,14 +2769,16 @@ host all all 0.0.0.0/0 md5
  box-shadow: none;
 }
 
-/* Markdown 内容样式 */
+/* Markdown 内容样式 - 与博客页面样式一致 */
 .markdown-content {
- line-height: 1.75;
+ line-height: 1.6;
  color: inherit;
+ font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .markdown-content p {
- margin: 0.75em 0;
+ margin: 0 0 20px;
+ margin: 0 0 1.25rem;
 }
 
 .markdown-content p:first-child {
@@ -2787,111 +2789,210 @@ host all all 0.0.0.0/0 md5
  margin-bottom: 0;
 }
 
+/* 标题样式 - 与博客一致 */
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3,
 .markdown-content h4,
 .markdown-content h5,
 .markdown-content h6 {
- margin: 1.25em 0 0.75em 0;
- font-weight: 600;
+ margin: 0 0 20px;
+ margin: 0 0 1.25rem;
+ font-weight: 700;
  line-height: 1.3;
+ color: #1a1a1a;
 }
 
-.markdown-content h1:first-child,
-.markdown-content h2:first-child,
-.markdown-content h3:first-child,
-.markdown-content h4:first-child {
- margin-top: 0;
+.ai-message .markdown-content h1,
+.ai-message .markdown-content h2,
+.ai-message .markdown-content h3,
+.ai-message .markdown-content h4,
+.ai-message .markdown-content h5,
+.ai-message .markdown-content h6 {
+ color: #1a1a1a;
 }
 
-.markdown-content h1 { font-size: 1.75em; }
-.markdown-content h2 { font-size: 1.5em; }
-.markdown-content h3 { font-size: 1.25em; }
-.markdown-content h4 { font-size: 1.1em; }
-.markdown-content h5 { font-size: 1em; }
-.markdown-content h6 { font-size: 0.9em; }
+.user-message .markdown-content h1,
+.user-message .markdown-content h2,
+.user-message .markdown-content h3,
+.user-message .markdown-content h4,
+.user-message .markdown-content h5,
+.user-message .markdown-content h6 {
+ color: white;
+}
 
-.markdown-content ul,
+.markdown-content h1 {
+ font-size: 32px;
+ font-size: 2rem;
+}
+
+.markdown-content h2 {
+ font-size: 24px;
+ font-size: 1.5rem;
+}
+
+.markdown-content h3 {
+ font-size: 20px;
+ font-size: 1.25rem;
+}
+
+.markdown-content h4 {
+ font-size: 18px;
+ font-size: 1.125rem;
+}
+
+.markdown-content h5 {
+ font-size: 16px;
+ font-size: 1rem;
+}
+
+.markdown-content h6 {
+ font-size: 16px;
+ font-size: 1rem;
+}
+
+/* 列表样式 - 与博客一致 */
+.markdown-content ul {
+ list-style: square;
+ margin: 0 0 20px 40px;
+ margin: 0 0 1.25rem 2.5rem;
+ padding: 0;
+}
+
 .markdown-content ol {
- margin: 0.75em 0;
- padding-left: 1.75em;
+ list-style: decimal;
+ margin: 0 0 20px 40px;
+ margin: 0 0 1.25rem 2.5rem;
+ padding: 0;
+}
+
+.markdown-content ul ul,
+.markdown-content ol ol {
+ margin: 0 0 0 40px;
+ margin: 0 0 0 2.5rem;
 }
 
 .markdown-content li {
- margin: 0.5em 0;
+ margin-bottom: 5px;
 }
 
+/* 代码样式 - 与博客一致 */
 .markdown-content code {
- background: rgba(0, 0, 0, 0.08);
- padding: 0.2em 0.4em;
- border-radius: 4px;
- font-size: 0.9em;
- font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+ font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ font-size: inherit;
+ background-color: #f5f5f5;
+ border: 1px solid #ebebeb;
+ padding: 0 5px;
+ color: #e74c3c;
+ white-space: nowrap;
 }
 
 .user-message .markdown-content code {
- background: rgba(255, 255, 255, 0.25);
+ background-color: rgba(255, 255, 255, 0.25);
+ border-color: rgba(255, 255, 255, 0.3);
+ color: rgba(255, 255, 255, 0.95);
 }
 
+/* 代码块样式 - 与博客一致 */
 .markdown-content pre {
- background: #1e1e1e;
- border-radius: 8px;
- padding: 16px;
+ display: block;
+ padding: 1.25rem;
+ margin-bottom: 20px;
+ margin-bottom: 1.25rem;
+ font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ font-size: inherit;
+ background-color: #f5f5f5;
+ border: 1px solid #ebebeb;
+ color: #1a1a1a;
+ white-space: pre-wrap;
  overflow-x: auto;
- overflow-y: auto;
- margin: 1em 0;
- position: relative;
- white-space: pre;
- word-wrap: normal;
- word-break: normal;
- font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
-}
-
-.ai-message .markdown-content pre {
- background: #1e1e1e;
+ border-radius: 0;
 }
 
 .user-message .markdown-content pre {
- background: rgba(0, 0, 0, 0.2);
+ background-color: rgba(0, 0, 0, 0.2);
+ border-color: rgba(255, 255, 255, 0.3);
+ color: rgba(255, 255, 255, 0.95);
 }
 
 .markdown-content pre code {
- background: transparent;
  padding: 0;
- border-radius: 0;
- color: #d4d4d4;
- font-size: 14px;
- line-height: 1.5;
- display: block;
- white-space: pre;
- word-wrap: normal;
- word-break: normal;
- font-family: inherit;
- overflow-wrap: normal;
-}
-
-.markdown-content blockquote {
- border-left: 4px solid #667eea;
- padding-left: 1em;
- margin: 1em 0;
  color: inherit;
- opacity: 0.85;
- font-style: italic;
+ white-space: inherit;
+ background: inherit;
+ border: 0;
+ font-size: inherit;
+ display: block;
 }
 
+/* 覆盖 highlight.js 样式，使其与博客页面一致 */
+.markdown-content pre code.hljs {
+ background: inherit;
+ color: #1a1a1a;
+}
+
+.user-message .markdown-content pre code.hljs {
+ color: rgba(255, 255, 255, 0.95);
+}
+
+/* 确保代码块内的语法高亮颜色在浅色背景下可见 */
+.ai-message .markdown-content pre code.hljs .hljs-keyword,
+.ai-message .markdown-content pre code.hljs .hljs-selector-tag,
+.ai-message .markdown-content pre code.hljs .hljs-title,
+.ai-message .markdown-content pre code.hljs .hljs-section,
+.ai-message .markdown-content pre code.hljs .hljs-doctag,
+.ai-message .markdown-content pre code.hljs .hljs-name,
+.ai-message .markdown-content pre code.hljs .hljs-strong {
+ color: #d73a49;
+}
+
+.ai-message .markdown-content pre code.hljs .hljs-string,
+.ai-message .markdown-content pre code.hljs .hljs-title,
+.ai-message .markdown-content pre code.hljs .hljs-section,
+.ai-message .markdown-content pre code.hljs .hljs-attribute,
+.ai-message .markdown-content pre code.hljs .hljs-symbol,
+.ai-message .markdown-content pre code.hljs .hljs-bullet,
+.ai-message .markdown-content pre code.hljs .hljs-addition {
+ color: #032f62;
+}
+
+.ai-message .markdown-content pre code.hljs .hljs-comment,
+.ai-message .markdown-content pre code.hljs .hljs-quote {
+ color: #6a737d;
+}
+
+/* 引用块样式 - 与博客一致 */
+.markdown-content blockquote {
+ display: block;
+ padding: 5px 0 5px 15px;
+ margin: 0 0 20px;
+ margin: 0 0 1.25rem;
+ line-height: 1.6;
+ border-left: 5px solid #e74c3c;
+ color: inherit;
+ font-style: normal;
+}
+
+.markdown-content blockquote p:last-child {
+ margin: 0;
+}
+
+/* 表格样式 - 与博客一致 */
 .markdown-content table {
- border-collapse: collapse;
  width: 100%;
- margin: 1em 0;
- font-size: 0.9em;
+ margin-bottom: 20px;
+ margin-bottom: 1.25rem;
+ border-spacing: 0;
+ border-collapse: collapse;
+ border-top: 1px solid #ebebeb;
+ border-left: 1px solid #ebebeb;
 }
 
 .markdown-content table th,
 .markdown-content table td {
- border: 1px solid rgba(0, 0, 0, 0.1);
- padding: 0.6em 0.8em;
- text-align: left;
+ padding: 5px 10px;
+ border-right: 1px solid #ebebeb;
+ border-bottom: 1px solid #ebebeb;
 }
 
 .user-message .markdown-content table th,
@@ -2900,18 +3001,14 @@ host all all 0.0.0.0/0 md5
 }
 
 .markdown-content table th {
- background: rgba(0, 0, 0, 0.05);
- font-weight: 600;
+ font-weight: 700;
 }
 
-.user-message .markdown-content table th {
- background: rgba(255, 255, 255, 0.15);
-}
-
+/* 链接样式 - 与博客一致 */
 .markdown-content a {
- color: #667eea;
- text-decoration: underline;
- text-underline-offset: 2px;
+ font-weight: 700;
+ color: #e74c3c;
+ text-decoration: none;
 }
 
 .user-message .markdown-content a {
@@ -2919,32 +3016,48 @@ host all all 0.0.0.0/0 md5
 }
 
 .markdown-content a:hover {
- opacity: 0.8;
+ color: #e74c3c;
+ text-decoration: underline;
 }
 
-.markdown-content strong {
- font-weight: 600;
+.user-message .markdown-content a:hover {
+ color: rgba(255, 255, 255, 0.95);
+ text-decoration: underline;
 }
 
-.markdown-content em {
+/* 强调样式 - 与博客一致 */
+.markdown-content strong,
+.markdown-content b {
+ font: inherit;
+ font-weight: 700;
+}
+
+.markdown-content em,
+.markdown-content i {
+ font: inherit;
  font-style: italic;
 }
 
+/* 水平线样式 - 与博客一致 */
 .markdown-content hr {
- border: none;
- border-top: 1px solid rgba(0, 0, 0, 0.1);
- margin: 1.5em 0;
+ margin: 0 0 20px;
+ margin: 0 0 1.25rem;
+ border: 0;
+ border-top: 1px solid #ebebeb;
 }
 
 .user-message .markdown-content hr {
  border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* 图片样式 */
 .markdown-content img {
+ width: auto;
  max-width: 100%;
  height: auto;
- border-radius: 8px;
+ vertical-align: bottom;
  margin: 1em 0;
+ border-radius: 0;
 }
 
 /* 响应式设计 */
@@ -2980,8 +3093,8 @@ host all all 0.0.0.0/0 md5
 &lt;/style&gt;
 &lt;!-- 引入 marked.js 用于 markdown 渲染 --&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" onload="console.log('[DeepSeek] marked.js 加载完成')" onerror="console.error('[DeepSeek] marked.js 加载失败')"&gt;&lt;/script&gt;
-&lt;!-- 引入 highlight.js 用于代码高亮 --&gt;
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"&gt;
+&lt;!-- 引入 highlight.js 用于代码高亮 - 使用浅色主题与博客一致 --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" onload="console.log('[DeepSeek] highlight.js 加载完成')" onerror="console.error('[DeepSeek] highlight.js 加载失败')"&gt;&lt;/script&gt;
 &lt;script&gt;
 (function() {
