@@ -2,86 +2,424 @@
  &lt;h1&gt;DeepSeek 智能助手&lt;/h1&gt;
  &lt;div id="chat-container"&gt;&lt;/div&gt;
  &lt;div id="input-container"&gt;
- &lt;input type="text" id="message-input" placeholder="输入您的问题..." /&gt;
+ &lt;textarea id="message-input" placeholder="输入您的问题..." rows="1"&gt;&lt;/textarea&gt;
  &lt;button id="send-btn"&gt;发送&lt;/button&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;style&gt;
 .deepseek-chat-page {
- font-family: Arial, sans-serif;
- max-width: 800px;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+ max-width: 900px;
  margin: 0 auto;
  padding: 20px;
+ background: #f7f7f8;
+ min-height: calc(100vh - 200px);
 }
 
 #chat-container {
- border: 1px solid #ddd;
- border-radius: 8px;
- padding: 20px;
+ background: #ffffff;
+ border-radius: 12px;
+ padding: 24px;
  margin-bottom: 20px;
- height: 400px;
+ min-height: 500px;
+ max-height: 70vh;
  overflow-y: auto;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#chat-container::-webkit-scrollbar {
+ width: 8px;
+}
+
+#chat-container::-webkit-scrollbar-track {
+ background: #f1f1f1;
+ border-radius: 4px;
+}
+
+#chat-container::-webkit-scrollbar-thumb {
+ background: #c1c1c1;
+ border-radius: 4px;
+}
+
+#chat-container::-webkit-scrollbar-thumb:hover {
+ background: #a8a8a8;
+}
+
+.message-group {
+ margin-bottom: 32px;
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
 }
 
 .message {
- margin-bottom: 10px;
- padding: 10px;
- border-radius: 5px;
+ display: flex;
+ gap: 16px;
+ animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+ from {
+ opacity: 0;
+ transform: translateY(10px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
 }
 
 .user-message {
- background-color: #e3f2fd;
- text-align: right;
+ flex-direction: row-reverse;
 }
 
-.ai-message {
- background-color: #f5f5f5;
+.message-avatar {
+ width: 32px;
+ height: 32px;
+ border-radius: 6px;
+ flex-shrink: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 14px;
+ font-weight: 600;
+ color: white;
 }
 
-.streaming {
- border-left: 3px solid #4CAF50;
- animation: pulse 1s infinite;
+.user-message .message-avatar {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-@keyframes pulse {
- 0% { opacity: 1; }
- 50% { opacity: 0.5; }
- 100% { opacity: 1; }
+.ai-message .message-avatar {
+ background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.message-content {
+ flex: 1;
+ min-width: 0;
+}
+
+.message-bubble {
+ padding: 16px 20px;
+ border-radius: 12px;
+ word-wrap: break-word;
+ word-break: break-word;
+ overflow-wrap: break-word;
+ line-height: 1.75;
+ font-size: 15px;
+}
+
+.user-message .message-bubble {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: white;
+ border-bottom-right-radius: 4px;
+}
+
+.ai-message .message-bubble {
+ background: #f7f7f8;
+ color: #202123;
+ border-bottom-left-radius: 4px;
+ border: 1px solid #e5e5e5;
+}
+
+.streaming .message-bubble {
+ border-left: 3px solid #19c37d;
+}
+
+.streaming-indicator {
+ display: inline-block;
+ width: 8px;
+ height: 8px;
+ background: #19c37d;
+ border-radius: 50%;
+ margin-left: 6px;
+ animation: pulse-dot 1.4s ease-in-out infinite;
+ vertical-align: middle;
+}
+
+@keyframes pulse-dot {
+ 0%, 80%, 100% {
+ opacity: 0.3;
+ transform: scale(0.8);
+ }
+ 40% {
+ opacity: 1;
+ transform: scale(1);
+ }
 }
 
 #input-container {
  display: flex;
- gap: 10px;
+ gap: 12px;
+ align-items: flex-end;
+ background: #ffffff;
+ padding: 16px;
+ border-radius: 12px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #message-input {
  flex: 1;
- padding: 10px;
- border: 1px solid #ddd;
- border-radius: 4px;
- font-size: 16px;
+ padding: 12px 16px;
+ border: 2px solid #e5e5e5;
+ border-radius: 8px;
+ font-size: 15px;
+ font-family: inherit;
+ resize: none;
+ min-height: 24px;
+ max-height: 200px;
+ overflow-y: auto;
+ transition: border-color 0.2s;
+}
+
+#message-input:focus {
+ outline: none;
+ border-color: #667eea;
 }
 
 #send-btn {
- padding: 10px 20px;
- background-color: #4CAF50;
+ padding: 12px 24px;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
  color: white;
  border: none;
- border-radius: 4px;
+ border-radius: 8px;
  cursor: pointer;
- font-size: 16px;
+ font-size: 15px;
+ font-weight: 500;
+ transition: transform 0.1s, box-shadow 0.2s;
+ white-space: nowrap;
+}
+
+#send-btn:hover:not(:disabled) {
+ transform: translateY(-1px);
+ box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+#send-btn:active:not(:disabled) {
+ transform: translateY(0);
 }
 
 #send-btn:disabled {
- background-color: #ccc;
+ background: #d1d5db;
  cursor: not-allowed;
+ transform: none;
+ box-shadow: none;
 }
 
-.typing-indicator {
- color: #666;
+/* Markdown 内容样式 */
+.markdown-content {
+ line-height: 1.75;
+ color: inherit;
+}
+
+.markdown-content p {
+ margin: 0.75em 0;
+}
+
+.markdown-content p:first-child {
+ margin-top: 0;
+}
+
+.markdown-content p:last-child {
+ margin-bottom: 0;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+ margin: 1.25em 0 0.75em 0;
+ font-weight: 600;
+ line-height: 1.3;
+}
+
+.markdown-content h1:first-child,
+.markdown-content h2:first-child,
+.markdown-content h3:first-child,
+.markdown-content h4:first-child {
+ margin-top: 0;
+}
+
+.markdown-content h1 { font-size: 1.75em; }
+.markdown-content h2 { font-size: 1.5em; }
+.markdown-content h3 { font-size: 1.25em; }
+.markdown-content h4 { font-size: 1.1em; }
+.markdown-content h5 { font-size: 1em; }
+.markdown-content h6 { font-size: 0.9em; }
+
+.markdown-content ul,
+.markdown-content ol {
+ margin: 0.75em 0;
+ padding-left: 1.75em;
+}
+
+.markdown-content li {
+ margin: 0.5em 0;
+}
+
+.markdown-content code {
+ background: rgba(0, 0, 0, 0.08);
+ padding: 0.2em 0.4em;
+ border-radius: 4px;
+ font-size: 0.9em;
+ font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+}
+
+.user-message .markdown-content code {
+ background: rgba(255, 255, 255, 0.25);
+}
+
+.markdown-content pre {
+ background: #1e1e1e;
+ border-radius: 8px;
+ padding: 16px;
+ overflow-x: auto;
+ overflow-y: auto;
+ margin: 1em 0;
+ position: relative;
+ white-space: pre;
+ word-wrap: normal;
+ word-break: normal;
+ font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+}
+
+.ai-message .markdown-content pre {
+ background: #1e1e1e;
+}
+
+.user-message .markdown-content pre {
+ background: rgba(0, 0, 0, 0.2);
+}
+
+.markdown-content pre code {
+ background: transparent;
+ padding: 0;
+ border-radius: 0;
+ color: #d4d4d4;
+ font-size: 14px;
+ line-height: 1.5;
+ display: block;
+ white-space: pre;
+ word-wrap: normal;
+ word-break: normal;
+ font-family: inherit;
+ overflow-wrap: normal;
+}
+
+.markdown-content blockquote {
+ border-left: 4px solid #667eea;
+ padding-left: 1em;
+ margin: 1em 0;
+ color: inherit;
+ opacity: 0.85;
  font-style: italic;
 }
+
+.markdown-content table {
+ border-collapse: collapse;
+ width: 100%;
+ margin: 1em 0;
+ font-size: 0.9em;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+ border: 1px solid rgba(0, 0, 0, 0.1);
+ padding: 0.6em 0.8em;
+ text-align: left;
+}
+
+.user-message .markdown-content table th,
+.user-message .markdown-content table td {
+ border-color: rgba(255, 255, 255, 0.2);
+}
+
+.markdown-content table th {
+ background: rgba(0, 0, 0, 0.05);
+ font-weight: 600;
+}
+
+.user-message .markdown-content table th {
+ background: rgba(255, 255, 255, 0.15);
+}
+
+.markdown-content a {
+ color: #667eea;
+ text-decoration: underline;
+ text-underline-offset: 2px;
+}
+
+.user-message .markdown-content a {
+ color: rgba(255, 255, 255, 0.95);
+}
+
+.markdown-content a:hover {
+ opacity: 0.8;
+}
+
+.markdown-content strong {
+ font-weight: 600;
+}
+
+.markdown-content em {
+ font-style: italic;
+}
+
+.markdown-content hr {
+ border: none;
+ border-top: 1px solid rgba(0, 0, 0, 0.1);
+ margin: 1.5em 0;
+}
+
+.user-message .markdown-content hr {
+ border-color: rgba(255, 255, 255, 0.2);
+}
+
+.markdown-content img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 8px;
+ margin: 1em 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+ .deepseek-chat-page {
+ padding: 12px;
+ }
+ 
+ #chat-container {
+ padding: 16px;
+ max-height: 60vh;
+ }
+ 
+ .message {
+ gap: 12px;
+ }
+ 
+ .message-avatar {
+ width: 28px;
+ height: 28px;
+ font-size: 12px;
+ }
+ 
+ .message-bubble {
+ padding: 12px 16px;
+ font-size: 14px;
+ }
+ 
+ #input-container {
+ padding: 12px;
+ }
+}
 &lt;/style&gt;
+&lt;!-- 引入 marked.js 用于 markdown 渲染 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" onload="console.log('[DeepSeek] marked.js 加载完成')" onerror="console.error('[DeepSeek] marked.js 加载失败')"&gt;&lt;/script&gt;
+&lt;!-- 引入 highlight.js 用于代码高亮 --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" onload="console.log('[DeepSeek] highlight.js 加载完成')" onerror="console.error('[DeepSeek] highlight.js 加载失败')"&gt;&lt;/script&gt;
 &lt;script&gt;
 (function() {
  const chatContainer = document.getElementById('chat-container');
@@ -89,36 +427,337 @@
  const sendBtn = document.getElementById('send-btn');
  const endpoint = 'http://qiaopan.tech:18080/api/v1/assistant/chat/stream';
  let currentController = null;
+ 
+ // 节流渲染 markdown，避免每次 SSE 数据都重新解析
+ let renderTimer = null;
+ let pendingText = '';
+ let lastRenderedText = '';
+ 
+ function throttledRenderMarkdown(text, targetElement, force = false) {
+ pendingText = text;
+ 
+ // 如果强制渲染或文本变化较大，立即渲染
+ if (force || text.length - lastRenderedText.length &gt; 50) {
+ if (renderTimer) {
+ clearTimeout(renderTimer);
+ renderTimer = null;
+ }
+ doRenderMarkdown(text, targetElement);
+ lastRenderedText = text;
+ return;
+ }
+ 
+ // 否则使用节流，每 150ms 渲染一次
+ if (!renderTimer) {
+ renderTimer = setTimeout(() =&gt; {
+ if (pendingText !== lastRenderedText) {
+ doRenderMarkdown(pendingText, targetElement);
+ lastRenderedText = pendingText;
+ }
+ renderTimer = null;
+ }, 150);
+ }
+ }
+ 
+ function doRenderMarkdown(text, targetElement) {
+ const renderedHtml = renderMarkdown(text);
+ targetElement.innerHTML = renderedHtml + '&lt;span class="streaming-indicator"&gt;&lt;/span&gt;';
+ highlightCode(targetElement);
+ scrollToBottom();
+ }
 
+ // 配置 marked.js - 等待库加载完成
+ function configureMarked() {
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] marked.js 未定义！');
+ return false;
+ }
+ 
+ try {
+ marked.setOptions({
+ breaks: true, // 支持 GitHub 风格的换行
+ gfm: true, // 启用 GitHub Flavored Markdown
+ headerIds: false,
+ mangle: false,
+ highlight: function(code, lang) {
+ if (lang &amp;&amp; typeof hljs !== 'undefined') {
+ try {
+ return hljs.highlight(code, { language: lang }).value;
+ } catch (err) {
+ return hljs.highlightAuto(code).value;
+ }
+ }
+ return code;
+ }
+ });
+ 
+ console.log('[DeepSeek] marked.js 配置完成', {
+ version: marked.version || 'unknown',
+ breaks: true,
+ gfm: true
+ });
+ 
+ // 测试 marked.js 是否正常工作
+ const testCases = [
+ { md: '# 标题', expect: '&lt;h1' },
+ { md: '**粗体**', expect: '&lt;strong' },
+ { md: '```java\ncode\n```', expect: '&lt;pre&gt;&lt;code' },
+ { md: '`inline code`', expect: '&lt;code' }
+ ];
+ 
+ let allPassed = true;
+ testCases.forEach((test, index) =&gt; {
+ try {
+ const result = marked.parse(test.md);
+ const passed = result.includes(test.expect);
+ if (!passed) {
+ console.warn(`[DeepSeek] 测试 ${index + 1} 失败:`, {
+ input: test.md,
+ expected: test.expect,
+ got: result.substring(0, 50)
+ });
+ allPassed = false;
+ }
+ } catch (e) {
+ console.error(`[DeepSeek] 测试 ${index + 1} 异常:`, e);
+ allPassed = false;
+ }
+ });
+ 
+ if (allPassed) {
+ console.log('[DeepSeek] ✅ 所有 marked.js 测试通过');
+ } else {
+ console.error('[DeepSeek] ❌ marked.js 测试失败，某些功能可能不可用');
+ }
+ 
+ return allPassed;
+ } catch (e) {
+ console.error('[DeepSeek] marked.js 配置失败:', e);
+ return false;
+ }
+ }
+
+ // 等待 marked.js 加载
+ function initMarked() {
+ if (typeof marked !== 'undefined') {
+ configureMarked();
+ } else {
+ // 如果 marked.js 还没加载，等待一下
+ let retries = 0;
+ const maxRetries = 10;
+ const checkInterval = setInterval(() =&gt; {
+ retries++;
+ if (typeof marked !== 'undefined') {
+ clearInterval(checkInterval);
+ configureMarked();
+ } else if (retries &gt;= maxRetries) {
+ clearInterval(checkInterval);
+ console.error('[DeepSeek] marked.js 加载超时，请检查网络连接或 CDN 是否可访问');
+ console.error('[DeepSeek] 尝试的 CDN: https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js');
+ }
+ }, 200);
+ }
+ }
+ 
+ // 立即尝试初始化
+ initMarked();
+ 
+ // 页面加载完成后再次检查
+ window.addEventListener('load', () =&gt; {
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] ⚠️ 页面加载完成但 marked.js 仍未加载！');
+ }
+ });
+
+ // 自动调整输入框高度
+ function adjustTextareaHeight() {
+ messageInput.style.height = 'auto';
+ messageInput.style.height = Math.min(messageInput.scrollHeight, 200) + 'px';
+ }
+
+ messageInput.addEventListener('input', adjustTextareaHeight);
+ // 已关闭 Enter 键发送功能，只能通过点击按钮发送
+
+ // 添加用户消息
  function addUserMessage(content) {
+ const messageGroup = document.createElement('div');
+ messageGroup.className = 'message-group';
+ 
  const messageDiv = document.createElement('div');
  messageDiv.className = 'message user-message';
- messageDiv.innerHTML = `&lt;strong&gt;您:&lt;/strong&gt; ${content}`;
- chatContainer.appendChild(messageDiv);
- chatContainer.scrollTop = chatContainer.scrollHeight;
+ 
+ const avatar = document.createElement('div');
+ avatar.className = 'message-avatar';
+ avatar.textContent = '你';
+ 
+ const contentDiv = document.createElement('div');
+ contentDiv.className = 'message-content';
+ 
+ const bubble = document.createElement('div');
+ bubble.className = 'message-bubble';
+ bubble.textContent = content;
+ 
+ contentDiv.appendChild(bubble);
+ messageDiv.appendChild(avatar);
+ messageDiv.appendChild(contentDiv);
+ messageGroup.appendChild(messageDiv);
+ chatContainer.appendChild(messageGroup);
+ 
+ scrollToBottom();
  }
 
+ // 创建 AI 消息
  function createAiMessage() {
+ const messageGroup = document.createElement('div');
+ messageGroup.className = 'message-group';
+ 
  const messageDiv = document.createElement('div');
  messageDiv.className = 'message ai-message streaming';
- messageDiv.innerHTML = '&lt;strong&gt;AI:&lt;/strong&gt; &lt;span class="streaming-content"&gt;&lt;/span&gt;&lt;span class="typing-indicator"&gt;▋&lt;/span&gt;';
- chatContainer.appendChild(messageDiv);
- chatContainer.scrollTop = chatContainer.scrollHeight;
- return messageDiv;
+ 
+ const avatar = document.createElement('div');
+ avatar.className = 'message-avatar';
+ avatar.textContent = 'AI';
+ 
+ const contentDiv = document.createElement('div');
+ contentDiv.className = 'message-content';
+ 
+ const bubble = document.createElement('div');
+ bubble.className = 'message-bubble markdown-content';
+ bubble.innerHTML = '&lt;span class="streaming-indicator"&gt;&lt;/span&gt;';
+ 
+ contentDiv.appendChild(bubble);
+ messageDiv.appendChild(avatar);
+ messageDiv.appendChild(contentDiv);
+ messageGroup.appendChild(messageDiv);
+ chatContainer.appendChild(messageGroup);
+ 
+ scrollToBottom();
+ return { messageGroup, bubble };
  }
 
+ // 渲染 markdown
+ function renderMarkdown(text) {
+ if (!text) return '';
+ 
+ // 确保 marked.js 已加载
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] marked.js 未加载！请检查网络连接或 CDN 是否可访问');
+ // 如果没有 marked.js，至少处理换行和基本转义
+ return text
+ .replace(/&amp;/g, '&amp;amp;')
+ .replace(/&lt;/g, '&amp;lt;')
+ .replace(/&gt;/g, '&amp;gt;')
+ .replace(/\n/g, '&lt;br&gt;');
+ }
+ 
+ try {
+ // 确保文本是字符串
+ let cleanText = String(text).trim();
+ 
+ if (!cleanText) return '';
+ 
+ // 调试：记录原始文本
+ const hasMarkdownSyntax = cleanText.includes('#') || cleanText.includes('```') || cleanText.includes('**') || cleanText.includes('*');
+ 
+ // 使用 marked.parse 解析 markdown
+ const html = marked.parse(cleanText);
+ 
+ // 调试：检查解析结果
+ if (hasMarkdownSyntax) {
+ const hasHtmlTags = html.includes('&lt;h') || html.includes('&lt;pre') || html.includes('&lt;code') || html.includes('&lt;strong') || html.includes('&lt;em');
+ 
+ if (!hasHtmlTags &amp;&amp; html === cleanText) {
+ console.error('[DeepSeek] Markdown 解析失败！', {
+ originalText: cleanText.substring(0, 100),
+ parsedHtml: html.substring(0, 100),
+ markedAvailable: typeof marked !== 'undefined',
+ markedVersion: marked?.version || 'unknown'
+ });
+ 
+ // 尝试强制解析
+ try {
+ const forcedHtml = marked.parse(cleanText, { breaks: true, gfm: true });
+ if (forcedHtml !== cleanText) {
+ console.log('[DeepSeek] 强制解析成功');
+ return forcedHtml;
+ }
+ } catch (e) {
+ console.error('[DeepSeek] 强制解析也失败:', e);
+ }
+ } else {
+ console.log('[DeepSeek] Markdown 解析成功', {
+ hasHeaders: html.includes('&lt;h'),
+ hasCodeBlocks: html.includes('&lt;pre'),
+ hasBold: html.includes('&lt;strong'),
+ htmlLength: html.length
+ });
+ }
+ }
+ 
+ return html;
+ } catch (e) {
+ console.error('[DeepSeek] Markdown 解析异常:', e);
+ console.error('[DeepSeek] 异常堆栈:', e.stack);
+ console.error('[DeepSeek] 原始文本前200字符:', text.substring(0, 200));
+ 
+ // 解析失败时，至少处理换行和基本转义
+ return text
+ .replace(/&amp;/g, '&amp;amp;')
+ .replace(/&lt;/g, '&amp;lt;')
+ .replace(/&gt;/g, '&amp;gt;')
+ .replace(/\n/g, '&lt;br&gt;');
+ }
+ }
+
+ // 高亮代码
+ function highlightCode(element) {
+ if (typeof hljs !== 'undefined') {
+ element.querySelectorAll('pre code').forEach((block) =&gt; {
+ // 确保代码块保留换行
+ block.style.whiteSpace = 'pre';
+ block.style.wordWrap = 'normal';
+ block.style.wordBreak = 'normal';
+ block.style.overflowWrap = 'normal';
+ 
+ // 高亮代码
+ try {
+ hljs.highlightElement(block);
+ } catch (e) {
+ console.warn('[DeepSeek] 代码高亮失败:', e);
+ }
+ });
+ } else {
+ // 如果没有 highlight.js，至少确保样式正确
+ element.querySelectorAll('pre code').forEach((block) =&gt; {
+ block.style.whiteSpace = 'pre';
+ block.style.wordWrap = 'normal';
+ block.style.wordBreak = 'normal';
+ block.style.overflowWrap = 'normal';
+ });
+ }
+ }
+
+ // 滚动到底部
+ function scrollToBottom() {
+ requestAnimationFrame(() =&gt; {
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ });
+ }
+
+ // 发送消息
  async function sendMessage() {
  const message = messageInput.value.trim();
  if (!message) return;
 
  messageInput.disabled = true;
  sendBtn.disabled = true;
+ messageInput.value = '';
+ adjustTextareaHeight();
 
  addUserMessage(message);
- messageInput.value = '';
 
- const aiMessageDiv = createAiMessage();
- const streamingContent = aiMessageDiv.querySelector('.streaming-content');
+ const { messageGroup, bubble } = createAiMessage();
+ const streamingContent = bubble;
 
  if (currentController) {
  currentController.abort();
@@ -172,51 +811,95 @@
  doneStreaming = true;
  break;
  }
- fullResponse += payload;
- streamingContent.textContent = fullResponse;
- chatContainer.scrollTop = chatContainer.scrollHeight;
+ 
+ try {
+ // 尝试解析 JSON 格式的响应
+ const jsonData = JSON.parse(payload);
+ // 提取实际的文本内容（根据 API 响应格式调整）
+ let deltaContent = '';
+ 
+ if (jsonData.choices &amp;&amp; jsonData.choices[0] &amp;&amp; jsonData.choices[0].delta) {
+ deltaContent = jsonData.choices[0].delta.content || '';
+ } else if (jsonData.choices &amp;&amp; jsonData.choices[0] &amp;&amp; jsonData.choices[0].message) {
+ deltaContent = jsonData.choices[0].message.content || '';
+ } else if (jsonData.content) {
+ deltaContent = jsonData.content;
+ } else if (jsonData.text) {
+ deltaContent = jsonData.text;
+ } else if (jsonData.message &amp;&amp; jsonData.message.content) {
+ deltaContent = jsonData.message.content;
+ } else if (typeof jsonData === 'string') {
+ deltaContent = jsonData;
  }
- // 忽略 id: / event: 等控制字段
+ 
+ if (deltaContent) {
+ fullResponse += deltaContent;
+ } else if (payload &amp;&amp; payload !== '[DONE]') {
+ // 如果无法解析，尝试直接使用 payload（可能是纯文本）
+ fullResponse += payload;
+ }
+ } catch (e) {
+ // 如果不是 JSON，直接追加文本（可能是纯文本流）
+ if (payload &amp;&amp; payload !== '[DONE]') {
+ fullResponse += payload;
+ }
+ }
+ 
+ // 使用节流渲染 markdown，避免每次 SSE 数据都重新解析
+ throttledRenderMarkdown(fullResponse, streamingContent);
+ }
  }
 
  if (doneStreaming) break;
  }
 
- finalizeMessage(aiMessageDiv);
+ // 清除节流定时器，立即进行最终渲染
+ if (renderTimer) {
+ clearTimeout(renderTimer);
+ renderTimer = null;
+ }
+ 
+ // 最终渲染一次，确保所有内容都正确格式化
+ doRenderMarkdown(fullResponse, streamingContent);
+ 
+ // 调试：检查是否有代码块
+ const codeBlocks = streamingContent.querySelectorAll('pre code');
+ if (codeBlocks.length &gt; 0) {
+ console.log('[DeepSeek] 检测到', codeBlocks.length, '个代码块');
+ } else if (fullResponse.includes('```')) {
+ console.warn('[DeepSeek] 文本包含 ``` 但未生成代码块，可能 markdown 解析失败');
+ }
+ 
+ messageGroup.querySelector('.ai-message').classList.remove('streaming');
+ lastRenderedText = ''; // 重置，为下次消息做准备
+ scrollToBottom();
  } catch (error) {
  if (error.name === 'AbortError') {
- streamingContent.textContent += ' (已中断)';
+ streamingContent.innerHTML = renderMarkdown(fullResponse) + ' &lt;span style="opacity: 0.6;"&gt;(已中断)&lt;/span&gt;';
  } else {
  console.error('请求错误:', error);
- streamingContent.textContent = '请求失败: ' + error.message;
+ streamingContent.innerHTML = '&lt;span style="color: #ef4444;"&gt;请求失败: ' + error.message + '&lt;/span&gt;';
  }
- finalizeMessage(aiMessageDiv);
+ messageGroup.querySelector('.ai-message').classList.remove('streaming');
  } finally {
  currentController = null;
- }
- }
-
- function finalizeMessage(aiMessageDiv) {
- aiMessageDiv.classList.remove('streaming');
- const indicator = aiMessageDiv.querySelector('.typing-indicator');
- if (indicator) indicator.style.display = 'none';
- enableInput();
- }
-
- function enableInput() {
  messageInput.disabled = false;
  sendBtn.disabled = false;
  messageInput.focus();
  }
-
- messageInput.addEventListener('keypress', (event) =&gt; {
- if (event.key === 'Enter' &amp;&amp; !event.shiftKey) {
- event.preventDefault();
- sendMessage();
  }
- });
 
  sendBtn.addEventListener('click', sendMessage);
- window.addEventListener('load', () =&gt; messageInput.focus());
+ 
+ // 页面加载完成后初始化
+ window.addEventListener('load', () =&gt; {
+ messageInput.focus();
+ // 再次检查 marked.js 是否加载
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] marked.js 未加载，Markdown 功能将不可用');
+ } else {
+ console.log('[DeepSeek] marked.js 已就绪');
+ }
+ });
 })();
 &lt;/script&gt;</description></item></channel></rss>

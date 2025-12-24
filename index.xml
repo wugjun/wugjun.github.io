@@ -1,4 +1,203 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>补漏砖匠</title><link>/</link><description>Recent content on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>第五章：系统觉醒，时空乱流</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%A7%89%E9%86%92%E6%97%B6%E7%A9%BA%E4%B9%B1%E6%B5%81/</link><pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%A7%89%E9%86%92%E6%97%B6%E7%A9%BA%E4%B9%B1%E6%B5%81/</guid><description>&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>补漏砖匠</title><link>/</link><description>Recent content on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>前端开发</title><link>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/</link><pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/</guid><description>&lt;h2 id="前端开发画卷篇"&gt;「前端开发画卷篇」&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;收录现代前端开发框架、工程化、性能优化等核心技术。从组件设计到架构模式，从用户体验到工程效率，构建优雅高效的前端应用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="-vue-丹青"&gt;&lt;span style="color: var(--cinnabar);"&gt;🎨 「Vue 丹青」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-vue-3-生态"&gt;🏗️ 「Vue 3 生态」&lt;/h4&gt;
+&lt;h5 id="组合式-api-精要"&gt;「组合式 API 精要」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/Vue/%E7%BB%84%E5%90%88%E5%BC%8FAPI"&gt;Vue 3 组合式 API 实战&lt;/a&gt; —— ref/reactive、生命周期、自定义Hook&lt;/li&gt;
+&lt;li&gt;计划：响应式原理深度解析、Composition API 设计模式&lt;/li&gt;
+&lt;li&gt;计划：TypeScript 集成、代码组织最佳实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="状态管理艺术"&gt;「状态管理艺术」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/Vue/Pinia%E5%AE%9E%E6%88%98"&gt;Pinia 状态管理&lt;/a&gt; —— Store 设计、数据持久化、插件开发&lt;/li&gt;
+&lt;li&gt;计划：Vuex 迁移策略、服务端状态同步、性能优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-工程化实践"&gt;🎯 「工程化实践」&lt;/h4&gt;
+&lt;h5 id="vite-构建优化"&gt;「Vite 构建优化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/Vue/Vite%E5%B7%A5%E7%A8%8B%E5%8C%96"&gt;Vite 配置深度解析&lt;/a&gt; —— 插件开发、依赖预构建、微前端集成&lt;/li&gt;
+&lt;li&gt;计划：构建性能优化、自定义预设、Monorepo 支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="nuxt-服务端渲染"&gt;「Nuxt 服务端渲染」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/Vue/Nuxt%E5%AE%9E%E6%88%98"&gt;Nuxt 3 全栈开发&lt;/a&gt; —— 服务端渲染、静态站点生成、API 路由&lt;/li&gt;
+&lt;li&gt;计划：中间件设计、缓存策略、SEO 优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-react-墨韵"&gt;&lt;span style="color: var(--cinnabar);"&gt;⚛️ 「React 墨韵」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-react-18-特性"&gt;🌊 「React 18 特性」&lt;/h4&gt;
+&lt;h5 id="并发特性实战"&gt;「并发特性实战」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/React/React18"&gt;React 18 新特性解析&lt;/a&gt; —— Concurrent Rendering、Suspense、Transitions&lt;/li&gt;
+&lt;li&gt;计划：并发模式原理、性能优化策略、渐进迁移方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="hooks-深度应用"&gt;「Hooks 深度应用」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/React/Hooks%E8%BF%9B%E9%98%B6"&gt;React Hooks 高级模式&lt;/a&gt; —— 自定义 Hook、状态管理、副作用控制&lt;/li&gt;
+&lt;li&gt;计划：Hook 性能优化、测试策略、设计模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-状态管理架构"&gt;🏰 「状态管理架构」&lt;/h4&gt;
+&lt;h5 id="redux-现代化"&gt;「Redux 现代化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/React/Redux%E5%AE%9E%E6%88%98"&gt;Redux Toolkit 最佳实践&lt;/a&gt; —— Store 设计、异步处理、性能优化&lt;/li&gt;
+&lt;li&gt;计划：RTK Query 集成、缓存策略、错误处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="原子化状态管理"&gt;「原子化状态管理」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/React/%E5%8E%9F%E5%AD%90%E5%8C%96%E7%8A%B6%E6%80%81"&gt;Zustand/Jotai 应用&lt;/a&gt; —— 轻量状态、派生状态、持久化方案&lt;/li&gt;
+&lt;li&gt;计划：状态分形、DevTools 集成、TypeScript 支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-css-绘卷"&gt;&lt;span style="color: var(--cinnabar);"&gt;🎭 「CSS 绘卷」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-现代-css"&gt;🎪 「现代 CSS」&lt;/h4&gt;
+&lt;h5 id="布局系统演进"&gt;「布局系统演进」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/CSS/%E5%B8%83%E5%B1%80%E7%B3%BB%E7%BB%9F"&gt;现代 CSS 布局指南&lt;/a&gt; —— Flexbox、Grid、Subgrid 深度解析&lt;/li&gt;
+&lt;li&gt;计划：响应式设计、容器查询、层叠上下文&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="动画与交互"&gt;「动画与交互」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/CSS/%E5%8A%A8%E7%94%BB%E4%BA%A4%E4%BA%92"&gt;CSS 动画艺术&lt;/a&gt; —— Transition、Animation、Transform 3D&lt;/li&gt;
+&lt;li&gt;计划：性能优化、交互动效、无障碍访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-工程化方案"&gt;🎨 「工程化方案」&lt;/h4&gt;
+&lt;h5 id="css-架构设计"&gt;「CSS 架构设计」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/CSS/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"&gt;CSS 方法论实践&lt;/a&gt; —— BEM、ITCSS、Atomic CSS 对比&lt;/li&gt;
+&lt;li&gt;计划：设计令牌、主题系统、组件样式隔离&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="预处理与后处理"&gt;「预处理与后处理」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/CSS/%E9%A2%84%E5%A4%84%E7%90%86"&gt;Sass/Less 高级技巧&lt;/a&gt; —— 混合宏、函数、模块化系统&lt;/li&gt;
+&lt;li&gt;计划：PostCSS 插件开发、Tailwind 定制化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-前端工程化"&gt;&lt;span style="color: var(--cinnabar);"&gt;🚀 「前端工程化」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-构建工具链"&gt;🛠️ 「构建工具链」&lt;/h4&gt;
+&lt;h5 id="webpack-深度优化"&gt;「Webpack 深度优化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E7%A8%8B%E5%8C%96/Webpack"&gt;Webpack 5 高级配置&lt;/a&gt; —— 模块联邦、Tree Shaking、缓存策略&lt;/li&gt;
+&lt;li&gt;计划：自定义 Loader/Plugin、微前端构建、性能分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="模块化演进"&gt;「模块化演进」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96"&gt;ES Module 实践指南&lt;/a&gt; —— 静态分析、动态导入、包发布规范&lt;/li&gt;
+&lt;li&gt;计划：Monorepo 管理、依赖优化、CDN 集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-质量保障"&gt;📦 「质量保障」&lt;/h4&gt;
+&lt;h5 id="测试策略体系"&gt;「测试策略体系」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5"&gt;前端测试全景指南&lt;/a&gt; —— 单元测试、集成测试、E2E 测试&lt;/li&gt;
+&lt;li&gt;计划：Jest/Vitest、Testing Library、Cypress/Playwright&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="代码质量管控"&gt;「代码质量管控」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F"&gt;代码规范与检查&lt;/a&gt; —— ESLint/Prettier/Husky 集成&lt;/li&gt;
+&lt;li&gt;计划：自定义规则、Git Hooks、CI/CD 流水线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-移动端适配"&gt;&lt;span style="color: var(--cinnabar);"&gt;📱 「移动端适配」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-响应式设计"&gt;📲 「响应式设计」&lt;/h4&gt;
+&lt;h5 id="跨端适配方案"&gt;「跨端适配方案」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1"&gt;移动端适配完全指南&lt;/a&gt; —— 视口控制、媒体查询、相对单位&lt;/li&gt;
+&lt;li&gt;计划：设计稿转换、多端预览、测试方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="触摸交互优化"&gt;「触摸交互优化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E4%BA%A4%E4%BA%92%E4%BC%98%E5%8C%96"&gt;移动端交互体验&lt;/a&gt; —— 手势识别、滚动性能、点击延迟&lt;/li&gt;
+&lt;li&gt;计划：PWA 特性、离线缓存、推送通知&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-跨端开发"&gt;🌐 「跨端开发」&lt;/h4&gt;
+&lt;h5 id="混合开发技术"&gt;「混合开发技术」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91"&gt;Hybrid 开发实践&lt;/a&gt; —— WebView 优化、JSBridge、性能监控&lt;/li&gt;
+&lt;li&gt;计划：Cordova/Capacitor、原生插件开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="小程序生态"&gt;「小程序生态」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%B0%8F%E7%A8%8B%E5%BA%8F"&gt;小程序开发体系&lt;/a&gt; —— 多端框架、平台差异、审核发布&lt;/li&gt;
+&lt;li&gt;计划：Taro/Uni-app、性能优化、商业化实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-性能优化"&gt;&lt;span style="color: var(--cinnabar);"&gt;📊 「性能优化」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-加载性能"&gt;⚡ 「加载性能」&lt;/h4&gt;
+&lt;h5 id="资源加载优化"&gt;「资源加载优化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD"&gt;前端性能优化指南&lt;/a&gt; —— 代码分割、懒加载、预加载策略&lt;/li&gt;
+&lt;li&gt;计划：Bundle 分析、资源优先级、HTTP/2 优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="缓存策略设计"&gt;「缓存策略设计」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5"&gt;浏览器缓存机制&lt;/a&gt; —— 强缓存、协商缓存、Service Worker&lt;/li&gt;
+&lt;li&gt;计划：CDN 优化、缓存失效策略、离线体验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-运行时性能"&gt;🎯 「运行时性能」&lt;/h4&gt;
+&lt;h5 id="渲染性能优化"&gt;「渲染性能优化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E6%B8%B2%E6%9F%93%E6%80%A7%E8%83%BD"&gt;渲染性能深度解析&lt;/a&gt; —— 重绘重排、合成层、内存管理&lt;/li&gt;
+&lt;li&gt;计划：Performance API、Lighthouse、Core Web Vitals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="javascript-性能"&gt;「JavaScript 性能」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/JS%E6%80%A7%E8%83%BD"&gt;JS 执行优化&lt;/a&gt; —— V8 优化、垃圾回收、异步编程&lt;/li&gt;
+&lt;li&gt;计划：Worker 多线程、WASM 集成、算法优化&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"&gt;事件循环&lt;/a&gt; —— V8 优化、垃圾回收、异步编程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-可视化艺术"&gt;&lt;span style="color: var(--cinnabar);"&gt;🎨 「可视化艺术」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-图表库实战"&gt;📈 「图表库实战」&lt;/h4&gt;
+&lt;h5 id="echarts-深度应用"&gt;「ECharts 深度应用」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8F%AF%E8%A7%86%E5%8C%96/ECharts"&gt;ECharts 高级技巧&lt;/a&gt; —— 自定义系列、富文本、交互事件&lt;/li&gt;
+&lt;li&gt;计划：大数据量优化、主题定制、插件开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="d3js-数据驱动"&gt;「D3.js 数据驱动」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8F%AF%E8%A7%86%E5%8C%96/D3js"&gt;D3.js 可视化编程&lt;/a&gt; —— 数据绑定、比例尺、动画过渡&lt;/li&gt;
+&lt;li&gt;计划：自定义图表、物理模拟、交互设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-图形与动画"&gt;🎮 「图形与动画」&lt;/h4&gt;
+&lt;h5 id="canvas-高性能渲染"&gt;「Canvas 高性能渲染」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8F%AF%E8%A7%86%E5%8C%96/Canvas"&gt;Canvas 渲染优化&lt;/a&gt; —— 离屏渲染、脏矩形、粒子系统&lt;/li&gt;
+&lt;li&gt;计划：游戏开发、数据可视化、图像处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="webgl-三维可视化"&gt;「WebGL 三维可视化」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8F%AF%E8%A7%86%E5%8C%96/WebGL"&gt;Three.js 入门到实战&lt;/a&gt; —— 场景图、材质光照、相机控制&lt;/li&gt;
+&lt;li&gt;计划：模型加载、着色器编程、性能优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-开发工具链"&gt;&lt;span style="color: var(--cinnabar);"&gt;🔧 「开发工具链」&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id="-调试与诊断"&gt;🛠️ 「调试与诊断」&lt;/h4&gt;
+&lt;h5 id="浏览器开发者工具"&gt;「浏览器开发者工具」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7%E9%93%BE/%E8%B0%83%E8%AF%95%E8%AF%8A%E6%96%AD"&gt;DevTools 高级技巧&lt;/a&gt; —— 性能分析、内存快照、网络监控&lt;/li&gt;
+&lt;li&gt;计划：自定义面板、Source Map、远程调试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="可视化调试工具"&gt;「可视化调试工具」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7%E9%93%BE/%E5%8F%AF%E8%A7%86%E5%8C%96%E8%B0%83%E8%AF%95"&gt;React/Vue DevTools&lt;/a&gt; —— 组件树、状态监控、性能分析&lt;/li&gt;
+&lt;li&gt;计划：自定义插件、生产环境调试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="-效率提升"&gt;⚙️ 「效率提升」&lt;/h4&gt;
+&lt;h5 id="低代码平台"&gt;「低代码平台」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7%E9%93%BE/%E4%BD%8E%E4%BB%A3%E7%A0%81"&gt;低代码开发实践&lt;/a&gt; —— 可视化搭建、Schema 驱动、插件生态&lt;/li&gt;
+&lt;li&gt;计划：组件物料、流程设计、扩展开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="ai-辅助开发"&gt;「AI 辅助开发」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7%E9%93%BE/AI%E8%BE%85%E5%8A%A9"&gt;AI 编程助手应用&lt;/a&gt; —— 代码生成、智能提示、自动化测试&lt;/li&gt;
+&lt;li&gt;计划：Prompt 工程、自定义模型、工作流集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前端之道，在于平衡用户体验与技术实现，在视觉美感与代码质量之间寻求完美统一。&lt;/p&gt;</description></item><item><title>第五章：系统觉醒，时空乱流</title><link>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%A7%89%E9%86%92%E6%97%B6%E7%A9%BA%E4%B9%B1%E6%B5%81/</link><pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate><guid>/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%A7%89%E9%86%92%E6%97%B6%E7%A9%BA%E4%B9%B1%E6%B5%81/</guid><description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%AC%BC%E8%B0%B7%E5%87%BA%E5%B1%B1%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"&gt;第四章-鬼谷出山，动态规划&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -2366,86 +2565,424 @@ host all all 0.0.0.0/0 md5
  &lt;h1&gt;DeepSeek 智能助手&lt;/h1&gt;
  &lt;div id="chat-container"&gt;&lt;/div&gt;
  &lt;div id="input-container"&gt;
- &lt;input type="text" id="message-input" placeholder="输入您的问题..." /&gt;
+ &lt;textarea id="message-input" placeholder="输入您的问题..." rows="1"&gt;&lt;/textarea&gt;
  &lt;button id="send-btn"&gt;发送&lt;/button&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;style&gt;
 .deepseek-chat-page {
- font-family: Arial, sans-serif;
- max-width: 800px;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+ max-width: 900px;
  margin: 0 auto;
  padding: 20px;
+ background: #f7f7f8;
+ min-height: calc(100vh - 200px);
 }
 
 #chat-container {
- border: 1px solid #ddd;
- border-radius: 8px;
- padding: 20px;
+ background: #ffffff;
+ border-radius: 12px;
+ padding: 24px;
  margin-bottom: 20px;
- height: 400px;
+ min-height: 500px;
+ max-height: 70vh;
  overflow-y: auto;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#chat-container::-webkit-scrollbar {
+ width: 8px;
+}
+
+#chat-container::-webkit-scrollbar-track {
+ background: #f1f1f1;
+ border-radius: 4px;
+}
+
+#chat-container::-webkit-scrollbar-thumb {
+ background: #c1c1c1;
+ border-radius: 4px;
+}
+
+#chat-container::-webkit-scrollbar-thumb:hover {
+ background: #a8a8a8;
+}
+
+.message-group {
+ margin-bottom: 32px;
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
 }
 
 .message {
- margin-bottom: 10px;
- padding: 10px;
- border-radius: 5px;
+ display: flex;
+ gap: 16px;
+ animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+ from {
+ opacity: 0;
+ transform: translateY(10px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
 }
 
 .user-message {
- background-color: #e3f2fd;
- text-align: right;
+ flex-direction: row-reverse;
 }
 
-.ai-message {
- background-color: #f5f5f5;
+.message-avatar {
+ width: 32px;
+ height: 32px;
+ border-radius: 6px;
+ flex-shrink: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 14px;
+ font-weight: 600;
+ color: white;
 }
 
-.streaming {
- border-left: 3px solid #4CAF50;
- animation: pulse 1s infinite;
+.user-message .message-avatar {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-@keyframes pulse {
- 0% { opacity: 1; }
- 50% { opacity: 0.5; }
- 100% { opacity: 1; }
+.ai-message .message-avatar {
+ background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.message-content {
+ flex: 1;
+ min-width: 0;
+}
+
+.message-bubble {
+ padding: 16px 20px;
+ border-radius: 12px;
+ word-wrap: break-word;
+ word-break: break-word;
+ overflow-wrap: break-word;
+ line-height: 1.75;
+ font-size: 15px;
+}
+
+.user-message .message-bubble {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: white;
+ border-bottom-right-radius: 4px;
+}
+
+.ai-message .message-bubble {
+ background: #f7f7f8;
+ color: #202123;
+ border-bottom-left-radius: 4px;
+ border: 1px solid #e5e5e5;
+}
+
+.streaming .message-bubble {
+ border-left: 3px solid #19c37d;
+}
+
+.streaming-indicator {
+ display: inline-block;
+ width: 8px;
+ height: 8px;
+ background: #19c37d;
+ border-radius: 50%;
+ margin-left: 6px;
+ animation: pulse-dot 1.4s ease-in-out infinite;
+ vertical-align: middle;
+}
+
+@keyframes pulse-dot {
+ 0%, 80%, 100% {
+ opacity: 0.3;
+ transform: scale(0.8);
+ }
+ 40% {
+ opacity: 1;
+ transform: scale(1);
+ }
 }
 
 #input-container {
  display: flex;
- gap: 10px;
+ gap: 12px;
+ align-items: flex-end;
+ background: #ffffff;
+ padding: 16px;
+ border-radius: 12px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #message-input {
  flex: 1;
- padding: 10px;
- border: 1px solid #ddd;
- border-radius: 4px;
- font-size: 16px;
+ padding: 12px 16px;
+ border: 2px solid #e5e5e5;
+ border-radius: 8px;
+ font-size: 15px;
+ font-family: inherit;
+ resize: none;
+ min-height: 24px;
+ max-height: 200px;
+ overflow-y: auto;
+ transition: border-color 0.2s;
+}
+
+#message-input:focus {
+ outline: none;
+ border-color: #667eea;
 }
 
 #send-btn {
- padding: 10px 20px;
- background-color: #4CAF50;
+ padding: 12px 24px;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
  color: white;
  border: none;
- border-radius: 4px;
+ border-radius: 8px;
  cursor: pointer;
- font-size: 16px;
+ font-size: 15px;
+ font-weight: 500;
+ transition: transform 0.1s, box-shadow 0.2s;
+ white-space: nowrap;
+}
+
+#send-btn:hover:not(:disabled) {
+ transform: translateY(-1px);
+ box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+#send-btn:active:not(:disabled) {
+ transform: translateY(0);
 }
 
 #send-btn:disabled {
- background-color: #ccc;
+ background: #d1d5db;
  cursor: not-allowed;
+ transform: none;
+ box-shadow: none;
 }
 
-.typing-indicator {
- color: #666;
+/* Markdown 内容样式 */
+.markdown-content {
+ line-height: 1.75;
+ color: inherit;
+}
+
+.markdown-content p {
+ margin: 0.75em 0;
+}
+
+.markdown-content p:first-child {
+ margin-top: 0;
+}
+
+.markdown-content p:last-child {
+ margin-bottom: 0;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+ margin: 1.25em 0 0.75em 0;
+ font-weight: 600;
+ line-height: 1.3;
+}
+
+.markdown-content h1:first-child,
+.markdown-content h2:first-child,
+.markdown-content h3:first-child,
+.markdown-content h4:first-child {
+ margin-top: 0;
+}
+
+.markdown-content h1 { font-size: 1.75em; }
+.markdown-content h2 { font-size: 1.5em; }
+.markdown-content h3 { font-size: 1.25em; }
+.markdown-content h4 { font-size: 1.1em; }
+.markdown-content h5 { font-size: 1em; }
+.markdown-content h6 { font-size: 0.9em; }
+
+.markdown-content ul,
+.markdown-content ol {
+ margin: 0.75em 0;
+ padding-left: 1.75em;
+}
+
+.markdown-content li {
+ margin: 0.5em 0;
+}
+
+.markdown-content code {
+ background: rgba(0, 0, 0, 0.08);
+ padding: 0.2em 0.4em;
+ border-radius: 4px;
+ font-size: 0.9em;
+ font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+}
+
+.user-message .markdown-content code {
+ background: rgba(255, 255, 255, 0.25);
+}
+
+.markdown-content pre {
+ background: #1e1e1e;
+ border-radius: 8px;
+ padding: 16px;
+ overflow-x: auto;
+ overflow-y: auto;
+ margin: 1em 0;
+ position: relative;
+ white-space: pre;
+ word-wrap: normal;
+ word-break: normal;
+ font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+}
+
+.ai-message .markdown-content pre {
+ background: #1e1e1e;
+}
+
+.user-message .markdown-content pre {
+ background: rgba(0, 0, 0, 0.2);
+}
+
+.markdown-content pre code {
+ background: transparent;
+ padding: 0;
+ border-radius: 0;
+ color: #d4d4d4;
+ font-size: 14px;
+ line-height: 1.5;
+ display: block;
+ white-space: pre;
+ word-wrap: normal;
+ word-break: normal;
+ font-family: inherit;
+ overflow-wrap: normal;
+}
+
+.markdown-content blockquote {
+ border-left: 4px solid #667eea;
+ padding-left: 1em;
+ margin: 1em 0;
+ color: inherit;
+ opacity: 0.85;
  font-style: italic;
 }
+
+.markdown-content table {
+ border-collapse: collapse;
+ width: 100%;
+ margin: 1em 0;
+ font-size: 0.9em;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+ border: 1px solid rgba(0, 0, 0, 0.1);
+ padding: 0.6em 0.8em;
+ text-align: left;
+}
+
+.user-message .markdown-content table th,
+.user-message .markdown-content table td {
+ border-color: rgba(255, 255, 255, 0.2);
+}
+
+.markdown-content table th {
+ background: rgba(0, 0, 0, 0.05);
+ font-weight: 600;
+}
+
+.user-message .markdown-content table th {
+ background: rgba(255, 255, 255, 0.15);
+}
+
+.markdown-content a {
+ color: #667eea;
+ text-decoration: underline;
+ text-underline-offset: 2px;
+}
+
+.user-message .markdown-content a {
+ color: rgba(255, 255, 255, 0.95);
+}
+
+.markdown-content a:hover {
+ opacity: 0.8;
+}
+
+.markdown-content strong {
+ font-weight: 600;
+}
+
+.markdown-content em {
+ font-style: italic;
+}
+
+.markdown-content hr {
+ border: none;
+ border-top: 1px solid rgba(0, 0, 0, 0.1);
+ margin: 1.5em 0;
+}
+
+.user-message .markdown-content hr {
+ border-color: rgba(255, 255, 255, 0.2);
+}
+
+.markdown-content img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 8px;
+ margin: 1em 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+ .deepseek-chat-page {
+ padding: 12px;
+ }
+ 
+ #chat-container {
+ padding: 16px;
+ max-height: 60vh;
+ }
+ 
+ .message {
+ gap: 12px;
+ }
+ 
+ .message-avatar {
+ width: 28px;
+ height: 28px;
+ font-size: 12px;
+ }
+ 
+ .message-bubble {
+ padding: 12px 16px;
+ font-size: 14px;
+ }
+ 
+ #input-container {
+ padding: 12px;
+ }
+}
 &lt;/style&gt;
+&lt;!-- 引入 marked.js 用于 markdown 渲染 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" onload="console.log('[DeepSeek] marked.js 加载完成')" onerror="console.error('[DeepSeek] marked.js 加载失败')"&gt;&lt;/script&gt;
+&lt;!-- 引入 highlight.js 用于代码高亮 --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" onload="console.log('[DeepSeek] highlight.js 加载完成')" onerror="console.error('[DeepSeek] highlight.js 加载失败')"&gt;&lt;/script&gt;
 &lt;script&gt;
 (function() {
  const chatContainer = document.getElementById('chat-container');
@@ -2453,36 +2990,337 @@ host all all 0.0.0.0/0 md5
  const sendBtn = document.getElementById('send-btn');
  const endpoint = 'http://qiaopan.tech:18080/api/v1/assistant/chat/stream';
  let currentController = null;
+ 
+ // 节流渲染 markdown，避免每次 SSE 数据都重新解析
+ let renderTimer = null;
+ let pendingText = '';
+ let lastRenderedText = '';
+ 
+ function throttledRenderMarkdown(text, targetElement, force = false) {
+ pendingText = text;
+ 
+ // 如果强制渲染或文本变化较大，立即渲染
+ if (force || text.length - lastRenderedText.length &gt; 50) {
+ if (renderTimer) {
+ clearTimeout(renderTimer);
+ renderTimer = null;
+ }
+ doRenderMarkdown(text, targetElement);
+ lastRenderedText = text;
+ return;
+ }
+ 
+ // 否则使用节流，每 150ms 渲染一次
+ if (!renderTimer) {
+ renderTimer = setTimeout(() =&gt; {
+ if (pendingText !== lastRenderedText) {
+ doRenderMarkdown(pendingText, targetElement);
+ lastRenderedText = pendingText;
+ }
+ renderTimer = null;
+ }, 150);
+ }
+ }
+ 
+ function doRenderMarkdown(text, targetElement) {
+ const renderedHtml = renderMarkdown(text);
+ targetElement.innerHTML = renderedHtml + '&lt;span class="streaming-indicator"&gt;&lt;/span&gt;';
+ highlightCode(targetElement);
+ scrollToBottom();
+ }
 
+ // 配置 marked.js - 等待库加载完成
+ function configureMarked() {
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] marked.js 未定义！');
+ return false;
+ }
+ 
+ try {
+ marked.setOptions({
+ breaks: true, // 支持 GitHub 风格的换行
+ gfm: true, // 启用 GitHub Flavored Markdown
+ headerIds: false,
+ mangle: false,
+ highlight: function(code, lang) {
+ if (lang &amp;&amp; typeof hljs !== 'undefined') {
+ try {
+ return hljs.highlight(code, { language: lang }).value;
+ } catch (err) {
+ return hljs.highlightAuto(code).value;
+ }
+ }
+ return code;
+ }
+ });
+ 
+ console.log('[DeepSeek] marked.js 配置完成', {
+ version: marked.version || 'unknown',
+ breaks: true,
+ gfm: true
+ });
+ 
+ // 测试 marked.js 是否正常工作
+ const testCases = [
+ { md: '# 标题', expect: '&lt;h1' },
+ { md: '**粗体**', expect: '&lt;strong' },
+ { md: '```java\ncode\n```', expect: '&lt;pre&gt;&lt;code' },
+ { md: '`inline code`', expect: '&lt;code' }
+ ];
+ 
+ let allPassed = true;
+ testCases.forEach((test, index) =&gt; {
+ try {
+ const result = marked.parse(test.md);
+ const passed = result.includes(test.expect);
+ if (!passed) {
+ console.warn(`[DeepSeek] 测试 ${index + 1} 失败:`, {
+ input: test.md,
+ expected: test.expect,
+ got: result.substring(0, 50)
+ });
+ allPassed = false;
+ }
+ } catch (e) {
+ console.error(`[DeepSeek] 测试 ${index + 1} 异常:`, e);
+ allPassed = false;
+ }
+ });
+ 
+ if (allPassed) {
+ console.log('[DeepSeek] ✅ 所有 marked.js 测试通过');
+ } else {
+ console.error('[DeepSeek] ❌ marked.js 测试失败，某些功能可能不可用');
+ }
+ 
+ return allPassed;
+ } catch (e) {
+ console.error('[DeepSeek] marked.js 配置失败:', e);
+ return false;
+ }
+ }
+
+ // 等待 marked.js 加载
+ function initMarked() {
+ if (typeof marked !== 'undefined') {
+ configureMarked();
+ } else {
+ // 如果 marked.js 还没加载，等待一下
+ let retries = 0;
+ const maxRetries = 10;
+ const checkInterval = setInterval(() =&gt; {
+ retries++;
+ if (typeof marked !== 'undefined') {
+ clearInterval(checkInterval);
+ configureMarked();
+ } else if (retries &gt;= maxRetries) {
+ clearInterval(checkInterval);
+ console.error('[DeepSeek] marked.js 加载超时，请检查网络连接或 CDN 是否可访问');
+ console.error('[DeepSeek] 尝试的 CDN: https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js');
+ }
+ }, 200);
+ }
+ }
+ 
+ // 立即尝试初始化
+ initMarked();
+ 
+ // 页面加载完成后再次检查
+ window.addEventListener('load', () =&gt; {
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] ⚠️ 页面加载完成但 marked.js 仍未加载！');
+ }
+ });
+
+ // 自动调整输入框高度
+ function adjustTextareaHeight() {
+ messageInput.style.height = 'auto';
+ messageInput.style.height = Math.min(messageInput.scrollHeight, 200) + 'px';
+ }
+
+ messageInput.addEventListener('input', adjustTextareaHeight);
+ // 已关闭 Enter 键发送功能，只能通过点击按钮发送
+
+ // 添加用户消息
  function addUserMessage(content) {
+ const messageGroup = document.createElement('div');
+ messageGroup.className = 'message-group';
+ 
  const messageDiv = document.createElement('div');
  messageDiv.className = 'message user-message';
- messageDiv.innerHTML = `&lt;strong&gt;您:&lt;/strong&gt; ${content}`;
- chatContainer.appendChild(messageDiv);
- chatContainer.scrollTop = chatContainer.scrollHeight;
+ 
+ const avatar = document.createElement('div');
+ avatar.className = 'message-avatar';
+ avatar.textContent = '你';
+ 
+ const contentDiv = document.createElement('div');
+ contentDiv.className = 'message-content';
+ 
+ const bubble = document.createElement('div');
+ bubble.className = 'message-bubble';
+ bubble.textContent = content;
+ 
+ contentDiv.appendChild(bubble);
+ messageDiv.appendChild(avatar);
+ messageDiv.appendChild(contentDiv);
+ messageGroup.appendChild(messageDiv);
+ chatContainer.appendChild(messageGroup);
+ 
+ scrollToBottom();
  }
 
+ // 创建 AI 消息
  function createAiMessage() {
+ const messageGroup = document.createElement('div');
+ messageGroup.className = 'message-group';
+ 
  const messageDiv = document.createElement('div');
  messageDiv.className = 'message ai-message streaming';
- messageDiv.innerHTML = '&lt;strong&gt;AI:&lt;/strong&gt; &lt;span class="streaming-content"&gt;&lt;/span&gt;&lt;span class="typing-indicator"&gt;▋&lt;/span&gt;';
- chatContainer.appendChild(messageDiv);
- chatContainer.scrollTop = chatContainer.scrollHeight;
- return messageDiv;
+ 
+ const avatar = document.createElement('div');
+ avatar.className = 'message-avatar';
+ avatar.textContent = 'AI';
+ 
+ const contentDiv = document.createElement('div');
+ contentDiv.className = 'message-content';
+ 
+ const bubble = document.createElement('div');
+ bubble.className = 'message-bubble markdown-content';
+ bubble.innerHTML = '&lt;span class="streaming-indicator"&gt;&lt;/span&gt;';
+ 
+ contentDiv.appendChild(bubble);
+ messageDiv.appendChild(avatar);
+ messageDiv.appendChild(contentDiv);
+ messageGroup.appendChild(messageDiv);
+ chatContainer.appendChild(messageGroup);
+ 
+ scrollToBottom();
+ return { messageGroup, bubble };
  }
 
+ // 渲染 markdown
+ function renderMarkdown(text) {
+ if (!text) return '';
+ 
+ // 确保 marked.js 已加载
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] marked.js 未加载！请检查网络连接或 CDN 是否可访问');
+ // 如果没有 marked.js，至少处理换行和基本转义
+ return text
+ .replace(/&amp;/g, '&amp;amp;')
+ .replace(/&lt;/g, '&amp;lt;')
+ .replace(/&gt;/g, '&amp;gt;')
+ .replace(/\n/g, '&lt;br&gt;');
+ }
+ 
+ try {
+ // 确保文本是字符串
+ let cleanText = String(text).trim();
+ 
+ if (!cleanText) return '';
+ 
+ // 调试：记录原始文本
+ const hasMarkdownSyntax = cleanText.includes('#') || cleanText.includes('```') || cleanText.includes('**') || cleanText.includes('*');
+ 
+ // 使用 marked.parse 解析 markdown
+ const html = marked.parse(cleanText);
+ 
+ // 调试：检查解析结果
+ if (hasMarkdownSyntax) {
+ const hasHtmlTags = html.includes('&lt;h') || html.includes('&lt;pre') || html.includes('&lt;code') || html.includes('&lt;strong') || html.includes('&lt;em');
+ 
+ if (!hasHtmlTags &amp;&amp; html === cleanText) {
+ console.error('[DeepSeek] Markdown 解析失败！', {
+ originalText: cleanText.substring(0, 100),
+ parsedHtml: html.substring(0, 100),
+ markedAvailable: typeof marked !== 'undefined',
+ markedVersion: marked?.version || 'unknown'
+ });
+ 
+ // 尝试强制解析
+ try {
+ const forcedHtml = marked.parse(cleanText, { breaks: true, gfm: true });
+ if (forcedHtml !== cleanText) {
+ console.log('[DeepSeek] 强制解析成功');
+ return forcedHtml;
+ }
+ } catch (e) {
+ console.error('[DeepSeek] 强制解析也失败:', e);
+ }
+ } else {
+ console.log('[DeepSeek] Markdown 解析成功', {
+ hasHeaders: html.includes('&lt;h'),
+ hasCodeBlocks: html.includes('&lt;pre'),
+ hasBold: html.includes('&lt;strong'),
+ htmlLength: html.length
+ });
+ }
+ }
+ 
+ return html;
+ } catch (e) {
+ console.error('[DeepSeek] Markdown 解析异常:', e);
+ console.error('[DeepSeek] 异常堆栈:', e.stack);
+ console.error('[DeepSeek] 原始文本前200字符:', text.substring(0, 200));
+ 
+ // 解析失败时，至少处理换行和基本转义
+ return text
+ .replace(/&amp;/g, '&amp;amp;')
+ .replace(/&lt;/g, '&amp;lt;')
+ .replace(/&gt;/g, '&amp;gt;')
+ .replace(/\n/g, '&lt;br&gt;');
+ }
+ }
+
+ // 高亮代码
+ function highlightCode(element) {
+ if (typeof hljs !== 'undefined') {
+ element.querySelectorAll('pre code').forEach((block) =&gt; {
+ // 确保代码块保留换行
+ block.style.whiteSpace = 'pre';
+ block.style.wordWrap = 'normal';
+ block.style.wordBreak = 'normal';
+ block.style.overflowWrap = 'normal';
+ 
+ // 高亮代码
+ try {
+ hljs.highlightElement(block);
+ } catch (e) {
+ console.warn('[DeepSeek] 代码高亮失败:', e);
+ }
+ });
+ } else {
+ // 如果没有 highlight.js，至少确保样式正确
+ element.querySelectorAll('pre code').forEach((block) =&gt; {
+ block.style.whiteSpace = 'pre';
+ block.style.wordWrap = 'normal';
+ block.style.wordBreak = 'normal';
+ block.style.overflowWrap = 'normal';
+ });
+ }
+ }
+
+ // 滚动到底部
+ function scrollToBottom() {
+ requestAnimationFrame(() =&gt; {
+ chatContainer.scrollTop = chatContainer.scrollHeight;
+ });
+ }
+
+ // 发送消息
  async function sendMessage() {
  const message = messageInput.value.trim();
  if (!message) return;
 
  messageInput.disabled = true;
  sendBtn.disabled = true;
+ messageInput.value = '';
+ adjustTextareaHeight();
 
  addUserMessage(message);
- messageInput.value = '';
 
- const aiMessageDiv = createAiMessage();
- const streamingContent = aiMessageDiv.querySelector('.streaming-content');
+ const { messageGroup, bubble } = createAiMessage();
+ const streamingContent = bubble;
 
  if (currentController) {
  currentController.abort();
@@ -2536,52 +3374,96 @@ host all all 0.0.0.0/0 md5
  doneStreaming = true;
  break;
  }
- fullResponse += payload;
- streamingContent.textContent = fullResponse;
- chatContainer.scrollTop = chatContainer.scrollHeight;
+ 
+ try {
+ // 尝试解析 JSON 格式的响应
+ const jsonData = JSON.parse(payload);
+ // 提取实际的文本内容（根据 API 响应格式调整）
+ let deltaContent = '';
+ 
+ if (jsonData.choices &amp;&amp; jsonData.choices[0] &amp;&amp; jsonData.choices[0].delta) {
+ deltaContent = jsonData.choices[0].delta.content || '';
+ } else if (jsonData.choices &amp;&amp; jsonData.choices[0] &amp;&amp; jsonData.choices[0].message) {
+ deltaContent = jsonData.choices[0].message.content || '';
+ } else if (jsonData.content) {
+ deltaContent = jsonData.content;
+ } else if (jsonData.text) {
+ deltaContent = jsonData.text;
+ } else if (jsonData.message &amp;&amp; jsonData.message.content) {
+ deltaContent = jsonData.message.content;
+ } else if (typeof jsonData === 'string') {
+ deltaContent = jsonData;
  }
- // 忽略 id: / event: 等控制字段
+ 
+ if (deltaContent) {
+ fullResponse += deltaContent;
+ } else if (payload &amp;&amp; payload !== '[DONE]') {
+ // 如果无法解析，尝试直接使用 payload（可能是纯文本）
+ fullResponse += payload;
+ }
+ } catch (e) {
+ // 如果不是 JSON，直接追加文本（可能是纯文本流）
+ if (payload &amp;&amp; payload !== '[DONE]') {
+ fullResponse += payload;
+ }
+ }
+ 
+ // 使用节流渲染 markdown，避免每次 SSE 数据都重新解析
+ throttledRenderMarkdown(fullResponse, streamingContent);
+ }
  }
 
  if (doneStreaming) break;
  }
 
- finalizeMessage(aiMessageDiv);
+ // 清除节流定时器，立即进行最终渲染
+ if (renderTimer) {
+ clearTimeout(renderTimer);
+ renderTimer = null;
+ }
+ 
+ // 最终渲染一次，确保所有内容都正确格式化
+ doRenderMarkdown(fullResponse, streamingContent);
+ 
+ // 调试：检查是否有代码块
+ const codeBlocks = streamingContent.querySelectorAll('pre code');
+ if (codeBlocks.length &gt; 0) {
+ console.log('[DeepSeek] 检测到', codeBlocks.length, '个代码块');
+ } else if (fullResponse.includes('```')) {
+ console.warn('[DeepSeek] 文本包含 ``` 但未生成代码块，可能 markdown 解析失败');
+ }
+ 
+ messageGroup.querySelector('.ai-message').classList.remove('streaming');
+ lastRenderedText = ''; // 重置，为下次消息做准备
+ scrollToBottom();
  } catch (error) {
  if (error.name === 'AbortError') {
- streamingContent.textContent += ' (已中断)';
+ streamingContent.innerHTML = renderMarkdown(fullResponse) + ' &lt;span style="opacity: 0.6;"&gt;(已中断)&lt;/span&gt;';
  } else {
  console.error('请求错误:', error);
- streamingContent.textContent = '请求失败: ' + error.message;
+ streamingContent.innerHTML = '&lt;span style="color: #ef4444;"&gt;请求失败: ' + error.message + '&lt;/span&gt;';
  }
- finalizeMessage(aiMessageDiv);
+ messageGroup.querySelector('.ai-message').classList.remove('streaming');
  } finally {
  currentController = null;
- }
- }
-
- function finalizeMessage(aiMessageDiv) {
- aiMessageDiv.classList.remove('streaming');
- const indicator = aiMessageDiv.querySelector('.typing-indicator');
- if (indicator) indicator.style.display = 'none';
- enableInput();
- }
-
- function enableInput() {
  messageInput.disabled = false;
  sendBtn.disabled = false;
  messageInput.focus();
  }
-
- messageInput.addEventListener('keypress', (event) =&gt; {
- if (event.key === 'Enter' &amp;&amp; !event.shiftKey) {
- event.preventDefault();
- sendMessage();
  }
- });
 
  sendBtn.addEventListener('click', sendMessage);
- window.addEventListener('load', () =&gt; messageInput.focus());
+ 
+ // 页面加载完成后初始化
+ window.addEventListener('load', () =&gt; {
+ messageInput.focus();
+ // 再次检查 marked.js 是否加载
+ if (typeof marked === 'undefined') {
+ console.error('[DeepSeek] marked.js 未加载，Markdown 功能将不可用');
+ } else {
+ console.log('[DeepSeek] marked.js 已就绪');
+ }
+ });
 })();
 &lt;/script&gt;</description></item><item><title>个人简历-英文</title><link>/post/about-en/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>/post/about-en/</guid><description>&lt;h2 id="-resume"&gt;📄 Resume&lt;/h2&gt;
 &lt;h3 id="-personal-information"&gt;👨‍💻 Personal Information&lt;/h3&gt;
