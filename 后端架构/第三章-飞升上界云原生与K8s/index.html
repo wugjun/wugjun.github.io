@@ -1,0 +1,282 @@
+<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>第三章：飞升上界 · 云原生与K8s</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="从分布式到云原生，韩立如何掌握Kubernetes，实现服务的自动调度和管理"><meta name=generator content="Hugo 0.152.2"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>菜单</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/>前端开发</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/>在线答题</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>第三章：飞升上界 · 云原生与K8s</h1><p class=post__lead>韩门已成气候，需飞升云上仙境，领悟Kubernetes的天道意志</p><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2025-12-24T00:00:00>December 24, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e5%90%8e%e7%ab%af%e6%9e%b6%e6%9e%84 rel=category>后端架构</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>页面内容</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#楔子韩门的困境>楔子：韩门的困境</a></li><li><a href=#第一节初入云上仙境>第一节：初入云上仙境</a></li><li><a href=#第二节洞天法宝pod>第二节：洞天法宝——Pod</a></li><li><a href=#第三节化身万千deployment>第三节：化身万千——Deployment</a></li><li><a href=#第四节南天门与接引仙使service与ingress>第四节：南天门与接引仙使——Service与Ingress</a></li><li><a href=#第五节宗门传承玉简helm-chart>第五节：宗门传承玉简——Helm Chart</a></li><li><a href=#第六节自动扩缩容hpa>第六节：自动扩缩容——HPA</a></li><li><a href=#第七节配置与密钥管理configmap与secret>第七节：配置与密钥管理——ConfigMap与Secret</a></li><li><a href=#第八节存储管理pv与pvc>第八节：存储管理——PV与PVC</a></li><li><a href=#第九节命名空间与资源配额>第九节：命名空间与资源配额</a></li><li><a href=#第十节监控与日志prometheus与elk>第十节：监控与日志——Prometheus与ELK</a></li><li><a href=#尾声云原生的真谛>尾声：云原生的真谛</a></li><li><a href=#本章要点总结>本章要点总结</a></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=楔子韩门的困境>楔子：韩门的困境</h2><p>建立韩门后，韩立在源界中声名鹊起。他的微服务架构稳定可靠，能够处理大量的业务请求，赢得了众多客户的信任。</p><p>然而，随着业务规模的不断扩大，韩立发现了一个严重的问题：服务的管理和运维变得越来越困难。</p><p>每当流量增加时，韩立需要手动增加服务器，部署新的服务实例。这个过程需要：</p><ol><li>购买或申请新的服务器</li><li>安装操作系统和依赖</li><li>部署Docker和配置网络</li><li>部署服务并配置监控</li><li>更新负载均衡配置</li></ol><p>整个过程需要数小时甚至数天，响应速度太慢。而且，当流量减少时，服务器资源闲置，造成巨大的浪费。</p><p>更糟糕的是，当某个服务实例崩溃时，需要人工介入才能恢复。如果是在深夜，可能几个小时都无法恢复，严重影响业务。</p><p>&ldquo;这样下去不行&mldr;&ldquo;韩立看着运维团队疲惫的身影，心中涌起一股无力感。</p><p>他听说，在源界的高层，有一个叫做"云上仙境"的地方。那里有一种叫做"Kubernetes"的天道意志，可以自动调度资源、管理服务、实现扩缩容和自愈。</p><p>&ldquo;我一定要飞升上界，掌握Kubernetes！&ldquo;韩立下定了决心。</p><hr><h2 id=第一节初入云上仙境>第一节：初入云上仙境</h2><p>经过数月的准备，韩立终于踏上了飞升之路。他带着韩门的所有服务，来到了云上仙境。</p><p>云上仙境，是一个由无数服务器组成的巨大集群。这里的服务器被称为"节点&rdquo;（Node），分为两种：</p><ul><li><strong>Master节点</strong>：控制节点，负责整个集群的管理和调度</li><li><strong>Worker节点</strong>：工作节点，负责运行实际的业务服务</li></ul><p>韩立刚进入云上仙境，就感受到了一股强大的意志——这就是<strong>Kubernetes</strong>，云上仙境的天道意志。</p><p>Kubernetes（简称K8s）是一个容器编排系统，它的核心思想是"声明式API&rdquo;——你只需要告诉它你想要的状态，它会自动帮你实现。</p><p>比如，你想要3个用户服务的实例运行，你只需要声明：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>apps/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Deployment</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>replicas</span>: <span style=color:#ae81ff>3</span>  <span style=color:#75715e># 我想要3个实例</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>template</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>image</span>: <span style=color:#ae81ff>user-service:1.0.0</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>containerPort</span>: <span style=color:#ae81ff>8080</span>
+</span></span></code></pre></div><p>Kubernetes会自动：</p><ol><li>检查当前有多少个实例在运行</li><li>如果少于3个，创建新的实例</li><li>如果多于3个，删除多余的实例</li><li>如果某个实例崩溃，自动重启或创建新的实例</li></ol><p>这就是"言出法随&rdquo;——你只需要声明想要的状态，Kubernetes会自动帮你达成。</p><hr><h2 id=第二节洞天法宝pod>第二节：洞天法宝——Pod</h2><p>在Kubernetes中，最小的部署单元是<strong>Pod</strong>。Pod就像源界中的"洞天法宝&rdquo;，是一个独立的运行环境，可以包含一个或多个容器。</p><p>韩立创建了他的第一个Pod：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>user-service:1.0.0</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>containerPort</span>: <span style=color:#ae81ff>8080</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>resources</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>requests</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>memory</span>: <span style=color:#e6db74>&#34;256Mi&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>cpu</span>: <span style=color:#e6db74>&#34;100m&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>limits</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>memory</span>: <span style=color:#e6db74>&#34;512Mi&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>cpu</span>: <span style=color:#e6db74>&#34;500m&#34;</span>
+</span></span></code></pre></div><p>Pod的特点：</p><ul><li><strong>资源共享</strong>：Pod内的容器共享网络和存储</li><li><strong>生命周期</strong>：Pod是短暂的，可能会被创建、删除、重启</li><li><strong>调度</strong>：Kubernetes会自动将Pod调度到合适的节点上</li></ul><p>但直接创建Pod有一个问题：如果Pod崩溃，Kubernetes不会自动重启它。所以，通常使用<strong>Deployment</strong>来管理Pod。</p><hr><h2 id=第三节化身万千deployment>第三节：化身万千——Deployment</h2><p>Deployment是Kubernetes中管理Pod的主要方式。它就像"化身万千"的神通，可以创建多个相同的Pod实例，并自动管理它们的生命周期。</p><p>韩立创建了一个Deployment：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>apps/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Deployment</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>replicas</span>: <span style=color:#ae81ff>3</span>  <span style=color:#75715e># 3个实例</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>template</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>image</span>: <span style=color:#ae81ff>user-service:1.0.0</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>containerPort</span>: <span style=color:#ae81ff>8080</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>livenessProbe</span>:    <span style=color:#75715e># 存活探针</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>httpGet</span>:
+</span></span><span style=display:flex><span>            <span style=color:#f92672>path</span>: <span style=color:#ae81ff>/health</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>port</span>: <span style=color:#ae81ff>8080</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>initialDelaySeconds</span>: <span style=color:#ae81ff>30</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>periodSeconds</span>: <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>readinessProbe</span>:   <span style=color:#75715e># 就绪探针</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>httpGet</span>:
+</span></span><span style=display:flex><span>            <span style=color:#f92672>path</span>: <span style=color:#ae81ff>/ready</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>port</span>: <span style=color:#ae81ff>8080</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>initialDelaySeconds</span>: <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>periodSeconds</span>: <span style=color:#ae81ff>5</span>
+</span></span></code></pre></div><p>Deployment的功能：</p><ol><li><strong>副本管理</strong>：自动维护指定数量的Pod实例</li><li><strong>滚动更新</strong>：更新时，逐步替换旧Pod，实现无损更新</li><li><strong>回滚</strong>：如果新版本有问题，可以快速回滚到旧版本</li><li><strong>自愈</strong>：如果Pod崩溃，自动重启或创建新的Pod</li></ol><p>当需要更新服务时，韩立只需要修改镜像版本：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>template</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>image</span>: <span style=color:#ae81ff>user-service:1.1.0 </span> <span style=color:#75715e># 新版本</span>
+</span></span></code></pre></div><p>Kubernetes会自动执行滚动更新：</p><ol><li>创建新版本的Pod</li><li>等待新Pod就绪</li><li>将流量切换到新Pod</li><li>删除旧Pod</li></ol><p>整个过程平滑无感，不会中断服务。这就是"道统的无损更迭"。</p><hr><h2 id=第四节南天门与接引仙使service与ingress>第四节：南天门与接引仙使——Service与Ingress</h2><p>Pod是动态的，可能会被创建、删除、重启，IP地址也会变化。那么，其他服务如何访问它呢？</p><p>这就是<strong>Service</strong>的作用。Service就像"南天门"，为Pod提供稳定的访问入口。</p><p>韩立创建了一个Service：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service </span> <span style=color:#75715e># 选择标签为app=user-service的Pod</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>TCP</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>port</span>: <span style=color:#ae81ff>80</span>          <span style=color:#75715e># Service的端口</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>targetPort</span>: <span style=color:#ae81ff>8080</span>   <span style=color:#75715e># Pod的端口</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>type</span>: <span style=color:#ae81ff>ClusterIP     </span> <span style=color:#75715e># 集群内部访问</span>
+</span></span></code></pre></div><p>Service的工作原理：</p><ol><li><strong>标签选择器</strong>：通过标签选择要代理的Pod</li><li><strong>负载均衡</strong>：将请求分发到多个Pod实例</li><li><strong>服务发现</strong>：通过DNS名称访问，如<code>user-service.default.svc.cluster.local</code></li></ol><p>但Service只能在集群内部访问。如果要从外部访问，需要使用<strong>Ingress</strong>。</p><p>Ingress就像"接引仙使"，负责将外部请求路由到集群内部的服务。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.k8s.io/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Ingress</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-ingress</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>rules</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user.example.com</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>http</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>paths</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>path</span>: <span style=color:#ae81ff>/</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>pathType</span>: <span style=color:#ae81ff>Prefix</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>backend</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>service</span>:
+</span></span><span style=display:flex><span>            <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>port</span>:
+</span></span><span style=display:flex><span>              <span style=color:#f92672>number</span>: <span style=color:#ae81ff>80</span>
+</span></span></code></pre></div><p>Ingress需要配合Ingress Controller（如Nginx、Traefik）使用，它会：</p><ol><li>监听80/443端口</li><li>根据域名和路径路由到对应的Service</li><li>支持SSL/TLS终止</li><li>支持负载均衡和限流</li></ol><p>这样，外部用户就可以通过<code>https://user.example.com</code>访问用户服务了。</p><hr><h2 id=第五节宗门传承玉简helm-chart>第五节：宗门传承玉简——Helm Chart</h2><p>随着服务的增多，韩立发现管理Kubernetes资源变得越来越复杂。每个服务都需要创建Deployment、Service、ConfigMap、Secret等多个资源，而且配置繁琐。</p><p>韩立想起了源界中的"宗门传承玉简"——<strong>Helm Chart</strong>。</p><p>Helm是Kubernetes的包管理工具，可以将一组相关的Kubernetes资源打包成一个Chart，实现一键部署。</p><p>韩立创建了他的第一个Chart：</p><pre tabindex=0><code>user-service/
+├── Chart.yaml          # Chart的元数据
+├── values.yaml         # 默认配置值
+└── templates/          # 模板文件
+    ├── deployment.yaml
+    ├── service.yaml
+    └── configmap.yaml
+</code></pre><p>Chart.yaml：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v2</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>description</span>: <span style=color:#ae81ff>用户服务Chart</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>version</span>: <span style=color:#ae81ff>1.0.0</span>
+</span></span></code></pre></div><p>values.yaml：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>replicaCount</span>: <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>image</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>repository</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#34;1.0.0&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>service</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>type</span>: <span style=color:#ae81ff>ClusterIP</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>port</span>: <span style=color:#ae81ff>80</span>
+</span></span></code></pre></div><p>templates/deployment.yaml：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>apps/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Deployment</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: {{ <span style=color:#ae81ff>.Values.name }}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>replicas</span>: {{ <span style=color:#ae81ff>.Values.replicaCount }}</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>template</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: {{ <span style=color:#ae81ff>.Values.name }}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>image</span>: <span style=color:#e6db74>&#34;{{ .Values.image.repository }}:{{ .Values.image.tag }}&#34;</span>
+</span></span></code></pre></div><p>使用Helm部署：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 安装</span>
+</span></span><span style=display:flex><span>helm install user-service ./user-service
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 升级</span>
+</span></span><span style=display:flex><span>helm upgrade user-service ./user-service
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 回滚</span>
+</span></span><span style=display:flex><span>helm rollback user-service <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 卸载</span>
+</span></span><span style=display:flex><span>helm uninstall user-service
+</span></span></code></pre></div><p>这样，韩立就可以将整个"韩门"打包成多个Chart，实现"道统"的标准化传播。无论是部署到新环境，还是分享给其他宗门，都变得非常简单。</p><hr><h2 id=第六节自动扩缩容hpa>第六节：自动扩缩容——HPA</h2><p>在云上仙境中，韩立还掌握了一个强大的神通——<strong>自动扩缩容</strong>（HPA，Horizontal Pod Autoscaler）。</p><p>HPA可以根据CPU、内存等指标，自动调整Pod的数量。当负载增加时，自动增加Pod；当负载减少时，自动减少Pod。</p><p>韩立创建了一个HPA：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>autoscaling/v2</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>HorizontalPodAutoscaler</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-hpa</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>scaleTargetRef</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>apps/v1</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Deployment</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>minReplicas</span>: <span style=color:#ae81ff>3</span>      <span style=color:#75715e># 最少3个实例</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>maxReplicas</span>: <span style=color:#ae81ff>10</span>     <span style=color:#75715e># 最多10个实例</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>metrics</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>type</span>: <span style=color:#ae81ff>Resource</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>resource</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>name</span>: <span style=color:#ae81ff>cpu</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>target</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>type</span>: <span style=color:#ae81ff>Utilization</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>averageUtilization</span>: <span style=color:#ae81ff>70</span>  <span style=color:#75715e># CPU使用率超过70%时扩容</span>
+</span></span></code></pre></div><p>HPA的工作原理：</p><ol><li><strong>监控指标</strong>：定期收集Pod的CPU、内存等指标</li><li><strong>计算目标</strong>：根据目标使用率计算需要的Pod数量</li><li><strong>调整副本</strong>：自动调整Deployment的replicas数量</li></ol><p>当流量突然增加，CPU使用率超过70%时，HPA会自动增加Pod数量，最高到10个。当流量减少，CPU使用率降低时，HPA会自动减少Pod数量，最低到3个。</p><p>这样，韩立就不需要手动管理服务的扩缩容了，系统会根据实际负载自动调整。</p><hr><h2 id=第七节配置与密钥管理configmap与secret>第七节：配置与密钥管理——ConfigMap与Secret</h2><p>在Kubernetes中，配置和密钥的管理有专门的方式：<strong>ConfigMap</strong>和<strong>Secret</strong>。</p><p><strong>ConfigMap</strong>：存储非敏感的配置数据</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ConfigMap</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-config</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>data</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>database.host</span>: <span style=color:#e6db74>&#34;mysql-service&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>database.port</span>: <span style=color:#e6db74>&#34;3306&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>cache.expireTime</span>: <span style=color:#e6db74>&#34;3600&#34;</span>
+</span></span></code></pre></div><p>在Pod中使用：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>DB_HOST</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>valueFrom</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>configMapKeyRef</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-config</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>key</span>: <span style=color:#ae81ff>database.host</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumeMounts</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>config</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>mountPath</span>: <span style=color:#ae81ff>/etc/config</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>config</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>configMap</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-config</span>
+</span></span></code></pre></div><p><strong>Secret</strong>：存储敏感数据，如密码、密钥等</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Secret</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-secret</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>type</span>: <span style=color:#ae81ff>Opaque</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>data</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>password</span>: <span style=color:#ae81ff>cGFzc3dvcmQxMjM= </span> <span style=color:#75715e># base64编码</span>
+</span></span></code></pre></div><p>在Pod中使用：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>DB_PASSWORD</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>valueFrom</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>secretKeyRef</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-secret</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>key</span>: <span style=color:#ae81ff>password</span>
+</span></span></code></pre></div><p>这样，配置和密钥就与代码分离了，可以独立管理和更新，无需重新构建镜像。</p><hr><h2 id=第八节存储管理pv与pvc>第八节：存储管理——PV与PVC</h2><p>在Kubernetes中，Pod是短暂的，可能会被删除和重建。那么，数据如何持久化呢？</p><p>这就是**PersistentVolume（PV）<strong>和</strong>PersistentVolumeClaim（PVC）**的作用。</p><p>PV是集群中的存储资源，由管理员创建：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>PersistentVolume</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>mysql-pv</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>capacity</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>storage</span>: <span style=color:#ae81ff>10Gi</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>accessModes</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#ae81ff>ReadWriteOnce</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>persistentVolumeReclaimPolicy</span>: <span style=color:#ae81ff>Retain</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>storageClassName</span>: <span style=color:#ae81ff>fast-ssd</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hostPath</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>path</span>: <span style=color:#ae81ff>/data/mysql</span>
+</span></span></code></pre></div><p>PVC是Pod对存储的请求：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>PersistentVolumeClaim</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>mysql-pvc</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>accessModes</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#ae81ff>ReadWriteOnce</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>resources</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>requests</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>storage</span>: <span style=color:#ae81ff>10Gi</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>storageClassName</span>: <span style=color:#ae81ff>fast-ssd</span>
+</span></span></code></pre></div><p>在Pod中使用：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>mysql</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumeMounts</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>mysql-storage</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>mountPath</span>: <span style=color:#ae81ff>/var/lib/mysql</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>mysql-storage</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>persistentVolumeClaim</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>claimName</span>: <span style=color:#ae81ff>mysql-pvc</span>
+</span></span></code></pre></div><p>这样，即使Pod被删除，数据也会保留在PV中。当新的Pod创建时，可以挂载同一个PV，继续使用之前的数据。</p><hr><h2 id=第九节命名空间与资源配额>第九节：命名空间与资源配额</h2><p>随着韩门在云上仙境中的发展，韩立发现需要更好的资源管理方式。他创建了<strong>命名空间</strong>（Namespace）来隔离不同的环境：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Namespace</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>production</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Namespace</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>development</span>
+</span></span></code></pre></div><p>然后，他为每个命名空间设置了<strong>资源配额</strong>（ResourceQuota）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ResourceQuota</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>production-quota</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>namespace</span>: <span style=color:#ae81ff>production</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hard</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>requests.cpu</span>: <span style=color:#e6db74>&#34;10&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>requests.memory</span>: <span style=color:#ae81ff>20Gi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>limits.cpu</span>: <span style=color:#e6db74>&#34;20&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>limits.memory</span>: <span style=color:#ae81ff>40Gi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>persistentvolumeclaims</span>: <span style=color:#e6db74>&#34;10&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>pods</span>: <span style=color:#e6db74>&#34;50&#34;</span>
+</span></span></code></pre></div><p>这样，生产环境和开发环境就被隔离了，每个环境都有独立的资源限制，不会相互影响。</p><hr><h2 id=第十节监控与日志prometheus与elk>第十节：监控与日志——Prometheus与ELK</h2><p>在云上仙境中，监控和日志收集也是必不可少的。韩立集成了<strong>Prometheus</strong>和<strong>ELK</strong>：</p><p><strong>Prometheus</strong>：指标收集和告警</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ServiceMonitor</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-monitor</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>endpoints</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>port</span>: <span style=color:#ae81ff>metrics</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>interval</span>: <span style=color:#ae81ff>30s</span>
+</span></span></code></pre></div><p><strong>ELK</strong>：日志收集和分析</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ConfigMap</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>filebeat-config</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>data</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>filebeat.yml</span>: |<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    filebeat.inputs:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - type: container
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      paths:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        - /var/log/containers/*.log
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    output.elasticsearch:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      hosts: [&#34;elasticsearch:9200&#34;]</span>
+</span></span></code></pre></div><p>通过监控和日志，韩立可以实时了解系统的运行状态，及时发现和解决问题。</p><hr><h2 id=尾声云原生的真谛>尾声：云原生的真谛</h2><p>经过数月的修炼，韩立终于掌握了Kubernetes的精髓。他意识到，云原生的真谛不仅仅是容器化和编排，更是一种思想：</p><ol><li><strong>声明式API</strong>：描述想要的状态，而不是如何实现</li><li><strong>自动化</strong>：让系统自动管理资源、扩缩容、自愈</li><li><strong>可观测性</strong>：通过监控、日志、链路追踪，全面了解系统状态</li><li><strong>弹性</strong>：根据负载自动调整，实现资源的最优利用</li></ol><p>&ldquo;云原生，我终于掌握了！&ldquo;韩立看着在Kubernetes上稳定运行的韩门，心中涌起一股成就感。</p><p>但他知道，这还不是终点。在源界中，还有更高级的修炼方式——服务网格（Service Mesh），可以实现更精细化的服务治理。</p><p>&ldquo;下一站，服务网格！&ldquo;韩立眼中闪烁着坚定的光芒。</p><hr><h2 id=本章要点总结>本章要点总结</h2><ol><li><strong>Kubernetes核心概念</strong>：Pod、Deployment、Service、Ingress</li><li><strong>声明式API</strong>：描述想要的状态，Kubernetes自动实现</li><li><strong>滚动更新</strong>：实现服务的无损更新</li><li><strong>自动扩缩容</strong>：根据负载自动调整Pod数量</li><li><strong>配置管理</strong>：使用ConfigMap和Secret管理配置和密钥</li><li><strong>存储管理</strong>：使用PV和PVC实现数据持久化</li><li><strong>Helm Chart</strong>：打包和管理Kubernetes资源</li><li><strong>监控与日志</strong>：集成Prometheus和ELK实现可观测性</li></ol><p>下一章，韩立将学习服务网格，实现更精细化的服务治理。</p></div><div class="post__tags tags clearfix"><svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373.0-.74-.24-1-.5L1 8A2.853 2.853.0 01.3 7C.113 6.55.0 5.973.0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034.0 1.4.0h4.2c.373.0.95.113 1.4.3s.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5.0 100-3 1.5 1.5.0 000 3z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/Kubernetes/ rel=tag>Kubernetes</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/ rel=tag>云原生</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92/ rel=tag>容器编排</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E6%9E%B6%E6%9E%84%E4%BF%AE%E4%BB%99/ rel=tag>架构修仙</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="wu guojun avatar" src=/img/QR.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>关于 wu guojun</span></div><div class=authorbox__description>北京牛马，高级 CV工程狮</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--prev"><a class=post-nav__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BC%80%E5%AE%97%E7%AB%8B%E6%B4%BE%E5%88%86%E5%B8%83%E5%BC%8F%E4%BF%AE%E7%9C%9F/ rel=prev><span class=post-nav__caption>«&#8201;上一篇</span><p class=post-nav__post-title>第二章：开宗立派 · 分布式修真</p></a></div><div class="post-nav__item post-nav__item--next"><a class=post-nav__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%A7%84%E5%88%99%E5%85%A5%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC/ rel=next><span class=post-nav__caption>下一篇&#8201;»</span><p class=post-nav__post-title>第四章：规则入微 · 服务网格</p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2025 补漏砖匠.
+<span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/quiz.js></script><script src=/js/ai-quiz.js></script></body></html>

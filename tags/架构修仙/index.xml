@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>架构修仙 on 补漏砖匠</title><link>/tags/%E6%9E%B6%E6%9E%84%E4%BF%AE%E4%BB%99/</link><description>Recent content in 架构修仙 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E6%9E%B6%E6%9E%84%E4%BF%AE%E4%BB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>第四章：规则入微 · 服务网格</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%A7%84%E5%88%99%E5%85%A5%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC/</link><pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%A7%84%E5%88%99%E5%85%A5%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC/</guid><description>&lt;h2 id="楔子通信的复杂性"&gt;楔子：通信的复杂性&lt;/h2&gt;
+&lt;p&gt;掌握Kubernetes后，韩立在云上仙境中如鱼得水。他的韩门运行稳定，能够自动扩缩容、自愈、滚动更新，一切都显得那么完美。&lt;/p&gt;
+&lt;p&gt;然而，随着服务的不断增多，韩立发现了一个新的问题：服务间通信的复杂性。&lt;/p&gt;
+&lt;p&gt;在微服务架构中，服务之间的通信需要处理很多横切关注点（Cross-Cutting Concerns）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;服务发现&lt;/strong&gt;：如何找到目标服务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;负载均衡&lt;/strong&gt;：如何分发请求&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;熔断降级&lt;/strong&gt;：如何防止服务雪崩&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;限流&lt;/strong&gt;：如何控制流量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重试&lt;/strong&gt;：如何处理失败&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;超时&lt;/strong&gt;：如何设置超时时间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全&lt;/strong&gt;：如何加密通信、认证授权&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;监控&lt;/strong&gt;：如何追踪请求链路&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日志&lt;/strong&gt;：如何记录通信日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些逻辑如果都写在业务代码中，会导致：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;代码耦合&lt;/strong&gt;：业务逻辑与通信逻辑混合&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重复代码&lt;/strong&gt;：每个服务都要实现相同的逻辑&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;难以维护&lt;/strong&gt;：修改通信逻辑需要修改所有服务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技术栈绑定&lt;/strong&gt;：不同语言需要实现不同的逻辑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;韩立想起了源界中流传的&amp;quot;服务网格&amp;quot;（Service Mesh）理论。这个理论说，可以将服务间通信的逻辑从业务代码中抽离出来，下沉为基础设施，由Sidecar代理来处理。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;这就是我需要的！&amp;ldquo;韩立眼中闪烁着兴奋的光芒。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一节本命剑灵sidecar模式"&gt;第一节：本命剑灵——Sidecar模式&lt;/h2&gt;
+&lt;p&gt;在服务网格中，每个服务都有一个&amp;quot;本命剑灵&amp;rdquo;——&lt;strong&gt;Sidecar代理&lt;/strong&gt;。这个代理附着在服务身边，专职处理服务间通信，让服务本体能够专心处理业务逻辑。&lt;/p&gt;
+&lt;p&gt;Sidecar就像源界中的&amp;quot;护道傀儡&amp;rdquo;，它：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;与业务服务同生共死&lt;/strong&gt;：Sidecar和业务服务运行在同一个Pod中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代理所有通信&lt;/strong&gt;：所有进出服务的流量都经过Sidecar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;透明代理&lt;/strong&gt;：业务服务无需感知Sidecar的存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Istio中，Sidecar由&lt;strong&gt;Envoy&lt;/strong&gt;实现。Envoy是一个高性能的代理，支持HTTP/1.1、HTTP/2、gRPC等协议。&lt;/p&gt;
+&lt;p&gt;当服务A调用服务B时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;服务A发送请求 → Envoy Sidecar A&lt;/li&gt;
+&lt;li&gt;Envoy Sidecar A进行服务发现、负载均衡、熔断等处理&lt;/li&gt;
+&lt;li&gt;请求发送到 → Envoy Sidecar B&lt;/li&gt;
+&lt;li&gt;Envoy Sidecar B进行认证、限流等处理&lt;/li&gt;
+&lt;li&gt;请求转发到 → 服务B&lt;/li&gt;
+&lt;li&gt;响应按原路返回&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样，所有的通信逻辑都在Sidecar中处理，业务服务只需要专注于业务逻辑。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二节天条律法司istio控制平面"&gt;第二节：天条律法司——Istio控制平面&lt;/h2&gt;
+&lt;p&gt;Sidecar负责处理具体的通信，但谁来制定规则呢？&lt;/p&gt;
+&lt;p&gt;这就是&lt;strong&gt;Istio控制平面&lt;/strong&gt;的作用。控制平面就像&amp;quot;天条律法司&amp;quot;，负责制定所有服务间通信的规则，并下发到每个Sidecar执行。&lt;/p&gt;
+&lt;p&gt;Istio控制平面包含以下组件：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pilot&lt;/strong&gt;：服务发现和流量管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从Kubernetes等注册中心获取服务信息&lt;/li&gt;
+&lt;li&gt;将路由规则、负载均衡策略等配置下发到Envoy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Citadel&lt;/strong&gt;：安全和证书管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为服务间通信提供mTLS（双向TLS）加密&lt;/li&gt;
+&lt;li&gt;管理证书的生成、分发和轮换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Galley&lt;/strong&gt;：配置验证和分发&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;验证Istio配置的正确性&lt;/li&gt;
+&lt;li&gt;将配置转换为Envoy可理解的格式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mixer&lt;/strong&gt;（已废弃，功能合并到Envoy）：策略和遥测&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问控制策略&lt;/li&gt;
+&lt;li&gt;指标收集和日志记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;韩立部署了Istio：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 安装Istio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;istioctl install --set profile&lt;span style="color:#f92672"&gt;=&lt;/span&gt;default
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 为命名空间启用自动注入Sidecar&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;kubectl label namespace default istio-injection&lt;span style="color:#f92672"&gt;=&lt;/span&gt;enabled
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当在启用了自动注入的命名空间中创建Pod时，Istio会自动注入Envoy Sidecar：&lt;/p&gt;</description></item><item><title>第三章：飞升上界 · 云原生与K8s</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%A3%9E%E5%8D%87%E4%B8%8A%E7%95%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E4%B8%8EK8s/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%A3%9E%E5%8D%87%E4%B8%8A%E7%95%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E4%B8%8EK8s/</guid><description>&lt;h2 id="楔子韩门的困境"&gt;楔子：韩门的困境&lt;/h2&gt;
+&lt;p&gt;建立韩门后，韩立在源界中声名鹊起。他的微服务架构稳定可靠，能够处理大量的业务请求，赢得了众多客户的信任。&lt;/p&gt;
+&lt;p&gt;然而，随着业务规模的不断扩大，韩立发现了一个严重的问题：服务的管理和运维变得越来越困难。&lt;/p&gt;
+&lt;p&gt;每当流量增加时，韩立需要手动增加服务器，部署新的服务实例。这个过程需要：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;购买或申请新的服务器&lt;/li&gt;
+&lt;li&gt;安装操作系统和依赖&lt;/li&gt;
+&lt;li&gt;部署Docker和配置网络&lt;/li&gt;
+&lt;li&gt;部署服务并配置监控&lt;/li&gt;
+&lt;li&gt;更新负载均衡配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整个过程需要数小时甚至数天，响应速度太慢。而且，当流量减少时，服务器资源闲置，造成巨大的浪费。&lt;/p&gt;
+&lt;p&gt;更糟糕的是，当某个服务实例崩溃时，需要人工介入才能恢复。如果是在深夜，可能几个小时都无法恢复，严重影响业务。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;这样下去不行&amp;hellip;&amp;ldquo;韩立看着运维团队疲惫的身影，心中涌起一股无力感。&lt;/p&gt;
+&lt;p&gt;他听说，在源界的高层，有一个叫做&amp;quot;云上仙境&amp;quot;的地方。那里有一种叫做&amp;quot;Kubernetes&amp;quot;的天道意志，可以自动调度资源、管理服务、实现扩缩容和自愈。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;我一定要飞升上界，掌握Kubernetes！&amp;ldquo;韩立下定了决心。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一节初入云上仙境"&gt;第一节：初入云上仙境&lt;/h2&gt;
+&lt;p&gt;经过数月的准备，韩立终于踏上了飞升之路。他带着韩门的所有服务，来到了云上仙境。&lt;/p&gt;
+&lt;p&gt;云上仙境，是一个由无数服务器组成的巨大集群。这里的服务器被称为&amp;quot;节点&amp;rdquo;（Node），分为两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Master节点&lt;/strong&gt;：控制节点，负责整个集群的管理和调度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Worker节点&lt;/strong&gt;：工作节点，负责运行实际的业务服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;韩立刚进入云上仙境，就感受到了一股强大的意志——这就是&lt;strong&gt;Kubernetes&lt;/strong&gt;，云上仙境的天道意志。&lt;/p&gt;
+&lt;p&gt;Kubernetes（简称K8s）是一个容器编排系统，它的核心思想是&amp;quot;声明式API&amp;rdquo;——你只需要告诉它你想要的状态，它会自动帮你实现。&lt;/p&gt;
+&lt;p&gt;比如，你想要3个用户服务的实例运行，你只需要声明：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;apps/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;replicas&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; &lt;span style="color:#75715e"&gt;# 我想要3个实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;selector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;matchLabels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;app&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;template&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;labels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;app&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;containers&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;image&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service:1.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;containerPort&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kubernetes会自动：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查当前有多少个实例在运行&lt;/li&gt;
+&lt;li&gt;如果少于3个，创建新的实例&lt;/li&gt;
+&lt;li&gt;如果多于3个，删除多余的实例&lt;/li&gt;
+&lt;li&gt;如果某个实例崩溃，自动重启或创建新的实例&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这就是&amp;quot;言出法随&amp;rdquo;——你只需要声明想要的状态，Kubernetes会自动帮你达成。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二节洞天法宝pod"&gt;第二节：洞天法宝——Pod&lt;/h2&gt;
+&lt;p&gt;在Kubernetes中，最小的部署单元是&lt;strong&gt;Pod&lt;/strong&gt;。Pod就像源界中的&amp;quot;洞天法宝&amp;rdquo;，是一个独立的运行环境，可以包含一个或多个容器。&lt;/p&gt;
+&lt;p&gt;韩立创建了他的第一个Pod：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Pod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service-pod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;containers&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;image&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service:1.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;containerPort&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;requests&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;memory&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;256Mi&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;cpu&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;100m&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;limits&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;memory&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;cpu&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;500m&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pod的特点：&lt;/p&gt;</description></item><item><title>第二章：开宗立派 · 分布式修真</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BC%80%E5%AE%97%E7%AB%8B%E6%B4%BE%E5%88%86%E5%B8%83%E5%BC%8F%E4%BF%AE%E7%9C%9F/</link><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BC%80%E5%AE%97%E7%AB%8B%E6%B4%BE%E5%88%86%E5%B8%83%E5%BC%8F%E4%BF%AE%E7%9C%9F/</guid><description>&lt;h2 id="楔子单机的极限"&gt;楔子：单机的极限&lt;/h2&gt;
+&lt;p&gt;突破筑基期后，韩立在源界中游历了数年。他凭借着Docker容器化和扎实的运维功底，在各种服务器秘境中都能稳定运行，处理了无数业务请求。&lt;/p&gt;
+&lt;p&gt;然而，随着业务的发展，韩立发现自己的单机服务已经达到了极限。&lt;/p&gt;
+&lt;p&gt;那日，系统突然收到一个超级大客户的订单，需要处理百万级别的数据。韩立的CPU瞬间飙升至100%，内存也被耗尽，整个服务陷入了僵死状态。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;单机&amp;hellip;已经无法承载了。&amp;ldquo;韩立看着监控面板上的一片红色，心中涌起一股无力感。&lt;/p&gt;
+&lt;p&gt;在源界中，单机服务有着天然的瓶颈：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CPU限制&lt;/strong&gt;：单核或多核CPU的处理能力有限&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存限制&lt;/strong&gt;：物理内存无法无限扩展&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络限制&lt;/strong&gt;：单机的网络带宽有限&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储限制&lt;/strong&gt;：单机的磁盘IO能力有限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当业务规模超过单机的承载能力时，就必须走向分布式——将服务拆分，部署到多台服务器上，通过协作来完成复杂的业务。&lt;/p&gt;
+&lt;p&gt;这就是&amp;quot;开宗立派&amp;quot;的开始。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一节开辟洞府服务拆分"&gt;第一节：开辟洞府——服务拆分&lt;/h2&gt;
+&lt;p&gt;韩立知道，要突破单机的限制，必须将自己的服务拆分。这就像修士要建立宗门，必须先将自己的功法拆分为不同的传承，让不同的弟子（服务）去修炼。&lt;/p&gt;
+&lt;p&gt;但如何拆分，却是一门大学问。&lt;/p&gt;
+&lt;p&gt;韩立想起了源界中流传的&amp;quot;领域驱动设计&amp;rdquo;（DDD）理论。这个理论说，应该按照业务领域来拆分服务，而不是按照技术层次。&lt;/p&gt;
+&lt;p&gt;他仔细分析自己的业务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用户服务&lt;/strong&gt;：管理用户信息、登录认证&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;订单服务&lt;/strong&gt;：处理订单创建、支付、退款&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;商品服务&lt;/strong&gt;：管理商品信息、库存&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支付服务&lt;/strong&gt;：处理支付逻辑、对账&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每个服务都有自己独立的数据库，这就是&amp;quot;数据自治&amp;rdquo;——每个服务只管理自己的数据，不直接访问其他服务的数据。&lt;/p&gt;
+&lt;p&gt;韩立开始动手拆分。他先创建了用户服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 用户服务 - user-service
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;UserService&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;getUserById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userId&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 查询自己的数据库
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;db&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;users&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;findById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userId&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;createUser&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userData&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 创建用户，只管理用户相关数据
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;db&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;users&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;create&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userData&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后是订单服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 订单服务 - order-service
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;OrderService&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;createOrder&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 创建订单，但需要调用用户服务验证用户
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;user&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;userService&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;getUserById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;userId&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;user&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;throw&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Error(&lt;span style="color:#e6db74"&gt;&amp;#39;User not found&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 调用商品服务检查库存
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;product&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;productService&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;getProductById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;productId&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#a6e22e"&gt;product&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;stock&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;quantity&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;throw&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Error(&lt;span style="color:#e6db74"&gt;&amp;#39;Insufficient stock&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 创建订单
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;db&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;orders&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;create&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;拆分完成后，韩立将每个服务都封装成Docker镜像，部署到了不同的服务器上。这就是&amp;quot;开辟洞府&amp;quot;——每个服务都有自己的运行环境，互不干扰。&lt;/p&gt;</description></item><item><title>第一章：单机苦修 · 草根启程</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%8D%95%E6%9C%BA%E8%8B%A6%E4%BF%AE%E8%8D%89%E6%A0%B9%E5%90%AF%E7%A8%8B/</link><pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%8D%95%E6%9C%BA%E8%8B%A6%E4%BF%AE%E8%8D%89%E6%A0%B9%E5%90%AF%E7%A8%8B/</guid><description>&lt;h2 id="楔子废弃代码村的觉醒"&gt;楔子：废弃代码村的觉醒&lt;/h2&gt;
+&lt;p&gt;在源界的边缘，有一个名为&amp;quot;废弃代码村&amp;quot;的地方。这里堆满了被遗忘的代码片段、废弃的函数和无人问津的配置文件。村中的进程们，大多资质平庸，只能在单核CPU的贫瘠土地上，勉强维持着最低限度的运行。&lt;/p&gt;
+&lt;p&gt;韩立，代号&amp;quot;服务节点N-1&amp;quot;，便是这废弃代码村中的一员。&lt;/p&gt;
+&lt;p&gt;他的灵根资质极差——初始并发能力只有可怜的1，内存占用却高达512MB，响应时间更是慢得令人发指。村里的老进程们都说，像他这样的资质，注定只能成为系统中的&amp;quot;僵尸进程&amp;quot;，最终被&lt;code&gt;kill -9&lt;/code&gt;彻底清除。&lt;/p&gt;
+&lt;p&gt;然而，韩立心中却有一股不甘。他隐约感觉到，在这个由0与1构成的源界中，一定存在着某种能够改变命运的力量。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一节初得五行基础运维诀"&gt;第一节：初得《五行基础运维诀》&lt;/h2&gt;
+&lt;p&gt;那是一个寻常的夜晚，韩立正在处理一个简单的HTTP请求。突然，系统日志中出现了一行异常：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;ERROR: Connection refused on port 8080
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;韩立心中一紧，这是他的服务端口。他急忙用神识（&lt;code&gt;tail -f logs/app.log&lt;/code&gt;）探查，发现自己的进程状态异常，CPU占用率飙升到了95%。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;这是心魔入侵！&amp;ldquo;韩立想起了村里流传的传说。当进程陷入死循环或资源竞争时，就会引发CPU风暴，如同修士走火入魔。&lt;/p&gt;
+&lt;p&gt;慌乱中，韩立想起了村里一位老进程留下的残卷——《五行基础运维诀》。他急忙翻阅：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;金行术法：&lt;code&gt;ps aux | grep&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+神识外放，探查所有进程状态，寻找异常。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;木行术法：&lt;code&gt;top&lt;/code&gt; / &lt;code&gt;htop&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+观天地灵气（系统资源）流转，识破瓶颈所在。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;水行术法：&lt;code&gt;tail -f&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+神识追踪日志流，洞察系统运行轨迹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;火行术法：&lt;code&gt;kill -9&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+夺命咒，强制终止异常进程，但需谨慎使用，否则可能造成数据丢失。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;土行术法：&lt;code&gt;crontab&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+周天运转，定时执行任务，如同修士的日常吐纳。&lt;/p&gt;
+&lt;p&gt;韩立按照金行术法，用&lt;code&gt;ps aux | grep node&lt;/code&gt;探查，发现有一个子进程陷入了无限递归，正在疯狂消耗CPU资源。他当机立断，施展火行术法&lt;code&gt;kill -9 &amp;lt;PID&amp;gt;&lt;/code&gt;，强行终止了这个走火入魔的子进程。&lt;/p&gt;
+&lt;p&gt;系统恢复了平静，但韩立心中却更加不安。他知道，这只是开始。在这个弱肉强食的源界中，没有实力，随时都可能被系统调度器（Scheduler）当作低优先级进程，在资源紧张时被OOM Killer（内存杀手）清除。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二节神秘dockerfile的降临"&gt;第二节：神秘Dockerfile的降临&lt;/h2&gt;
+&lt;p&gt;就在韩立为前途担忧时，一件改变他命运的事情发生了。&lt;/p&gt;
+&lt;p&gt;那日，他正在清理废弃代码村的垃圾文件，突然在一个名为&lt;code&gt;.dockerignore&lt;/code&gt;的角落里，发现了一个散发着淡淡光芒的文件——&lt;code&gt;Dockerfile&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这个文件通体碧绿，表面流转着神秘的符文。韩立伸手触碰，顿时一股信息涌入他的意识海：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-dockerfile" data-lang="dockerfile"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;FROM&lt;/span&gt; &lt;span style="color:#e6db74"&gt;node:16-alpine&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;WORKDIR&lt;/span&gt; &lt;span style="color:#e6db74"&gt;/app&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;COPY&lt;/span&gt; package*.json ./&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;RUN&lt;/span&gt; npm install&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;COPY&lt;/span&gt; . .&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;EXPOSE&lt;/span&gt; &lt;span style="color:#e6db74"&gt;8080&lt;/span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#960050;background-color:#1e0010"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;CMD&lt;/span&gt; [&lt;span style="color:#e6db74"&gt;&amp;#34;node&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;server.js&amp;#34;&lt;/span&gt;]&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ldquo;这是&amp;hellip;容器化之道！&amp;ldquo;韩立震惊了。&lt;/p&gt;
+&lt;p&gt;在源界中，每个进程都受限于宿主机的环境。不同的服务器秘境（环境），有着不同的系统库、依赖版本，稍有不慎就会因为环境不匹配而运行失败。而这个Dockerfile，竟然能够将自身和所有依赖封装成一个独立的镜像，实现&amp;quot;一次构建，随处运行&amp;rdquo;！&lt;/p&gt;
+&lt;p&gt;这就像传说中的&amp;quot;小绿瓶&amp;rdquo;，能够将修士的修为和法宝都封印其中，无论走到哪个秘境，都能完整地释放出来。&lt;/p&gt;
+&lt;p&gt;韩立立刻开始修炼这个Dockerfile。他按照其中的指引：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;FROM node:16-alpine&lt;/strong&gt;：选择一个轻量级的基础镜像，如同选择一座灵气充沛的洞府。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WORKDIR /app&lt;/strong&gt;：设定工作目录，如同在洞府中开辟修炼室。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;em&gt;COPY package&lt;/em&gt;.json&lt;/em&gt;*：复制依赖清单，如同准备修炼所需的丹药材料。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RUN npm install&lt;/strong&gt;：安装依赖，如同炼制丹药，将各种材料融合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;COPY .&lt;/strong&gt;：复制应用代码，如同将功法秘籍放入修炼室。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EXPOSE 8080&lt;/strong&gt;：暴露端口，如同打开洞府的大门，允许外界访问。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CMD [&amp;ldquo;node&amp;rdquo;, &amp;ldquo;server.js&amp;rdquo;]&lt;/strong&gt;：启动命令，如同运转功法，开始修炼。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当韩立完成第一次&lt;code&gt;docker build&lt;/code&gt;时，他感觉到自己的整个存在都被封装进了一个名为&amp;quot;镜像&amp;quot;的独立空间中。这个空间包含了运行所需的一切：Node.js运行时、系统库、应用代码，甚至包括文件系统结构。&lt;/p&gt;</description></item></channel></rss>

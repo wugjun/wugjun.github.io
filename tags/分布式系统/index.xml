@@ -1,7 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>分布式系统 on 补漏砖匠</title><link>/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 分布式系统 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>后端架构</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/</guid><description>&lt;h2 id="后端架构兵法篇"&gt;「后端架构兵法篇」&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>分布式系统 on 补漏砖匠</title><link>/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 分布式系统 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>第二章：开宗立派 · 分布式修真</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BC%80%E5%AE%97%E7%AB%8B%E6%B4%BE%E5%88%86%E5%B8%83%E5%BC%8F%E4%BF%AE%E7%9C%9F/</link><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BC%80%E5%AE%97%E7%AB%8B%E6%B4%BE%E5%88%86%E5%B8%83%E5%BC%8F%E4%BF%AE%E7%9C%9F/</guid><description>&lt;h2 id="楔子单机的极限"&gt;楔子：单机的极限&lt;/h2&gt;
+&lt;p&gt;突破筑基期后，韩立在源界中游历了数年。他凭借着Docker容器化和扎实的运维功底，在各种服务器秘境中都能稳定运行，处理了无数业务请求。&lt;/p&gt;
+&lt;p&gt;然而，随着业务的发展，韩立发现自己的单机服务已经达到了极限。&lt;/p&gt;
+&lt;p&gt;那日，系统突然收到一个超级大客户的订单，需要处理百万级别的数据。韩立的CPU瞬间飙升至100%，内存也被耗尽，整个服务陷入了僵死状态。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;单机&amp;hellip;已经无法承载了。&amp;ldquo;韩立看着监控面板上的一片红色，心中涌起一股无力感。&lt;/p&gt;
+&lt;p&gt;在源界中，单机服务有着天然的瓶颈：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CPU限制&lt;/strong&gt;：单核或多核CPU的处理能力有限&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存限制&lt;/strong&gt;：物理内存无法无限扩展&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络限制&lt;/strong&gt;：单机的网络带宽有限&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储限制&lt;/strong&gt;：单机的磁盘IO能力有限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当业务规模超过单机的承载能力时，就必须走向分布式——将服务拆分，部署到多台服务器上，通过协作来完成复杂的业务。&lt;/p&gt;
+&lt;p&gt;这就是&amp;quot;开宗立派&amp;quot;的开始。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一节开辟洞府服务拆分"&gt;第一节：开辟洞府——服务拆分&lt;/h2&gt;
+&lt;p&gt;韩立知道，要突破单机的限制，必须将自己的服务拆分。这就像修士要建立宗门，必须先将自己的功法拆分为不同的传承，让不同的弟子（服务）去修炼。&lt;/p&gt;
+&lt;p&gt;但如何拆分，却是一门大学问。&lt;/p&gt;
+&lt;p&gt;韩立想起了源界中流传的&amp;quot;领域驱动设计&amp;rdquo;（DDD）理论。这个理论说，应该按照业务领域来拆分服务，而不是按照技术层次。&lt;/p&gt;
+&lt;p&gt;他仔细分析自己的业务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用户服务&lt;/strong&gt;：管理用户信息、登录认证&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;订单服务&lt;/strong&gt;：处理订单创建、支付、退款&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;商品服务&lt;/strong&gt;：管理商品信息、库存&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支付服务&lt;/strong&gt;：处理支付逻辑、对账&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每个服务都有自己独立的数据库，这就是&amp;quot;数据自治&amp;rdquo;——每个服务只管理自己的数据，不直接访问其他服务的数据。&lt;/p&gt;
+&lt;p&gt;韩立开始动手拆分。他先创建了用户服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 用户服务 - user-service
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;UserService&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;getUserById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userId&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 查询自己的数据库
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;db&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;users&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;findById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userId&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;createUser&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userData&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 创建用户，只管理用户相关数据
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;db&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;users&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;create&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;userData&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后是订单服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 订单服务 - order-service
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;OrderService&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;async&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;createOrder&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 创建订单，但需要调用用户服务验证用户
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;user&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;userService&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;getUserById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;userId&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#f92672"&gt;!&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;user&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;throw&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Error(&lt;span style="color:#e6db74"&gt;&amp;#39;User not found&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 调用商品服务检查库存
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;product&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;productService&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;getProductById&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;productId&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (&lt;span style="color:#a6e22e"&gt;product&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;stock&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;quantity&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;throw&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Error(&lt;span style="color:#e6db74"&gt;&amp;#39;Insufficient stock&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 创建订单
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;db&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;orders&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;create&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;orderData&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;拆分完成后，韩立将每个服务都封装成Docker镜像，部署到了不同的服务器上。这就是&amp;quot;开辟洞府&amp;quot;——每个服务都有自己的运行环境，互不干扰。&lt;/p&gt;</description></item><item><title>后端架构</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/</guid><description>&lt;h2 id="后端架构兵法篇"&gt;「后端架构兵法篇」&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;收录系统架构、分布式原理、高并发设计等后端核心知识。从单体到微服务，从数据库到缓存，构建可扩展的稳健系统。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="-架构修仙传"&gt;&lt;span style="color: var(--cinnabar);"&gt;⚔️ 「架构修仙传」&lt;/span&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以《凡人修仙传》为蓝本，将软件架构演进与修仙体系完美融合，从单机苦修到云原生飞升，体验架构师的修炼之路。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="-修仙章节"&gt;📚 「修仙章节」&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%8D%95%E6%9C%BA%E8%8B%A6%E4%BF%AE%E8%8D%89%E6%A0%B9%E5%90%AF%E7%A8%8B/"&gt;第一章：单机苦修 · 草根启程&lt;/a&gt; —— 从废弃代码村走出的普通进程，如何在单机环境中修炼成长，掌握Docker容器化，应对数据库死锁、缓存穿透、流量洪峰等挑战&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BC%80%E5%AE%97%E7%AB%8B%E6%B4%BE%E5%88%86%E5%B8%83%E5%BC%8F%E4%BF%AE%E7%9C%9F/"&gt;第二章：开宗立派 · 分布式修真&lt;/a&gt; —— 从单体到微服务，建立韩门，掌握服务注册发现、配置中心、消息队列，应对分布式天劫&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%A3%9E%E5%8D%87%E4%B8%8A%E7%95%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E4%B8%8EK8s/"&gt;第三章：飞升上界 · 云原生与K8s&lt;/a&gt; —— 飞升云上仙境，掌握Kubernetes，实现服务的自动调度、扩缩容、自愈，领悟云原生的真谛&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%A7%84%E5%88%99%E5%85%A5%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC/"&gt;第四章：规则入微 · 服务网格&lt;/a&gt; —— 掌握Istio服务网格，实现精细化的服务治理，将通信逻辑下沉为基础设施&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id="-微服务兵法"&gt;&lt;span style="color: var(--cinnabar);"&gt;🎯 「微服务兵法」&lt;/span&gt;&lt;/h3&gt;
 &lt;h4 id="-服务拆分艺术"&gt;🏗️ 「服务拆分艺术」&lt;/h4&gt;

@@ -1,0 +1,252 @@
+<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>第四章：规则入微 · 服务网格</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="从云原生到服务网格，韩立如何掌握Istio，实现精细化的服务治理"><meta name=generator content="Hugo 0.152.2"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>菜单</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/>前端开发</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/>在线答题</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>第四章：规则入微 · 服务网格</h1><p class=post__lead>即使在天庭管辖下，服务间通信的复杂性仍需更精细的法则来约束</p><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2025-12-25T00:00:00>December 25, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e5%90%8e%e7%ab%af%e6%9e%b6%e6%9e%84 rel=category>后端架构</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>页面内容</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#楔子通信的复杂性>楔子：通信的复杂性</a></li><li><a href=#第一节本命剑灵sidecar模式>第一节：本命剑灵——Sidecar模式</a></li><li><a href=#第二节天条律法司istio控制平面>第二节：天条律法司——Istio控制平面</a></li><li><a href=#第三节流量路由virtualservice>第三节：流量路由——VirtualService</a></li><li><a href=#第四节熔断与限流destinationrule>第四节：熔断与限流——DestinationRule</a></li><li><a href=#第五节超时与重试virtualservice>第五节：超时与重试——VirtualService</a></li><li><a href=#第六节安全通信mtls>第六节：安全通信——mTLS</a></li><li><a href=#第七节访问控制authorizationpolicy>第七节：访问控制——AuthorizationPolicy</a></li><li><a href=#第八节可观测性遥测数据>第八节：可观测性——遥测数据</a></li><li><a href=#第九节外部服务访问serviceentry>第九节：外部服务访问——ServiceEntry</a></li><li><a href=#第十节网关gateway>第十节：网关——Gateway</a></li><li><a href=#尾声服务网格的真谛>尾声：服务网格的真谛</a></li><li><a href=#本章要点总结>本章要点总结</a></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=楔子通信的复杂性>楔子：通信的复杂性</h2><p>掌握Kubernetes后，韩立在云上仙境中如鱼得水。他的韩门运行稳定，能够自动扩缩容、自愈、滚动更新，一切都显得那么完美。</p><p>然而，随着服务的不断增多，韩立发现了一个新的问题：服务间通信的复杂性。</p><p>在微服务架构中，服务之间的通信需要处理很多横切关注点（Cross-Cutting Concerns）：</p><ul><li><strong>服务发现</strong>：如何找到目标服务</li><li><strong>负载均衡</strong>：如何分发请求</li><li><strong>熔断降级</strong>：如何防止服务雪崩</li><li><strong>限流</strong>：如何控制流量</li><li><strong>重试</strong>：如何处理失败</li><li><strong>超时</strong>：如何设置超时时间</li><li><strong>安全</strong>：如何加密通信、认证授权</li><li><strong>监控</strong>：如何追踪请求链路</li><li><strong>日志</strong>：如何记录通信日志</li></ul><p>这些逻辑如果都写在业务代码中，会导致：</p><ol><li><strong>代码耦合</strong>：业务逻辑与通信逻辑混合</li><li><strong>重复代码</strong>：每个服务都要实现相同的逻辑</li><li><strong>难以维护</strong>：修改通信逻辑需要修改所有服务</li><li><strong>技术栈绑定</strong>：不同语言需要实现不同的逻辑</li></ol><p>韩立想起了源界中流传的"服务网格"（Service Mesh）理论。这个理论说，可以将服务间通信的逻辑从业务代码中抽离出来，下沉为基础设施，由Sidecar代理来处理。</p><p>&ldquo;这就是我需要的！&ldquo;韩立眼中闪烁着兴奋的光芒。</p><hr><h2 id=第一节本命剑灵sidecar模式>第一节：本命剑灵——Sidecar模式</h2><p>在服务网格中，每个服务都有一个"本命剑灵&rdquo;——<strong>Sidecar代理</strong>。这个代理附着在服务身边，专职处理服务间通信，让服务本体能够专心处理业务逻辑。</p><p>Sidecar就像源界中的"护道傀儡&rdquo;，它：</p><ul><li><strong>与业务服务同生共死</strong>：Sidecar和业务服务运行在同一个Pod中</li><li><strong>代理所有通信</strong>：所有进出服务的流量都经过Sidecar</li><li><strong>透明代理</strong>：业务服务无需感知Sidecar的存在</li></ul><p>在Istio中，Sidecar由<strong>Envoy</strong>实现。Envoy是一个高性能的代理，支持HTTP/1.1、HTTP/2、gRPC等协议。</p><p>当服务A调用服务B时：</p><ol><li>服务A发送请求 → Envoy Sidecar A</li><li>Envoy Sidecar A进行服务发现、负载均衡、熔断等处理</li><li>请求发送到 → Envoy Sidecar B</li><li>Envoy Sidecar B进行认证、限流等处理</li><li>请求转发到 → 服务B</li><li>响应按原路返回</li></ol><p>这样，所有的通信逻辑都在Sidecar中处理，业务服务只需要专注于业务逻辑。</p><hr><h2 id=第二节天条律法司istio控制平面>第二节：天条律法司——Istio控制平面</h2><p>Sidecar负责处理具体的通信，但谁来制定规则呢？</p><p>这就是<strong>Istio控制平面</strong>的作用。控制平面就像"天条律法司"，负责制定所有服务间通信的规则，并下发到每个Sidecar执行。</p><p>Istio控制平面包含以下组件：</p><p><strong>Pilot</strong>：服务发现和流量管理</p><ul><li>从Kubernetes等注册中心获取服务信息</li><li>将路由规则、负载均衡策略等配置下发到Envoy</li></ul><p><strong>Citadel</strong>：安全和证书管理</p><ul><li>为服务间通信提供mTLS（双向TLS）加密</li><li>管理证书的生成、分发和轮换</li></ul><p><strong>Galley</strong>：配置验证和分发</p><ul><li>验证Istio配置的正确性</li><li>将配置转换为Envoy可理解的格式</li></ul><p><strong>Mixer</strong>（已废弃，功能合并到Envoy）：策略和遥测</p><ul><li>访问控制策略</li><li>指标收集和日志记录</li></ul><p>韩立部署了Istio：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 安装Istio</span>
+</span></span><span style=display:flex><span>istioctl install --set profile<span style=color:#f92672>=</span>default
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 为命名空间启用自动注入Sidecar</span>
+</span></span><span style=display:flex><span>kubectl label namespace default istio-injection<span style=color:#f92672>=</span>enabled
+</span></span></code></pre></div><p>当在启用了自动注入的命名空间中创建Pod时，Istio会自动注入Envoy Sidecar：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service     </span> <span style=color:#75715e># 业务容器</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>user-service:1.0.0</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>istio-proxy      </span> <span style=color:#75715e># Sidecar容器（自动注入）</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>istio/proxyv2:1.15.0</span>
+</span></span></code></pre></div><hr><h2 id=第三节流量路由virtualservice>第三节：流量路由——VirtualService</h2><p>在Istio中，流量路由通过<strong>VirtualService</strong>来定义。VirtualService定义了如何将请求路由到不同的服务版本。</p><p>韩立创建了一个VirtualService，实现A/B测试：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>VirtualService</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hosts</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>http</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>match</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>headers</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>user-agent</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>regex</span>: <span style=color:#e6db74>&#34;.*Chrome.*&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>route</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>destination</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>subset</span>: <span style=color:#ae81ff>v2     </span> <span style=color:#75715e># Chrome用户使用v2版本</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>100</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>route</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>destination</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>subset</span>: <span style=color:#ae81ff>v1     </span> <span style=color:#75715e># 其他用户使用v1版本</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>90</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>destination</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>subset</span>: <span style=color:#ae81ff>v2     </span> <span style=color:#75715e># 10%流量到v2版本</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>10</span>
+</span></span></code></pre></div><p>这个配置实现了：</p><ol><li>Chrome用户100%使用v2版本</li><li>其他用户90%使用v1版本，10%使用v2版本</li></ol><p>通过<strong>DestinationRule</strong>定义服务版本：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>DestinationRule</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>subsets</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>version</span>: <span style=color:#ae81ff>v1.0.0</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>v2</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>version</span>: <span style=color:#ae81ff>v2.0.0</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>trafficPolicy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>loadBalancer</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>simple</span>: <span style=color:#ae81ff>ROUND_ROBIN   </span> <span style=color:#75715e># 负载均衡策略</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>connectionPool</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>tcp</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>maxConnections</span>: <span style=color:#ae81ff>100</span>   <span style=color:#75715e># 最大连接数</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>http</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>http1MaxPendingRequests</span>: <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>http2MaxRequests</span>: <span style=color:#ae81ff>100</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>maxRequestsPerConnection</span>: <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>outlierDetection</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>consecutiveErrors</span>: <span style=color:#ae81ff>3</span>   <span style=color:#75715e># 连续错误3次</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>interval</span>: <span style=color:#ae81ff>30s         </span> <span style=color:#75715e># 检查间隔</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>baseEjectionTime</span>: <span style=color:#ae81ff>30s</span> <span style=color:#75715e># 基础驱逐时间</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>maxEjectionPercent</span>: <span style=color:#ae81ff>50</span> <span style=color:#75715e># 最大驱逐比例</span>
+</span></span></code></pre></div><p>这样，韩立就可以精细地控制流量路由，实现灰度发布、A/B测试、金丝雀发布等策略。</p><hr><h2 id=第四节熔断与限流destinationrule>第四节：熔断与限流——DestinationRule</h2><p>在Istio中，熔断和限流通过<strong>DestinationRule</strong>来配置。</p><p><strong>熔断</strong>：通过<code>outlierDetection</code>配置</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>DestinationRule</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>trafficPolicy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>outlierDetection</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>consecutiveErrors</span>: <span style=color:#ae81ff>5</span>        <span style=color:#75715e># 连续5次错误</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>interval</span>: <span style=color:#ae81ff>30s              </span> <span style=color:#75715e># 检查间隔30秒</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>baseEjectionTime</span>: <span style=color:#ae81ff>30s      </span> <span style=color:#75715e># 基础驱逐时间30秒</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>maxEjectionPercent</span>: <span style=color:#ae81ff>50</span>      <span style=color:#75715e># 最多驱逐50%的实例</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>minHealthPercent</span>: <span style=color:#ae81ff>50</span>       <span style=color:#75715e># 至少保留50%的健康实例</span>
+</span></span></code></pre></div><p>当某个服务实例连续失败5次时，Istio会将其从负载均衡池中移除30秒。如果30秒后仍然失败，会继续驱逐。</p><p><strong>限流</strong>：通过<code>connectionPool</code>和<code>circuitBreaker</code>配置</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>DestinationRule</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>trafficPolicy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>connectionPool</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>tcp</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>maxConnections</span>: <span style=color:#ae81ff>100</span>       <span style=color:#75715e># 最大连接数</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>http</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>http1MaxPendingRequests</span>: <span style=color:#ae81ff>10</span>  <span style=color:#75715e># HTTP/1.1最大等待请求数</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>http2MaxRequests</span>: <span style=color:#ae81ff>100</span>       <span style=color:#75715e># HTTP/2最大请求数</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>maxRequestsPerConnection</span>: <span style=color:#ae81ff>2</span>  <span style=color:#75715e># 每个连接最大请求数</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>circuitBreaker</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>consecutiveErrors</span>: <span style=color:#ae81ff>3</span>        <span style=color:#75715e># 连续3次错误触发熔断</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>interval</span>: <span style=color:#ae81ff>30s</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>baseEjectionTime</span>: <span style=color:#ae81ff>30s</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>maxEjectionPercent</span>: <span style=color:#ae81ff>50</span>
+</span></span></code></pre></div><p>这样，当连接数或请求数超过限制时，Istio会自动拒绝新的请求，防止服务过载。</p><hr><h2 id=第五节超时与重试virtualservice>第五节：超时与重试——VirtualService</h2><p>在Istio中，超时和重试通过<strong>VirtualService</strong>来配置。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>VirtualService</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hosts</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>http</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>route</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>destination</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>timeout</span>: <span style=color:#ae81ff>5s       </span> <span style=color:#75715e># 超时时间5秒</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>retries</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>attempts</span>: <span style=color:#ae81ff>3</span>      <span style=color:#75715e># 重试3次</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>perTryTimeout</span>: <span style=color:#ae81ff>2s </span> <span style=color:#75715e># 每次重试的超时时间</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>retryOn</span>:         <span style=color:#75715e># 在什么情况下重试</span>
+</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>5xx         </span> <span style=color:#75715e># 5xx错误</span>
+</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>reset       </span> <span style=color:#75715e># 连接重置</span>
+</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>connect-failure </span> <span style=color:#75715e># 连接失败</span>
+</span></span></code></pre></div><p>这样，当请求超时或失败时，Istio会自动重试，提高请求的成功率。</p><hr><h2 id=第六节安全通信mtls>第六节：安全通信——mTLS</h2><p>在微服务架构中，服务间通信的安全性至关重要。Istio提供了<strong>mTLS</strong>（双向TLS）来加密服务间通信。</p><p>mTLS的工作原理：</p><ol><li><strong>证书颁发</strong>：Citadel为每个服务颁发证书</li><li><strong>证书分发</strong>：证书自动注入到Sidecar中</li><li><strong>加密通信</strong>：服务间通信使用TLS加密</li><li><strong>证书轮换</strong>：证书定期自动轮换</li></ol><p>启用mTLS：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>security.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>PeerAuthentication</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>default</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>namespace</span>: <span style=color:#ae81ff>istio-system</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>mtls</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>mode</span>: <span style=color:#ae81ff>STRICT </span> <span style=color:#75715e># 强制mTLS</span>
+</span></span></code></pre></div><p>或者为特定服务启用：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>security.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>PeerAuthentication</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>mtls</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>mode</span>: <span style=color:#ae81ff>STRICT</span>
+</span></span></code></pre></div><p>这样，所有服务间通信都会被加密，防止中间人攻击和数据泄露。</p><hr><h2 id=第七节访问控制authorizationpolicy>第七节：访问控制——AuthorizationPolicy</h2><p>在Istio中，访问控制通过<strong>AuthorizationPolicy</strong>来配置。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>security.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>AuthorizationPolicy</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-policy</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>action</span>: <span style=color:#ae81ff>ALLOW</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>rules</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>from</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>source</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>principals</span>: [<span style=color:#e6db74>&#34;cluster.local/ns/default/sa/order-service&#34;</span>]
+</span></span><span style=display:flex><span>    <span style=color:#f92672>to</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>operation</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>methods</span>: [<span style=color:#e6db74>&#34;GET&#34;</span>, <span style=color:#e6db74>&#34;POST&#34;</span>]
+</span></span><span style=display:flex><span>        <span style=color:#f92672>paths</span>: [<span style=color:#e6db74>&#34;/api/users/*&#34;</span>]
+</span></span></code></pre></div><p>这个策略表示：</p><ul><li>只允许来自<code>order-service</code>的请求</li><li>只允许GET和POST方法</li><li>只允许访问<code>/api/users/*</code>路径</li></ul><p>更复杂的策略：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>security.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>AuthorizationPolicy</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>user-service-policy</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>matchLabels</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>app</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>action</span>: <span style=color:#ae81ff>DENY</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>rules</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>from</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>source</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>notRequestPrincipals</span>: [<span style=color:#e6db74>&#34;*&#34;</span>]  <span style=color:#75715e># 拒绝未认证的请求</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>to</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>operation</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>methods</span>: [<span style=color:#e6db74>&#34;DELETE&#34;</span>]  <span style=color:#75715e># 拒绝DELETE方法</span>
+</span></span></code></pre></div><p>这样，韩立就可以精细地控制哪些服务可以访问哪些接口，实现零信任安全模型。</p><hr><h2 id=第八节可观测性遥测数据>第八节：可观测性——遥测数据</h2><p>Istio自动收集丰富的遥测数据，包括：</p><ul><li><strong>指标</strong>：请求数、延迟、错误率等</li><li><strong>日志</strong>：访问日志、错误日志等</li><li><strong>追踪</strong>：分布式链路追踪</li></ul><p>这些数据可以集成到Prometheus、Grafana、Jaeger等工具中。</p><p><strong>指标收集</strong>：</p><p>Istio自动收集以下指标：</p><ul><li><code>istio_requests_total</code>：请求总数</li><li><code>istio_request_duration_seconds</code>：请求延迟</li><li><code>istio_request_bytes</code>：请求大小</li><li><code>istio_response_bytes</code>：响应大小</li></ul><p>在Grafana中可视化：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ConfigMap</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>grafana-dashboard</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>data</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>istio-dashboard.json</span>: |<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      &#34;dashboard&#34;: {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        &#34;panels&#34;: [
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>          {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            &#34;title&#34;: &#34;Request Rate&#34;,
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            &#34;targets&#34;: [
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>              {
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>                &#34;expr&#34;: &#34;sum(rate(istio_requests_total[5m]))&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>              }
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>            ]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>          }
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        ]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      }
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    }</span>
+</span></span></code></pre></div><p><strong>链路追踪</strong>：</p><p>Istio自动注入追踪头（如<code>x-request-id</code>、<code>x-trace-id</code>），可以在Jaeger中查看完整的请求链路。</p><hr><h2 id=第九节外部服务访问serviceentry>第九节：外部服务访问——ServiceEntry</h2><p>在Istio中，默认情况下只能访问集群内部的服务。如果要访问外部服务，需要使用<strong>ServiceEntry</strong>。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ServiceEntry</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>external-api</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hosts</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#ae81ff>api.external.com</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>number</span>: <span style=color:#ae81ff>443</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>https</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>HTTPS</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>location</span>: <span style=color:#ae81ff>MESH_EXTERNAL</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>resolution</span>: <span style=color:#ae81ff>DNS</span>
+</span></span></code></pre></div><p>这样，服务就可以访问外部API了，而且所有的Istio功能（如mTLS、限流、监控等）都会应用到外部服务上。</p><hr><h2 id=第十节网关gateway>第十节：网关——Gateway</h2><p>在Istio中，外部流量通过<strong>Gateway</strong>进入集群。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Gateway</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>ingress-gateway</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>selector</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>istio</span>: <span style=color:#ae81ff>ingressgateway</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>servers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>port</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>number</span>: <span style=color:#ae81ff>80</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>name</span>: <span style=color:#ae81ff>http</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>HTTP</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>hosts</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#e6db74>&#34;*.example.com&#34;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>port</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>number</span>: <span style=color:#ae81ff>443</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>name</span>: <span style=color:#ae81ff>https</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>HTTPS</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>tls</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>mode</span>: <span style=color:#ae81ff>SIMPLE</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>credentialName</span>: <span style=color:#ae81ff>example-com-tls</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>hosts</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#e6db74>&#34;*.example.com&#34;</span>
+</span></span></code></pre></div><p>然后通过VirtualService路由到内部服务：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.istio.io/v1beta1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>VirtualService</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>ingress-routing</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hosts</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#e6db74>&#34;*.example.com&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>gateways</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#ae81ff>ingress-gateway</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>http</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>match</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>uri</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>prefix</span>: <span style=color:#e6db74>&#34;/api/users&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>route</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>destination</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>host</span>: <span style=color:#ae81ff>user-service</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>port</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>number</span>: <span style=color:#ae81ff>8080</span>
+</span></span></code></pre></div><p>这样，外部流量就可以通过Istio Gateway进入集群，并路由到相应的服务。</p><hr><h2 id=尾声服务网格的真谛>尾声：服务网格的真谛</h2><p>经过数月的修炼，韩立终于掌握了服务网格的精髓。他意识到，服务网格的真谛是：</p><ol><li><strong>关注点分离</strong>：将通信逻辑从业务代码中抽离，下沉为基础设施</li><li><strong>统一治理</strong>：通过控制平面统一管理所有服务的通信规则</li><li><strong>透明代理</strong>：业务服务无需感知Sidecar的存在</li><li><strong>精细化控制</strong>：可以实现流量路由、熔断、限流、安全等精细化的控制</li><li><strong>可观测性</strong>：自动收集丰富的遥测数据，实现全面的可观测性</li></ol><p>&ldquo;服务网格，我终于掌握了！&ldquo;韩立看着在Istio上运行的韩门，心中涌起一股成就感。</p><p>通过服务网格，韩立实现了：</p><ul><li><strong>零侵入</strong>：业务代码无需修改</li><li><strong>统一治理</strong>：所有服务的通信规则统一管理</li><li><strong>精细化控制</strong>：可以实现复杂的流量管理策略</li><li><strong>安全加固</strong>：mTLS加密、访问控制</li><li><strong>全面可观测</strong>：指标、日志、追踪</li></ul><p>但他知道，这还不是终点。在源界中，还有更高级的修炼方式——智能架构（AIOps），可以实现系统的自感知、自决策、自修复。</p><p>&ldquo;下一站，智能架构！&ldquo;韩立眼中闪烁着坚定的光芒。</p><hr><h2 id=本章要点总结>本章要点总结</h2><ol><li><strong>Sidecar模式</strong>：将通信逻辑从业务代码中抽离，由Sidecar代理处理</li><li><strong>控制平面</strong>：Istio控制平面统一管理所有服务的通信规则</li><li><strong>流量路由</strong>：通过VirtualService实现精细化的流量路由</li><li><strong>熔断限流</strong>：通过DestinationRule实现熔断和限流</li><li><strong>超时重试</strong>：通过VirtualService配置超时和重试策略</li><li><strong>安全通信</strong>：通过mTLS加密服务间通信</li><li><strong>访问控制</strong>：通过AuthorizationPolicy实现精细化的访问控制</li><li><strong>可观测性</strong>：自动收集指标、日志、追踪数据</li><li><strong>外部服务</strong>：通过ServiceEntry访问外部服务</li><li><strong>网关</strong>：通过Gateway管理外部流量</li></ol><p>下一章，韩立将学习智能架构，实现系统的自感知、自决策、自修复。</p></div><div class="post__tags tags clearfix"><svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373.0-.74-.24-1-.5L1 8A2.853 2.853.0 01.3 7C.113 6.55.0 5.973.0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034.0 1.4.0h4.2c.373.0.95.113 1.4.3s.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5.0 100-3 1.5 1.5.0 000 3z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC/ rel=tag>服务网格</a></li><li class=tags__item><a class="tags__link btn" href=/tags/Istio/ rel=tag>Istio</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86/ rel=tag>微服务治理</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E6%9E%B6%E6%9E%84%E4%BF%AE%E4%BB%99/ rel=tag>架构修仙</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="wu guojun avatar" src=/img/QR.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>关于 wu guojun</span></div><div class=authorbox__description>北京牛马，高级 CV工程狮</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--prev"><a class=post-nav__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%A3%9E%E5%8D%87%E4%B8%8A%E7%95%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E4%B8%8EK8s/ rel=prev><span class=post-nav__caption>«&#8201;上一篇</span><p class=post-nav__post-title>第三章：飞升上界 · 云原生与K8s</p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2025 补漏砖匠.
+<span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/quiz.js></script><script src=/js/ai-quiz.js></script></body></html>

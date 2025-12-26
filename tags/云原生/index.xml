@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>云原生 on 补漏砖匠</title><link>/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link><description>Recent content in 云原生 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>运维部署</title><link>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/</guid><description>&lt;h2 id="运维部署机关篇"&gt;「运维部署机关篇」&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>云原生 on 补漏砖匠</title><link>/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link><description>Recent content in 云原生 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>第三章：飞升上界 · 云原生与K8s</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%A3%9E%E5%8D%87%E4%B8%8A%E7%95%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E4%B8%8EK8s/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%A3%9E%E5%8D%87%E4%B8%8A%E7%95%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E4%B8%8EK8s/</guid><description>&lt;h2 id="楔子韩门的困境"&gt;楔子：韩门的困境&lt;/h2&gt;
+&lt;p&gt;建立韩门后，韩立在源界中声名鹊起。他的微服务架构稳定可靠，能够处理大量的业务请求，赢得了众多客户的信任。&lt;/p&gt;
+&lt;p&gt;然而，随着业务规模的不断扩大，韩立发现了一个严重的问题：服务的管理和运维变得越来越困难。&lt;/p&gt;
+&lt;p&gt;每当流量增加时，韩立需要手动增加服务器，部署新的服务实例。这个过程需要：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;购买或申请新的服务器&lt;/li&gt;
+&lt;li&gt;安装操作系统和依赖&lt;/li&gt;
+&lt;li&gt;部署Docker和配置网络&lt;/li&gt;
+&lt;li&gt;部署服务并配置监控&lt;/li&gt;
+&lt;li&gt;更新负载均衡配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整个过程需要数小时甚至数天，响应速度太慢。而且，当流量减少时，服务器资源闲置，造成巨大的浪费。&lt;/p&gt;
+&lt;p&gt;更糟糕的是，当某个服务实例崩溃时，需要人工介入才能恢复。如果是在深夜，可能几个小时都无法恢复，严重影响业务。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;这样下去不行&amp;hellip;&amp;ldquo;韩立看着运维团队疲惫的身影，心中涌起一股无力感。&lt;/p&gt;
+&lt;p&gt;他听说，在源界的高层，有一个叫做&amp;quot;云上仙境&amp;quot;的地方。那里有一种叫做&amp;quot;Kubernetes&amp;quot;的天道意志，可以自动调度资源、管理服务、实现扩缩容和自愈。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;我一定要飞升上界，掌握Kubernetes！&amp;ldquo;韩立下定了决心。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一节初入云上仙境"&gt;第一节：初入云上仙境&lt;/h2&gt;
+&lt;p&gt;经过数月的准备，韩立终于踏上了飞升之路。他带着韩门的所有服务，来到了云上仙境。&lt;/p&gt;
+&lt;p&gt;云上仙境，是一个由无数服务器组成的巨大集群。这里的服务器被称为&amp;quot;节点&amp;rdquo;（Node），分为两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Master节点&lt;/strong&gt;：控制节点，负责整个集群的管理和调度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Worker节点&lt;/strong&gt;：工作节点，负责运行实际的业务服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;韩立刚进入云上仙境，就感受到了一股强大的意志——这就是&lt;strong&gt;Kubernetes&lt;/strong&gt;，云上仙境的天道意志。&lt;/p&gt;
+&lt;p&gt;Kubernetes（简称K8s）是一个容器编排系统，它的核心思想是&amp;quot;声明式API&amp;rdquo;——你只需要告诉它你想要的状态，它会自动帮你实现。&lt;/p&gt;
+&lt;p&gt;比如，你想要3个用户服务的实例运行，你只需要声明：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;apps/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;replicas&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; &lt;span style="color:#75715e"&gt;# 我想要3个实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;selector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;matchLabels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;app&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;template&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;labels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;app&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;containers&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;image&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service:1.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;containerPort&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kubernetes会自动：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查当前有多少个实例在运行&lt;/li&gt;
+&lt;li&gt;如果少于3个，创建新的实例&lt;/li&gt;
+&lt;li&gt;如果多于3个，删除多余的实例&lt;/li&gt;
+&lt;li&gt;如果某个实例崩溃，自动重启或创建新的实例&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这就是&amp;quot;言出法随&amp;rdquo;——你只需要声明想要的状态，Kubernetes会自动帮你达成。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二节洞天法宝pod"&gt;第二节：洞天法宝——Pod&lt;/h2&gt;
+&lt;p&gt;在Kubernetes中，最小的部署单元是&lt;strong&gt;Pod&lt;/strong&gt;。Pod就像源界中的&amp;quot;洞天法宝&amp;rdquo;，是一个独立的运行环境，可以包含一个或多个容器。&lt;/p&gt;
+&lt;p&gt;韩立创建了他的第一个Pod：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Pod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service-pod&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;containers&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;image&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service:1.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;containerPort&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;resources&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;requests&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;memory&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;256Mi&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;cpu&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;100m&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;limits&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;memory&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;cpu&lt;/span&gt;: &lt;span style="color:#e6db74"&gt;&amp;#34;500m&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pod的特点：&lt;/p&gt;</description></item><item><title>运维部署</title><link>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate><guid>/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/</guid><description>&lt;h2 id="运维部署机关篇"&gt;「运维部署机关篇」&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;收录基础设施即代码、持续部署、监控告警等运维实战经验。从单机到集群，从脚本到平台，构建稳定可靠的部署体系。&lt;/p&gt;
 &lt;/blockquote&gt;
