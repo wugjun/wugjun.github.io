@@ -1,0 +1,315 @@
+<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>工单短信触达需求文档</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="投诉工单系统短信通知与直通率统计改造需求文档"><meta name=generator content="Hugo 0.152.2"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>菜单</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E4%BD%9C%E5%8F%B0/>工作台</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/>前端开发</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/>在线答题</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>工单短信触达需求文档</h1><p class=post__lead>基于DDD领域驱动设计，实现工单短信自动触达、手动回复、回访处理及统计报表功能</p><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2025-12-29T00:00:00>December 29, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e5%bc%80%e6%ba%90%e6%96%87%e6%a1%a3 rel=category>开源文档</a>, <a class=meta__link href=/categories/%e9%9c%80%e6%b1%82%e6%96%87%e6%a1%a3 rel=category>需求文档</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>页面内容</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#-需求概述>📋 需求概述</a><ul><li><a href=#项目背景>项目背景</a></li><li><a href=#核心目标>核心目标</a></li></ul></li><li><a href=#-领域模型设计>🏗️ 领域模型设计</a><ul><li><a href=#核心领域core-domain>核心领域（Core Domain）</a></li></ul></li><li><a href=#-功能需求与开发任务>🎯 功能需求与开发任务</a><ul><li><a href=#功能一新建工单自动发送受理短信>功能一：新建工单自动发送受理短信</a></li><li><a href=#功能二工单结案短信回复人工触发>功能二：工单结案短信回复（人工触发）</a></li><li><a href=#功能三短信回访>功能三：短信回访</a></li><li><a href=#功能四工单流程与字段改造>功能四：工单流程与字段改造</a></li><li><a href=#功能五直通率统计报表>功能五：直通率统计报表</a></li></ul></li><li><a href=#-数据模型设计>📊 数据模型设计</a><ul><li><a href=#数据库表结构>数据库表结构</a></li></ul></li><li><a href=#-权限控制>🔐 权限控制</a><ul><li><a href=#角色权限矩阵>角色权限矩阵</a></li></ul></li><li><a href=#-非功能性需求>🚨 非功能性需求</a><ul><li><a href=#性能要求>性能要求</a></li><li><a href=#可靠性要求>可靠性要求</a></li><li><a href=#安全性要求>安全性要求</a></li></ul></li><li><a href=#-开发里程碑>📝 开发里程碑</a><ul><li><a href=#phase-1-基础功能2周>Phase 1: 基础功能（2周）</a></li><li><a href=#phase-2-核心功能3周>Phase 2: 核心功能（3周）</a></li><li><a href=#phase-3-统计报表1周>Phase 3: 统计报表（1周）</a></li><li><a href=#phase-4-测试与优化1周>Phase 4: 测试与优化（1周）</a></li></ul></li><li><a href=#-参考资料>📚 参考资料</a><ul><li><a href=#领域驱动设计>领域驱动设计</a></li><li><a href=#业务规则总结>业务规则总结</a></li></ul></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=-需求概述>📋 需求概述</h2><h3 id=项目背景>项目背景</h3><p>投诉工单系统需要新增短信通知功能，实现工单受理、结案、回访的短信触达，并改造直通率统计报表。</p><h3 id=核心目标>核心目标</h3><ol><li><strong>自动发送受理短信</strong>：新建工单后自动发送受理通知</li><li><strong>手动短信回复</strong>：支持处理人员手动发送结案通知短信</li><li><strong>短信回访</strong>：工单结案后自动发送回访短信，处理客户回复</li><li><strong>统计报表改造</strong>：基于主办机构计算直通办理率</li></ol><hr><h2 id=-领域模型设计>🏗️ 领域模型设计</h2><h3 id=核心领域core-domain>核心领域（Core Domain）</h3><h4 id=1-投诉工单实体complaintorder>1. 投诉工单实体（ComplaintOrder）</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 核心字段</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> orderId: 工单ID
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> orderType: 工单类型<span style=color:#960050;background-color:#1e0010>（</span>12378<span style=color:#960050;background-color:#1e0010>、</span>监管转办<span style=color:#960050;background-color:#1e0010>、</span>消保转送<span style=color:#960050;background-color:#1e0010>、</span>咨询等<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> contactName: 联系人姓名
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> contactPhone: 联系人电话
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> complainantPhone: 投诉人电话
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> mainOrg: 主办机构<span style=color:#960050;background-color:#1e0010>（</span>总行<span style=color:#f92672>/</span>信用卡中心<span style=color:#f92672>/</span>分行<span style=color:#f92672>/</span>其他<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> mainOperator: 主办人员
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> isSmsReply: 是否短信回复<span style=color:#960050;background-color:#1e0010>（</span>是<span style=color:#f92672>/</span>否<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> smsReplyTime: 回复时间
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> isSmsVisit: 是否短信回访<span style=color:#960050;background-color:#1e0010>（</span>是<span style=color:#f92672>/</span>否<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> visitDate: 回访日期
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> visitTime: 回访时间
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> visitResult: 回访效果<span style=color:#960050;background-color:#1e0010>（</span>满意<span style=color:#f92672>/</span>不满意<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> processNotifyType: 处理决定告知方式<span style=color:#960050;background-color:#1e0010>（</span>短信<span style=color:#f92672>/</span>其他<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> processNotifyTime: 处理决定告知时间
+</span></span></code></pre></div><h4 id=2-短信交互实体smsinteraction>2. 短信交互实体（SmsInteraction）</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>-</span> smsId: 短信记录ID
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> orderId: 关联工单
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> smsType: 短信类型<span style=color:#960050;background-color:#1e0010>（</span>受理通知<span style=color:#f92672>/</span>结案通知<span style=color:#f92672>/</span>回访<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> templateId: 短信模板
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> phone: 发送手机号
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> customerName: 客户姓名
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> sendTime: 短信发送时间
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> sendOperator: 发送人
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> replyContent: 客户回复内容
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> replyTime: 客户回复时间
+</span></span></code></pre></div><h4 id=3-短信模板实体smstemplate>3. 短信模板实体（SmsTemplate）</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>-</span> templateId: 模板ID
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> templateName: 模板名称
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> templateContent: 模板内容
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> templateType: 类型<span style=color:#960050;background-color:#1e0010>（</span>受理<span style=color:#f92672>/</span>结案<span style=color:#f92672>/</span>回访<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> approvedStatus: 业务审核状态
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> visibleRoles: 可见角色<span style=color:#960050;background-color:#1e0010>（</span>总行<span style=color:#f92672>/</span>分行<span style=color:#960050;background-color:#1e0010>）</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>-</span> enabled: 是否启用
+</span></span></code></pre></div><hr><h2 id=-功能需求与开发任务>🎯 功能需求与开发任务</h2><h3 id=功能一新建工单自动发送受理短信>功能一：新建工单自动发送受理短信</h3><h4 id=-功能描述>📌 功能描述</h4><p>投诉工单新建成功后，系统自动发送受理短信给联系人。</p><h4 id=-开发功能点>🔧 开发功能点</h4><p><strong>1.1 工单创建事件监听</strong></p><ul><li><input disabled type=checkbox> 实现工单创建领域事件（OrderCreatedEvent）</li><li><input disabled type=checkbox> 配置事件监听器（OrderCreatedEventListener）</li><li><input disabled type=checkbox> 事件发布机制（EventPublisher）</li></ul><p><strong>1.2 短信发送服务</strong></p><ul><li><input disabled type=checkbox> 实现短信发送服务接口（SmsSendService）</li><li><input disabled type=checkbox> 手机号格式校验（PhoneValidator）</li><li><input disabled type=checkbox> 短信模板加载（TemplateLoader）</li><li><input disabled type=checkbox> 短信网关调用（SmsGatewayClient）</li><li><input disabled type=checkbox> 发送失败重试机制（RetryHandler）</li></ul><p><strong>1.3 短信记录持久化</strong></p><ul><li><input disabled type=checkbox> 创建短信发送记录（SmsRecordRepository.save）</li><li><input disabled type=checkbox> 记录发送状态（成功/失败）</li><li><input disabled type=checkbox> 记录发送时间、操作人等信息</li></ul><p><strong>1.4 异常处理</strong></p><ul><li><input disabled type=checkbox> 非手机号跳过发送（日志记录）</li><li><input disabled type=checkbox> 短信网关异常捕获与日志</li><li><input disabled type=checkbox> 发送失败告警通知</li></ul><h4 id=-单元测试点>✅ 单元测试点</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 测试类：OrderCreatedEventListenerTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_工单创建后自动发送受理短信_成功</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 创建工单事件，联系人为手机号</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 触发事件监听</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证短信发送服务被调用，记录已保存</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_工单创建后自动发送受理短信_非手机号跳过</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 创建工单事件，联系人为座机</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 触发事件监听</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证短信发送服务未被调用，记录日志</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_工单创建后自动发送受理短信_发送失败重试</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 短信网关首次调用失败</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 触发重试机制</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证重试3次，最终记录失败状态</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_短信模板加载_模板不存在</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 受理短信模板未配置</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 尝试加载模板</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 抛出业务异常，记录错误日志</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=功能二工单结案短信回复人工触发>功能二：工单结案短信回复（人工触发）</h3><h4 id=-功能描述-1>📌 功能描述</h4><p>工单处理页面新增【短信回复】按钮，支持处理人员手动发送结案通知短信。</p><h4 id=-开发功能点-1>🔧 开发功能点</h4><p><strong>2.1 前端UI开发</strong></p><ul><li><input disabled type=checkbox> 工单处理页面添加【短信回复】按钮</li><li><input disabled type=checkbox> 实现短信发送弹窗组件（SmsReplyModal）</li><li><input disabled type=checkbox> 弹窗字段：客户姓名（只读）、手机号（只读）、模板选择（单选）</li><li><input disabled type=checkbox> 模板列表按角色过滤（总行/分行）</li></ul><p><strong>2.2 后端API开发</strong></p><ul><li><input disabled type=checkbox> 创建短信回复接口（POST /api/orders/{orderId}/sms-reply）</li><li><input disabled type=checkbox> 参数校验：工单ID、模板ID、手机号一致性校验</li><li><input disabled type=checkbox> 权限校验：派单处理人员权限</li><li><input disabled type=checkbox> 业务规则校验：每个工单仅允许发送一次</li></ul><p><strong>2.3 短信模板权限控制</strong></p><ul><li><input disabled type=checkbox> 实现模板可见性过滤（TemplateVisibilityFilter）</li><li><input disabled type=checkbox> 总行角色：仅显示总行模板</li><li><input disabled type=checkbox> 分行角色：仅显示分行模板</li><li><input disabled type=checkbox> 模板审核状态校验（仅已审核通过可用）</li></ul><p><strong>2.4 工单状态更新</strong></p><ul><li><input disabled type=checkbox> 更新工单字段：<code>isSmsReply = true</code></li><li><input disabled type=checkbox> 更新工单字段：<code>smsReplyTime = 当前时间</code></li><li><input disabled type=checkbox> 更新工单字段：<code>processNotifyType = "短信"</code></li><li><input disabled type=checkbox> 更新工单字段：<code>processNotifyTime = 当前时间</code></li></ul><p><strong>2.5 短信发送与记录</strong></p><ul><li><input disabled type=checkbox> 调用短信发送服务</li><li><input disabled type=checkbox> 保存短信发送记录</li><li><input disabled type=checkbox> 返回发送结果</li></ul><h4 id=-单元测试点-1>✅ 单元测试点</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 测试类：OrderSmsReplyControllerTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_发送短信回复_成功</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 工单存在，未发送过短信，模板已审核</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 调用短信回复接口</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证短信发送成功，工单状态已更新</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_发送短信回复_工单已发送过短信</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 工单已发送过短信回复</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 再次调用短信回复接口</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回业务异常：&#34;每个工单仅允许发送一次&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_发送短信回复_手机号不一致</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 请求中的手机号与工单联系人手机号不一致</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 调用短信回复接口</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回参数校验异常</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_发送短信回复_模板未审核</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 选择的模板审核状态为&#34;待审核&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 调用短信回复接口</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回业务异常：&#34;模板未审核通过&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_发送短信回复_无权限</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 当前用户无派单处理权限</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 调用短信回复接口</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回权限异常</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 测试类：TemplateVisibilityFilterTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_模板可见性过滤_总行角色</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 当前用户为总行角色</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 获取可用模板列表</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 仅返回总行模板</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_模板可见性过滤_分行角色</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 当前用户为分行角色</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 获取可用模板列表</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 仅返回分行模板</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=功能三短信回访>功能三：短信回访</h3><h4 id=-功能描述-2>📌 功能描述</h4><p>工单办结后，自动发送回访短信。客户回复"BMY"表示不满意。</p><h4 id=-开发功能点-2>🔧 开发功能点</h4><p><strong>3.1 回访触发机制</strong></p><ul><li><input disabled type=checkbox> 实现工单结案事件监听（OrderClosedEvent）</li><li><input disabled type=checkbox> 校验回访条件：<code>isSmsVisit = true</code> 且联系电话为手机号</li><li><input disabled type=checkbox> 触发回访短信发送</li></ul><p><strong>3.2 回访短信发送</strong></p><ul><li><input disabled type=checkbox> 加载回访短信模板</li><li><input disabled type=checkbox> 调用短信发送服务</li><li><input disabled type=checkbox> 记录回访短信发送记录</li><li><input disabled type=checkbox> 设置回访有效期：发送时间 T + 3 自然日</li></ul><p><strong>3.3 客户回复处理</strong></p><ul><li><input disabled type=checkbox> 实现短信回复接收接口（POST /api/sms/reply）</li><li><input disabled type=checkbox> 解析回复内容：识别"BMY"关键字</li><li><input disabled type=checkbox> 更新回访效果：<code>visitResult = "不满意"</code>（回复BMY）</li><li><input disabled type=checkbox> 更新回访日期时间：<code>visitDate</code>、<code>visitTime</code> = 短信发送时间</li><li><input disabled type=checkbox> 仅统计首次客户回复（多次发送只统计第一次）</li></ul><p><strong>3.4 回访有效期管理</strong></p><ul><li><input disabled type=checkbox> 实现回访有效期校验（VisitValidityChecker）</li><li><input disabled type=checkbox> 超过有效期（T+3天）的回复不处理</li><li><input disabled type=checkbox> 记录过期回复日志</li></ul><h4 id=-单元测试点-2>✅ 单元测试点</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 测试类：OrderClosedEventListenerTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_工单结案后自动发送回访短信_满足条件</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 工单结案，isSmsVisit=true，联系电话为手机号</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 触发结案事件</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证回访短信已发送</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_工单结案后自动发送回访短信_不满足条件</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 工单结案，isSmsVisit=false</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 触发结案事件</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证回访短信未发送</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 测试类：SmsReplyHandlerTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_处理客户回复_BMY表示不满意</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 收到客户回复&#34;BMY&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 处理回复</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证回访效果更新为&#34;不满意&#34;，回访日期时间已更新</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_处理客户回复_非BMY内容</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 收到客户回复&#34;谢谢&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 处理回复</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证回访效果未更新（保持原值或默认值）</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_处理客户回复_仅统计首次回复</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 已处理过首次回复</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 收到第二次回复</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证第二次回复被忽略，不更新回访效果</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_处理客户回复_超过有效期</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 回访短信发送时间超过3天</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 收到客户回复</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证回复被忽略，记录过期日志</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 测试类：VisitValidityCheckerTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_回访有效期校验_在有效期内</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 发送时间T，当前时间T+2天</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 校验有效期</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回true</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_回访有效期校验_超过有效期</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 发送时间T，当前时间T+4天</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 校验有效期</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回false</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=功能四工单流程与字段改造>功能四：工单流程与字段改造</h3><h4 id=-功能描述-3>📌 功能描述</h4><p>针对不同工单类型（12378投诉、监管转办、消保转送、咨询问题）进行字段和流程改造。</p><h4 id=-开发功能点-3>🔧 开发功能点</h4><p><strong>4.1 12378投诉工单改造</strong></p><ul><li><input disabled type=checkbox> 主办人员字段：主办机构=总行时默认当前经办人，支持修改</li><li><input disabled type=checkbox> 回复时间字段：<code>isSmsReply=是</code>时必填校验</li><li><input disabled type=checkbox> 工单转办类型：转办时显示"投诉转办部门"字段</li><li><input disabled type=checkbox> 流程处理方式：选"本节点处理"时显示"机构投诉办理情况表"</li><li><input disabled type=checkbox> 表单新增字段：&ldquo;投诉处理过程及下一步整改措施&rdquo;</li></ul><p><strong>4.2 消保转送工单改造</strong></p><ul><li><input disabled type=checkbox> 新增"主办人员"字段</li><li><input disabled type=checkbox> &ldquo;处理决定是否告知"字段：新增"是（短信）&ldquo;选项</li><li><input disabled type=checkbox> &ldquo;告知时间"字段：短信发送时自动填充</li><li><input disabled type=checkbox> &ldquo;告知方式"字段：选择短信时显示为"短信&rdquo;</li></ul><p><strong>4.3 咨询问题工单改造</strong></p><ul><li><input disabled type=checkbox> 新增"主办机构"字段</li><li><input disabled type=checkbox> 新增"主办人员"字段</li></ul><p><strong>4.4 字段显示控制</strong></p><ul><li><input disabled type=checkbox> 实现动态表单字段显示逻辑（DynamicFormFieldController）</li><li><input disabled type=checkbox> 根据工单类型、流程状态控制字段显示/隐藏</li><li><input disabled type=checkbox> 实现字段必填校验规则（FieldValidationRule）</li></ul><h4 id=-单元测试点-3>✅ 单元测试点</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 测试类：ComplaintOrderServiceTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_12378工单_主办机构为总行时默认主办人员</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 创建12378工单，主办机构=总行，当前经办人=张三</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 保存工单</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证主办人员自动填充为&#34;张三&#34;，支持手动修改</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_12378工单_回复时间必填校验</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 12378工单，isSmsReply=是，回复时间为空</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 保存工单</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 返回字段校验异常：&#34;回复时间必填&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_消保转送工单_处理决定告知方式为短信</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 消保转送工单，处理决定告知方式选择&#34;是（短信）&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 发送短信后保存工单</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证告知方式显示为&#34;短信&#34;，告知时间已填充</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 测试类：DynamicFormFieldControllerTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_字段显示控制_转办类型为转办时显示投诉转办部门</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 监管转办工单，转办类型=&#34;转办&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 获取表单字段配置</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证&#34;投诉转办部门&#34;字段可见</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_字段显示控制_流程处理方式为本节点处理时显示情况表</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 监管转办工单，流程处理方式=&#34;本节点处理&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 获取表单字段配置</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证&#34;机构投诉办理情况表&#34;字段可见</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=功能五直通率统计报表>功能五：直通率统计报表</h3><h4 id=-功能描述-4>📌 功能描述</h4><p>基于主办机构计算直通办理率，包括总直通率、总行直通率、分行直通率。</p><h4 id=-开发功能点-4>🔧 开发功能点</h4><p><strong>5.1 数据查询服务</strong></p><ul><li><input disabled type=checkbox> 实现工单统计查询接口（OrderStatisticsService）</li><li><input disabled type=checkbox> 按主办机构分类统计工单量</li><li><input disabled type=checkbox> 支持时间范围筛选</li><li><input disabled type=checkbox> 支持工单类型筛选</li></ul><p><strong>5.2 直通率计算逻辑</strong></p><ul><li><input disabled type=checkbox> 实现总直通率计算：各主办机构工单量 / 工单总量</li><li><input disabled type=checkbox> 实现总行直通率计算：（总行+信用卡中心工单量）/ 工单总量</li><li><input disabled type=checkbox> 实现分行直通率计算：分行工单量 / 分行经办过的（分行+其他）工单量</li><li><input disabled type=checkbox> 实现分类逻辑：总行直通/分行直通/非直通</li></ul><p><strong>5.3 报表数据聚合</strong></p><ul><li><input disabled type=checkbox> 实现报表数据聚合服务（ReportAggregationService）</li><li><input disabled type=checkbox> 按主办机构分组统计</li><li><input disabled type=checkbox> 计算各维度直通率指标</li><li><input disabled type=checkbox> 数据格式化输出</li></ul><p><strong>5.4 报表API开发</strong></p><ul><li><input disabled type=checkbox> 创建直通率统计接口（GET /api/reports/throughput-rate）</li><li><input disabled type=checkbox> 支持查询参数：时间范围、工单类型</li><li><input disabled type=checkbox> 返回JSON格式统计数据</li></ul><h4 id=-单元测试点-4>✅ 单元测试点</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// 测试类：ThroughputRateCalculatorTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_总直通率计算</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 工单总量100，各主办机构工单量80</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 计算总直通率</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证结果=80%</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_总行直通率计算</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 工单总量100，总行工单30，信用卡中心工单20</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 计算总行直通率</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证结果=(30+20)/100=50%</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_分行直通率计算</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 分行经办过的工单：分行50，其他10</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 计算分行直通率</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证结果=50/(50+10)=83.33%</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_直通率分类_总行直通</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 主办机构=总行</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 判断直通类型</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证返回&#34;总行直通&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_直通率分类_分行直通</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 主办机构=分行</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 判断直通类型</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证返回&#34;分行直通&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_直通率分类_非直通</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 主办机构=其他</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 判断直通类型</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证返回&#34;非直通&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 测试类：OrderStatisticsServiceTest</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_按主办机构统计工单量</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 数据库中存在不同主办机构的工单</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 调用统计服务</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证按主办机构正确分组统计</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test_统计查询_时间范围筛选</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Given: 设置时间范围2024-01-01至2024-01-31</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// When: 调用统计服务</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Then: 验证仅统计该时间范围内的工单</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h2 id=-数据模型设计>📊 数据模型设计</h2><h3 id=数据库表结构>数据库表结构</h3><h4 id=1-投诉工单表complaint_order>1. 投诉工单表（complaint_order）</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=display:flex><span><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> complaint_order (
+</span></span><span style=display:flex><span>    order_id VARCHAR(<span style=color:#ae81ff>64</span>) <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span>,
+</span></span><span style=display:flex><span>    order_type VARCHAR(<span style=color:#ae81ff>32</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    contact_name VARCHAR(<span style=color:#ae81ff>64</span>),
+</span></span><span style=display:flex><span>    contact_phone VARCHAR(<span style=color:#ae81ff>32</span>),
+</span></span><span style=display:flex><span>    complainant_phone VARCHAR(<span style=color:#ae81ff>32</span>),
+</span></span><span style=display:flex><span>    main_org VARCHAR(<span style=color:#ae81ff>32</span>),
+</span></span><span style=display:flex><span>    main_operator VARCHAR(<span style=color:#ae81ff>64</span>),
+</span></span><span style=display:flex><span>    is_sms_reply CHAR(<span style=color:#ae81ff>1</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;N&#39;</span>,
+</span></span><span style=display:flex><span>    sms_reply_time DATETIME,
+</span></span><span style=display:flex><span>    is_sms_visit CHAR(<span style=color:#ae81ff>1</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;N&#39;</span>,
+</span></span><span style=display:flex><span>    visit_date DATE,
+</span></span><span style=display:flex><span>    visit_time DATETIME,
+</span></span><span style=display:flex><span>    visit_result VARCHAR(<span style=color:#ae81ff>16</span>),
+</span></span><span style=display:flex><span>    process_notify_type VARCHAR(<span style=color:#ae81ff>16</span>),
+</span></span><span style=display:flex><span>    process_notify_time DATETIME,
+</span></span><span style=display:flex><span>    created_time DATETIME <span style=color:#66d9ef>DEFAULT</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span>,
+</span></span><span style=display:flex><span>    updated_time DATETIME <span style=color:#66d9ef>DEFAULT</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>UPDATE</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span>
+</span></span><span style=display:flex><span>);
+</span></span></code></pre></div><h4 id=2-短信发送记录表sms_record>2. 短信发送记录表（sms_record）</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=display:flex><span><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> sms_record (
+</span></span><span style=display:flex><span>    sms_id VARCHAR(<span style=color:#ae81ff>64</span>) <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span>,
+</span></span><span style=display:flex><span>    order_id VARCHAR(<span style=color:#ae81ff>64</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    sms_type VARCHAR(<span style=color:#ae81ff>16</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    template_id VARCHAR(<span style=color:#ae81ff>64</span>),
+</span></span><span style=display:flex><span>    phone VARCHAR(<span style=color:#ae81ff>32</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    customer_name VARCHAR(<span style=color:#ae81ff>64</span>),
+</span></span><span style=display:flex><span>    send_time DATETIME <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    send_operator VARCHAR(<span style=color:#ae81ff>64</span>),
+</span></span><span style=display:flex><span>    send_status VARCHAR(<span style=color:#ae81ff>16</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    reply_content TEXT,
+</span></span><span style=display:flex><span>    reply_time DATETIME,
+</span></span><span style=display:flex><span>    validity_end_time DATETIME,
+</span></span><span style=display:flex><span>    created_time DATETIME <span style=color:#66d9ef>DEFAULT</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span>,
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>INDEX</span> idx_order_id (order_id),
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>INDEX</span> idx_phone (phone),
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>INDEX</span> idx_send_time (send_time)
+</span></span><span style=display:flex><span>);
+</span></span></code></pre></div><h4 id=3-短信模板表sms_template>3. 短信模板表（sms_template）</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=display:flex><span><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> sms_template (
+</span></span><span style=display:flex><span>    template_id VARCHAR(<span style=color:#ae81ff>64</span>) <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span>,
+</span></span><span style=display:flex><span>    template_name VARCHAR(<span style=color:#ae81ff>128</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    template_content TEXT <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    template_type VARCHAR(<span style=color:#ae81ff>16</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    approved_status VARCHAR(<span style=color:#ae81ff>16</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+</span></span><span style=display:flex><span>    visible_roles VARCHAR(<span style=color:#ae81ff>128</span>),
+</span></span><span style=display:flex><span>    enabled CHAR(<span style=color:#ae81ff>1</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;Y&#39;</span>,
+</span></span><span style=display:flex><span>    created_time DATETIME <span style=color:#66d9ef>DEFAULT</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span>,
+</span></span><span style=display:flex><span>    updated_time DATETIME <span style=color:#66d9ef>DEFAULT</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>UPDATE</span> <span style=color:#66d9ef>CURRENT_TIMESTAMP</span>
+</span></span><span style=display:flex><span>);
+</span></span></code></pre></div><hr><h2 id=-权限控制>🔐 权限控制</h2><h3 id=角色权限矩阵>角色权限矩阵</h3><table><thead><tr><th>功能</th><th>总行角色</th><th>分行角色</th><th>派单处理人员</th></tr></thead><tbody><tr><td>查看总行模板</td><td>✅</td><td>❌</td><td>根据角色</td></tr><tr><td>查看分行模板</td><td>❌</td><td>✅</td><td>根据角色</td></tr><tr><td>发送短信回复</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>查看统计报表</td><td>✅</td><td>✅</td><td>❌</td></tr></tbody></table><hr><h2 id=-非功能性需求>🚨 非功能性需求</h2><h3 id=性能要求>性能要求</h3><ul><li>短信发送接口响应时间 &lt; 2秒</li><li>统计报表查询响应时间 &lt; 5秒（数据量10万以内）</li><li>支持并发发送短信：100条/秒</li></ul><h3 id=可靠性要求>可靠性要求</h3><ul><li>短信发送失败重试机制：最多重试3次，间隔5秒</li><li>短信发送记录完整保存，支持追溯</li><li>系统异常不影响工单主流程</li></ul><h3 id=安全性要求>安全性要求</h3><ul><li>短信模板内容需业务审核</li><li>短信发送操作需记录审计日志</li><li>敏感信息（手机号）需脱敏显示</li></ul><hr><h2 id=-开发里程碑>📝 开发里程碑</h2><h3 id=phase-1-基础功能2周>Phase 1: 基础功能（2周）</h3><ul><li><input disabled type=checkbox> 领域模型设计</li><li><input disabled type=checkbox> 数据库表结构创建</li><li><input disabled type=checkbox> 短信发送服务基础功能</li><li><input disabled type=checkbox> 工单创建自动发送受理短信</li></ul><h3 id=phase-2-核心功能3周>Phase 2: 核心功能（3周）</h3><ul><li><input disabled type=checkbox> 短信回复功能（前端+后端）</li><li><input disabled type=checkbox> 短信回访功能</li><li><input disabled type=checkbox> 工单字段改造</li></ul><h3 id=phase-3-统计报表1周>Phase 3: 统计报表（1周）</h3><ul><li><input disabled type=checkbox> 直通率统计计算</li><li><input disabled type=checkbox> 报表API开发</li><li><input disabled type=checkbox> 报表前端展示</li></ul><h3 id=phase-4-测试与优化1周>Phase 4: 测试与优化（1周）</h3><ul><li><input disabled type=checkbox> 单元测试覆盖</li><li><input disabled type=checkbox> 集成测试</li><li><input disabled type=checkbox> 性能优化</li><li><input disabled type=checkbox> 文档完善</li></ul><hr><h2 id=-参考资料>📚 参考资料</h2><h3 id=领域驱动设计>领域驱动设计</h3><ul><li>工单是聚合根（Aggregate Root）</li><li>短信回复、短信回访是工单下的子领域能力</li><li>字段变更影响：流程、报表、权限</li></ul><h3 id=业务规则总结>业务规则总结</h3><ul><li>报表统计必须以<strong>主办机构</strong>为唯一判断依据</li><li>每个工单仅允许发送一次短信回复</li><li>短信回访有效期：发送时间 T + 3 自然日</li><li>多次发送只统计首次客户回复</li></ul><hr><blockquote><p>本文档基于GPT和DeepSeek整理，采用DDD领域驱动设计思想，详细拆解了每个功能点的开发任务和单元测试点，便于开发团队按阶段实施和测试验证。</p></blockquote></div><div class="post__tags tags clearfix"><svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373.0-.74-.24-1-.5L1 8A2.853 2.853.0 01.3 7C.113 6.55.0 5.973.0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034.0 1.4.0h4.2c.373.0.95.113 1.4.3s.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5.0 100-3 1.5 1.5.0 000 3z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/ rel=tag>需求分析</a></li><li class=tags__item><a class="tags__link btn" href=/tags/DDD/ rel=tag>DDD</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/ rel=tag>短信触达</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E5%B7%A5%E5%8D%95%E7%B3%BB%E7%BB%9F/ rel=tag>工单系统</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="wu guojun avatar" src=/img/QR.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>关于 wu guojun</span></div><div class=authorbox__description>北京牛马，高级 CV工程狮</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--prev"><a class=post-nav__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF-%E5%85%B8%E5%BD%93%E9%93%BA%E7%9A%84%E5%90%AF%E7%A4%BA/ rel=prev><span class=post-nav__caption>«&#8201;上一篇</span><p class=post-nav__post-title>区块链技术核心典当铺的启示</p></a></div><div class="post-nav__item post-nav__item--next"><a class=post-nav__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%85%A8%E6%B8%A0%E9%81%93%E6%8A%95%E8%AF%89%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E5%8F%8A%E6%8A%95%E8%AF%89%E5%AD%97%E6%AE%B5%E4%BC%98%E5%8C%96/ rel=next><span class=post-nav__caption>下一篇&#8201;»</span><p class=post-nav__post-title>工单全渠道统计及字段优化需求文档</p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2026 补漏砖匠.
+<span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/quiz.js></script><script src=/js/ai-quiz.js></script></body></html>

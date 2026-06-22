@@ -38,6 +38,11 @@
 &lt;li&gt;计划：多版本文档管理、多语言支持策略&lt;/li&gt;
 &lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95/"&gt;英语语法&lt;/a&gt; —— 解决查看文档，不解其意的痛点。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h5 id="需求文档"&gt;「需求文档」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%B7%A5%E5%8D%95%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/"&gt;工单短信触达需求文档&lt;/a&gt; —— DDD领域驱动设计、功能点拆解、单元测试点&lt;/li&gt;
+&lt;li&gt;计划：需求文档模板、用户故事编写、验收标准定义&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h5 id="自动化文档"&gt;「自动化文档」&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E6%96%87%E6%A1%A3%E7%BC%96%E6%92%B0/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%96%87%E6%A1%A3"&gt;CI 集成文档生成&lt;/a&gt; —— Javadoc/Sphinx/Doxygen 实战&lt;/li&gt;
@@ -53,6 +58,12 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E6%96%87%E6%A1%A3%E7%BC%96%E6%92%B0/%E8%A7%86%E8%A7%89%E5%8C%96"&gt;技术图表绘制&lt;/a&gt; —— 架构图、流程图、序列图规范&lt;/li&gt;
 &lt;li&gt;计划：配色方案、图标系统、交互式文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="技术总结"&gt;「技术总结」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF-%E5%85%B8%E5%BD%93%E9%93%BA%E7%9A%84%E5%90%AF%E7%A4%BA/"&gt;区块链技术核心：典当铺的启示&lt;/a&gt; —— 双花防御、51%攻击、时间换空间&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE-%E5%B0%86%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E7%A1%AC%E5%BA%A6%E5%88%BB%E5%85%A5%E6%95%B0%E5%AD%97%E7%81%B5%E9%AD%82/"&gt;区块链：将现实世界的&amp;quot;硬度&amp;quot;刻入数字灵魂&lt;/a&gt; —— 从增删改查到只能生长，数字世界的哲学实现&lt;/li&gt;
+&lt;li&gt;计划：核心技术解析、最佳实践总结、案例分析&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id="-代码规范训"&gt;&lt;span style="color: var(--cinnabar);"&gt;⚙️ 「代码规范训」&lt;/span&gt;&lt;/h3&gt;

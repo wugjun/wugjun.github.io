@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>需求文档 on 补漏砖匠</title><link>/categories/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/</link><description>Recent content in 需求文档 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml"/><item><title>工单全渠道统计及字段优化需求文档</title><link>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%85%A8%E6%B8%A0%E9%81%93%E6%8A%95%E8%AF%89%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E5%8F%8A%E6%8A%95%E8%AF%89%E5%AD%97%E6%AE%B5%E4%BC%98%E5%8C%96/</link><pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate><guid>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%85%A8%E6%B8%A0%E9%81%93%E6%8A%95%E8%AF%89%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E5%8F%8A%E6%8A%95%E8%AF%89%E5%AD%97%E6%AE%B5%E4%BC%98%E5%8C%96/</guid><description>&lt;h1 id="需求概述"&gt;需求概述&lt;/h1&gt;
+&lt;h2 id="投诉数据对比报表"&gt;投诉数据对比报表&lt;/h2&gt;
+&lt;h3 id="业务规则"&gt;业务规则&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;报表名称&lt;/strong&gt;：投诉数据对比报表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;菜单路径&lt;/strong&gt;：工单系统 → 报表系统 → 报表查询 → 投诉数据对比报表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持按年度、季度、月度对远程银行各渠道的投诉数据进行对比分析。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;报表权限&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;总行消费者权益保护部工单用户和运营管理部（服务督查室）客户关注岗、值班经理、坐席组长：查询及导出全量数据。&lt;/li&gt;
+&lt;li&gt;分行工单用户：查询及导出“业务所在城市”为本分行的数据。&lt;/li&gt;
+&lt;li&gt;支行工单用户：无该报表任何权限，不展示该报表菜单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据范围（投诉渠道）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;总行监管转办&lt;/li&gt;
+&lt;li&gt;信用卡中心监管转办&lt;/li&gt;
+&lt;li&gt;远程银行中心自收&lt;/li&gt;
+&lt;li&gt;信用卡中心自收&lt;/li&gt;
+&lt;li&gt;其他&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="投诉渠道与工单类型对应关系"&gt;投诉渠道与工单类型对应关系&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;投诉渠道&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;工单类型/数据来源&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;解释说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;总行监管转办&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;全渠道投诉报表中“总行监管转办投诉”的数据（总行监管转办工单＋分行监管转办工单）&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;总分行非信用卡条线受理的监管机构转办投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;信用卡中心监管转办&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;全渠道投诉报表中，“投诉来源”为“信用卡中心监管转办投诉”的投诉数据&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;信用卡中心受理的监管机构转办投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;远程银行中心自收&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;参见下文“自收投诉来源和工单类型对应关系表”&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;信用卡中心自有渠道受理的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;其他&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;其他投诉工单（暂无）&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;其他渠道受理的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="自收投诉来源和工单类型对应关系表"&gt;自收投诉来源和工单类型对应关系表&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;自收投诉来源&lt;/th&gt;
+ &lt;th&gt;工单类型&lt;/th&gt;
+ &lt;th&gt;解释说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;自有渠道&lt;/td&gt;
+ &lt;td&gt;投诉工单&lt;/td&gt;
+ &lt;td&gt;95577/4006695577 受理的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;12378呼转&lt;/td&gt;
+ &lt;td&gt;投诉工单（12378）&lt;/td&gt;
+ &lt;td&gt;12378呼转至95577或4006695577的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;消保平台转办&lt;/td&gt;
+ &lt;td&gt;消保平台转送投诉（总）&lt;/td&gt;
+ &lt;td&gt;消保平台转办至95577或4006695577的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;其他&lt;/td&gt;
+ &lt;td&gt;其他（暂无）&lt;/td&gt;
+ &lt;td&gt;其他投诉来源的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查询条件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;投诉渠道&lt;/li&gt;
+&lt;li&gt;自收投诉来源&lt;/li&gt;
+&lt;li&gt;对比时段类型&lt;/li&gt;
+&lt;li&gt;查询数据时段&lt;/li&gt;
+&lt;li&gt;对比条件&lt;/li&gt;
+&lt;li&gt;对比单位&lt;/li&gt;
+&lt;li&gt;业务条线&lt;/li&gt;
+&lt;li&gt;被投诉单位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查询条件说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询条件【对比时段类型】选择“年度”时，【查询数据时段】仅支持选择某年份；季、月、自选同理，支持与之对应的具体时间范围。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特别说明&lt;/strong&gt;：查询条件选择“年”时，没有同比数据，显示“/”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对比条件释义&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“全量”：对全量投诉数据进行对比&lt;/li&gt;
+&lt;li&gt;“剔除重复”：统计对比时段内唯一来电号码的投诉数据，重复号码的多笔投诉仅做一笔&lt;/li&gt;
+&lt;li&gt;“剔除无效”：在“剔除重复”数据基础上，同时剔除各经办单位提出并审核通过的无效投诉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;被投诉单位&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>工单短信触达需求文档</title><link>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%B7%A5%E5%8D%95%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/</link><pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%B7%A5%E5%8D%95%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/</guid><description>&lt;h2 id="-需求概述"&gt;📋 需求概述&lt;/h2&gt;
+&lt;h3 id="项目背景"&gt;项目背景&lt;/h3&gt;
+&lt;p&gt;投诉工单系统需要新增短信通知功能，实现工单受理、结案、回访的短信触达，并改造直通率统计报表。&lt;/p&gt;
+&lt;h3 id="核心目标"&gt;核心目标&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;自动发送受理短信&lt;/strong&gt;：新建工单后自动发送受理通知&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;手动短信回复&lt;/strong&gt;：支持处理人员手动发送结案通知短信&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;短信回访&lt;/strong&gt;：工单结案后自动发送回访短信，处理客户回复&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;统计报表改造&lt;/strong&gt;：基于主办机构计算直通办理率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="-领域模型设计"&gt;🏗️ 领域模型设计&lt;/h2&gt;
+&lt;h3 id="核心领域core-domain"&gt;核心领域（Core Domain）&lt;/h3&gt;
+&lt;h4 id="1-投诉工单实体complaintorder"&gt;1. 投诉工单实体（ComplaintOrder）&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 核心字段&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; orderId: 工单ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; orderType: 工单类型&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;12378&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;监管转办&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;消保转送&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;咨询等&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; contactName: 联系人姓名
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; contactPhone: 联系人电话
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; complainantPhone: 投诉人电话
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; mainOrg: 主办机构&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;总行&lt;span style="color:#f92672"&gt;/&lt;/span&gt;信用卡中心&lt;span style="color:#f92672"&gt;/&lt;/span&gt;分行&lt;span style="color:#f92672"&gt;/&lt;/span&gt;其他&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; mainOperator: 主办人员
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; isSmsReply: 是否短信回复&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;是&lt;span style="color:#f92672"&gt;/&lt;/span&gt;否&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; smsReplyTime: 回复时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; isSmsVisit: 是否短信回访&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;是&lt;span style="color:#f92672"&gt;/&lt;/span&gt;否&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visitDate: 回访日期
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visitTime: 回访时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visitResult: 回访效果&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;满意&lt;span style="color:#f92672"&gt;/&lt;/span&gt;不满意&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; processNotifyType: 处理决定告知方式&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;短信&lt;span style="color:#f92672"&gt;/&lt;/span&gt;其他&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; processNotifyTime: 处理决定告知时间
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="2-短信交互实体smsinteraction"&gt;2. 短信交互实体（SmsInteraction）&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; smsId: 短信记录ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; orderId: 关联工单
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; smsType: 短信类型&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;受理通知&lt;span style="color:#f92672"&gt;/&lt;/span&gt;结案通知&lt;span style="color:#f92672"&gt;/&lt;/span&gt;回访&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateId: 短信模板
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; phone: 发送手机号
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; customerName: 客户姓名
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; sendTime: 短信发送时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; sendOperator: 发送人
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; replyContent: 客户回复内容
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; replyTime: 客户回复时间
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="3-短信模板实体smstemplate"&gt;3. 短信模板实体（SmsTemplate）&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateId: 模板ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateName: 模板名称
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateContent: 模板内容
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateType: 类型&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;受理&lt;span style="color:#f92672"&gt;/&lt;/span&gt;结案&lt;span style="color:#f92672"&gt;/&lt;/span&gt;回访&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; approvedStatus: 业务审核状态
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visibleRoles: 可见角色&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;总行&lt;span style="color:#f92672"&gt;/&lt;/span&gt;分行&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; enabled: 是否启用
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-功能需求与开发任务"&gt;🎯 功能需求与开发任务&lt;/h2&gt;
+&lt;h3 id="功能一新建工单自动发送受理短信"&gt;功能一：新建工单自动发送受理短信&lt;/h3&gt;
+&lt;h4 id="-功能描述"&gt;📌 功能描述&lt;/h4&gt;
+&lt;p&gt;投诉工单新建成功后，系统自动发送受理短信给联系人。&lt;/p&gt;</description></item></channel></rss>

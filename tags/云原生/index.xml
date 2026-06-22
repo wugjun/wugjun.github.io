@@ -94,8 +94,15 @@
 &lt;h4 id="-kubernetes-排兵阵"&gt;☸️ 「Kubernetes 排兵阵」&lt;/h4&gt;
 &lt;h5 id="集群部署与管理"&gt;「集群部署与管理」&lt;/h5&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%AE%B9%E5%99%A8%E5%8C%96/K8s%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2"&gt;K8s 集群建设指南&lt;/a&gt; —— 高可用架构、网络插件选型、存储方案&lt;/li&gt;
-&lt;li&gt;计划：节点管理、资源配额、命名空间规划&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%AE%B9%E5%99%A8%E5%8C%96/K8s%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2"&gt;K8s 集群建设指南&lt;/a&gt; —— 高可用架构、网络插件选型、存储方案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%AE%B9%E5%99%A8%E5%8C%96/etcd%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/"&gt;etcd 集群部署详解&lt;/a&gt; —— 集群模式、高可用部署、证书管理与运维故障排查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计划：节点管理、资源配额、命名空间规划&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id="工作负载编排"&gt;「工作负载编排」&lt;/h5&gt;
 &lt;ul&gt;

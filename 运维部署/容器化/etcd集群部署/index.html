@@ -1,0 +1,276 @@
+<!doctype html><html class=no-js lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>Kubernetes 集群部署 - etcd 安装与配置</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="K8s 集群中 etcd 的完整安装、配置和部署指南"><meta name=generator content="Hugo 0.152.2"><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/quiz.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title=补漏砖匠 rel=home><div class=logo__title>补漏砖匠</div><div class=logo__tagline>独钓寒江雪，为有暗香来。</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>菜单</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E4%BD%9C%E5%8F%B0/>工作台</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%89%91%E6%B3%95%E7%AF%87/>编程语言</a></li><li class=menu__item><a class=menu__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/>运维部署</a></li><li class=menu__item><a class=menu__link href=/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A3%8B%E8%B0%B1%E7%AF%87/>算法数据结构</a></li><li class=menu__item><a class=menu__link href=/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/>后端架构</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-%E6%B3%95%E5%AE%9D%E7%AF%87/>工具效率</a></li><li class=menu__item><a class=menu__link href=/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/>前端开发</a></li><li class=menu__item><a class=menu__link href=/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3-%E5%85%B8%E7%B1%8D%E7%AF%87/>开源文档</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-AI%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95/>JAVA在线测试</a></li><li class=menu__item><a class=menu__link href=/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%9C%A8%E7%BA%BF%E7%AD%94%E9%A2%98%E7%A4%BA%E4%BE%8B/>在线答题</a></li><li class=menu__item><a class=menu__link href=/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87/%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87-DeepSeek%E6%B5%81%E5%BC%8F%E8%81%8A%E5%A4%A9/>DeepSeek</a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>Kubernetes 集群部署 - etcd 安装与配置</h1><p class=post__lead>etcd 作为 Kubernetes 的数据存储核心，稳定可靠的部署至关重要</p><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-3e-7c-4.4.0-8 3.6-8 8C0 12.4 3.6 16 8 16s8-3.6 8-8.0000003c0-4.4-3.6-8-8-8zM8 14.4c-3.52.0-6.4-2.88-6.4-6.4000003.0-3.52 2.88-6.4 6.4-6.4s6.4 2.88 6.4 6.4C14.4 11.52 11.52 14.4 8 14.4zm.4-10.4000003H7.2v4.8L11.36 11.36l.64-1.04-3.6-2.1600003z"/></svg>
+<time class=meta__text datetime=2025-12-29T00:00:00>December 29, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg>
+<span class=meta__text><a class=meta__link href=/categories/%e8%bf%90%e7%bb%b4%e9%83%a8%e7%bd%b2 rel=category>运维部署</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>页面内容</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#-概述>📋 概述</a><ul><li><a href=#架构说明>架构说明</a></li></ul></li><li><a href=#-环境准备>🔧 环境准备</a><ul><li><a href=#节点信息配置>节点信息配置</a></li><li><a href=#系统要求>系统要求</a></li></ul></li><li><a href=#-安装-etcd>📦 安装 etcd</a><ul><li><a href=#步骤-1-下载-etcd-二进制文件>步骤 1: 下载 etcd 二进制文件</a></li><li><a href=#步骤-2-配置-etcd-集群>步骤 2: 配置 etcd 集群</a></li><li><a href=#步骤-3-创建-systemd-服务>步骤 3: 创建 systemd 服务</a></li></ul></li><li><a href=#-启动-etcd-集群>🚀 启动 etcd 集群</a><ul><li><a href=#步骤-4-启动集群>步骤 4: 启动集群</a></li></ul></li><li><a href=#-验证和监控>✅ 验证和监控</a><ul><li><a href=#检查集群状态>检查集群状态</a></li><li><a href=#常用维护命令>常用维护命令</a></li></ul></li><li><a href=#-注意事项>📝 注意事项</a></li><li><a href=#-相关资源>🔗 相关资源</a></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=-概述>📋 概述</h2><p>etcd 是 Kubernetes 集群的核心数据存储组件，负责存储集群的所有配置数据、状态信息和元数据。本文档提供 etcd 集群的完整安装、配置和部署方案。</p><h3 id=架构说明>架构说明</h3><ul><li><strong>集群模式</strong>: 建议至少 3 个节点（奇数个节点，避免脑裂）</li><li><strong>数据目录</strong>: <code>/var/lib/etcd</code></li><li><strong>配置文件</strong>: <code>/etc/etcd/etcd.conf</code></li><li><strong>服务文件</strong>: <code>/etc/systemd/system/etcd.service</code></li><li><strong>端口</strong>:<ul><li><code>2379</code>: 客户端通信端口</li><li><code>2380</code>: 节点间通信端口</li></ul></li></ul><hr><h2 id=-环境准备>🔧 环境准备</h2><h3 id=节点信息配置>节点信息配置</h3><p>根据实际环境修改以下节点信息：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 节点格式: 主机名:IP地址:etcd节点名</span>
+</span></span><span style=display:flex><span>NODES<span style=color:#f92672>=(</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-01:192.168.1.100:etcd-01&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-node-01:192.168.1.101:etcd-02&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-02:192.168.1.102:etcd-03&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>)</span>
+</span></span></code></pre></div><h3 id=系统要求>系统要求</h3><ul><li><strong>操作系统</strong>: CentOS 7+ / Ubuntu 18.04+</li><li><strong>内存</strong>: 至少 2GB（推荐 4GB+）</li><li><strong>磁盘</strong>: 至少 20GB 可用空间（SSD 推荐）</li><li><strong>网络</strong>: 节点间网络延迟 &lt; 10ms</li></ul><hr><h2 id=-安装-etcd>📦 安装 etcd</h2><h3 id=步骤-1-下载-etcd-二进制文件>步骤 1: 下载 etcd 二进制文件</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e># install-etcd.sh - etcd 安装脚本</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>set -e
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ETCD_VERSION<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;v3.5.9&#34;</span>  <span style=color:#75715e># 根据 K8s 版本选择兼容的 etcd 版本</span>
+</span></span><span style=display:flex><span>INSTALL_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/usr/local/bin&#34;</span>
+</span></span><span style=display:flex><span>DATA_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/var/lib/etcd&#34;</span>
+</span></span><span style=display:flex><span>CONFIG_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/etc/etcd&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 交互式确认</span>
+</span></span><span style=display:flex><span>read -p <span style=color:#e6db74>&#34;是否执行 etcd 安装步骤？(y/n) &#34;</span> -n <span style=color:#ae81ff>1</span> -r
+</span></span><span style=display:flex><span>echo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> ! $REPLY <span style=color:#f92672>=</span>~ ^<span style=color:#f92672>[</span>Yy<span style=color:#f92672>]</span>$ <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;已跳过 etcd 安装&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;=== 开始安装 etcd </span><span style=color:#e6db74>${</span>ETCD_VERSION<span style=color:#e6db74>}</span><span style=color:#e6db74> ===&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 创建必要目录</span>
+</span></span><span style=display:flex><span>sudo mkdir -p <span style=color:#e6db74>${</span>INSTALL_DIR<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>sudo mkdir -p <span style=color:#e6db74>${</span>DATA_DIR<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>sudo mkdir -p <span style=color:#e6db74>${</span>CONFIG_DIR<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 下载 etcd</span>
+</span></span><span style=display:flex><span>cd /tmp
+</span></span><span style=display:flex><span>wget https://github.com/etcd-io/etcd/releases/download/<span style=color:#e6db74>${</span>ETCD_VERSION<span style=color:#e6db74>}</span>/etcd-<span style=color:#e6db74>${</span>ETCD_VERSION<span style=color:#e6db74>}</span>-linux-amd64.tar.gz
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 解压并安装</span>
+</span></span><span style=display:flex><span>tar -xzf etcd-<span style=color:#e6db74>${</span>ETCD_VERSION<span style=color:#e6db74>}</span>-linux-amd64.tar.gz
+</span></span><span style=display:flex><span>sudo cp etcd-<span style=color:#e6db74>${</span>ETCD_VERSION<span style=color:#e6db74>}</span>-linux-amd64/etcd* <span style=color:#e6db74>${</span>INSTALL_DIR<span style=color:#e6db74>}</span>/
+</span></span><span style=display:flex><span>sudo chmod +x <span style=color:#e6db74>${</span>INSTALL_DIR<span style=color:#e6db74>}</span>/etcd*
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 验证安装</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>${</span>INSTALL_DIR<span style=color:#e6db74>}</span>/etcd --version
+</span></span><span style=display:flex><span><span style=color:#e6db74>${</span>INSTALL_DIR<span style=color:#e6db74>}</span>/etcdctl version
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;✓ etcd 安装完成&#34;</span>
+</span></span></code></pre></div><h3 id=步骤-2-配置-etcd-集群>步骤 2: 配置 etcd 集群</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e># configure-etcd.sh - etcd 集群配置脚本</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>set -e
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>NODES<span style=color:#f92672>=(</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-01:192.168.1.100:etcd-01&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-node-01:192.168.1.101:etcd-02&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-02:192.168.1.102:etcd-03&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ETCD_VERSION<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;v3.5.9&#34;</span>
+</span></span><span style=display:flex><span>INSTALL_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/usr/local/bin&#34;</span>
+</span></span><span style=display:flex><span>DATA_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/var/lib/etcd&#34;</span>
+</span></span><span style=display:flex><span>CONFIG_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/etc/etcd&#34;</span>
+</span></span><span style=display:flex><span>CERT_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/etc/etcd/ssl&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 交互式确认</span>
+</span></span><span style=display:flex><span>read -p <span style=color:#e6db74>&#34;是否执行 etcd 集群配置？(y/n) &#34;</span> -n <span style=color:#ae81ff>1</span> -r
+</span></span><span style=display:flex><span>echo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> ! $REPLY <span style=color:#f92672>=</span>~ ^<span style=color:#f92672>[</span>Yy<span style=color:#f92672>]</span>$ <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;已跳过 etcd 配置&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;=== 开始配置 etcd 集群 ===&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 生成集群初始成员列表</span>
+</span></span><span style=display:flex><span>INITIAL_CLUSTER<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> NODE_INFO in <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NODES[@]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    IFS<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;:&#39;</span> read -r HOSTNAME NODE_IP ETCD_NAME <span style=color:#f92672>&lt;&lt;&lt;</span> <span style=color:#e6db74>&#34;</span>$NODE_INFO<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    INITIAL_CLUSTER<span style=color:#f92672>+=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>ETCD_NAME<span style=color:#e6db74>}</span><span style=color:#e6db74>=https://</span><span style=color:#e6db74>${</span>NODE_IP<span style=color:#e6db74>}</span><span style=color:#e6db74>:2380,&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>INITIAL_CLUSTER<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>INITIAL_CLUSTER%,<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;集群成员列表: </span><span style=color:#e6db74>${</span>INITIAL_CLUSTER<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 为每个节点配置 etcd</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> NODE_INFO in <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NODES[@]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    IFS<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;:&#39;</span> read -r HOSTNAME NODE_IP ETCD_NAME <span style=color:#f92672>&lt;&lt;&lt;</span> <span style=color:#e6db74>&#34;</span>$NODE_INFO<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;配置节点: </span><span style=color:#e6db74>${</span>HOSTNAME<span style=color:#e6db74>}</span><span style=color:#e6db74> (</span><span style=color:#e6db74>${</span>ETCD_NAME<span style=color:#e6db74>}</span><span style=color:#e6db74>)&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    ssh root@<span style=color:#e6db74>${</span>NODE_IP<span style=color:#e6db74>}</span> <span style=color:#e6db74>&lt;&lt; EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        # 创建目录
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mkdir -p ${DATA_DIR}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mkdir -p ${CONFIG_DIR}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mkdir -p ${CERT_DIR}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        # 创建 etcd 配置文件
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        cat &gt; ${CONFIG_DIR}/etcd.conf &lt;&lt; EOC
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 节点名称
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_NAME=${ETCD_NAME}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 数据目录
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_DATA_DIR=${DATA_DIR}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 监听客户端请求的地址
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_LISTEN_CLIENT_URLS=https://${NODE_IP}:2379,https://127.0.0.1:2379
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 监听对等节点请求的地址
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_LISTEN_PEER_URLS=https://${NODE_IP}:2380
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 客户端访问地址
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_INITIAL_ADVERTISE_PEER_URLS=https://${NODE_IP}:2380
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_ADVERTISE_CLIENT_URLS=https://${NODE_IP}:2379
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 初始集群成员列表
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_INITIAL_CLUSTER=${INITIAL_CLUSTER}
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 集群状态（new 表示新集群，existing 表示加入已有集群）
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_INITIAL_CLUSTER_STATE=new
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 集群 token
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_INITIAL_CLUSTER_TOKEN=k8s-etcd-cluster
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 客户端证书配置（如果使用 TLS）
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_CLIENT_CERT_AUTH=true
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_CERT_FILE=${CERT_DIR}/server.crt
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_KEY_FILE=${CERT_DIR}/server.key
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_TRUSTED_CA_FILE=${CERT_DIR}/ca.crt
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 对等节点证书配置
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_PEER_CLIENT_CERT_AUTH=true
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_PEER_CERT_FILE=${CERT_DIR}/peer.crt
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_PEER_KEY_FILE=${CERT_DIR}/peer.key
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ETCD_PEER_TRUSTED_CA_FILE=${CERT_DIR}/ca.crt
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOC
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        # 设置权限
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        chmod 644 ${CONFIG_DIR}/etcd.conf
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        chown -R etcd:etcd ${DATA_DIR} ${CONFIG_DIR} 2&gt;/dev/null || true
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        echo &#34;✓ ${HOSTNAME} 配置完成&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;✓ etcd 集群配置完成&#34;</span>
+</span></span></code></pre></div><h3 id=步骤-3-创建-systemd-服务>步骤 3: 创建 systemd 服务</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e># setup-etcd-service.sh - 创建 etcd systemd 服务</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>set -e
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>NODES<span style=color:#f92672>=(</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-01:192.168.1.100:etcd-01&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-node-01:192.168.1.101:etcd-02&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-02:192.168.1.102:etcd-03&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>INSTALL_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/usr/local/bin&#34;</span>
+</span></span><span style=display:flex><span>CONFIG_DIR<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/etc/etcd&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 交互式确认</span>
+</span></span><span style=display:flex><span>read -p <span style=color:#e6db74>&#34;是否创建 etcd systemd 服务？(y/n) &#34;</span> -n <span style=color:#ae81ff>1</span> -r
+</span></span><span style=display:flex><span>echo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> ! $REPLY <span style=color:#f92672>=</span>~ ^<span style=color:#f92672>[</span>Yy<span style=color:#f92672>]</span>$ <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;已跳过服务创建&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;=== 创建 etcd systemd 服务 ===&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> NODE_INFO in <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NODES[@]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    IFS<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;:&#39;</span> read -r HOSTNAME NODE_IP ETCD_NAME <span style=color:#f92672>&lt;&lt;&lt;</span> <span style=color:#e6db74>&#34;</span>$NODE_INFO<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;为 </span><span style=color:#e6db74>${</span>HOSTNAME<span style=color:#e6db74>}</span><span style=color:#e6db74> 创建服务...&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    ssh root@<span style=color:#e6db74>${</span>NODE_IP<span style=color:#e6db74>}</span> <span style=color:#e6db74>&lt;&lt; EOF
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        cat &gt; /etc/systemd/system/etcd.service &lt;&lt; EOS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Unit]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Description=Etcd Server
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Documentation=https://github.com/coreos/etcd
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>After=network.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Wants=network-online.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Service]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Type=notify
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EnvironmentFile=-${CONFIG_DIR}/etcd.conf
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>ExecStart=${INSTALL_DIR}/etcd
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Restart=on-failure
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>RestartSec=10
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>LimitNOFILE=65536
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># 关键：增加启动超时时间，避免集群启动时超时
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>TimeoutStartSec=120
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[Install]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>WantedBy=multi-user.target
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        # 重新加载 systemd
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        systemctl daemon-reload
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        systemctl enable etcd
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        echo &#34;✓ ${HOSTNAME} 服务创建完成&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;✓ etcd 服务创建完成&#34;</span>
+</span></span></code></pre></div><hr><h2 id=-启动-etcd-集群>🚀 启动 etcd 集群</h2><h3 id=步骤-4-启动集群>步骤 4: 启动集群</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e># start-etcd-cluster.sh - 启动 etcd 集群</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>set -e
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>NODES<span style=color:#f92672>=(</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-01:192.168.1.100:etcd-01&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-node-01:192.168.1.101:etcd-02&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;k8s-master-02:192.168.1.102:etcd-03&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 交互式确认</span>
+</span></span><span style=display:flex><span>read -p <span style=color:#e6db74>&#34;是否启动 etcd 集群？(y/n) &#34;</span> -n <span style=color:#ae81ff>1</span> -r
+</span></span><span style=display:flex><span>echo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> ! $REPLY <span style=color:#f92672>=</span>~ ^<span style=color:#f92672>[</span>Yy<span style=color:#f92672>]</span>$ <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;已跳过集群启动&#34;</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;=== 启动 etcd 集群 ===&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 按顺序启动节点（避免同时启动导致的问题）</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i in <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>!NODES[@]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    NODE_INFO<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NODES[$i]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    IFS<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;:&#39;</span> read -r HOSTNAME NODE_IP ETCD_NAME <span style=color:#f92672>&lt;&lt;&lt;</span> <span style=color:#e6db74>&#34;</span>$NODE_INFO<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;启动节点 </span><span style=color:#e6db74>${</span>HOSTNAME<span style=color:#e6db74>}</span><span style=color:#e6db74> (第 </span><span style=color:#66d9ef>$((</span>i+1<span style=color:#66d9ef>))</span><span style=color:#e6db74> 个节点)...&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    ssh root@<span style=color:#e6db74>${</span>NODE_IP<span style=color:#e6db74>}</span> <span style=color:#e6db74>&#34;systemctl start etcd&#34;</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 等待节点启动</span>
+</span></span><span style=display:flex><span>    sleep <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 检查节点状态</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> ssh root@<span style=color:#e6db74>${</span>NODE_IP<span style=color:#e6db74>}</span> <span style=color:#e6db74>&#34;systemctl is-active --quiet etcd&#34;</span>; <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>        echo <span style=color:#e6db74>&#34;✓ </span><span style=color:#e6db74>${</span>HOSTNAME<span style=color:#e6db74>}</span><span style=color:#e6db74> 启动成功&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>        echo <span style=color:#e6db74>&#34;✗ </span><span style=color:#e6db74>${</span>HOSTNAME<span style=color:#e6db74>}</span><span style=color:#e6db74> 启动失败，请检查日志: journalctl -u etcd -n 50&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;=== 检查集群状态 ===&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 使用第一个节点检查集群状态</span>
+</span></span><span style=display:flex><span>FIRST_NODE<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NODES[0]<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>IFS<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;:&#39;</span> read -r FIRST_HOST FIRST_IP FIRST_NAME <span style=color:#f92672>&lt;&lt;&lt;</span> <span style=color:#e6db74>&#34;</span>$FIRST_NODE<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ssh root@<span style=color:#e6db74>${</span>FIRST_IP<span style=color:#e6db74>}</span> <span style=color:#e6db74>&#34;/usr/local/bin/etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/etc/etcd/ssl/ca.crt --cert=/etc/etcd/ssl/server.crt --key=/etc/etcd/ssl/server.key endpoint health&#34;</span> <span style=color:#f92672>||</span> echo <span style=color:#e6db74>&#34;注意: 如果使用 TLS，请确保证书已正确配置&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;✓ etcd 集群启动完成&#34;</span>
+</span></span></code></pre></div><hr><h2 id=-验证和监控>✅ 验证和监控</h2><h3 id=检查集群状态>检查集群状态</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 检查服务状态</span>
+</span></span><span style=display:flex><span>systemctl status etcd
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 查看日志</span>
+</span></span><span style=display:flex><span>journalctl -u etcd -f
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 检查集群健康（如果使用 TLS）</span>
+</span></span><span style=display:flex><span>etcdctl --endpoints<span style=color:#f92672>=</span>https://127.0.0.1:2379 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --cacert<span style=color:#f92672>=</span>/etc/etcd/ssl/ca.crt <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --cert<span style=color:#f92672>=</span>/etc/etcd/ssl/server.crt <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --key<span style=color:#f92672>=</span>/etc/etcd/ssl/server.key <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    endpoint health
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 查看集群成员</span>
+</span></span><span style=display:flex><span>etcdctl --endpoints<span style=color:#f92672>=</span>https://127.0.0.1:2379 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --cacert<span style=color:#f92672>=</span>/etc/etcd/ssl/ca.crt <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --cert<span style=color:#f92672>=</span>/etc/etcd/ssl/server.crt <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --key<span style=color:#f92672>=</span>/etc/etcd/ssl/server.key <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    member list
+</span></span></code></pre></div><h3 id=常用维护命令>常用维护命令</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 备份 etcd 数据</span>
+</span></span><span style=display:flex><span>etcdctl snapshot save /backup/etcd-snapshot-<span style=color:#66d9ef>$(</span>date +%Y%m%d<span style=color:#66d9ef>)</span>.db
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 恢复 etcd 数据</span>
+</span></span><span style=display:flex><span>etcdctl snapshot restore /backup/etcd-snapshot-20231229.db <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    --data-dir<span style=color:#f92672>=</span>/var/lib/etcd-restore
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 查看集群统计信息</span>
+</span></span><span style=display:flex><span>etcdctl endpoint status --write-out<span style=color:#f92672>=</span>table
+</span></span></code></pre></div><hr><h2 id=-注意事项>📝 注意事项</h2><ol><li><strong>证书配置</strong>: 如果使用 TLS，确保所有节点的证书已正确配置</li><li><strong>网络连通性</strong>: 确保所有节点间的 2379 和 2380 端口互通</li><li><strong>数据备份</strong>: 定期备份 etcd 数据，防止数据丢失</li><li><strong>资源监控</strong>: 监控 etcd 的 CPU、内存和磁盘使用情况</li><li><strong>版本兼容</strong>: 确保 etcd 版本与 Kubernetes 版本兼容</li></ol><hr><h2 id=-相关资源>🔗 相关资源</h2><ul><li><a href=https://etcd.io/docs/>etcd 官方文档</a></li><li><a href=https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/>Kubernetes etcd 集成</a></li></ul></div><div class="post__tags tags clearfix"><svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373.0-.74-.24-1-.5L1 8A2.853 2.853.0 01.3 7C.113 6.55.0 5.973.0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034.0 1.4.0h4.2c.373.0.95.113 1.4.3s.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5.0 100-3 1.5 1.5.0 000 3z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/Kubernetes/ rel=tag>Kubernetes</a></li><li class=tags__item><a class="tags__link btn" href=/tags/etcd/ rel=tag>etcd</a></li><li class=tags__item><a class="tags__link btn" href=/tags/%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/ rel=tag>集群部署</a></li></ul></div></article></main><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="wu guojun avatar" src=/img/QR.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>关于 wu guojun</span></div><div class=authorbox__description>北京牛马，高级 CV工程狮</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--prev"><a class=post-nav__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2-%E6%9C%BA%E5%85%B3%E7%AF%87/ rel=prev><span class=post-nav__caption>«&#8201;上一篇</span><p class=post-nav__post-title>运维部署</p></a></div><div class="post-nav__item post-nav__item--next"><a class=post-nav__link href=/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD-ngrok%E5%86%85%E7%BD%91%E7%BD%91%E7%A9%BF%E9%80%8F/ rel=next><span class=post-nav__caption>下一篇&#8201;»</span><p class=post-nav__post-title>Ngrok 内网穿透部署指南</p></a></div></nav></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__links><a class=footer__link href=/post/about/>个人简历-中文</a> | <a class=footer__link href=/post/about-en/>个人简历-英文</a></div><div class=footer__copyright>&copy; 2026 补漏砖匠.
+<span class=footer__copyright-credits><a href=# rel="nofollow noopener" target=_blank>左键右鼠运阴阳，挖山填海码几行。</a> <a href=# rel="nofollow noopener" target=_blank>人海浮沉皆过客，我是人间补漏匠。</a></span></div></div></footer></div><script async defer src=/js/menu.js></script><script src=/js/quiz.js></script><script src=/js/ai-quiz.js></script></body></html>

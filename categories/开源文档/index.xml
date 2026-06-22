@@ -1,4 +1,335 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>开源文档 on 补漏砖匠</title><link>/categories/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/</link><description>Recent content in 开源文档 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml"/><item><title>典籍篇</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/</guid><description>&lt;p&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>开源文档 on 补漏砖匠</title><link>/categories/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/</link><description>Recent content in 开源文档 on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml"/><item><title>工单全渠道统计及字段优化需求文档</title><link>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%85%A8%E6%B8%A0%E9%81%93%E6%8A%95%E8%AF%89%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E5%8F%8A%E6%8A%95%E8%AF%89%E5%AD%97%E6%AE%B5%E4%BC%98%E5%8C%96/</link><pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate><guid>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%85%A8%E6%B8%A0%E9%81%93%E6%8A%95%E8%AF%89%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E5%8F%8A%E6%8A%95%E8%AF%89%E5%AD%97%E6%AE%B5%E4%BC%98%E5%8C%96/</guid><description>&lt;h1 id="需求概述"&gt;需求概述&lt;/h1&gt;
+&lt;h2 id="投诉数据对比报表"&gt;投诉数据对比报表&lt;/h2&gt;
+&lt;h3 id="业务规则"&gt;业务规则&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;报表名称&lt;/strong&gt;：投诉数据对比报表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;菜单路径&lt;/strong&gt;：工单系统 → 报表系统 → 报表查询 → 投诉数据对比报表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持按年度、季度、月度对远程银行各渠道的投诉数据进行对比分析。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;报表权限&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;总行消费者权益保护部工单用户和运营管理部（服务督查室）客户关注岗、值班经理、坐席组长：查询及导出全量数据。&lt;/li&gt;
+&lt;li&gt;分行工单用户：查询及导出“业务所在城市”为本分行的数据。&lt;/li&gt;
+&lt;li&gt;支行工单用户：无该报表任何权限，不展示该报表菜单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据范围（投诉渠道）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;总行监管转办&lt;/li&gt;
+&lt;li&gt;信用卡中心监管转办&lt;/li&gt;
+&lt;li&gt;远程银行中心自收&lt;/li&gt;
+&lt;li&gt;信用卡中心自收&lt;/li&gt;
+&lt;li&gt;其他&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="投诉渠道与工单类型对应关系"&gt;投诉渠道与工单类型对应关系&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;投诉渠道&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;工单类型/数据来源&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;解释说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;总行监管转办&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;全渠道投诉报表中“总行监管转办投诉”的数据（总行监管转办工单＋分行监管转办工单）&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;总分行非信用卡条线受理的监管机构转办投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;信用卡中心监管转办&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;全渠道投诉报表中，“投诉来源”为“信用卡中心监管转办投诉”的投诉数据&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;信用卡中心受理的监管机构转办投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;远程银行中心自收&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;参见下文“自收投诉来源和工单类型对应关系表”&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;信用卡中心自有渠道受理的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;其他&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;其他投诉工单（暂无）&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;其他渠道受理的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="自收投诉来源和工单类型对应关系表"&gt;自收投诉来源和工单类型对应关系表&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;自收投诉来源&lt;/th&gt;
+ &lt;th&gt;工单类型&lt;/th&gt;
+ &lt;th&gt;解释说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;自有渠道&lt;/td&gt;
+ &lt;td&gt;投诉工单&lt;/td&gt;
+ &lt;td&gt;95577/4006695577 受理的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;12378呼转&lt;/td&gt;
+ &lt;td&gt;投诉工单（12378）&lt;/td&gt;
+ &lt;td&gt;12378呼转至95577或4006695577的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;消保平台转办&lt;/td&gt;
+ &lt;td&gt;消保平台转送投诉（总）&lt;/td&gt;
+ &lt;td&gt;消保平台转办至95577或4006695577的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;其他&lt;/td&gt;
+ &lt;td&gt;其他（暂无）&lt;/td&gt;
+ &lt;td&gt;其他投诉来源的客户投诉&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查询条件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;投诉渠道&lt;/li&gt;
+&lt;li&gt;自收投诉来源&lt;/li&gt;
+&lt;li&gt;对比时段类型&lt;/li&gt;
+&lt;li&gt;查询数据时段&lt;/li&gt;
+&lt;li&gt;对比条件&lt;/li&gt;
+&lt;li&gt;对比单位&lt;/li&gt;
+&lt;li&gt;业务条线&lt;/li&gt;
+&lt;li&gt;被投诉单位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查询条件说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询条件【对比时段类型】选择“年度”时，【查询数据时段】仅支持选择某年份；季、月、自选同理，支持与之对应的具体时间范围。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特别说明&lt;/strong&gt;：查询条件选择“年”时，没有同比数据，显示“/”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对比条件释义&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“全量”：对全量投诉数据进行对比&lt;/li&gt;
+&lt;li&gt;“剔除重复”：统计对比时段内唯一来电号码的投诉数据，重复号码的多笔投诉仅做一笔&lt;/li&gt;
+&lt;li&gt;“剔除无效”：在“剔除重复”数据基础上，同时剔除各经办单位提出并审核通过的无效投诉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;被投诉单位&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>工单短信触达需求文档</title><link>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%B7%A5%E5%8D%95%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/</link><pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%B7%A5%E5%8D%95%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/</guid><description>&lt;h2 id="-需求概述"&gt;📋 需求概述&lt;/h2&gt;
+&lt;h3 id="项目背景"&gt;项目背景&lt;/h3&gt;
+&lt;p&gt;投诉工单系统需要新增短信通知功能，实现工单受理、结案、回访的短信触达，并改造直通率统计报表。&lt;/p&gt;
+&lt;h3 id="核心目标"&gt;核心目标&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;自动发送受理短信&lt;/strong&gt;：新建工单后自动发送受理通知&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;手动短信回复&lt;/strong&gt;：支持处理人员手动发送结案通知短信&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;短信回访&lt;/strong&gt;：工单结案后自动发送回访短信，处理客户回复&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;统计报表改造&lt;/strong&gt;：基于主办机构计算直通办理率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="-领域模型设计"&gt;🏗️ 领域模型设计&lt;/h2&gt;
+&lt;h3 id="核心领域core-domain"&gt;核心领域（Core Domain）&lt;/h3&gt;
+&lt;h4 id="1-投诉工单实体complaintorder"&gt;1. 投诉工单实体（ComplaintOrder）&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 核心字段&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; orderId: 工单ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; orderType: 工单类型&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;12378&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;监管转办&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;消保转送&lt;span style="color:#960050;background-color:#1e0010"&gt;、&lt;/span&gt;咨询等&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; contactName: 联系人姓名
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; contactPhone: 联系人电话
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; complainantPhone: 投诉人电话
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; mainOrg: 主办机构&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;总行&lt;span style="color:#f92672"&gt;/&lt;/span&gt;信用卡中心&lt;span style="color:#f92672"&gt;/&lt;/span&gt;分行&lt;span style="color:#f92672"&gt;/&lt;/span&gt;其他&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; mainOperator: 主办人员
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; isSmsReply: 是否短信回复&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;是&lt;span style="color:#f92672"&gt;/&lt;/span&gt;否&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; smsReplyTime: 回复时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; isSmsVisit: 是否短信回访&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;是&lt;span style="color:#f92672"&gt;/&lt;/span&gt;否&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visitDate: 回访日期
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visitTime: 回访时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visitResult: 回访效果&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;满意&lt;span style="color:#f92672"&gt;/&lt;/span&gt;不满意&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; processNotifyType: 处理决定告知方式&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;短信&lt;span style="color:#f92672"&gt;/&lt;/span&gt;其他&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; processNotifyTime: 处理决定告知时间
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="2-短信交互实体smsinteraction"&gt;2. 短信交互实体（SmsInteraction）&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; smsId: 短信记录ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; orderId: 关联工单
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; smsType: 短信类型&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;受理通知&lt;span style="color:#f92672"&gt;/&lt;/span&gt;结案通知&lt;span style="color:#f92672"&gt;/&lt;/span&gt;回访&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateId: 短信模板
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; phone: 发送手机号
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; customerName: 客户姓名
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; sendTime: 短信发送时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; sendOperator: 发送人
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; replyContent: 客户回复内容
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; replyTime: 客户回复时间
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="3-短信模板实体smstemplate"&gt;3. 短信模板实体（SmsTemplate）&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateId: 模板ID
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateName: 模板名称
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateContent: 模板内容
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; templateType: 类型&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;受理&lt;span style="color:#f92672"&gt;/&lt;/span&gt;结案&lt;span style="color:#f92672"&gt;/&lt;/span&gt;回访&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; approvedStatus: 业务审核状态
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; visibleRoles: 可见角色&lt;span style="color:#960050;background-color:#1e0010"&gt;（&lt;/span&gt;总行&lt;span style="color:#f92672"&gt;/&lt;/span&gt;分行&lt;span style="color:#960050;background-color:#1e0010"&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt; enabled: 是否启用
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="-功能需求与开发任务"&gt;🎯 功能需求与开发任务&lt;/h2&gt;
+&lt;h3 id="功能一新建工单自动发送受理短信"&gt;功能一：新建工单自动发送受理短信&lt;/h3&gt;
+&lt;h4 id="-功能描述"&gt;📌 功能描述&lt;/h4&gt;
+&lt;p&gt;投诉工单新建成功后，系统自动发送受理短信给联系人。&lt;/p&gt;</description></item><item><title>区块链技术核心典当铺的启示</title><link>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF-%E5%85%B8%E5%BD%93%E9%93%BA%E7%9A%84%E5%90%AF%E7%A4%BA/</link><pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF-%E5%85%B8%E5%BD%93%E9%93%BA%E7%9A%84%E5%90%AF%E7%A4%BA/</guid><description>&lt;h2 id="-引言"&gt;📖 引言&lt;/h2&gt;
+&lt;p&gt;比特币作为第一个成功的去中心化数字货币，其核心创新在于解决了**&amp;ldquo;双花问题&amp;rdquo;**（Double Spending Problem）。如何用通俗易懂的方式理解这个看似复杂的技术问题？&lt;/p&gt;
+&lt;p&gt;本文通过一个生动的&lt;strong&gt;典当铺比喻&lt;/strong&gt;，带你深入理解区块链的双花防御机制、51%攻击原理，以及&amp;quot;时间换空间&amp;quot;的核心思想。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-第一幕古老的漏洞中心化的困境"&gt;🎭 第一幕：古老的漏洞——中心化的困境&lt;/h2&gt;
+&lt;h3 id="故事沈万三的第一次欺诈"&gt;故事：沈万三的第一次欺诈&lt;/h3&gt;
+&lt;p&gt;从前，有个叫沈万三的商人，他有一块祖传金砖。他找到&amp;quot;诚信典当铺1号&amp;quot;，抵押金砖，换得一张**&amp;ldquo;当票A&amp;rdquo;&lt;strong&gt;和一笔钱。掌柜的把&lt;/strong&gt;&amp;ldquo;沈万三抵押金砖一块&amp;rdquo;**记录在自己的账本上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;沈万三动了歪心思&lt;/strong&gt;：他手巧，伪造了一张一模一样的**&amp;ldquo;当票A&amp;rsquo;&amp;rdquo;**。他跑到城另一头的&amp;quot;仁义典当铺2号&amp;quot;，声称要典当同一块金砖。2号掌柜没见过这块金砖，查验当票似乎无误，便也给了他钱。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结果&lt;/strong&gt;：傍晚，两家典当铺掌柜对账时，发现**&amp;ldquo;同一块金砖被典当了两次&amp;rdquo;**，大惊失色！虽然最终作废了第二次交易，但沈万三已经卷钱跑路，2号典当铺蒙受了损失。&lt;/p&gt;
+&lt;h3 id="技术对应传统中心化系统的双花问题"&gt;技术对应：传统中心化系统的双花问题&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;典当铺场景&lt;/th&gt;
+ &lt;th&gt;技术对应&lt;/th&gt;
+ &lt;th&gt;问题本质&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;各家典当铺独立账本&lt;/td&gt;
+ &lt;td&gt;银行独立数据库&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;信息不同步&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;伪造当票A'&lt;/td&gt;
+ &lt;td&gt;复制交易记录&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;数据可复制&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;利用时间差&lt;/td&gt;
+ &lt;td&gt;网络延迟&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;缺乏全局一致性&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2号铺蒙受损失&lt;/td&gt;
+ &lt;td&gt;商家收到假币&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;无法验证资产唯一性&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;核心问题&lt;/strong&gt;：在中心化系统中，如果缺乏权威机构的统一验证，同一资产（数字资产）可以被多次花费，这就是**&amp;ldquo;双花问题&amp;rdquo;**的根源。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-第二幕革命性的发明分布式大账本"&gt;🔄 第二幕：革命性的发明——分布式大账本&lt;/h2&gt;
+&lt;h3 id="故事典当联盟的诞生"&gt;故事：典当联盟的诞生&lt;/h3&gt;
+&lt;p&gt;全城的典当铺吃尽苦头，终于联合起来，成立了一个**&amp;ldquo;典当联盟&amp;rdquo;**。他们制定了一套全新的规则：&lt;/p&gt;
+&lt;h4 id="1-统一账本"&gt;1. 统一账本&lt;/h4&gt;
+&lt;p&gt;全城100家典当铺，每家都持有一本&lt;strong&gt;完全相同的、实时同步的超级大账本&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术对应&lt;/strong&gt;：&lt;strong&gt;分布式账本（Distributed Ledger）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个节点（典当铺）维护完整的账本副本&lt;/li&gt;
+&lt;li&gt;通过共识机制保持数据一致性&lt;/li&gt;
+&lt;li&gt;去中心化，无单一控制点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-当票即交易"&gt;2. 当票即交易&lt;/h4&gt;
+&lt;p&gt;任何一笔典当（交易），都不再是简单的当票，而是一条全网广播的**&amp;ldquo;交易记录&amp;rdquo;**。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;交易ID：001&lt;/strong&gt;&lt;br&gt;
+沈万三的金砖编号888，从&lt;code&gt;[沈万三地址]&lt;/code&gt;抵押至&lt;code&gt;[诚信1号地址]&lt;/code&gt;&lt;br&gt;
+时间戳：2024-01-01 10:00:00&lt;br&gt;
+签名：&lt;code&gt;0x3a5f2b...&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;技术对应&lt;/strong&gt;：&lt;strong&gt;UTXO（未花费交易输出）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每笔交易记录资产的转移&lt;/li&gt;
+&lt;li&gt;交易用加密签名保证真实性&lt;/li&gt;
+&lt;li&gt;全网广播，所有节点可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="3-挖矿竞争合账"&gt;3. 挖矿竞争（合账）&lt;/h4&gt;
+&lt;p&gt;他们引入一种叫**&amp;ldquo;合账&amp;rdquo;&lt;strong&gt;的竞赛。每十分钟，各家掌柜会竞相把这段时间收到的交易记录打包成一个&lt;/strong&gt;&amp;ldquo;区块&amp;rdquo;**（相当于一页账）。谁先解出一道超级难的数学题（&lt;strong&gt;工作量证明&lt;/strong&gt;），谁就有权把这一页账（区块）发给所有人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术对应&lt;/strong&gt;：&lt;strong&gt;工作量证明（Proof of Work）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;矿工（掌柜）竞争打包交易&lt;/li&gt;
+&lt;li&gt;解决哈希难题（数学题）获得记账权&lt;/li&gt;
+&lt;li&gt;平均10分钟产生一个区块（比特币）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="4-链式记账"&gt;4. 链式记账&lt;/h4&gt;
+&lt;p&gt;新的一页账必须牢牢钉在上一页账的后面，并用数学封印（哈希值）串联起来，形成一条**&amp;ldquo;区块链&amp;rdquo;**。想改其中一页，就必须重做后面所有的页，并重新赢得每次的竞赛。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术对应&lt;/strong&gt;：&lt;strong&gt;区块链（Blockchain）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个区块包含前一个区块的哈希值&lt;/li&gt;
+&lt;li&gt;形成不可篡改的链式结构&lt;/li&gt;
+&lt;li&gt;篡改历史记录的成本呈指数级增长&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="架构对比"&gt;架构对比&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;传统中心化系统 vs 区块链系统
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+单一账本（易被攻击） 分布式账本（100家店）
+独立验证（信息差） 全网共识（统一验证）
+可篡改（信任中心） 不可篡改（数学保证）
+单点故障 去中心化容错
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="-第三幕沈万三的终极挑战51攻击"&gt;⚔️ 第三幕：沈万三的终极挑战——51%攻击&lt;/h2&gt;
+&lt;h3 id="故事控制多数算力的攻击"&gt;故事：控制多数算力的攻击&lt;/h3&gt;
+&lt;p&gt;沈万三不甘心，他决定挑战整个联盟系统。他想把典当给1号铺的金砖，再偷偷&amp;quot;典当&amp;quot;一次。&lt;/p&gt;</description></item><item><title>区块链将现实世界的硬度刻入数字灵魂</title><link>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE-%E5%B0%86%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E7%A1%AC%E5%BA%A6%E5%88%BB%E5%85%A5%E6%95%B0%E5%AD%97%E7%81%B5%E9%AD%82/</link><pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate><guid>/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE-%E5%B0%86%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E7%A1%AC%E5%BA%A6%E5%88%BB%E5%85%A5%E6%95%B0%E5%AD%97%E7%81%B5%E9%AD%82/</guid><description>&lt;h2 id="一当数据库变硬从增删改查到只能生长"&gt;一、当数据库&amp;quot;变硬&amp;quot;：从增删改查到只能&amp;quot;生长&amp;quot;&lt;/h2&gt;
+&lt;p&gt;大多数程序员的第一反应是：区块链不就是个分布式数据库吗？&lt;/p&gt;
+&lt;p&gt;确实，但这是个&lt;strong&gt;只能生长、不能修改&lt;/strong&gt;的数据库。每一笔交易一旦被确认，就像现实中的&amp;quot;一手交钱、一手交货&amp;quot;——钱货两清，无法反悔。这种特性，我们称之为 &lt;strong&gt;&amp;ldquo;买定离手&amp;quot;的数字化&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;想象一下：如果现实世界的物理定律允许你随意修改已经发生的化学反应，世界会变成什么样子？区块链正是在数字世界里重建了这种&lt;strong&gt;不可逆性&lt;/strong&gt;，让电子记录获得了物质世界的&amp;quot;硬度&amp;rdquo;。&lt;/p&gt;
+&lt;h3 id="传统数据库-vs-区块链"&gt;传统数据库 vs 区块链&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;特性&lt;/th&gt;
+ &lt;th&gt;传统数据库&lt;/th&gt;
+ &lt;th&gt;区块链&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;数据操作&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;增删改查（CRUD）&lt;/td&gt;
+ &lt;td&gt;只能追加（Append-only）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;历史修改&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;可以回滚、删除&lt;/td&gt;
+ &lt;td&gt;历史不可篡改&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;信任来源&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;中心化机构&lt;/td&gt;
+ &lt;td&gt;数学和密码学&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;数据状态&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;可变的、柔软的&lt;/td&gt;
+ &lt;td&gt;不可变的、坚硬的&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="二区块与链数字世界的岩石与地层"&gt;二、&amp;ldquo;区块&amp;quot;与&amp;quot;链&amp;rdquo;：数字世界的岩石与地层&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;区块&lt;/strong&gt;是什么？它不是一个简单的数据容器，而是一个&lt;strong&gt;时间胶囊&lt;/strong&gt;。每个区块都封装了特定时间段内发生的所有交易，就像地质层中的岩石，记录着那个时代的所有故事。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链&lt;/strong&gt;又是什么？它是将这些时间胶囊&lt;strong&gt;按时间顺序焊接在一起的钢索&lt;/strong&gt;。每个新区块都包含前一个区块的&amp;quot;数字指纹&amp;quot;（哈希值），形成了一种依赖关系：要修改历史中的任何一笔交易，就必须把之后所有的区块全部重做一遍。&lt;/p&gt;
+&lt;p&gt;这就像现实中的因果链：你今天做的决定，会基于昨天的经历；而昨天的经历，又基于前天的选择……想要改变过去的某一个瞬间，就必须改变之后所有的时空连续体。&lt;/p&gt;
+&lt;h3 id="区块的时间胶囊特性"&gt;区块的&amp;quot;时间胶囊&amp;quot;特性&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;区块 N-1 区块 N 区块 N+1
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ 交易1 │ │ 交易1 │ │ 交易1 │
+│ 交易2 │ │ 交易2 │ │ 交易2 │
+│ 交易3 │ │ 交易3 │ │ 交易3 │
+│ ... │ │ ... │ │ ... │
+│ 前区块哈希 │ ──────→ │ 前区块哈希 │ ──────→ │ 前区块哈希 │
+│ 时间戳 │ │ 时间戳 │ │ 时间戳 │
+│ 随机数 │ │ 随机数 │ │ 随机数 │
+└─────────────┘ └─────────────┘ └─────────────┘
+ ↑ ↑ ↑
+ 历史 现在 未来
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;篡改成本&lt;/strong&gt;：要修改区块 N-1 中的一笔交易，需要：&lt;/p&gt;</description></item><item><title>典籍篇</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E6%95%B0%E6%8D%AE%E5%BA%93-PostgreSQL%E5%AE%89%E8%A3%85/</guid><description>&lt;p&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="源码安装postgresql稳定版本linux"&gt;源码安装PostgreSQL稳定版本（Linux）&lt;/h1&gt;
 &lt;h2 id="-准备工作"&gt;📋 准备工作&lt;/h2&gt;
 &lt;h3 id="1-查看最新稳定版本"&gt;1. &lt;strong&gt;查看最新稳定版本&lt;/strong&gt;&lt;/h3&gt;
@@ -663,6 +994,11 @@ host all all 0.0.0.0/0 md5
 &lt;li&gt;计划：多版本文档管理、多语言支持策略&lt;/li&gt;
 &lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95/"&gt;英语语法&lt;/a&gt; —— 解决查看文档，不解其意的痛点。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h5 id="需求文档"&gt;「需求文档」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%B7%A5%E5%8D%95%E7%9F%AD%E4%BF%A1%E8%A7%A6%E8%BE%BE/"&gt;工单短信触达需求文档&lt;/a&gt; —— DDD领域驱动设计、功能点拆解、单元测试点&lt;/li&gt;
+&lt;li&gt;计划：需求文档模板、用户故事编写、验收标准定义&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h5 id="自动化文档"&gt;「自动化文档」&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E6%96%87%E6%A1%A3%E7%BC%96%E6%92%B0/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%96%87%E6%A1%A3"&gt;CI 集成文档生成&lt;/a&gt; —— Javadoc/Sphinx/Doxygen 实战&lt;/li&gt;
@@ -678,6 +1014,12 @@ host all all 0.0.0.0/0 md5
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E6%96%87%E6%A1%A3%E7%BC%96%E6%92%B0/%E8%A7%86%E8%A7%89%E5%8C%96"&gt;技术图表绘制&lt;/a&gt; —— 架构图、流程图、序列图规范&lt;/li&gt;
 &lt;li&gt;计划：配色方案、图标系统、交互式文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="技术总结"&gt;「技术总结」&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF-%E5%85%B8%E5%BD%93%E9%93%BA%E7%9A%84%E5%90%AF%E7%A4%BA/"&gt;区块链技术核心：典当铺的启示&lt;/a&gt; —— 双花防御、51%攻击、时间换空间&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3/%E5%8C%BA%E5%9D%97%E9%93%BE-%E5%B0%86%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E7%A1%AC%E5%BA%A6%E5%88%BB%E5%85%A5%E6%95%B0%E5%AD%97%E7%81%B5%E9%AD%82/"&gt;区块链：将现实世界的&amp;quot;硬度&amp;quot;刻入数字灵魂&lt;/a&gt; —— 从增删改查到只能生长，数字世界的哲学实现&lt;/li&gt;
+&lt;li&gt;计划：核心技术解析、最佳实践总结、案例分析&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id="-代码规范训"&gt;&lt;span style="color: var(--cinnabar);"&gt;⚙️ 「代码规范训」&lt;/span&gt;&lt;/h3&gt;
