@@ -1541,7 +1541,51 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;li&gt;再随机写回真实位置（B+Tree）。&lt;/li&gt;
 &lt;li&gt;崩溃恢复时：若真实页校验失败，从双写缓冲区拷贝完整副本覆盖。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;代价：&lt;strong&gt;写放大 2 倍&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>前端面试题</title><link>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BF%85%E4%BF%AE%E8%AF%BE/</link><pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate><guid>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BF%85%E4%BF%AE%E8%AF%BE/</guid><description>&lt;h2 id="-返回"&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;代价：&lt;strong&gt;写放大 2 倍&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>linux 网络深度分析</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/Linux%E7%BD%91%E7%BB%9C%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90-%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B/</link><pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/Linux%E7%BD%91%E7%BB%9C%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90-%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B/</guid><description>&lt;p&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="http-请求在内核里的奇幻之旅"&gt;HTTP 请求在内核里的奇幻之旅&lt;/h1&gt;
+&lt;h2 id="8-层网络"&gt;8 层网络&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用户态 application layer&lt;/li&gt;
+&lt;li&gt;系统调用 &lt;code&gt;sys_sendto&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;传输层 TCP &lt;code&gt;tcp_sendmsg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;网络层 IP &lt;code&gt;ip_queue_xmit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;邻居子系统 ARP &lt;code&gt;ARP_Resolve&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;数据链路层 &lt;code&gt;dev_queue_xmit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;驱动层 &lt;code&gt;ndo_start_xmit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;网卡硬件 DMA + PHY&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="发送路径"&gt;发送路径&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;用户空间
+curl / Python / Nginx
+|
+send() / write()
+====系统调用边界=======
+VFS: sock_sendmsg()
+|
+TCP: tcp_sendmsg()
++-- copy_from_user
++-- tcp_push()
++-- tcp_write_xmit()
+|
+IP: ip_queue_xmit()
++--- 路由查找
++-- NETFILTER_HOOK
++-- ip_output()
+|
+邻居：neigh_output()
++-- ARP 查询
++-- dev_queue_xmit()
+ |
+驱动 ndo_start_xmit()
++-- DMA MAP
++-- TX 描述符
++-- write(tail)
+======硬件边界======
+NIC DMA → PHY → 电信号
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="socket-创建的内核数据结构"&gt;socket() 创建的内核数据结构&lt;/h2&gt;
+&lt;h3 id="用户态-vs-内核态映射"&gt;用户态 vs 内核态映射&lt;/h3&gt;
+&lt;p&gt;用户调用 &lt;code&gt;socket()&lt;/code&gt; 时，内核需要创建三层嵌套的数据结构：&lt;/p&gt;</description></item><item><title>前端面试题</title><link>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BF%85%E4%BF%AE%E8%AF%BE/</link><pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate><guid>/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BF%85%E4%BF%AE%E8%AF%BE/</guid><description>&lt;h2 id="-返回"&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E7%94%BB%E5%8D%B7%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id="代码执行结果"&gt;代码执行结果&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;obj&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;a&lt;/span&gt;&lt;span style="color:#f92672"&gt;:&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;,
@@ -7422,4 +7466,79 @@ route is valid!&lt;/p&gt;
 &lt;li&gt;征集现实问题转化为算法题&lt;/li&gt;
 &lt;li&gt;读者提供解法思路可成书中龙套角色&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</description></item></channel></rss>
+&lt;hr&gt;</description></item><item><title/><link>/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/%E6%95%B0%E5%AD%97%E6%98%9F%E5%A4%9C/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/%E6%95%B0%E5%AD%97%E6%98%9F%E5%A4%9C/</guid><description>&lt;!doctype html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;title&gt;数字星夜 · 一年级数学 20 以内加减法 · Three.js 3D 游戏&lt;/title&gt;
+&lt;style&gt;
+ html,body{margin:0;padding:0;overflow:hidden;background:#0a0e1f;font-family:"PingFang SC","Microsoft YaHei",sans-serif;user-select:none;-webkit-user-select:none}
+ #sceneWrap{position:fixed;inset:0;z-index:0}
+ #sceneWrap canvas{display:block}
+ #hud{position:fixed;top:0;left:0;right:0;z-index:20;pointer-events:none;padding:10px 14px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+ #hudTopL{display:flex;gap:10px;align-items:center}
+ .pill{background:rgba(10,14,31,.72);border:1px solid rgba(255,255,255,.22);color:#ffe9b8;border-radius:999px;padding:6px 14px;font-size:16px;font-weight:700;backdrop-filter:blur(4px)}
+ .pill b{color:#ffd75e}
+ #backBtn{pointer-events:auto;background:#2f3b68;color:#fff;border:1px solid #5b6fc0;border-radius:10px;padding:8px 14px;font-size:15px;font-weight:700;cursor:pointer}
+ #backBtn:hover{background:#3d4e9e}
+ #statusLine{position:fixed;top:64px;left:0;right:0;z-index:20;text-align:center;pointer-events:none;font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+ #statusLine .cmp{font-size:30px;padding:0 6px}
+ #formula{position:fixed;bottom:150px;left:0;right:0;z-index:20;text-align:center;pointer-events:none;font-size:26px;font-weight:800;color:#9ee6ff;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+ #toast{position:fixed;top:38%;left:0;right:0;z-index:30;text-align:center;pointer-events:none;font-size:34px;font-weight:900;color:#ffd75e;text-shadow:0 3px 12px rgba(0,0,0,.8);opacity:0;transition:opacity .35s}
+ #toast.show{opacity:1}
+ #gameUI{position:fixed;bottom:14px;left:0;right:0;z-index:20;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:8px 12px;pointer-events:none}
+ #gameUI&gt;*{pointer-events:auto}
+ .gbtn{background:linear-gradient(#5b6fc0,#3d4e9e);color:#fff;border:2px solid #8fa2e8;border-radius:14px;padding:14px 20px;font-size:20px;font-weight:800;cursor:pointer;min-width:70px;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+ .gbtn:hover{filter:brightness(1.15)}
+ .gbtn:active{transform:translateY(2px)}
+ .gbtn.gold{background:linear-gradient(#e8a33d,#c47e14);border-color:#ffd98a;color:#3a2500}
+ .gbtn.red{background:linear-gradient(#d96a5a,#b3452f);border-color:#f0a08f}
+ .gbtn.green{background:linear-gradient(#4fae6d,#2f8a4c);border-color:#8fd8a8}
+ .gbtn.small{font-size:16px;padding:10px 14px;min-width:54px}
+ .gbtn.tiny{font-size:14px;padding:8px 10px;min-width:44px;border-radius:10px}
+ .gbtn:disabled{opacity:.4;pointer-events:none}
+ .gmsg{background:rgba(10,14,31,.78);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:14px;padding:10px 18px;font-size:18px;font-weight:700;backdrop-filter:blur(4px)}
+ .gmsg b{color:#ffd75e}
+ .grow{flex-basis:100%;height:0}
+ #fade{position:fixed;inset:0;background:#0a0e1f;opacity:0;pointer-events:none;z-index:40;transition:opacity .5s}
+ #fade.on{opacity:1;pointer-events:auto}
+ .overlay{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:rgba(5,8,20,.78);backdrop-filter:blur(6px)}
+ .overlay.hidden{display:none}
+ .card{background:linear-gradient(#232c55,#151d3d);border:2px solid #5b6fc0;border-radius:24px;padding:34px 44px;max-width:680px;text-align:center;box-shadow:0 18px 60px rgba(0,0,0,.6)}
+ .card h1{color:#ffd75e;font-size:40px;margin:0 0 6px;letter-spacing:2px}
+ .card h2{color:#fff;font-size:22px;margin:0 0 16px;font-weight:600}
+ .card p{color:#c7d2f5;font-size:16px;line-height:1.8;margin:4px 0}
+ .card .sub{color:#8fa2e8;font-size:14px;line-height:1.7;margin:8px 0}
+ .row{display:flex;justify-content:center;gap:12px;margin:18px 0 8px;flex-wrap:wrap}
+ .lvlBtn{background:#2f3b68;color:#fff;border:2px solid #5b6fc0;border-radius:14px;padding:12px 22px;font-size:20px;font-weight:800;cursor:pointer}
+ .lvlBtn.on{background:#e8a33d;border-color:#ffd98a;color:#3a2500}
+ .bigBtn{background:linear-gradient(#e8a33d,#c47e14);color:#3a2500;border:none;border-radius:16px;padding:16px 40px;font-size:24px;font-weight:900;cursor:pointer;margin-top:8px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+ .bigBtn:hover{filter:brightness(1.1)}
+ .stars{font-size:44px;letter-spacing:8px;margin:6px 0}
+ .stars .off{color:#3a4468}
+ #ratingCard .got{color:#9ee6ff;font-size:20px;font-weight:700}
+ #hintLine{font-size:14px;color:#8fa2e8;margin-top:10px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="sceneWrap"&gt;&lt;/div&gt;
+
+&lt;div id="hud"&gt;
+ &lt;div id="hudTopL"&gt;
+ &lt;div class="pill"&gt;金币 &lt;b id="coinVal"&gt;0&lt;/b&gt;&lt;/div&gt;
+ &lt;div class="pill"&gt;星星 &lt;b id="starVal"&gt;0&lt;/b&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;button id="backBtn" style="display:none"&gt;返回夜空&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="statusLine"&gt;&lt;/div&gt;
+&lt;div id="formula"&gt;&lt;/div&gt;
+&lt;div id="gameUI"&gt;&lt;/div&gt;
+&lt;div id="toast"&gt;&lt;/div&gt;
+&lt;div id="fade"&gt;&lt;/div&gt;
+
+&lt;div id="startScreen" class="overlay"&gt;
+ &lt;div class="card"&gt;
+ &lt;h1&gt;数字星夜&lt;/h1&gt;
+ &lt;h2&gt;卖火柴的小女孩 · 数学大冒险&lt;/h2&gt;
+ &lt;p&gt;转动数字罗盘，进入六个 3D 游戏：摘苹果、扶老奶奶过马路、爬楼梯、打靶、时钟救援、方阵寻宝。&lt;/p&gt;</description></item></channel></rss>

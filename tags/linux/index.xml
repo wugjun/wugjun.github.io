@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on 补漏砖匠</title><link>/tags/linux/</link><description>Recent content in Linux on 补漏砖匠</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>linux 网络深度分析</title><link>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/Linux%E7%BD%91%E7%BB%9C%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90-%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B/</link><pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate><guid>/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/Linux%E7%BD%91%E7%BB%9C%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90-%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B/</guid><description>&lt;p&gt;&lt;a href="/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84/%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84-%E5%85%B5%E6%B3%95%E7%AF%87/"&gt;◀ 返回&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="http-请求在内核里的奇幻之旅"&gt;HTTP 请求在内核里的奇幻之旅&lt;/h1&gt;
+&lt;h2 id="8-层网络"&gt;8 层网络&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用户态 application layer&lt;/li&gt;
+&lt;li&gt;系统调用 &lt;code&gt;sys_sendto&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;传输层 TCP &lt;code&gt;tcp_sendmsg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;网络层 IP &lt;code&gt;ip_queue_xmit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;邻居子系统 ARP &lt;code&gt;ARP_Resolve&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;数据链路层 &lt;code&gt;dev_queue_xmit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;驱动层 &lt;code&gt;ndo_start_xmit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;网卡硬件 DMA + PHY&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="发送路径"&gt;发送路径&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;用户空间
+curl / Python / Nginx
+|
+send() / write()
+====系统调用边界=======
+VFS: sock_sendmsg()
+|
+TCP: tcp_sendmsg()
++-- copy_from_user
++-- tcp_push()
++-- tcp_write_xmit()
+|
+IP: ip_queue_xmit()
++--- 路由查找
++-- NETFILTER_HOOK
++-- ip_output()
+|
+邻居：neigh_output()
++-- ARP 查询
++-- dev_queue_xmit()
+ |
+驱动 ndo_start_xmit()
++-- DMA MAP
++-- TX 描述符
++-- write(tail)
+======硬件边界======
+NIC DMA → PHY → 电信号
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="socket-创建的内核数据结构"&gt;socket() 创建的内核数据结构&lt;/h2&gt;
+&lt;h3 id="用户态-vs-内核态映射"&gt;用户态 vs 内核态映射&lt;/h3&gt;
+&lt;p&gt;用户调用 &lt;code&gt;socket()&lt;/code&gt; 时，内核需要创建三层嵌套的数据结构：&lt;/p&gt;</description></item></channel></rss>
