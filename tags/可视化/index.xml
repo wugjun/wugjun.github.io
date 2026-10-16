@@ -170,6 +170,7 @@
 &lt;h5 id="webgl-三维可视化"&gt;「WebGL 三维可视化」&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%8F%AF%E8%A7%86%E5%8C%96/WebGL"&gt;Three.js 入门到实战&lt;/a&gt; —— 场景图、材质光照、相机控制&lt;/li&gt;
+&lt;li&gt;&lt;a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%95%B0%E5%AD%97%E6%98%9F%E5%A4%9C"&gt;数字星夜&lt;/a&gt; —— Three.js 3D 数学大冒险游戏&lt;/li&gt;
 &lt;li&gt;计划：模型加载、着色器编程、性能优化&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
