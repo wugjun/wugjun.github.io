@@ -7503,16 +7503,42 @@ route is valid!&lt;/p&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"&gt;
 &lt;title&gt;数字星夜 · 一年级数学 20 以内加减法 · Three.js 2D 几何游戏&lt;/title&gt;
 &lt;style&gt;
- html,body{margin:0;padding:0;overflow:hidden;background:#0a0e1f;font-family:"PingFang SC","Microsoft YaHei",sans-serif;user-select:none;-webkit-user-select:none}
+ html,body{margin:0;padding:0;overflow:hidden;background:#0a0e1f;font-family:"PingFang SC","Microsoft YaHei",sans-serif;user-select:none;-webkit-user-select:none;touch-action:none;overscroll-behavior:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
  #sceneWrap{position:fixed;inset:0;z-index:0}
- #sceneWrap canvas{display:block}
+ #sceneWrap canvas{display:block;touch-action:none}
  #hud{position:fixed;top:0;left:0;right:0;z-index:20;pointer-events:none;padding:10px 14px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
  #hudTopL{display:flex;gap:10px;align-items:center}
  .pill{background:rgba(10,14,31,.72);border:1px solid rgba(255,255,255,.22);color:#ffe9b8;border-radius:999px;padding:6px 14px;font-size:16px;font-weight:700;backdrop-filter:blur(4px)}
  .pill b{color:#ffd75e}
+ /* ===== 奖励瓶罐（进制存储：个位铜、十位银、百位金、千位钻石） ===== */
+ .jarGroup{display:inline-flex;align-items:center;gap:3px;background:rgba(10,14,31,.72);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:5px 8px;backdrop-filter:blur(4px)}
+ .jarTag{display:inline-flex;flex-direction:column;align-items:center;gap:1px;margin-right:4px;font-size:11px;color:#ffe9b8;font-weight:700}
+ .jarTag i{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #fff3b0, #d4a017);border:1px solid #ffefb0}
+ .jar{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:30px;height:36px;border:2px solid rgba(255,255,255,.55);border-radius:7px 7px 12px 12px;background:rgba(255,255,255,.10);box-shadow:inset 0 -7px 0 rgba(255,255,255,.07);position:relative;transition:opacity .3s}
+ .jar b{font-size:15px;color:#fff;line-height:1;z-index:1;font-weight:900}
+ .jar .cap{position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:16px;height:6px;border-radius:3px;background:rgba(255,255,255,.35)}
+ .jar .grain{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:10px;height:8px;border-radius:4px 4px 8px 8px;background:radial-gradient(circle at 50% 30%, #ffd9a0, #b87333);z-index:0;opacity:.9}
+ .jar.empty{opacity:.30}
+ .jar.empty .grain{display:none}
+ .jar.pop b{animation:jarPop .5s cubic-bezier(.2,2.4,.4,1)}
+ @keyframes jarPop{0%{transform:scale(1)}40%{transform:scale(1.7);color:#ffd75e}100%{transform:scale(1)}}
+ .jarT{background:radial-gradient(circle at 50% 30%, #ffd9a0, #b87333)}
+ .jarS{background:radial-gradient(circle at 50% 30%, #fff, #9aa4b1)}
+ .jarG{background:radial-gradient(circle at 50% 30%, #fff3b0, #d4a017)}
+ .jarD{background:radial-gradient(circle at 50% 30%, #dff6ff, #3ec1e8)}
+ /* ===== 奖励飘动 ===== */
+ .flyCoin,.flyStar{position:fixed;z-index:60;pointer-events:none;will-change:transform,opacity}
+ .flyCoin{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#3a2500;border:2px solid rgba(255,255,255,.85);box-shadow:0 0 10px rgba(255,215,94,.7)}
+ .flyCoin.copper{background:radial-gradient(circle at 35% 30%, #ffd9a0, #b87333);border-color:#ffd9a0}
+ .flyCoin.silver{background:radial-gradient(circle at 35% 30%, #fff, #9aa4b1);border-color:#fff;color:#334}
+ .flyCoin.gold{background:radial-gradient(circle at 35% 30%, #fff3b0, #d4a017);border-color:#ffefb0}
+ .flyCoin.dia{background:radial-gradient(circle at 35% 30%, #dff6ff, #3ec1e8);border-color:#e6f7ff;color:#064}
+ .flyStar{font-size:32px;line-height:1;color:#ffd75e;text-shadow:0 0 14px rgba(255,215,94,.95)}
+ .score{color:#aef2c9}
+ .score b{color:#8fe8b0}
  #backBtn{pointer-events:auto;background:#2f3b68;color:#fff;border:1px solid #5b6fc0;border-radius:10px;padding:8px 14px;font-size:15px;font-weight:700;cursor:pointer}
  #backBtn:hover{background:#3d4e9e}
  #statusLine{position:fixed;top:64px;left:0;right:0;z-index:20;text-align:center;pointer-events:none;font-size:22px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
@@ -7521,7 +7547,7 @@ route is valid!&lt;/p&gt;
  #toast.show{opacity:1}
  #gameUI{position:fixed;bottom:14px;left:0;right:0;z-index:20;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:8px 12px;pointer-events:none}
  #gameUI&gt;*{pointer-events:auto}
- .gbtn{background:linear-gradient(#5b6fc0,#3d4e9e);color:#fff;border:2px solid #8fa2e8;border-radius:14px;padding:14px 20px;font-size:20px;font-weight:800;cursor:pointer;min-width:70px;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+ .gbtn{background:linear-gradient(#5b6fc0,#3d4e9e);color:#fff;border:2px solid #8fa2e8;border-radius:14px;padding:14px 20px;font-size:20px;font-weight:800;cursor:pointer;min-width:70px;box-shadow:0 4px 12px rgba(0,0,0,.4);touch-action:manipulation}
  .gbtn:hover{filter:brightness(1.15)}
  .gbtn:active{transform:translateY(2px)}
  .gbtn.gold{background:linear-gradient(#e8a33d,#c47e14);border-color:#ffd98a;color:#3a2500}
@@ -7543,14 +7569,80 @@ route is valid!&lt;/p&gt;
  .card p{color:#c7d2f5;font-size:16px;line-height:1.8;margin:4px 0}
  .card .sub{color:#8fa2e8;font-size:14px;line-height:1.7;margin:8px 0}
  .row{display:flex;justify-content:center;gap:12px;margin:18px 0 8px;flex-wrap:wrap}
- .lvlBtn{background:#2f3b68;color:#fff;border:2px solid #5b6fc0;border-radius:14px;padding:12px 22px;font-size:20px;font-weight:800;cursor:pointer}
+ .lvlBtn{background:#2f3b68;color:#fff;border:2px solid #5b6fc0;border-radius:14px;padding:12px 22px;font-size:20px;font-weight:800;cursor:pointer;touch-action:manipulation}
  .lvlBtn.on{background:#e8a33d;border-color:#ffd98a;color:#3a2500}
- .bigBtn{background:linear-gradient(#e8a33d,#c47e14);color:#3a2500;border:none;border-radius:16px;padding:16px 40px;font-size:24px;font-weight:900;cursor:pointer;margin-top:8px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+ .bigBtn{background:linear-gradient(#e8a33d,#c47e14);color:#3a2500;border:none;border-radius:16px;padding:16px 40px;font-size:24px;font-weight:900;cursor:pointer;margin-top:8px;box-shadow:0 6px 18px rgba(0,0,0,.4);touch-action:manipulation}
  .bigBtn:hover{filter:brightness(1.1)}
  .stars{font-size:44px;letter-spacing:8px;margin:6px 0}
  .stars .off{color:#3a4468}
  #ratingCard .got{color:#9ee6ff;font-size:20px;font-weight:700}
  #hintLine{font-size:14px;color:#8fa2e8;margin-top:10px}
+ /* ===== 算式方框（数字格 + 加减符号 + 数字跳跃效果） ===== */
+ .calcBox{display:inline-block;min-width:52px;padding:5px 12px;margin:0 2px;border:2px solid #5b6fc0;border-radius:12px;background:rgba(10,14,31,.88);color:#fff;font-size:26px;font-weight:900;text-align:center;vertical-align:middle;box-shadow:0 2px 0 rgba(0,0,0,.35) inset}
+ .calcBox.sm{min-width:38px;padding:2px 9px;font-size:20px;border-radius:9px}
+ .calcBox.gold{color:#ffd75e;border-color:#ffd98a}
+ .calcBox.jump{animation:calcJump .55s cubic-bezier(.2,2.4,.4,1)}
+ .calcOp{display:inline-block;min-width:46px;font-size:32px;font-weight:900;color:#ffd75e;text-align:center;vertical-align:middle;text-shadow:0 0 14px rgba(255,215,94,.55)}
+ .calcEq{display:inline-block;min-width:34px;font-size:28px;font-weight:900;color:#9ee6ff;text-align:center;vertical-align:middle;text-shadow:0 0 10px rgba(158,230,255,.4)}
+ @keyframes calcJump{
+ 0%{transform:translateY(0) scale(1)}
+ 35%{transform:translateY(-11px) scale(1.3);color:#ffd75e;border-color:#ffd98a;background:rgba(64,76,140,.9);box-shadow:0 0 20px rgba(255,217,138,.85)}
+ 70%{transform:translateY(2px) scale(.97)}
+ 100%{transform:translateY(0) scale(1)}
+ }
+ #ratingCard{position:relative}
+ .closeX{position:absolute;top:10px;right:12px;background:rgba(255,255,255,.12);color:#dfe6ff;border:1px solid rgba(255,255,255,.3);border-radius:50%;width:42px;height:42px;font-size:24px;line-height:1;cursor:pointer;z-index:2;touch-action:manipulation}
+ .closeX:hover{background:rgba(255,255,255,.28);color:#fff}
+ /* ===== 手机 / 窄屏适配 ===== */
+ #backBtn{touch-action:manipulation}
+ @media (max-width: 760px){
+ .card{padding:22px 18px;border-radius:18px;max-width:94vw;max-height:88vh;overflow:auto;-webkit-overflow-scrolling:touch}
+ .card h1{font-size:30px}
+ .card h2{font-size:18px;line-height:1.4;margin-bottom:12px}
+ .card p{font-size:15px;line-height:1.7}
+ .row{gap:10px;margin:14px 0 6px}
+ .lvlBtn{padding:11px 16px;font-size:17px}
+ .bigBtn{width:100%;max-width:320px;padding:16px 20px;font-size:21px}
+ #hud{padding:8px 10px;padding-top:calc(8px + env(safe-area-inset-top))}
+ .jarGroup{gap:2px;padding:4px 6px;border-radius:11px}
+ .jar{width:24px;height:30px;border-radius:5px 5px 10px 10px}
+ .jar b{font-size:12px}
+ .jar .cap{width:12px;height:5px}
+ .jar .grain{width:8px;height:6px}
+ .jarTag{font-size:10px;margin-right:2px}
+ .jarTag i{width:10px;height:10px}
+ .flyCoin{width:20px;height:20px;font-size:10px}
+ .flyStar{font-size:25px}
+ .score{padding:4px 9px;font-size:14px}
+ .pill{font-size:14px;padding:5px 11px}
+ #backBtn{font-size:13px;padding:8px 10px;border-radius:9px}
+ #statusLine{top:52px;font-size:17px;padding:0 8px}
+ #formula{bottom:176px;font-size:22px;padding:0 8px}
+ #toast{font-size:26px;top:32%}
+ #gameUI{bottom:0;left:0;right:0;padding:8px 8px calc(12px + env(safe-area-inset-bottom));gap:8px}
+ .gbtn{min-width:0;flex:1 1 auto;padding:15px 10px;font-size:21px;border-radius:14px;max-width:160px}
+ .gbtn.small{font-size:17px;padding:12px 8px;min-width:0}
+ .gbtn.tiny{font-size:15px;padding:11px 6px;min-width:0}
+ .gmsg{font-size:16px;padding:8px 12px}
+ .stars{font-size:36px}
+ #ratingCard .got{font-size:17px}
+ .calcBox{min-width:42px;padding:4px 9px;font-size:22px;border-radius:10px}
+ .calcBox.sm{min-width:32px;padding:1px 7px;font-size:17px}
+ .calcOp{min-width:38px;font-size:26px}
+ .calcEq{min-width:26px;font-size:23px}
+ .closeX{width:38px;height:38px;font-size:21px}
+ }
+ @media (max-height: 520px) and (orientation: landscape){
+ .card{max-height:94vh;overflow:auto;-webkit-overflow-scrolling:touch;padding:16px 20px}
+ .card h1{font-size:24px}
+ .card h2{font-size:16px;margin-bottom:8px}
+ .card p{font-size:14px;line-height:1.6}
+ .bigBtn{padding:12px 24px;font-size:18px;width:auto}
+ #gameUI{bottom:0;padding-bottom:6px;gap:6px}
+ .gbtn{padding:10px 12px;font-size:16px;max-width:150px}
+ #statusLine{top:48px;font-size:15px}
+ #formula{bottom:88px;font-size:18px}
+ }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -7558,8 +7650,21 @@ route is valid!&lt;/p&gt;
 
 &lt;div id="hud"&gt;
  &lt;div id="hudTopL"&gt;
- &lt;div class="pill"&gt;金币 &lt;b id="coinVal"&gt;0&lt;/b&gt;&lt;/div&gt;
- &lt;div class="pill"&gt;星星 &lt;b id="starVal"&gt;0&lt;/b&gt;&lt;/div&gt;
+ &lt;div class="jarGroup" id="coinJars" title="金币：个位铜、十位银、百位金、千位钻石"&gt;
+ &lt;span class="jarTag"&gt;&lt;i&gt;&lt;/i&gt;金币&lt;/span&gt;
+ &lt;span class="jar" data-lv="3"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarD"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;span class="jar" data-lv="2"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarG"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;span class="jar" data-lv="1"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarS"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;span class="jar" data-lv="0"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarT"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="jarGroup" id="starJars" title="星星：个位铜、十位银、百位金、千位钻石"&gt;
+ &lt;span class="jarTag"&gt;★ 星星&lt;/span&gt;
+ &lt;span class="jar" data-lv="3"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarD"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;span class="jar" data-lv="2"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarG"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;span class="jar" data-lv="1"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarS"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;span class="jar" data-lv="0"&gt;&lt;span class="cap"&gt;&lt;/span&gt;&lt;span class="grain jarT"&gt;&lt;/span&gt;&lt;b&gt;0&lt;/b&gt;&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="pill score" title="游戏局数：每玩一局 +1"&gt;局数 &lt;b id="scoreVal"&gt;0&lt;/b&gt;&lt;/div&gt;
  &lt;/div&gt;
  &lt;button id="backBtn" style="display:none"&gt;返回夜空&lt;/button&gt;
 &lt;/div&gt;
